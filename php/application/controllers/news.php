@@ -4,8 +4,6 @@ class News extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->library('javascript');
-        $this->load->library('jquery', FALSE);
 		$this->load->model('news_model');
 	}
 
@@ -37,15 +35,6 @@ class News extends CI_Controller {
 	
 	public function create()
 	{
-	
-		$data = array();
-
-        $this->jquery->script('/libraries/jquery.js', TRUE);
-        $js = $this->javascript->hide('#dialog');
-
-        $this->javascript->output($js);
-        $this->javascript->compile();
-		
 		$this->load->helper('form');
 		$this->load->library('form_validation');
 
