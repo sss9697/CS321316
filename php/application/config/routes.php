@@ -37,10 +37,11 @@
 | in the URL cannot be matched to a valid route.
 |
 */
-$route['(:any)'] = 'submit';
-$route['default_controller'] = 'submit';
-$route['(:any)'] = 'submit_view';
-$route['default_controller'] = 'submit_view';
+$route['news/create'] = 'news/create';
+$route['news/(:any)'] = 'news/view/$1';
+$route['news'] = 'news';
+$route['(:any)'] = 'pages/view/$1';
+$route['default_controller'] = 'pages/view';
 
 
 /* End of file routes.php */
