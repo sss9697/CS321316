@@ -37,7 +37,8 @@
 | in the URL cannot be matched to a valid route.
 |
 */
-
+$route['(:any)'] = 'submit';
+$route['default_controller'] = 'submit';
 $route['(:any)'] = 'submit_view';
 $route['default_controller'] = 'submit_view';
 
