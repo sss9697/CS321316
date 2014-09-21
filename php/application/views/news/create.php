@@ -13,6 +13,6 @@
 	<textarea name="text"></textarea><br />
 
 	<input type="submit" name="submit" value="Create news item" />
-
+	<?php echo ('<p id="submit">Submit</p>'); ?>
 </form>
 </div>
