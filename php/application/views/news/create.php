@@ -1,15 +1,6 @@
-<?php echo $library_src;?>
-<?php echo $script_head;?> 
-
 <h2>Create a news item</h2>
 
 <?php echo validation_errors(); ?>
-
-<script>
-	$(function() {
-		$("#dialog").dialog();
-	});
-</script>
 
 <div id="dialog" title="popup test">
 <?php echo form_open('news/create') ?>
