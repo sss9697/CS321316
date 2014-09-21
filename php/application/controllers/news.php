@@ -5,6 +5,7 @@ class News extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->library('javascript');
+		$this->load->library('javascript/jquery');
 		$this->load->model('news_model');
 	}
 

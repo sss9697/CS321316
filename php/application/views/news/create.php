@@ -1,3 +1,5 @@
+<?php echo $library_src;?>
+<?php echo $script_head;?> 
 
 <h2>Create a news item</h2>
 
