@@ -60,7 +60,7 @@ $(function()
 			//Need to validate with DB here
 			//hashing password?
 			
-			window.alert(name + " Signed in");
+			window.alert(name.val() + " Signed in");
 			
 			dialog.dialog( "close" );
 		}

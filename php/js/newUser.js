@@ -63,7 +63,7 @@ $(function()
 			//Need insert to DB here
 			//hashing password?
 			
-			window.alert("Welcome " + name);
+			window.alert('Welcome ' + name.val());
 			
 			dialog.dialog( "close" );
 		}

@@ -42,6 +42,6 @@
 			</form>
 		</div>
 		
-		<button id="create-user">New user</button> <button id="create-user">Sign in</button> 
+		<button id="create-user">New user</button> <button id="validate-user">Sign in</button> 
 	</head>
 </html>
