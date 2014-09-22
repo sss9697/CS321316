@@ -60,21 +60,18 @@ $(function()
 		valid = valid && checkRegexp( password, /^([0-9a-zA-Z])+$/, "Password field only allow : a-z 0-9" );
 		if ( valid ) 
 		{
-			$( "#users tbody" ).append( "<tr>" +
-			"<td>" + name.val() + "</td>" +
-			"<td>" + email.val() + "</td>" +
-			"<td>" + password.val() + "</td>" +
-			"</tr>" );
+			//Need insert to DB here
+			
 			dialog.dialog( "close" );
 		}
 		return valid;
 	}
 	
-	dialog = $( "#dialog-form" ).dialog(
+	dialog = $( "#newuser-form" ).dialog(
 	{
 		autoOpen: false,
-		height: 300,
-		width: 350,
+		height: 400,
+		width: 550,
 		modal: true,
 		buttons: 
 		{
