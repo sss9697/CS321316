@@ -4,7 +4,7 @@
 <?php echo validation_errors(); ?>
 
 <div id="dialog" title="popup test">
-	<?php echo form_open('news/create'), array('id' => 'form')); ?>
+	<?php echo form_open('news/create') ?>
 
 		<label for="title">Title</label>
 		<input type="input" name="title" /><br />
