@@ -33,7 +33,7 @@
 				<fieldset>
 					<label for="email">Email:  </label>
 					<input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all"><br>
-					<font color="red" size="7">Google account will use google login</font> <br>
+					<font color="red" size="2">Google account will use google login</font> <br>
 					<label for="password">Password:</label>
 					<input type="password" name="password" id="password" value="" class="text ui-widget-content ui-corner-all"><br>
 					<!-- Allow form submission with keyboard without duplicating the dialog button -->
