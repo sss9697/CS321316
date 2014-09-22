@@ -1,5 +1,9 @@
 <h2>Create a news item</h2>
-
+<script>
+	$(function() {
+	$( "#dialog" ).dialog();
+	});
+</script>
 
 <?php echo validation_errors(); ?>
 
