@@ -10,8 +10,8 @@ class Pages extends CI_Controller {
 			show_404();
 		}
 
-		$data['title'] = ucfirst('Visual IDE Main Page'); // Capitalize the first letter
+		$data['title'] = ucfirst($page); // Capitalize the first letter
 
-		$this->load->view('pages/'.$page, $data);
+		$this->load->view('vide/'.$page, $data);
 	}
 }
