@@ -1,8 +1,4 @@
-$(document).ready(function()
-{
-  $("#submit").click(function()
-  {
-    $("#form").hide();
-  });
-});
+$(function() {
+	$( "#dialog" ).dialog();
+	});
 
