@@ -4,7 +4,7 @@
 <?php echo validation_errors(); ?>
 
 <div id="dialog" title="popup test">
-	<?php echo form_open('news/create') ?>
+	<?php echo form_open('news/create'), array('id' => 'form')); ?>
 
 		<label for="title">Title</label>
 		<input type="input" name="title" /><br />
@@ -12,7 +12,6 @@
 		<label for="text">Text</label>
 		<textarea name="text"></textarea><br />
 
-		<input type="submit" name="submit" value="Create news item" />
-		<?php echo ('<p id="submit">Submit</p>'); ?>
-	</form>
+		<input type="submit" id="submit" name="submit" value="Create news item" />
+	<?php echo form_close(); ?>
 </div>
