@@ -1,6 +1,8 @@
-$(document).ready(function(){
-  $("#submit").click(function(){
-    $("#form").submit();
+$(document).ready(function()
+{
+  $("#submit").click(function()
+  {
+    $("#form").hide();
   });
 });
 
