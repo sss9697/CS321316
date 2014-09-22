@@ -60,13 +60,9 @@ $(function()
 			//Need to validate with DB here
 			//hashing password?
 			
-			window.alert('why' + name.val() + " Signed in");
+			window.alert('why' + email.val() + " Signed in");
 			
 			dialog.dialog( "close" );
-		}
-		else
-		{
-			window.alert('whytest');
 		}
 		return valid;
 	}
