@@ -91,7 +91,7 @@ $(function()
 	form = dialog.find( "form" ).on( "submit", function( event ) 
 	{
 		event.preventDefault();
-		addUser();
+		validateUser();
 	});
 	$( "#validate-user" ).button().on( "click", function() 
 	{
