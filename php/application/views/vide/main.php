@@ -15,11 +15,11 @@
 			<form>
 				<fieldset>
 					<label for="name">Name</label>
-					<input type="text" name="name" id="name" value="" class="text ui-widget-content ui-corner-all">
+					<input type="text" name="name" id="name" value="" class="text ui-widget-content ui-corner-all"><br>
 					<label for="email">Email</label>
-					<input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all">
+					<input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all"><br>
 					<label for="password">Password</label>
-					<input type="password" name="password" id="password" value="" class="text ui-widget-content ui-corner-all">
+					<input type="password" name="password" id="password" value="" class="text ui-widget-content ui-corner-all"><br>
 					<!-- Allow form submission with keyboard without duplicating the dialog button -->
 					<input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
 				</fieldset>
