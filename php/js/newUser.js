@@ -68,7 +68,9 @@ $(function()
 				//data : {"name":name.val(), "email":email.val(), "password":password.val()},
 				data : {"name":"ttt", "email":"ttt@ttt", "password":"larry"},
 				success : function(data)
-				{}
+				{
+					window.alert('User created');
+				}
 			});
 			
 			//hashing password?

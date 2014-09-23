@@ -9,6 +9,7 @@ class News_model extends CI_Model
 	
 	function insert_account()
 	{
+	echo '<script>alert("You reached your model");</script>';
 		$data = array(
 			'name' => 'name',
 			'email' => 'email',
