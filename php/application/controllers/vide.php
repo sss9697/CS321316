@@ -19,7 +19,7 @@ class Vide extends CI_Controller
 	{
 		$this->load->model('db_model');
 		$this->load->helper('form');
-		echo '<script>alert("You reached your controllers inside");</script>';
+		echo "conttroller";
 		if ($this->input->post("email") != "")
 		{
 			
@@ -27,12 +27,12 @@ class Vide extends CI_Controller
 												$this->input->post('email'),
 												$this->input->post('password')
 											);
-			echo '<script>alert("You reached your controllers SUCCESS");</script>';
+			echo "Inside";
 		}
 		else
 		{
-			echo '<script>alert("You reached your controller ERROR");</script>';
+			echo "ELSE";
 		}
-		echo '<script>alert("You reached your controller EXIT");</script>';
+		echo "END";
 	}
 }

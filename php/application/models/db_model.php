@@ -9,6 +9,7 @@ class News_model extends CI_Model
 	
 	public function insert_account($name, $email, $password)
 	{
+		echo "MODEL";
 		$acc['name'] = $name;
 		$acc['email'] = $email;
 		$acc['password'] = $password;
