@@ -69,7 +69,11 @@ $(function()
 				data : {"name":name.val(), "email":email.val(), "password":password.val()},
 				success : function()
 				{
-					window.alert("User "+name.val()+" created").fadeOut("slow");
+					window.setTimeout(function() {
+						 $(".alert").fadeTo(500, 0).slideUp(500, function(){
+							  $(this).remove(); 
+						 });
+					}, 5000);
 				},
 				error : function(jqXHR, textStatus, errorThrown)
 				{
