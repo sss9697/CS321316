@@ -67,7 +67,7 @@ $(function()
 				type : 'POST',
 				datatype : "json",
 				data : {"name":name.val(), "email":email.val(), "password":password.val()},
-				success : function(data)
+				success : function()
 				{
 					window.alert("User "+name.val()+" created").fadeOut("slow");
 				},
