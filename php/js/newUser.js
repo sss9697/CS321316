@@ -69,7 +69,7 @@ $(function()
 				data : {"name":name.val(), "email":email.val(), "password":password.val()},
 				success : function(data)
 				{
-					alert("User "+name.val()+" created").fadeOut("slow");
+					window.alert("User "+name.val()+" created").fadeOut("slow");
 				},
 				error : function(jqXHR, textStatus, errorThrown)
 				{
@@ -78,8 +78,6 @@ $(function()
 			});
 			
 			//hashing password?
-			
-			//window.alert('Welcome ' + name.val());
 			
 			dialog.dialog( "close" );
 		}
