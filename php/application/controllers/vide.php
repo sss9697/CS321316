@@ -23,9 +23,6 @@ class Vide extends CI_Controller
 	
 	public function insert_account()
 	{
-		echo "contt";
-
-		echo "conttroller";
 		if ($this->input->post("email") != "")
 		{
 			
@@ -33,12 +30,6 @@ class Vide extends CI_Controller
 												$this->input->post('email'),
 												$this->input->post('password')
 											);
-			echo "Inside";
 		}
-		else
-		{
-			echo "ELSE";
-		}
-		echo "END";
 	}
 }
