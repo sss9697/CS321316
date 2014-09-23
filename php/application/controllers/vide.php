@@ -18,7 +18,7 @@ class Vide extends CI_Controller
 	public function insert_account()
 	{
 		$this->load->model('db_model');
-		$this->load->helper('form');
+
 		echo "conttroller";
 		if ($this->input->post("email") != "")
 		{
