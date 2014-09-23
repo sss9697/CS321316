@@ -18,7 +18,19 @@ class Vide extends CI_Controller {
 	function insert_account()
 	{
 		echo '<script>alert("You reached your controller");</script>';
-		$this->load->model('db_model');
-		$this->db_model->insert_account();
+		$this->load->helper('form');
+		
+		if ($this->input->post("email") != "")
+		{
+			$this->db_model->insert_account(	$this->input->post('name'),
+												$this->input->post('email'),
+												$this->input->post('password')
+											);
+												
+		}
+		else
+		{
+			echo '<script>alert("You reached your controller ERROR");</script>';
+		}
 	}
 }
