@@ -38,7 +38,6 @@
 |
 */
 $route['default_controller'] = 'vide/view';
-$route['(:any)'] = 'vide/view';
 
 
 /* End of file routes.php */
