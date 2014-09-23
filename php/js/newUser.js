@@ -63,19 +63,17 @@ $(function()
 			//Need insert to DB here
 			$.ajax(
 			{
-				url : "<?php echo site_url();?>/index.php/vide/insert_account",      //if dont work user base_url()
+				url : "<?php echo base_url();?>/index.php/vide/insert_account",      //if dont work user base_url()
 				type : 'POST',
 				//data : {"name":name.val(), "email":email.val(), "password":password.val()},
 				data : {"name":"ttt", "email":"ttt@ttt", "password":"larry"},
 				success : function(data)
-				{
-					window.alert('User created');
-				}
+				{}
 			});
 			
 			//hashing password?
 			
-			window.alert('Welcome ' + name.val());
+			//window.alert('Welcome ' + name.val());
 			
 			dialog.dialog( "close" );
 		}
