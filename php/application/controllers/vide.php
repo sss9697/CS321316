@@ -17,6 +17,7 @@ class Vide extends CI_Controller
 	
 	public function insert_account()
 	{
+	echo "contt";
 		$this->load->model('db_model');
 
 		echo "conttroller";
