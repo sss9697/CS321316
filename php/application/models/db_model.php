@@ -13,7 +13,7 @@ class News_model extends CI_Model
 		$data = array(
 			'name' => 'name',
 			'email' => 'email',
-			'message' => 'message');
+			'password' => 'password');
 			
 			$this->db->insert('accounts', $data);
 	}
