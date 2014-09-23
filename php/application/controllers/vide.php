@@ -15,14 +15,14 @@ class Vide extends CI_Controller
 		$this->load->view('vide/'.$page, $data);
 	}
 	
-	function insert_account()
+	public function insert_account()
 	{
 		$this->load->model('db_model');
 		$this->load->helper('form');
-		
+		echo '<script>alert("You reached your controllers inside");</script>';
 		if ($this->input->post("email") != "")
 		{
-			echo '<script>alert("You reached your controllers inside");</script>';
+			
 			$this->db_model->insert_account(	$this->input->post('name'),
 												$this->input->post('email'),
 												$this->input->post('password')
