@@ -66,7 +66,7 @@ $(function()
 				url : "<?php echo base_url();?>/index.php/vide/insert_account",      //if dont work user base_url()
 				type : 'POST',
 				//data : {"name":name.val(), "email":email.val(), "password":password.val()},
-				data : {"name":"ttt", "email":"ttt@ttt", "password":"larry"},
+				data : {name:"ttt", email:"ttt@ttt", password:"larry"},
 				success : function(data)
 				{}
 			});
