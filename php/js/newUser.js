@@ -66,11 +66,10 @@ $(function()
 				url : "https://php-cs321316.rhcloud.com/index.php/vide/insert_account",      //if dont work user base_url()
 				type : 'POST',
 				datatype : "json",
-				//data : {"name":name.val(), "email":email.val(), "password":password.val()},
-				data : {'name':"ttt", 'email':"ttt@ttt", 'password':"larry"},
+				data : {"name":name.val(), "email":email.val(), "password":password.val()},
 				success : function(data)
 				{
-					alert("YAY");
+					alert("User "+name.val()+" created").fadeOut("slow");
 				},
 				error : function(jqXHR, textStatus, errorThrown)
 				{
