@@ -61,6 +61,15 @@ $(function()
 		if ( valid ) 
 		{
 			//Need insert to DB here
+			$.ajax(
+			{
+				url : "<?php echo site_url();?>/vide/insert_account",      //if dont work user base_url()
+				type : 'POST',
+				data : {"name":name.val(), "email":email.val(), "password":password.val()},
+				success : function(data)
+				{}
+			});
+			
 			//hashing password?
 			
 			window.alert('Welcome ' + name.val());

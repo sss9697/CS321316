@@ -14,4 +14,10 @@ class Vide extends CI_Controller {
 
 		$this->load->view('vide/'.$page, $data);
 	}
+	
+	function insert_account()
+	{
+		$this->load->model('db_model');
+		$this->db_model->insert_account();
+	}
 }
