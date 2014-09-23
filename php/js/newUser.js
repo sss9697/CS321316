@@ -69,7 +69,6 @@ $(function()
 				hash |= 0;
 			}
 			
-			
 			//Insert to DB here
 			$.ajax(
 			{

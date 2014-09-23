@@ -57,8 +57,16 @@ $(function()
 		valid = valid && checkRegexp( password, /^([0-9a-zA-Z])+$/, "Password field only allow : a-z 0-9" );
 		if ( valid ) 
 		{
+			//hashing password
+			var hash = 0, i, chr, len;
+			for(i=0, len = password.val().length; i< len; i++)
+			{
+				chr = password.val().charCodeAt(i);
+				hash = ((hash << 5) - hash) + chr;
+				hash |= 0;
+			}
+			
 			//Need to validate with DB here
-			//hashing password?
 			
 			window.alert('why' + email.val() + " Signed in");
 			
