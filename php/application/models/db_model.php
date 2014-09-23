@@ -10,11 +10,8 @@ class News_model extends CI_Model
 	function insert_account($name, $email, $password)
 	{
 	echo '<script>alert("You reached your model");</script>';
-		$data = array(
-			'name' => $name,
-			'email' => $email,
-			'password' => $password);
+		$this->setValues($name, $email, $password);
 			
-			$this->db->insert('accounts', $data);
+			$this->db->insert('accounts', $this);
 	}
 }
