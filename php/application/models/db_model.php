@@ -7,7 +7,7 @@ class News_model extends CI_Model
 		$this->load->database();
 	}
 	
-	public function insert_account($name, $email, $password)
+	public function insert_accountm($name, $email, $password)
 	{
 		echo "MODEL";
 		$acc['name'] = $name;
