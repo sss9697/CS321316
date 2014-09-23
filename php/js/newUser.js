@@ -73,7 +73,7 @@ $(function()
 				},
 				error : function(jqXHR, textStatus, errorThrown)
 				{
-					alert(textStatus + " " + errorThrown);
+					alert(textStatus + " " + errorThrown + " " + jqXHR);
 				}
 			});
 			
