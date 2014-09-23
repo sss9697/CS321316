@@ -27,7 +27,7 @@ class Vide extends CI_Controller
 												$this->input->post('email'),
 												$this->input->post('password')
 											);
-												
+			echo '<script>alert("You reached your controllers SUCCESS");</script>';
 		}
 		else
 		{
