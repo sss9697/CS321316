@@ -22,6 +22,7 @@ class Vide extends CI_Controller
 		
 		if ($this->input->post("email") != "")
 		{
+		echo '<script>alert("You reached your controllers inside");</script>';
 			$this->db_model->insert_account(	$this->input->post('name'),
 												$this->input->post('email'),
 												$this->input->post('password')

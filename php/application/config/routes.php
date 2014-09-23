@@ -37,6 +37,7 @@
 | in the URL cannot be matched to a valid route.
 |
 */
+$route['vide/view'] = 'vide/view';
 $route['default_controller'] = 'vide/view';
 
 
