@@ -60,28 +60,32 @@ $(function()
 		valid = valid && checkRegexp( password, /^([0-9a-zA-Z])+$/, "Password field only allow : a-z 0-9" );
 		if ( valid ) 
 		{
-			//Need insert to DB here
+			//hashing password
+			var hash = 0, i, chr, len;
+			for(i=0, len = password.val().length; i< len; i++)
+			{
+				chr = password.val().charCodeAt(i);
+				hash = ((hash << 5) - hash) + chr;
+				hash |= 0;
+			}
+			
+			
+			//Insert to DB here
 			$.ajax(
 			{
 				url : "https://php-cs321316.rhcloud.com/index.php/vide/insert_account",      //if dont work user base_url()
 				type : 'POST',
 				datatype : "json",
-				data : {"name":name.val(), "email":email.val(), "password":password.val()},
+				data : {"name":name.val(), "email":email.val(), "password":hash},
 				success : function()
 				{
-					window.setTimeout(function() {
-						 $(".alert").fadeTo(500, 0).slideUp(500, function(){
-							  $(this).remove(); 
-						 });
-					}, 5000);
+					alert("Account created!!");
 				},
 				error : function(jqXHR, textStatus, errorThrown)
 				{
 					alert(textStatus + " " + errorThrown + " " + jqXHR);
 				}
 			});
-			
-			//hashing password?
 			
 			dialog.dialog( "close" );
 		}
