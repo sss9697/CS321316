@@ -1,7 +1,13 @@
 <?php
 
-class Vide extends CI_Controller {
-
+class Vide extends CI_Controller 
+{
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('db_model');
+	}
+	
 	public function view($page = 'main')
 	{
 		if ( ! file_exists(APPPATH.'/views/vide/'.$page.'.php'))
