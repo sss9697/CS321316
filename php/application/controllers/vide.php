@@ -17,7 +17,7 @@ class Vide extends CI_Controller {
 	
 	function insert_account()
 	{
-		//echo '<script>alert("You reached your controller");</script>';
+		echo '<script>alert("You reached your controller");</script>';
 		$this->load->model('db_model');
 		$this->db_model->insert_account();
 	}
