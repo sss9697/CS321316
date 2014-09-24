@@ -7,7 +7,7 @@
 				color:Red;
 			}
 			
-			#button 
+			#logout-btn
 			{
 				position:absolute;
 				top:0;
