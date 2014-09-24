@@ -40,7 +40,7 @@
 				<fieldset>
 					<label for="email">Email:  </label>
 					<input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all"><br>
-					<label id="noAccoutLabel" class="errorMsg">Account not found\n</label>
+					<label id="noAccoutLabel" class="errorMsg">Account not found<br /></label>
 					<label for="password">Password:</label>
 					<input type="password" name="password" id="password" value="" class="text ui-widget-content ui-corner-all"><br>
 					<!-- Allow form submission with keyboard without duplicating the dialog button -->

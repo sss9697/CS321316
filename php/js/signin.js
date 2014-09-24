@@ -83,7 +83,7 @@ $(function()
 					{
 						document.getElementById("noAccoutLabel").style.display = "none";
 						//validate account here
-						
+						alert(account.name);
 						
 						dialog.dialog( "close" );
 					}
