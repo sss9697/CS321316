@@ -1,5 +1,3 @@
-$(function()
-{
 	function logoutAction()
 	{
 		document.getElementById('logout-btn').style.visibility="none";
@@ -9,4 +7,3 @@ $(function()
 		
 		//dirty check?? optional so depend on time
 	}
-});
