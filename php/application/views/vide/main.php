@@ -88,7 +88,7 @@
 		<button id="create-user">New user</button> <button id="validate-user">Sign in</button> <button id="validate-google">Google Sign in</button>
 		<button id="logout-btn" style="visibility:hidden" onClick="logoutAction();" type="button">Logout</button>
 		
-		<div id="maindiv" style="visibility:hidden">
+		<div id="maindiv">
 			<div id="header">
 				<label id="welcomelabel"></label>
 			</div>
