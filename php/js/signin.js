@@ -82,9 +82,11 @@ $(function()
 					else
 					{
 						document.getElementById("noAccoutLabel").style.display = "none";
-						//validate account here
-						$.each(account, function(id,name,email,password,curx,cury,costume,moveset)
+						
+						//pull everything, used to init the next steps
+						$.each(account.results, function(id,name,email,password,curx,cury,costume,moveset)
 						{
+							//validate account here
 							alert(name);
 						});
 						
