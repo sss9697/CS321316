@@ -83,7 +83,7 @@ $(function()
 					{
 						document.getElementById("noAccoutLabel").style.display = "none";
 						
-						console.log(account.name);
+						console.log(account[0].name);
 						//pull everything, used to init the next steps
 						/*$.each(account, function(id,name,email,password,curx,cury,costume,moveset)
 						{
