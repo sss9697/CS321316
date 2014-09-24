@@ -94,7 +94,7 @@ $(function()
 							document.getElementById('validate-user').style.visibility="hidden";
 							document.getElementById('validate-google').style.visibility="hidden";
 							document.getElementById('welcomelabel').innerHTML = 'Welcome '+ account[0].name;
-							$("maindiv").fadeIn(2000);
+							$('#maindiv').fadeIn(2000);
 						}
 					}
 				},
