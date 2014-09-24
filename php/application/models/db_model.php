@@ -19,4 +19,15 @@ class db_model extends CI_Model
 			
 		$this->db->insert('accounts', $acc);
 	}
+	
+	public function get_accountm($email)
+	{
+		$this->db->where('email', $email);
+		
+		$query = $this->get('accounts');
+		
+		$results = $query->result();
+		
+		return $results;
+	}
 }

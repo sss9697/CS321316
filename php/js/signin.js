@@ -67,8 +67,22 @@ $(function()
 			}
 			
 			//Need to validate with DB here
-			
-			window.alert('why' + email.val() + " Signed in");
+			$.ajax(
+			{
+				url : "https://php-cs321316.rhcloud.com/index.php/vide/get_account",
+				type : 'POST',
+				datatype : "json",
+				data : {"email":email.val()},
+				success : function(account)
+				{
+					//validate account here
+					alert(account);
+				},
+				error : function(jqXHR, textStatus, errorThrown)
+				{
+					alert(textStatus + " " + errorThrown + " " + jqXHR);
+				}
+			});
 			
 			dialog.dialog( "close" );
 		}

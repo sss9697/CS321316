@@ -32,4 +32,12 @@ class Vide extends CI_Controller
 											);
 		}
 	}
+	
+	public function get_account()
+	{
+		if ($this->input->post("email") != "")
+		{
+			$this->db_model->get_accountm(	$this->input->post('email') );
+		}
+	}
 }
