@@ -38,8 +38,18 @@ class Vide extends CI_Controller
 		if ($this->input->post("email") != "")
 		{
 			$query = $this->db_model->get_accountm(	$this->input->post('email') );
-			header('Content-Type: application/json');
-			echo json_encode($query);
+			$password = $this->input->post('password');
+			
+			if($query[0]["password"] == $password)
+			{
+				header('Content-Type: application/json');
+				echo json_encode($query);
+			}
+			else
+			{	
+				$empty = new stdClass();
+				echo json_encode($empty);
+			}
 		}
 	}
 }
