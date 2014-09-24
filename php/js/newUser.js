@@ -1,6 +1,7 @@
 $(function() 
 {
 	var dialog, form,
+	var base_url = '<?php echo site_url();
 	emailRegex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
 	name = $( "#name" ),
 	email = $( "#email" ),
@@ -72,7 +73,8 @@ $(function()
 			//Insert to DB here
 			$.ajax(
 			{
-				url : "https://php-cs321316.rhcloud.com/index.php/vide/insert_account",      //if dont work user base_url()
+				//url : "https://php-cs321316.rhcloud.com/index.php/vide/insert_account",    
+				url : base_url + '/index.php/vide/insert_account',
 				type : 'POST',
 				datatype : "json",
 				data : {"name":name.val(), "email":email.val(), "password":hash},
