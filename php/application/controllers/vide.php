@@ -41,7 +41,7 @@ class Vide extends CI_Controller
 			$password = $this->input->post('password');
 			
 			$data['pass'] = $query['password'];
-			if($data[0] == $password)
+			if($data == $password)
 			{
 				header('Content-Type: application/json');
 				echo json_encode($query);
