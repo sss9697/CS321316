@@ -84,10 +84,10 @@ $(function()
 						document.getElementById("noAccoutLabel").style.display = "none";
 						
 						//pull everything, used to init the next steps
-						$.each(account.results, function(id,name,email,password,curx,cury,costume,moveset)
+						$.each(account, function(id,name,email,password,curx,cury,costume,moveset)
 						{
 							//validate account here
-							alert(name);
+							alert(name.val());
 						});
 						
 						dialog.dialog( "close" );
