@@ -15,8 +15,9 @@
 			}
 			#maindiv
 			{
+				position:absolute;
 				display: none;
-				padding: 45px;
+				padding: 40px;
 			}
 			#header
 			{
