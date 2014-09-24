@@ -94,6 +94,7 @@ $(function()
 							document.getElementById('create-user').style.visibility="hidden";
 							document.getElementById('validate-user').style.visibility="hidden";
 							document.getElementById('validate-google').style.visibility="hidden";
+							document.getElementById('maindiv').style.visibility="visible";
 						}
 					}
 				},

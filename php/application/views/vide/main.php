@@ -1,17 +1,45 @@
 <html>
 	<head>
 		<style>
-			.errorMsg 
+			.errorMsg
 			{
 				display:none;        
 				color:Red;
 			}
-			
 			#logout-btn
 			{
 				position:absolute;
 				top:10;
 				right:10;
+			}
+			#header
+			{
+				background-color:black;
+				color:white;
+				text-align:center;
+				padding:5px;
+			}
+			#editordiv
+			{
+				background-color:#eeeeee;
+				height:600px;
+				width:250px;
+				float:left;
+				padding:5px; 
+			}
+			#playerdiv
+			{
+				width:350px;
+				float:left;
+				padding:10px; 
+			}
+			#controldiv
+			{
+				background-color:black;
+				color:white;
+				clear:both;
+				text-align:center;
+				padding:5px; 
 			}
 		</style>	
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
@@ -59,5 +87,20 @@
 		
 		<button id="create-user">New user</button> <button id="validate-user">Sign in</button> <button id="validate-google">Google Sign in</button>
 		<button id="logout-btn" style="visibility:hidden" onClick="logoutAction();" type="button">Logout</button>
+		
+		<div id="maindiv" style="visibility:hidden">
+			<div id="header">
+				<label id="welcomelabel"></label>
+			</div>
+			<div id="editordiv">
+				EDITOR SPACE
+			</div>
+			<div id="playerdiv">
+				PLAYERSPACE
+			</div>
+			<div id="controldiv">
+				CONTROL SPACE
+			</div>		
+		</div>
 	</head>
 </html>
