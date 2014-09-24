@@ -10,12 +10,12 @@
 			{
 				display: none;
 				position:absolute;
-				top:40;
-				right:40;
+				top:10;
+				right:10;
 			}
 			#maindiv
 			{
-				position:relative;
+				position:fixed;
 				display: none;
 				padding: 40px;
 			}
