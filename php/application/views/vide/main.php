@@ -15,9 +15,7 @@
 			}
 			#maindiv
 			{
-				position:fixed;
 				display: none;
-				padding: 40px;
 			}
 			#header
 			{
