@@ -83,7 +83,7 @@ $(function()
 					{
 						if(hash != account[0].password)
 						{
-							document.getElementById("noAccoutLabel").style.display = "none";
+							document.getElementById("noAccoutLabel").style.display = "inline";
 						}
 						else
 						{
