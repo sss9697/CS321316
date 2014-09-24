@@ -83,12 +83,13 @@ $(function()
 					{
 						document.getElementById("noAccoutLabel").style.display = "none";
 						
+						alert(account['name']);
 						//pull everything, used to init the next steps
-						$.each(account, function(id,name,email,password,curx,cury,costume,moveset)
+						/*$.each(account, function(id,name,email,password,curx,cury,costume,moveset)
 						{
 							//validate account here
-							alert(name.val());
-						});
+							alert(name);
+						});*/
 						
 						dialog.dialog( "close" );
 					}
