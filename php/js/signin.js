@@ -72,7 +72,7 @@ $(function()
 				url : "https://php-cs321316.rhcloud.com/index.php/vide/get_account",
 				type : 'POST',
 				datatype : "json",
-				data : {"email":email.val(), "password":hash},
+				data : {"email":email.val()},
 				success : function(account)
 				{
 					if($.isEmptyObject(account))
@@ -81,12 +81,16 @@ $(function()
 					}
 					else
 					{
-						document.getElementById("noAccoutLabel").style.display = "none";
-						
-						alert(account[0].name);
-						
-						//logged in, switch panel visibility
-						dialog.dialog( "close" );
+						if(hash == account[0].password)
+						{
+							document.getElementById("noAccoutLabel").style.display = "none";
+						}
+						else
+						{
+							//logged in, switch panel visibility
+							alert("welcome "+account[0].name);
+							dialog.dialog( "close" );
+						}
 					}
 				},
 				error : function(jqXHR, textStatus, errorThrown)
