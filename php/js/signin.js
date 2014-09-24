@@ -88,13 +88,13 @@ $(function()
 						else
 						{
 							//logged in, switch panel visibility
-							alert("welcome "+account[0].name);
 							dialog.dialog( "close" );
 							document.getElementById('logout-btn').style.visibility="visible";
 							document.getElementById('create-user').style.visibility="hidden";
 							document.getElementById('validate-user').style.visibility="hidden";
 							document.getElementById('validate-google').style.visibility="hidden";
 							document.getElementById('maindiv').style.visibility="visible";
+							document.getElementById('welcomelabel').innerHTML = 'Welcome '+ account[0].name;
 						}
 					}
 				},
