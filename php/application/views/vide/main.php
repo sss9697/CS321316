@@ -20,6 +20,7 @@
 		
 		<script src="<?php echo base_url(). "js/newUser.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/signin.js" ?>"></script>
+		<script src="<?php echo base_url(). "js/logout.js" ?>"></script>
 	
 		<title>Visual IDE Group 16</title>
 		
@@ -57,6 +58,6 @@
 		</div>
 		
 		<button id="create-user">New user</button> <button id="validate-user">Sign in</button> <button id="validate-google">Google Sign in</button>
-		<button id="logout-btn" style="visibility:hidden" type="button">Logout</button>
+		<button id="logout-btn" style="visibility:hidden" onClick="logoutAction();" type="button">Logout</button>
 	</head>
 </html>
