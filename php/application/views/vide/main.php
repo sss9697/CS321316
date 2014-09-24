@@ -18,7 +18,6 @@
 				color:white;
 				text-align:center;
 				padding:5px;
-				position: absolute;
 			}
 			#editordiv
 			{
@@ -27,14 +26,12 @@
 				width:250px;
 				float:left;
 				padding:5px; 
-				position: absolute;
 			}
 			#playerdiv
 			{
 				width:350px;
 				float:left;
 				padding:10px; 
-				position: absolute;
 			}
 			#controldiv
 			{
@@ -43,7 +40,6 @@
 				clear:both;
 				text-align:center;
 				padding:5px; 
-				position: absolute;
 			}
 		</style>	
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
