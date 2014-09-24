@@ -16,6 +16,7 @@
 			#maindiv
 			{
 				display: none;
+				padding: 45px;
 			}
 			#header
 			{
