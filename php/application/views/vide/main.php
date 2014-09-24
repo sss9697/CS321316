@@ -50,6 +50,6 @@
 		</div>
 		
 		<button id="create-user">New user</button> <button id="validate-user">Sign in</button> <button id="validate-google">Google Sign in</button>
-		<button id="logout-btn" style="visibility:visible" type="button">Logout</button>
+		<button id="logout-btn" style="visibility:hidden" type="button">Logout</button>
 	</head>
 </html>
