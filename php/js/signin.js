@@ -83,7 +83,7 @@ $(function()
 					{
 						document.getElementById("noAccoutLabel").style.display = "none";
 						//validate account here
-						var acc = $.parstJSON(account);
+						var acc = $.parseJSON(account);
 						alert(acc.name);
 						
 						dialog.dialog( "close" );
