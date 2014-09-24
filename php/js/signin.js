@@ -75,6 +75,7 @@ $(function()
 				data : {"email":email.val()},
 				success : function(account)
 				{
+					//check for empty account here
 					//validate account here
 					alert(account);
 				},

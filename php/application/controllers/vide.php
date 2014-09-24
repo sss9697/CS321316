@@ -37,7 +37,9 @@ class Vide extends CI_Controller
 	{
 		if ($this->input->post("email") != "")
 		{
-			$this->db_model->get_accountm(	$this->input->post('email') );
+			$query = $this->db_model->get_accountm(	$this->input->post('email') );
+			header('Content-Type: application/json');
+			echo json_encode($query);
 		}
 	}
 }
