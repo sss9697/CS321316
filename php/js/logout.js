@@ -4,7 +4,7 @@
 		document.getElementById('create-user').style.visibility="visible";
 		document.getElementById('validate-user').style.visibility="visible";
 		document.getElementById('validate-google').style.visibility="visible";
-		document.getElementById('maindiv').style.visibility="hidden";
 		document.getElementById('welcomelabel').innerHTML = '';
+		$('#maindiv').fadeOut(3000);
 		//dirty check?? optional so depend on time
 	}
