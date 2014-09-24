@@ -75,9 +75,18 @@ $(function()
 				data : {"email":email.val()},
 				success : function(account)
 				{
-					//check for empty account here
-					//validate account here
-					alert(account);
+					if($.isEmptyObject(account))
+					{
+						document.getElementById("noAccoutLabel").style.display = "inline";
+					}
+					else
+					{
+						document.getElementById("noAccoutLabel").style.display = "none";
+						//validate account here
+						
+						
+						dialog.dialog( "close" );
+					}
 				},
 				error : function(jqXHR, textStatus, errorThrown)
 				{
@@ -85,7 +94,7 @@ $(function()
 				}
 			});
 			
-			dialog.dialog( "close" );
+			//dialog.dialog( "close" );
 		}
 		return valid;
 	}

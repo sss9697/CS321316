@@ -1,5 +1,12 @@
 <html>
 	<head>
+		<style>
+			.errorMsg 
+			{
+				display:none;        
+				color:Red;
+			}
+		</style>	
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
 		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
 		<script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
@@ -33,6 +40,7 @@
 				<fieldset>
 					<label for="email">Email:  </label>
 					<input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all"><br>
+					<label id="noAccoutLabel" class="errorMsg">Account not found\n</label>
 					<label for="password">Password:</label>
 					<input type="password" name="password" id="password" value="" class="text ui-widget-content ui-corner-all"><br>
 					<!-- Allow form submission with keyboard without duplicating the dialog button -->
