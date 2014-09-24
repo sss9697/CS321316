@@ -89,11 +89,10 @@ $(function()
 						{
 							//logged in, switch panel visibility
 							dialog.dialog( "close" );
-							
-							document.getElementById('create-user').style.visibility="hidden";
-							document.getElementById('validate-user').style.visibility="hidden";
-							document.getElementById('validate-google').style.visibility="hidden";
 							document.getElementById('welcomelabel').innerHTML = 'Welcome '+ account[0].name;
+							$('#create-user').fadeOut(3000);
+							$('#validate-user').fadeOut(3000);
+							$('#validate-google').fadeOut(3000);
 							$('#logout-btn').hide().fadeIn(3000);
 							$('#maindiv').hide().fadeIn(3000);
 						}
