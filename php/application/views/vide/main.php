@@ -10,8 +10,8 @@
 			#logout-btn
 			{
 				position:absolute;
-				top:0;
-				right:0;
+				top:10;
+				right:10;
 			}
 		</style>	
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
