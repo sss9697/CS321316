@@ -24,7 +24,7 @@ class db_model extends CI_Model
 	{
 		$this->db->where('email', $email);
 		
-		$query = $this->get('accounts');
+		$query = $this->db->get('accounts');
 		
 		$results = $query->result();
 		
