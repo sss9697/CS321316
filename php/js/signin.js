@@ -81,7 +81,7 @@ $(function()
 					}
 					else
 					{
-						if(hash == account[0].password)
+						if(hash != account[0].password)
 						{
 							document.getElementById("noAccoutLabel").style.display = "none";
 						}
