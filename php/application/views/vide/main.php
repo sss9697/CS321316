@@ -12,6 +12,10 @@
 				top:10;
 				right:10;
 			}
+			#maindiv
+			{
+				display: none;
+			}
 			#header
 			{
 				background-color:black;
