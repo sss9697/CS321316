@@ -83,8 +83,10 @@ $(function()
 					{
 						document.getElementById("noAccoutLabel").style.display = "none";
 						//validate account here
-						var acc = $.parseJSON(account);
-						alert(acc.name);
+						$.each(account, function(id,name,email,password,curx,cury,costume,moveset)
+						{
+							alert(name);
+						});
 						
 						dialog.dialog( "close" );
 					}
