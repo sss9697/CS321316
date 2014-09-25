@@ -37,14 +37,14 @@ body
 {
 	float:left;
 	width:300px;
-	height:300px;
+	height:270px;
 }
 #editorspace
 {
 	float:left;
 	width:300px;
-	height: 470px;
-	font-size: 110%
+	height: 500px;
+	font-size: 120%
 }
 #playerdiv
 {
