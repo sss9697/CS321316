@@ -47,7 +47,7 @@
 		</div>
 		
 		<button id="create-user">New user</button> <button id="validate-user">Sign in</button> <button id="validate-google">Google Sign in</button>
-		<button id="logout-btn" onClick="logoutAction();" type="button">Logout</button>
+		<button id="logout-btn" type="button">Logout</button>
 		
 		<div id="maindiv">
 			<div id="header">
