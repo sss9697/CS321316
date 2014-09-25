@@ -29,10 +29,23 @@ $(function()
 	
 	$("#edittxt").keypress(function (e)
 	{
-		if(e.which != 8 && e.which != 0 && e.which != 45 && (e.which < 48 || e.which > 57))
+		var s = "";
+		var t = $("#quantity").val();
+		if(s==t)
 		{
-			$("#errmsg").html("Digits Only").show().fadeOut("slow");
-			return false;
+			if(e.which != 8 && e.which != 0 && e.which != 45 && (e.which < 48 || e.which > 57))
+			{
+				$("#errmsg").html("Digits Only").show().fadeOut("slow");
+				return false;
+			}
+		}
+		else
+		{
+			if(e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57))
+			{
+				$("#errmsg").html("Digits Only").show().fadeOut("slow");
+				return false;
+			}
 		}
 	});
 });

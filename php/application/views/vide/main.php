@@ -67,32 +67,37 @@
 								</li>
 								<li id="moveright">
 									<div id="movediv">
-										right
+										right: <input type="text" name="edittxt" id="edittxt" maxlength="4" size="3" />&nbsp;<span id="errmsg" class="errorMsg"></span>
 									</div>
 								</li>
 								<li id="moveup">
 									<div id="movediv">
-										up
+										up: <input type="text" name="edittxt" id="edittxt" maxlength="4" size="3" />&nbsp;<span id="errmsg" class="errorMsg"></span>
 									</div>
 								</li>
 								<li id="movedown">
 									<div id="movediv">
-										down
+										down: <input type="text" name="edittxt" id="edittxt" maxlength="4" size="3" />&nbsp;<span id="errmsg" class="errorMsg"></span>
 									</div>
 								</li>
 								<li id="moveloop">
 									<div id="movediv">
-										loop
+										loop open
+									</div>
+								</li>
+								<li id="moveloop">
+									<div id="movediv">
+										loop close: <input type="text" name="edittxt" id="edittxt" maxlength="4" size="3" />&nbsp;<span id="errmsg" class="errorMsg"></span>
 									</div>
 								</li>
 								<li id="movesetx">
 									<div id="movediv">
-										set x
+										set x: <input type="text" name="edittxt" id="edittxt" maxlength="4" size="3" />&nbsp;<span id="errmsg" class="errorMsg"></span>
 									</div>
 								</li>
 								<li id="movesety">
 									<div id="movediv">
-										set y
+										set y: <input type="text" name="edittxt" id="edittxt" maxlength="4" size="3" />&nbsp;<span id="errmsg" class="errorMsg"></span>
 									</div>
 								</li>
 							</ul>
