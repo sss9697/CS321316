@@ -79,6 +79,31 @@
 								loop
 							</div>
 						</li>
+						<li id="movesetx">
+							<div id="movediv">
+								set x
+							</div>
+						</li>
+						<li id="movesety">
+							<div id="movediv">
+								set y
+							</div>
+						</li>
+						<li id="movechartoggle">
+							<div id="movediv">
+								toggle character
+							</div>
+						</li>
+						<li id="movebackground">
+							<div id="movediv">
+								change background
+							</div>
+						</li>
+						<li id="movechangechar">
+							<div id="movediv">
+								change char
+							</div>
+						</li>
 					</ul>
 				</div>
 				EDITOR SPACE<BR><BR><BR><BR>
