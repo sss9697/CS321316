@@ -12,6 +12,17 @@ $(function()
 		cursor: "move"
 	});
 	
+	$( "#movelist" ).droppable(
+	{
+		activeClass: "ui-state-default",
+		hoverClass: "ui-state-hover",
+		accept: ".item"
+		drop: function( event, ui)
+		{
+			
+		}
+	});
+	
 	$( "#editorspace ul" ).droppable(
 	{
 		activeClass: "ui-state-default",
