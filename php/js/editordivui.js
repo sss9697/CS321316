@@ -20,7 +20,8 @@ $(function()
 		drop: function( event, ui ) 
 		{
 			$( this ).find( ".placeholder" ).remove();
-			$( "<li class=\"added\" id=\"added\" ></li>" ).text( ui.draggable.text() ).appendTo( this );
+			//$( "<li class=\"added\" id=\"added\" ></li>" ).text( ui.draggable.text() ).appendTo( this );
+			ui.draggable.appendTo(this);
 		}
 	});
 	
