@@ -27,7 +27,7 @@ $(function()
 		$( "<li class=\"placeholder\"></li>").text("drag command here").appendTo("#editorspace ul");
 	});
 	
-	$("$edittxt").keypress(function (e)
+	$("#edittxt").keypress(function (e)
 	{
 		if(e.which != 8 && e.which != 0 && e.which != 45 && (e.which < 48 || e.which > 57))
 		{

@@ -62,7 +62,7 @@
 							<ul>
 								<li id="moveleft">
 									<div id="movediv">
-										left: <input type="text" name="edittxt" id="edittxt" maxlength="4" size="3" />&nbsp;<span id="errmsg"></span>
+										left: <input type="text" name="edittxt" id="edittxt" maxlength="4" size="3" />&nbsp;<span id="errmsg" class="errorMsg"></span>
 									</div>
 								</li>
 								<li id="moveright">
