@@ -19,7 +19,7 @@ $(function()
 		accept: ".item",
 		drop: function( event, ui)
 		{
-			
+			$(this).append($(ui.draggable));
 		}
 	});
 	
