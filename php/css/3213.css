@@ -39,6 +39,7 @@
 #movelist > li > div
 {
 	background-color: #ffffff
+	float:left;
 }
 #movelist > li > div:hover
 {
