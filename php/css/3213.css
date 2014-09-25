@@ -46,6 +46,12 @@ body
 	height: 500px;
 	font-size: 120%
 }
+#droppable
+{
+	float:left;
+	width:300px
+	height:440px;
+}
 #playerdiv
 {
 	width:550px;

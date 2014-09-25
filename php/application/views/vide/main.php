@@ -122,7 +122,7 @@
 				<div id="editorspace">
 					<h1 class="ui-widget-header">Editor</h1>
 					<div class="ui-widget-content">
-						<ul>
+						<ul id="droppable">
 							<li class="placeholder">drag command here</li>
 						</ul>
 					</div>
