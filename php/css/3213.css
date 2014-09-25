@@ -31,12 +31,19 @@ body
 	float:left;
 	width:300px;
 	height:800px;
+	font-size:80%;
 }
 #movecontainer
 {
 	float:left;
 	width:300px;
 	height:350px;
+}
+#editorspace
+{
+	float:left;
+	width:300px;
+	height: 420px;
 }
 #playerdiv
 {

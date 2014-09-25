@@ -119,7 +119,14 @@
 						</div>
 					</div>
 				</div>
-				<br>EDITOR
+				<div id="editorspace">
+					<h1 class="ui-widget-header">Editor</h1>
+					<div class="ui-widget-content">
+						<ul>
+							<li class="placeholder">drag command here></li>
+						</ul>
+					</div>
+				</div>
 			</div>
 			<div id="playerdiv">
 				PLAYERSPACE
