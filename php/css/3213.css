@@ -28,7 +28,26 @@
 	width:200px;
 	height:800px;
 }
-
+#movecontainer
+{
+	background-color:#dddddd;
+}
+#movelist
+{
+}
+#movelist > li
+{
+	padding: 5px;
+}
+#movelist > li > div
+{
+	background-color: #ffffff
+	float:left;
+}
+#movelist > li > div:hover
+{
+	background-color: black;
+}
 
 #playerdiv
 {
