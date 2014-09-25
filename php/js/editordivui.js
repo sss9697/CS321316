@@ -2,8 +2,9 @@ $(function()
 {
 	$("#edittxt").each(function()
 	{
-		$(this).val(0);
+		this.val(0);
 	});
+	
 	$( "#movelist" ).accordion(
 	{
 		heightStyle: "content"
@@ -14,6 +15,16 @@ $(function()
 		helper: "clone",
 		revert: "invalid",
 		cursor: "move"
+	});
+	
+	$( "#movelist > li").droppable(
+	{
+		accept: "editorspace > li",
+		activeClass: "ui-state-highlight",
+		drop: function(event, ui)
+		{
+			$(this).append($(ui.draggable));
+		}
 	});
 	
 	$( "#editorspace ul" ).droppable(
