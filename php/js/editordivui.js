@@ -26,4 +26,12 @@ $(function()
 		$("#editorspace ul").find(".added").remove();
 		$( "<li class=\"placeholder\"></li>").text("drag command here").appendTo("#editorspace ul");
 	});
+	
+	$("$edittxt").keypress(function (e)
+	{
+		if(e.which != 8 && e.which != 0 && e.which != 45 && (e.which < 48 || e.which > 57))
+		{
+			$("#errmsg").html("Digits Only").show().fadeOut("slow");
+		}
+	});
 });

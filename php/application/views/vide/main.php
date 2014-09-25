@@ -62,7 +62,7 @@
 							<ul>
 								<li id="moveleft">
 									<div id="movediv">
-										left
+										left: <input type="text" name="edittxt" id="edittxt" maxlength="4" size="3" />&nbsp;<span id="errmsg" class="errorMsg"></span>
 									</div>
 								</li>
 								<li id="moveright">
@@ -102,7 +102,7 @@
 							<ul>
 								<li id="movechartoggle">
 									<div id="movediv">
-										toggle character
+										Hide character
 									</div>
 								</li>
 								<li id="movebackground">
