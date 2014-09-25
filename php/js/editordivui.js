@@ -17,7 +17,13 @@ $(function()
 		drop: function( event, ui ) 
 		{
 			$( this ).find( ".placeholder" ).remove();
-			$( "<li></li>" ).text( ui.draggable.text() ).appendTo( this );
+			$( "<li class=\"added\" id=\"added\" ></li>" ).text( ui.draggable.text() ).appendTo( this );
 		}
+	});
+	
+	$( "#clear-btn" ).button().on( "click", function() 
+	{
+		$(this).find(".added").remove();
+		$( "<li class=\"placeholder\"></li>").text("drag command here").appendTo(this);
 	});
 });

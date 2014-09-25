@@ -123,9 +123,12 @@
 					<h1 class="ui-widget-header">Editor</h1>
 					<div class="ui-widget-content">
 						<ul>
-							<li class="placeholder">drag command here></li>
+							<li class="placeholder">drag command here</li>
 						</ul>
 					</div>
+				</div>
+				<div id="editorcontrol" align="center">
+					<button id="clear-btn">Clear</button>&nbsp;&nbsp;&nbsp;&nbsp;<button id="compile-btn">Compile</button>
 				</div>
 			</div>
 			<div id="playerdiv">
