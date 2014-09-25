@@ -7,6 +7,10 @@ body
 	display:none;        
 	color:Red;
 }
+#errmsg
+{
+	color:Red;
+}
 #logout-btn
 {
 	display: none;
