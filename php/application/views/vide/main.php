@@ -60,42 +60,42 @@
 						<h2><a href="#">Moves</a></h2>
 						<div>
 							<ul>
-								<li id="moveleft">
+								<li id="moveleft" class="command">
 									<div id="movediv">
-										left: <input type="number" name="edittxt" id="edittxt" max="999" min="-999" />
+										left: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
 									</div>
 								</li>
-								<li id="moveright">
+								<li id="moveright" class="command">
 									<div id="movediv">
 										right: <input type="number" name="edittxt" id="edittxt" max="999" min="-999" />
 									</div>
 								</li>
-								<li id="moveup">
+								<li id="moveup" class="command">
 									<div id="movediv">
 										up: <input type="number" name="edittxt" id="edittxt" max="999" min="-999" />
 									</div>
 								</li>
-								<li id="movedown">
+								<li id="movedown" class="command">
 									<div id="movediv">
 										down: <input type="number" name="edittxt" id="edittxt" max="999" min="-999" />
 									</div>
 								</li>
-								<li id="moveloop">
+								<li id="moveloop" class="command">
 									<div id="movediv">
 										loop open
 									</div>
 								</li>
-								<li id="moveloop">
+								<li id="moveloop" class="command">
 									<div id="movediv">
 										loop close: <input type="number" name="edittxt" id="edittxt" max="999" min="-999" />
 									</div>
 								</li>
-								<li id="movesetx">
+								<li id="movesetx" class="command">
 									<div id="movediv">
 										set x: <input type="number" name="edittxt" id="edittxt" max="999" min="-999" />
 									</div>
 								</li>
-								<li id="movesety">
+								<li id="movesety" class="command">
 									<div id="movediv">
 										set y: <input type="number" name="edittxt" id="edittxt" max="999" min="-999" />
 									</div>
@@ -105,17 +105,17 @@
 						<h2><a href="#">Other commands</a></h2>
 						<div>
 							<ul>
-								<li id="movechartoggle">
+								<li id="movechartoggle" class="command">
 									<div id="movediv">
 										Hide character
 									</div>
 								</li>
-								<li id="movebackground">
+								<li id="movebackground" class="command">
 									<div id="movediv">
 										change background
 									</div>
 								</li>
-								<li id="movechangechar">
+								<li id="movechangechar" class="command">
 									<div id="movediv">
 										change char
 									</div>
