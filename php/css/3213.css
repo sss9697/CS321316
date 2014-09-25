@@ -25,23 +25,33 @@
 {
 	background-color:#eeeeee;
 }
+#movecontainer
+{
+	background-color:#dddddd;
+	float:left;
+}
+#movelist
+{
+	clear:left;
+	float: left;
+	list-style:none;
+}
 #movelist > li
 {
-	display:inline-block;
 	padding: 5px;
+	display: block;
+	float: left;
 }
 #movelist > li > div
 {
+	display: block;
 	color: #ffffff
 }
 #movelist > li > div:hover
 {
 	color: black;
 }
-#movecontainer
-{
-	background-color:#dddddd;
-}
+
 #playerdiv
 {
 	width:350px;
