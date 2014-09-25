@@ -16,11 +16,12 @@ $(function()
 	{
 		activeClass: "ui-state-default",
 		hoverClass: "ui-state-hover",
-		accept: ":not(.ui-sortable-helper)",
+		accept: "#movelist > li",
+		//accept: ":not(.ui-sortable-helper)",
 		drop: function( event, ui ) 
 		{
 			$( this ).find( ".placeholder" ).remove();
-			$( "<li class=\"added\" id=\"added\" ></li>" ).text( ui.draggable ).appendTo( this );
+			//$( "<li class=\"added\" id=\"added\" ></li>" ).text( ui.draggable ).appendTo( this );
 		}
 	});
 	
