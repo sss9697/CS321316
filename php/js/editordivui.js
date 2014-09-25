@@ -19,7 +19,7 @@ $(function()
 	
 	$( "#movelist > li").droppable(
 	{
-		accept: "editorspace > li",
+		accept: "#editorspace > li",
 		activeClass: "ui-state-highlight",
 		drop: function(event, ui)
 		{
