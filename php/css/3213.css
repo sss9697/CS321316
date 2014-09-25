@@ -28,28 +28,21 @@
 #movecontainer
 {
 	background-color:#dddddd;
-	float:left;
 }
 #movelist
 {
-	clear:left;
-	float: left;
-	list-style:none;
 }
 #movelist > li
 {
 	padding: 5px;
-	display: block;
-	float: left;
 }
 #movelist > li > div
 {
-	display: block;
-	color: #ffffff
+	background-color: #ffffff
 }
 #movelist > li > div:hover
 {
-	color: black;
+	background-color: black;
 }
 
 #playerdiv
