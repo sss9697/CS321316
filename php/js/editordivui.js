@@ -24,13 +24,6 @@ $(function()
 			$(this).append($(ui.draggable).clone());
 			$("#editorspace .command").addClass("item");
 			$(".item").removeClass("ui-draggable command");
-			$(".item").draggable(
-			{
-				appendTo: "body",
-				helper: "clone",
-				revert: "invalid",
-				cursor: "move"
-			});
 		}
 	});
 	
