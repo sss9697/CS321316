@@ -22,17 +22,11 @@ $(function()
 			$( this ).find( ".placeholder" ).remove();
 			//$( "<li class=\"added\" id=\"added\" ></li>" ).text( ui.draggable.text() ).appendTo( this );
 			$(this).append($(ui.draggable).clone());
-			$("#editorspace .command").addClass("item");
-			$(".item").removeClass("ui-draggable command");
-			$(".item").draggable(
-			{
-				appendTo: "body",
-				helper: "clone",
-				revert: "invalid",
-				cursor: "move"
-			});
+
 		}
 	});
+	
+	$("#editorspace ul" ).sortable();
 	
 	$( "#clear-btn" ).button().on( "click", function() 
 	{
