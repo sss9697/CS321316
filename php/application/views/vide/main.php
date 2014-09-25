@@ -1,52 +1,6 @@
 <html>
 	<head>
-		<style>
-			.errorMsg
-			{
-				display:none;        
-				color:Red;
-			}
-			#logout-btn
-			{
-				display: none;
-				position:absolute;
-				top:10;
-				right:10;
-			}
-			#maindiv
-			{
-				display: none;
-			}
-			#header
-			{
-				background-color:black;
-				color:white;
-				text-align:center;
-				padding:5px;
-			}
-			#editordiv
-			{
-				background-color:#eeeeee;
-				height:600px;
-				width:250px;
-				float:left;
-				padding:5px; 
-			}
-			#playerdiv
-			{
-				width:350px;
-				float:left;
-				padding:10px; 
-			}
-			#controldiv
-			{
-				background-color:black;
-				color:white;
-				clear:both;
-				text-align:center;
-				padding:5px; 
-			}
-		</style>	
+		<link rel="stylesheet" href="<?php echo base_url(). "css/3213.css" ?>" type="text/css">
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
 		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
 		<script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
@@ -98,6 +52,15 @@
 				<label id="welcomelabel"></label>
 			</div>
 			<div id="editordiv">
+				<div id="movecontainer">
+					<ul id="movelist">
+						<li id="moveleft">left</li>
+						<li id="moveright">right</li>
+						<li id="moveup">up</li>
+						<li id="movedown">down</li>
+						<li id="moveloop">loop</li>
+					</ul>
+				</div>
 				EDITOR SPACE
 			</div>
 			<div id="playerdiv">
