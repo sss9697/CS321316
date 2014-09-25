@@ -12,16 +12,6 @@ $(function()
 		cursor: "move"
 	});
 	
-	$( "#movelist ul").droppable(
-	{
-		accept: ":not(.ui-sortable-helper)",
-		activeClass: "ui-state-highlight",
-		drop: function(event, ui)
-		{
-			$(this).append($(ui.draggable));
-		}
-	});
-	
 	$( "#editorspace ul" ).droppable(
 	{
 		activeClass: "ui-state-default",
@@ -37,9 +27,29 @@ $(function()
 		}
 	});
 	
+	var sortableIn = 0;
 	$("#editorspace ul" ).sortable(
 	{
-		placeholder: "ui-state-highlight"
+		placeholder: "ui-state-highlight",
+		receive: function(event, ui)
+		{
+			sortableIn = 1;
+		},
+		over: function(event, ui)
+		{
+			sortableIn = 1;
+		},
+		out: function(event, ui)
+		{
+			sortableIn = 0;
+		},
+		beforeStop: function(event, ui)
+		{
+			if(sortableIn ==0)
+			{
+				ui.item.remove();
+			}
+		}
 	});
 	
 	$( "#clear-btn" ).button().on( "click", function() 
