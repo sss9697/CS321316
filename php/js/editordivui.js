@@ -29,6 +29,7 @@ $(function()
 	
 	$("#edittxt").keypress(function (e)
 	{
+		$("#edittxt").each(function (){
 		var s = "";
 		var t = $("#edittxt").val();
 		if(s==t)
@@ -47,5 +48,6 @@ $(function()
 				return false;
 			}
 		}
+		});
 	});
 });
