@@ -1,6 +1,9 @@
 $(function() 
 {
-	$( "#movelist" ).accordion();
+	$( "#movelist" ).accordion(
+	{
+		heightStyle: "content"
+	});
 	$( "#movelist li" ).draggable(
 	{
 		appendTo: "body",
