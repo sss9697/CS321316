@@ -2,7 +2,7 @@ $(function()
 {
 	$("#edittxt").each(function()
 	{
-		this.val(0);
+		$(this).val('0');
 	});
 	
 	$( "#movelist" ).accordion(
