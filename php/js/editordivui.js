@@ -1,10 +1,5 @@
 $(function() 
 {
-	$("#edittxt").each(function()
-	{
-		$(this).val('0');
-	});
-	
 	$( "#movelist" ).accordion(
 	{
 		heightStyle: "content"
@@ -17,7 +12,7 @@ $(function()
 		cursor: "move"
 	});
 	
-	$( "#movelist > li").droppable(
+	$( "#movelist ul").droppable(
 	{
 		accept: "#editorspace > li",
 		activeClass: "ui-state-highlight",
