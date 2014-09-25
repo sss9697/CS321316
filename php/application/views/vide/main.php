@@ -81,7 +81,7 @@
 						</li>
 					</ul>
 				</div>
-				EDITOR SPACE
+				EDITOR SPACE<BR><BR><BR><BR>
 			</div>
 			<div id="playerdiv">
 				PLAYERSPACE
