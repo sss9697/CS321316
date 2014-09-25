@@ -16,7 +16,7 @@ $(function()
 	{
 		activeClass: "ui-state-default",
 		hoverClass: "ui-state-hover",
-		accept: ":not(.ui-sortable-helper)",
+		accept: ".command",
 		drop: function( event, ui ) 
 		{
 			$( this ).find( ".placeholder" ).remove();

@@ -62,12 +62,12 @@
 							<ul>
 								<li id="moveleft" class="command">
 									<div id="movediv">
-										left: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
+										left: <input type="number" name="edittxt" id="edittxt" max="999" min="-999" />
 									</div>
 								</li>
 								<li id="moveright" class="command">
 									<div id="movediv">
-										right: <input type="number" name="edittxt" id="edittxt" max="999" min="-999" />
+										right: <input type="number" name="edittxt" id="edittxt" value="30" max="999" min="-999" />
 									</div>
 								</li>
 								<li id="moveup" class="command">
