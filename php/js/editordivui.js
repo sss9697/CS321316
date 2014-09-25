@@ -21,7 +21,7 @@ $(function()
 		{
 			$( this ).find( ".placeholder" ).remove();
 			//$( "<li class=\"added\" id=\"added\" ></li>" ).text( ui.draggable.text() ).appendTo( this );
-			$(this).append($(ui.helper).clone());
+			$(this).append($(ui.draggable).clone());
 		}
 	});
 	
