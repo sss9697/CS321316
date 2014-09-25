@@ -12,7 +12,7 @@ $(function()
 		cursor: "move"
 	});
 	
-	$( "#movelist" ).droppable(
+	$( "#thrashdiv" ).droppable(
 	{
 		activeClass: "ui-state-default",
 		hoverClass: "ui-state-hover",

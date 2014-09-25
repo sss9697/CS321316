@@ -132,6 +132,9 @@
 						</ul>
 					</div>
 				</div>
+				<div id="thrashdiv" align="center">
+					Move here to thrash
+				</div>
 				<div id="editorcontrol" align="center">
 					<button id="load-btn">Load</button>&nbsp;&nbsp;&nbsp;&nbsp;<button id="clear-btn">Clear</button>&nbsp;&nbsp;&nbsp;&nbsp;<button id="compile-btn">Compile</button>
 				</div>
