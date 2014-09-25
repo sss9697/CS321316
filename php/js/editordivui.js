@@ -1,5 +1,9 @@
 $(function() 
 {
+	$("#edittxt").each(function()
+	{
+		$(this).val(0);
+	});
 	$( "#movelist" ).accordion(
 	{
 		heightStyle: "content"
@@ -10,17 +14,6 @@ $(function()
 		helper: "clone",
 		revert: "invalid",
 		cursor: "move"
-	});
-	
-	$( "#movelist li" ).droppable(
-	{
-		activeClass: "ui-state-default",
-		hoverClass: "ui-state-hover",
-		accept: ":not(.ui-sortable-helper)",
-		drop: function( event, ui)
-		{
-			$(this).append($(ui.draggable));
-		}
 	});
 	
 	$( "#editorspace ul" ).droppable(
