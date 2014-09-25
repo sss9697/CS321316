@@ -27,7 +27,7 @@ $(function()
 			$(".item").draggable(
 			{
 				appendTo: "body",
-				helper: "clone"
+				helper: "clone",
 				revert: "invalid",
 				cursor: "move"
 			});
