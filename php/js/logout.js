@@ -9,4 +9,4 @@ $(function()
 		$('#maindiv').fadeOut(3000);
 		//dirty check?? optional so depend on time
 	});
-}
+});
