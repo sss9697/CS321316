@@ -128,7 +128,7 @@
 					</div>
 				</div>
 				<div id="editorcontrol" align="center">
-					<button id="clear-btn">Clear</button>&nbsp;&nbsp;&nbsp;&nbsp;<button id="compile-btn">Compile</button>
+					<button id="load-btn">Load</button>&nbsp;&nbsp;&nbsp;&nbsp;<button id="clear-btn">Clear</button>&nbsp;&nbsp;&nbsp;&nbsp;<button id="compile-btn">Compile</button>
 				</div>
 			</div>
 			<div id="playerdiv">

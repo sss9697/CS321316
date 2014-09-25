@@ -23,7 +23,7 @@ $(function()
 	
 	$( "#clear-btn" ).button().on( "click", function() 
 	{
-		$(this).find(".added").remove();
-		$( "<li class=\"placeholder\"></li>").text("drag command here").appendTo(this);
+		$("#editorspace ul").find(".added").remove();
+		$( "<li class=\"placeholder\"></li>").text("drag command here").appendTo("#editorspace ul");
 	});
 });
