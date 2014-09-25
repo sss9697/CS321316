@@ -4,7 +4,7 @@ $(function()
 	{
 		heightStyle: "content"
 	});
-	$( "#movelist li" ).draggable(
+	$( "#movediv" ).draggable(
 	{
 		appendTo: "body",
 		helper: "clone"
@@ -30,7 +30,7 @@ $(function()
 	$("#edittxt").keypress(function (e)
 	{
 		var s = "";
-		var t = $("#quantity").val();
+		var t = $("#edittxt").val();
 		if(s==t)
 		{
 			if(e.which != 8 && e.which != 0 && e.which != 45 && (e.which < 48 || e.which > 57))
