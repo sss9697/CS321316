@@ -16,7 +16,7 @@ $(function()
 	{
 		activeClass: "ui-state-default",
 		hoverClass: "ui-state-hover",
-		accept: ".item",
+		accept: ".ui-draggable-handle ui-droppable item",
 		drop: function( event, ui)
 		{
 			$(this).append($(ui.draggable));
