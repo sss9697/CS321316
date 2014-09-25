@@ -6,7 +6,7 @@ $(function()
 	});
 	$( "#movelist li" ).draggable(
 	{
-		appendTo: "body",
+		appendTo: "editordiv",
 		helper: "clone"
 	});
 	/*$( "#cart ol" ).droppable(
