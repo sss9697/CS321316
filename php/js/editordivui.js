@@ -16,7 +16,7 @@ $(function()
 	{
 		activeClass: "ui-state-default",
 		hoverClass: "ui-state-hover",
-		accept: ".item"
+		accept: ".item",
 		drop: function( event, ui)
 		{
 			
