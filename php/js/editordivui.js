@@ -29,7 +29,7 @@ $(function()
 				appendTo: "body",
 				helper: "clone"
 				revert: "invalid",
-				cursot: "move"
+				cursor: "move"
 			});
 		}
 	});
