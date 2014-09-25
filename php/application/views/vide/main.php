@@ -62,22 +62,22 @@
 							<ul>
 								<li id="moveleft">
 									<div id="movediv">
-										left: <input type="number" name="edittxt" id="edittxt" max="999" min="999" />
+										left: <input type="number" name="edittxt" id="edittxt" max="999" min="-999" />
 									</div>
 								</li>
 								<li id="moveright">
 									<div id="movediv">
-										right: <<input type="number" name="edittxt" id="edittxt" max="999" min="999" />
+										right: <input type="number" name="edittxt" id="edittxt" max="999" min="-999" />
 									</div>
 								</li>
 								<li id="moveup">
 									<div id="movediv">
-										up: <input type="number" name="edittxt" id="edittxt" max="999" min="999" />
+										up: <input type="number" name="edittxt" id="edittxt" max="999" min="-999" />
 									</div>
 								</li>
 								<li id="movedown">
 									<div id="movediv">
-										down: <input type="number" name="edittxt" id="edittxt" max="999" min="999" />
+										down: <input type="number" name="edittxt" id="edittxt" max="999" min="-999" />
 									</div>
 								</li>
 								<li id="moveloop">
@@ -87,17 +87,17 @@
 								</li>
 								<li id="moveloop">
 									<div id="movediv">
-										loop close: <input type="number" name="edittxt" id="edittxt" max="999" min="999" />
+										loop close: <input type="number" name="edittxt" id="edittxt" max="999" min="-999" />
 									</div>
 								</li>
 								<li id="movesetx">
 									<div id="movediv">
-										set x: <input type="number" name="edittxt" id="edittxt" max="999" min="999" />
+										set x: <input type="number" name="edittxt" id="edittxt" max="999" min="-999" />
 									</div>
 								</li>
 								<li id="movesety">
 									<div id="movediv">
-										set y: <input type="number" name="edittxt" id="edittxt" max="999" min="999" />
+										set y: <input type="number" name="edittxt" id="edittxt" max="999" min="-999" />
 									</div>
 								</li>
 							</ul>

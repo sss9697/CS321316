@@ -7,8 +7,11 @@ $(function()
 	$( "li", "#movelist" ).draggable(
 	{
 		appendTo: "body",
-		helper: "clone"
+		helper: "clone",
+		revert: "invalid",
+		cursor: "move"
 	});
+	
 	$( "#editorspace ul" ).droppable(
 	{
 		activeClass: "ui-state-default",
@@ -17,7 +20,7 @@ $(function()
 		drop: function( event, ui ) 
 		{
 			$( this ).find( ".placeholder" ).remove();
-			$( "<li class=\"added\" id=\"added\" ></li>" ).text( ui.draggable.text() ).appendTo( this );
+			$( "<li class=\"added\" id=\"added\" ></li>" ).text( ui.draggable ).appendTo( this );
 		}
 	});
 	
