@@ -14,8 +14,8 @@ $(function()
 	
 	$( "#movelist ul").droppable(
 	{
-		accept: "#editorspace > li",
-		activeClass: ":not(.ui-sortable-helper)",
+		accept: ":not(.ui-sortable-helper)",
+		activeClass: "ui-state-highlight",
 		drop: function(event, ui)
 		{
 			$(this).append($(ui.draggable));

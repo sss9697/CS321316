@@ -62,22 +62,22 @@
 							<ul>
 								<li id="moveleft" class="command">
 									<div id="movediv">
-										left: <input type="number" name="edittxt" id="edittxt" max="999" min="-999" />
+										left: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
 									</div>
 								</li>
 								<li id="moveright" class="command">
 									<div id="movediv">
-										right: <input type="number" name="edittxt" id="edittxt" value="30" max="999" min="-999" />
+										right: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
 									</div>
 								</li>
 								<li id="moveup" class="command">
 									<div id="movediv">
-										up: <input type="number" name="edittxt" id="edittxt" max="999" min="-999" />
+										up: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
 									</div>
 								</li>
 								<li id="movedown" class="command">
 									<div id="movediv">
-										down: <input type="number" name="edittxt" id="edittxt" max="999" min="-999" />
+										down: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
 									</div>
 								</li>
 								<li id="moveloop" class="command">
@@ -87,17 +87,17 @@
 								</li>
 								<li id="moveloop" class="command">
 									<div id="movediv">
-										loop close: <input type="number" name="edittxt" id="edittxt" max="999" min="-999" />
+										loop close: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
 									</div>
 								</li>
 								<li id="movesetx" class="command">
 									<div id="movediv">
-										set x: <input type="number" name="edittxt" id="edittxt" max="999" min="-999" />
+										set x: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
 									</div>
 								</li>
 								<li id="movesety" class="command">
 									<div id="movediv">
-										set y: <input type="number" name="edittxt" id="edittxt" max="999" min="-999" />
+										set y: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
 									</div>
 								</li>
 							</ul>
