@@ -48,6 +48,10 @@ body
 	height: 500px;
 	font-size: 120%
 }
+#edittxt
+{
+	height: 18px;
+}
 #droppable
 {
 	float:left;
