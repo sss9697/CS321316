@@ -16,7 +16,7 @@ $(function()
 	{
 		activeClass: "ui-state-default",
 		hoverClass: "ui-state-hover",
-		accept: ".ui-draggable-handle ui-droppable item",
+		accept: ":not(.ui-sortable-helper)",
 		drop: function( event, ui)
 		{
 			$(this).append($(ui.draggable));
