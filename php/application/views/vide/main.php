@@ -119,7 +119,7 @@
 						</div>
 					</div>
 				</div>
-				EDITOR SPACE<BR>
+				<br>EDITOR
 			</div>
 			<div id="playerdiv">
 				PLAYERSPACE
