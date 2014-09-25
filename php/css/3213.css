@@ -1,3 +1,7 @@
+body
+{
+	font-size: 75%
+}
 .errorMsg
 {
 	display:none;        
@@ -32,6 +36,7 @@
 {
 	float:left;
 	width:200px;
+	height: 400px;
 }
 #playerdiv
 {
