@@ -4,7 +4,7 @@ $(function()
 	{
 		heightStyle: "content"
 	});
-	$( "#movediv" ).draggable(
+	$( "li", "#movelist" ).draggable(
 	{
 		appendTo: "body",
 		helper: "clone"
@@ -25,29 +25,5 @@ $(function()
 	{
 		$("#editorspace ul").find(".added").remove();
 		$( "<li class=\"placeholder\"></li>").text("drag command here").appendTo("#editorspace ul");
-	});
-	
-	$("#edittxt").keypress(function (e)
-	{
-		$("#edittxt").each(function (){
-		var s = "";
-		var t = $("#edittxt").val();
-		if(s==t)
-		{
-			if(e.which != 8 && e.which != 0 && e.which != 45 && (e.which < 48 || e.which > 57))
-			{
-				$("#errmsg").html("Digits Only").show().fadeOut("slow");
-				return false;
-			}
-		}
-		else
-		{
-			if(e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57))
-			{
-				$("#errmsg").html("Digits Only").show().fadeOut("slow");
-				return false;
-			}
-		}
-		});
 	});
 });

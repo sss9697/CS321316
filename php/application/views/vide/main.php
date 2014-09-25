@@ -62,22 +62,22 @@
 							<ul>
 								<li id="moveleft">
 									<div id="movediv">
-										left: <input type="text" name="edittxt" id="edittxt" maxlength="4" size="3" />&nbsp;<span id="errmsg" class="errorMsg"></span>
+										left: <input type="number" name="edittxt" id="edittxt" max="999" min="999" />
 									</div>
 								</li>
 								<li id="moveright">
 									<div id="movediv">
-										right: <input type="text" name="edittxt" id="edittxt" maxlength="4" size="3" />&nbsp;<span id="errmsg" class="errorMsg"></span>
+										right: <<input type="number" name="edittxt" id="edittxt" max="999" min="999" />
 									</div>
 								</li>
 								<li id="moveup">
 									<div id="movediv">
-										up: <input type="text" name="edittxt" id="edittxt" maxlength="4" size="3" />&nbsp;<span id="errmsg" class="errorMsg"></span>
+										up: <input type="number" name="edittxt" id="edittxt" max="999" min="999" />
 									</div>
 								</li>
 								<li id="movedown">
 									<div id="movediv">
-										down: <input type="text" name="edittxt" id="edittxt" maxlength="4" size="3" />&nbsp;<span id="errmsg" class="errorMsg"></span>
+										down: <input type="number" name="edittxt" id="edittxt" max="999" min="999" />
 									</div>
 								</li>
 								<li id="moveloop">
@@ -87,17 +87,17 @@
 								</li>
 								<li id="moveloop">
 									<div id="movediv">
-										loop close: <input type="text" name="edittxt" id="edittxt" maxlength="4" size="3" />&nbsp;<span id="errmsg" class="errorMsg"></span>
+										loop close: <input type="number" name="edittxt" id="edittxt" max="999" min="999" />
 									</div>
 								</li>
 								<li id="movesetx">
 									<div id="movediv">
-										set x: <input type="text" name="edittxt" id="edittxt" maxlength="4" size="3" />&nbsp;<span id="errmsg" class="errorMsg"></span>
+										set x: <input type="number" name="edittxt" id="edittxt" max="999" min="999" />
 									</div>
 								</li>
 								<li id="movesety">
 									<div id="movediv">
-										set y: <input type="text" name="edittxt" id="edittxt" maxlength="4" size="3" />&nbsp;<span id="errmsg" class="errorMsg"></span>
+										set y: <input type="number" name="edittxt" id="edittxt" max="999" min="999" />
 									</div>
 								</li>
 							</ul>
