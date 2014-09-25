@@ -54,11 +54,31 @@
 			<div id="editordiv">
 				<div id="movecontainer">
 					<ul id="movelist">
-						<li id="moveleft">left</li>
-						<li id="moveright">right</li>
-						<li id="moveup">up</li>
-						<li id="movedown">down</li>
-						<li id="moveloop">loop</li>
+						<li id="moveleft">
+							<div id="movediv">
+								left
+							</div>
+						</li>
+						<li id="moveright">
+							<div id="movediv">
+								right
+							</div>
+						</li>
+						<li id="moveup">
+							<div id="movediv">
+								up
+							</div>
+						</li>
+						<li id="movedown">
+							<div id="movediv">
+								down
+							</div>
+						</li>
+						<li id="moveloop">
+							<div id="movediv">
+								loop
+							</div>
+						</li>
 					</ul>
 				</div>
 				EDITOR SPACE
