@@ -23,11 +23,17 @@
 }
 #editordiv
 {
-	background-color:#eeeeee;
-	height:800px;
-	width:250px;
-	float:left;
-	padding:5px; 
+	background-color:#dddddd;
+}
+#movelist li
+{
+	display:inline;
+	list-style-type: none;
+	padding: 5px;
+}
+#movecontainer
+{
+	
 }
 #playerdiv
 {
