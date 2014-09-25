@@ -8,7 +8,8 @@
 		<script src="<?php echo base_url(). "js/newUser.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/signin.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/logout.js" ?>"></script>
-	
+		<script src="<?php echo base_url(). "js/editordivui.js" ?>"></script>
+		
 		<title>Visual IDE Group 16</title>
 		
 		
@@ -53,60 +54,71 @@
 			</div>
 			<div id="editordiv">
 				<div id="movecontainer">
-					<ul id="movelist">
-						<li id="moveleft">
-							<div id="movediv">
-								left
-							</div>
-						</li>
-						<li id="moveright">
-							<div id="movediv">
-								right
-							</div>
-						</li>
-						<li id="moveup">
-							<div id="movediv">
-								up
-							</div>
-						</li>
-						<li id="movedown">
-							<div id="movediv">
-								down
-							</div>
-						</li>
-						<li id="moveloop">
-							<div id="movediv">
-								loop
-							</div>
-						</li>
-						<li id="movesetx">
-							<div id="movediv">
-								set x
-							</div>
-						</li>
-						<li id="movesety">
-							<div id="movediv">
-								set y
-							</div>
-						</li>
-						<li id="movechartoggle">
-							<div id="movediv">
-								toggle character
-							</div>
-						</li>
-						<li id="movebackground">
-							<div id="movediv">
-								change background
-							</div>
-						</li>
-						<li id="movechangechar">
-							<div id="movediv">
-								change char
-							</div>
-						</li>
-					</ul>
+					<h1 class="ui-widget-header">Commands</h1>
+					<div id="movelist">
+						<h2><a href="#">Moves</a></h2>
+						<div>
+							<ul>
+								<li id="moveleft">
+									<div id="movediv">
+										left
+									</div>
+								</li>
+								<li id="moveright">
+									<div id="movediv">
+										right
+									</div>
+								</li>
+								<li id="moveup">
+									<div id="movediv">
+										up
+									</div>
+								</li>
+								<li id="movedown">
+									<div id="movediv">
+										down
+									</div>
+								</li>
+								<li id="moveloop">
+									<div id="movediv">
+										loop
+									</div>
+								</li>
+								<li id="movesetx">
+									<div id="movediv">
+										set x
+									</div>
+								</li>
+								<li id="movesety">
+									<div id="movediv">
+										set y
+									</div>
+								</li>
+							</ul>
+						</div>
+						<h2><a href="#">Other commands</a></h2>
+						<div>
+							<ul>
+								<li id="movechartoggle">
+									<div id="movediv">
+										toggle character
+									</div>
+								</li>
+								<li id="movebackground">
+									<div id="movediv">
+										change background
+									</div>
+								</li>
+								<li id="movechangechar">
+									<div id="movediv">
+										change char
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
-				EDITOR SPACE<BR><BR><BR><BR>
+				EDITOR SPACE<BR>
 			</div>
 			<div id="playerdiv">
 				PLAYERSPACE
