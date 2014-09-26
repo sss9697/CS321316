@@ -1,5 +1,4 @@
-$(function()
-{
+
 	function logoutf()
 	{
 		$('#create-user').fadeIn(3000);
@@ -9,4 +8,3 @@ $(function()
 		$('#maindiv').fadeOut(3000);
 		//dirty check?? optional so depend on time
 	}
-});
