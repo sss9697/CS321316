@@ -1,6 +1,6 @@
 $(function()
 {
-	$("#logout-btn").button().on("click", function()
+	function logoutf()
 	{
 		$('#create-user').fadeIn(3000);
 		$('#validate-user').fadeIn(3000);
@@ -8,5 +8,5 @@ $(function()
 		$('#logout-btn').fadeOut(3000);
 		$('#maindiv').fadeOut(3000);
 		//dirty check?? optional so depend on time
-	});
+	}
 });
