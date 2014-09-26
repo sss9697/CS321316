@@ -51,10 +51,4 @@ $(function()
 			}
 		}
 	});
-	
-	$( "#clear-btn" ).button().on( "click", function() 
-	{
-		$("#editorspace ul").empty();
-		$( "<li class=\"placeholder\"></li>").text("drag command here").appendTo("#editorspace ul");
-	});
 });

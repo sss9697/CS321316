@@ -1,8 +1,12 @@
-
-	function processCommand(com)
+function processCommand(com)
+{
+	if( com === "logout")
 	{
-		if( com === "logout")
-		{
-			logoutf();
-		}
+		logoutf();
 	}
+	
+	if( com === "clear")
+	{
+		clearf();
+	}
+}

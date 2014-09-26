@@ -8,10 +8,13 @@
 		
 		<script src="<?php echo base_url(). "js/newUser.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/signin.js" ?>"></script>
-		<script src="<?php echo base_url(). "js/logout.js" ?>"></script>
-		<script src="<?php echo base_url(). "js/commandprocessor.js" ?>"></script>
-		<script src="<?php echo base_url(). "js/button.js" ?>"></script>		
+				
 		<script src="<?php echo base_url(). "js/editordivui.js" ?>"></script>
+		
+		<script src="<?php echo base_url(). "js/btnlogout.js" ?>"></script>
+		<script src="<?php echo base_url(). "js/btnclear.js" ?>"></script>
+		<script src="<?php echo base_url(). "js/commandprocessor.js" ?>"></script>
+		<script src="<?php echo base_url(). "js/button.js" ?>"></script>
 		
 		<title>Visual IDE Group 16</title>
 		
