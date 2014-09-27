@@ -11,4 +11,10 @@ $(function()
 	{
 		processCommand("clear");
 	});
+	
+	//compile button
+	$( "#compile-btn" ).button().on( "click", function() 
+	{
+		processCommand("compile");
+	});
 });

@@ -13,6 +13,7 @@
 		
 		<script src="<?php echo base_url(). "js/btnlogout.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/btnclear.js" ?>"></script>
+		<script src="<?php echo base_url(). "js/btncompile.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/commandprocessor.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/button.js" ?>"></script>
 		
