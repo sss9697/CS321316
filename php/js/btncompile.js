@@ -1,4 +1,5 @@
 function logoutf()
 {
-	alert("COMPILE BUTTON");
+	var numberofcommand = $("#droppable").children().length;
+	alert(numberofcommand);
 }
