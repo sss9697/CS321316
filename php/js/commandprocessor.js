@@ -9,4 +9,9 @@ function processCommand(com)
 	{
 		clearf();
 	}
+	
+	if( com === "compile")
+	{
+		compilef();
+	}
 }
