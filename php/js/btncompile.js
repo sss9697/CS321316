@@ -9,5 +9,5 @@ function compilef()
 	var test = $("#droppable").children().children().children().get(0).val();
 	var test2 = $("#droppable").children().children().get(0).text();
 	
-	alert("First command is: "test2 + " " + test+ " times");
+	alert("First command is: "+test2 + " " + test+ " times");
 }
