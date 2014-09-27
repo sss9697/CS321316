@@ -8,8 +8,9 @@ function compilef()
 	//after compile command, we will have an expand command function
 	//expand command will remove all loops and expand them into multiple instance of instructions
 	//Whether it should change up5 to up1 up1 up1 up1 up1 is still to be determined
+	//expand should also change left-5 to right5 or down-7 to up7
 	var numberofcommand = $("#droppable").children().length;
-	var test = $("#droppable > input").val();
+	var test = $("#droppable > li > div > input").val();
 	var test2 = $("#droppable > li").attr("id");
 	
 	alert("First command is: "+test2 + " " + test+ " times");
