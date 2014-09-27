@@ -13,9 +13,9 @@ function compilef()
 	var test = $("#droppable > li > div > input").val();
 	var test2 = $("#droppable > li").attr("id");
 	
-	var test3 = $("#droppable > li > div > input").eq(1).val();
+	var test3 = $("#droppable > li:eq(1) > div > input").val();
 	var test4 = $("#droppable > li").eq(1).attr("id");
 	
 	//alert("First command is: "+test2 + " " + test+ " times");
-	alert("Second command is: "+test3 + " " + test4+ " times");
+	alert("Second command is: "+test4 + " " + test3+ " times");
 }
