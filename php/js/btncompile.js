@@ -6,8 +6,8 @@ function compilef()
 	//similarly, the save button should call compilecommand then call its DB function to post.
 	
 	var numberofcommand = $("#droppable").children().length;
-	var test = $("#droppable").children().children().children().get(0).tagName;
-	var test2 = $("#droppable").children().children().get(0).innerHTML;
+	var test = $("#droppable").children().children().children().get(0).attr("value");
+	var test2 = $("#droppable").children().get(0).attr("id");
 	
 	alert("First command is: "+test2 + " " + test+ " times");
 }
