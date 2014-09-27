@@ -7,7 +7,7 @@ function compilef()
 	
 	var numberofcommand = $("#droppable").children().length;
 	var test = $("#droppable").children().children().children().get(0).tagName;
-	var test2 = $("#droppable").children().children().get(0).text();
+	var test2 = $("#droppable").children().children().get(0).tagName;
 	
 	alert("First command is: "+test2 + " " + test+ " times");
 }
