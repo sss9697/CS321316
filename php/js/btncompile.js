@@ -124,10 +124,13 @@ function expandCommand(input, start)
 			{
 				for( k = 0 ; k < temp.length; k++)
 				{
+					console.log("temp.length " + temp.length);
 					tempOutput[tempOutput.length] = temp[k];
 				}
 			}
 			tempOutput[tempOutput.length] = i;
+			console.log("i is " + i);
+			console.log("tempoutput is " + tempOutput);
 			return tempOutput;
 		}
 		else
