@@ -100,8 +100,9 @@ function expandCommand(input, start)
 	{
 		if(input[i].charAt(0) == "O")
 		{
+		console.log("entered o");
 			var temp2 = expandCommand(input, i + 1);
-			
+			console.log("temp2 returned");
 			for ( j = 0 ; j < temp2.length - 1 ; j++)
 			{
 				temp[temp.length] = temp2[j];
