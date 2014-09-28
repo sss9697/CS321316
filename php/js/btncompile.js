@@ -92,10 +92,49 @@ function validateCommand(input)
 }
 
 //remove the loop and expand out the commands
-function expandCommand()
+function expandCommand(input, start)
 {
+	var temp = [];
+	
+	for( i = start ; i < input.length ; i ++)
+	{
+		if(input[i].charAt(0) == "O")
+		{
+			var temp2 = expandCommand(input, i + 1);
+			
+			for ( j = 0 ; j < temp2.length - 1 ; j++)
+			{
+				temp[temp.length] = temp2[j];
+			}
+			
+			var newPosition = temp2[temp2.length - 1];
+			temp2.splice(-1);
+			i = newPosition;
+		}
+		
+		else if(input[i].charAt(0) == "C")
+		{
+			var newInput = input[i].splice(0,1);
+			var t = parseInt(newInput)
+			var tempOutput = [];
+			
+			for ( j = 0 ; j < t ; j++)
+			{
+				for( k = 0 ; k < temp.length; k++)
+				{
+					tempOutput[tempOutput.length] = temp[k];
+				}
+			}
+			tempOutput[tempOutput.length] = i;
+			return tempOutput;
+		}
+		else
+		{
+			temp[temp.length] = input[i];
+		}
+		return temp;
+	}
 }
-
 
 function compilef()
 {	
@@ -105,7 +144,11 @@ function compilef()
 	var check = validateCommand(command);
 	
 	if(check[0] == 0)
-		alert("OK Commands");
+	{
+		console.log("OK");
+		var expanded = expandCommand(command, 0);
+		console.log(expanded);
+	}
 	else if(check[0] == 1)
 		alert("Too much open brackets, remove one of them");
 	else if(check[0] == 2)
