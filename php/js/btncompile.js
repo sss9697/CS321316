@@ -111,5 +111,5 @@ function compilef()
 	else if(check[0] == 2)
 		alert("Too much close brackets, remove it at line number " + check[1]);
 	else
-		alert("Closed bracket before open brackets at line number " + checl[1]);
+		alert("Closed bracket before open brackets at line number " + check[1]);
 }
