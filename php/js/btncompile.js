@@ -69,5 +69,5 @@ function compilef()
 	//alert("Second command is: "+test4 + " " + test3+ " times");
 	
 	var command = compileCommand();
-	console.log(command.val());
+	console.log(command);
 }
