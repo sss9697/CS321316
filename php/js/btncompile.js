@@ -3,7 +3,7 @@ function compileCommand()
 	$('#droppable').children().each(function () 
 	{
 		var commandType = $(this).attr("id");
-		var numberTimes = $("#div > input").val();
+		var numberTimes = $(this).find("input").val();
 		console.log("command is: "+commandType + " " + numberTimes+ " times");
 	});
 }
