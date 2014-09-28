@@ -41,7 +41,7 @@ function compileCommand()
 		
 		compileString += numberTimes + ",";
 	});
-	compileString.slice(0,-1);
+	compileString = compileString.slice(0,-1);
 	return compileString;
 }
 
