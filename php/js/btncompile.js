@@ -79,16 +79,16 @@ function validateCommand(input)
 		
 		if(check < 0 && i < input.length -1)
 		{
-			return 3;
+			return [3, i+1];
 		}
 	}
 	
 	if(check > 0)
-		return 1;
+		return [1, 0];
 	else if(check < 0)
-		return 2;
+		return [2, input.length];
 	else
-		return 0;	
+		return [0,0];	
 }
 
 //remove the loop and expand out the commands
@@ -104,12 +104,12 @@ function compilef()
 	
 	var check = validateCommand(command);
 	
-	if(check == 0)
+	if(check[0] == 0)
 		alert("OK Commands");
-	else if(check == 1)
-		alert("Too much open brackets");
-	else if(check == 2)
-		alert("Too much close brackets");
+	else if(check[0] == 1)
+		alert("Too much open brackets, remove one of them");
+	else if(check[0] == 2)
+		alert("Too much close brackets, remove it at line number " + check[1]);
 	else
-		alert("Closed bracket before open brackets");
+		alert("Closed bracket before open brackets at line number " + checl[1]);
 }
