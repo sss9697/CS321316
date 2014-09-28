@@ -77,7 +77,7 @@ function validateCommand(input)
 			check -= 1;
 		}
 		
-		if(check < 0)
+		if(check < 0 && i < input.length -1)
 		{
 			return 3;
 		}
