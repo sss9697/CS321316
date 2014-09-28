@@ -114,7 +114,7 @@ function expandCommand(input, start)
 			console.log(i);
 		}
 		
-		else if(input[i].charAt(0) == "C")
+		if(input[i].charAt(0) == "C")
 		{
 		console.log("entered C");
 			var newInput = input[i].splice(0,1);
