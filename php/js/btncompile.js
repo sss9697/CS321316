@@ -1,4 +1,4 @@
-//change user input command into a set of string command, used for DB as well as processing
+//change user input command into an array
 function compileCommand()
 {
 	var commands = [];
@@ -46,10 +46,17 @@ function compileCommand()
 	return commands;
 }
 
-//convert string command into array (Might be optional)
+//convert array into string for DB Storage
 function convertCommand(input)
 {
-
+	var returnString = "";
+	
+	for(i = 0; i < input.length ; i++)
+	{
+		returnString += input[i] + " ";
+	}
+	
+	return returnString;
 }
 
 //validate user input command, the loops
@@ -73,5 +80,7 @@ function compilef()
 		console.log(command[i]);
 	}
 	
+	var r = convertCommand(command);
+	console.log(r);
 	//convertCommand(command);
 }
