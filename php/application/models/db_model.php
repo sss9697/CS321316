@@ -9,13 +9,13 @@ class db_model extends CI_Model
 	
 	public function insert_accountm($name, $email, $password)
 	{
-		$acc['name'] = $name;
-		$acc['email'] = $email;
-		$acc['password'] = $password;
-		$acc['curx'] = 0;
-		$acc['cury'] = 0;
-		$acc['costume'] = "default";
-		$acc['moveset'] = "";
+		$acc['Name'] = $name;
+		$acc['Email'] = $email;
+		$acc['Password'] = $password;
+		$acc['GoogleAcc'] = 0;
+		$acc['DefaultChar'] = "default";
+		$acc['DefaultBackground'] = "White";
+		$acc['DefaultCharState'] = "1";
 			
 		$this->db->insert('accounts', $acc);
 	}
