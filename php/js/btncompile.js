@@ -102,7 +102,7 @@ function expandCommand(input, start)
 		{
 		console.log("entered o");
 			var temp2 = expandCommand(input, i + 1);
-			console.log("temp2 returned");
+			console.log("temp2 returned with " + temp2);
 			for ( j = 0 ; j < temp2.length - 1 ; j++)
 			{
 				temp[temp.length] = temp2[j];
