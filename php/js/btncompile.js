@@ -40,9 +40,9 @@ function compileCommand()
 			default: compileString += "U";
 		}
 		
-		compileString += "numberTimes" + " ";
+		compileString += numberTimes + " ";
 		//console.log("command is: "+commandType + " " + numberTimes+ " times");
-		console.log(compileString);
+		return compileString;
 	});
 }
 
@@ -67,5 +67,6 @@ function compilef()
 	//alert("First command is: "+test2 + " " + test+ " times");
 	//alert("Second command is: "+test4 + " " + test3+ " times");
 	
-	compileCommand();
+	var command = compileCommand();
+	console.log(command);
 }
