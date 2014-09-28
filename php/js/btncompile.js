@@ -1,3 +1,13 @@
+function compileCommand()
+{
+	$('#droppable').children().each(function () 
+	{
+		var commandType = $(this).attr("id");
+		var numberTimes = $("#div > input").val();
+		console.log("command is: "+commandType + " " + numberTimes+ " times");
+	});
+}
+
 function compilef()
 {
 	//this following functions are just for testing
@@ -17,5 +27,7 @@ function compilef()
 	var test4 = $("#droppable > li").eq(1).attr("id");
 	
 	//alert("First command is: "+test2 + " " + test+ " times");
-	alert("Second command is: "+test4 + " " + test3+ " times");
+	//alert("Second command is: "+test4 + " " + test3+ " times");
+	
+	compileCommand();
 }
