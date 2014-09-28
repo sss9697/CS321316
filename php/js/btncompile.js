@@ -116,6 +116,7 @@ function expandCommand(input, start)
 		
 		else if(input[i].charAt(0) == "C")
 		{
+		console.log("entered C");
 			var newInput = input[i].splice(0,1);
 			var t = parseInt(newInput)
 			var tempOutput = [];
