@@ -96,7 +96,7 @@ function expandCommand(input, start)
 {
 	var temp = [];
 	
-	for( i = start ; i < input.length ; i ++)
+	for(var i = start ; i < input.length ; i ++)
 	{
 		if(input[i].charAt(0) == "O")
 		{
