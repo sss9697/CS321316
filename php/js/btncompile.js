@@ -41,6 +41,7 @@ function compileCommand()
 		
 		compileString += numberTimes + ",";
 	});
+	compileString.slice(0,-1);
 	return compileString;
 }
 
@@ -48,6 +49,8 @@ function compileCommand()
 function convertCommand(input)
 {
 	var jsonTemp = "["+input+"]";
+	
+	console.log("JSONTEMP: " + jsonTemp);
 	var output = JSON.parse(jsonTemp);
 	
 	console.log(output[0]);
