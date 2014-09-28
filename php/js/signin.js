@@ -81,7 +81,7 @@ $(function()
 					}
 					else
 					{
-						if(hash != account[0].password)
+						if(hash != account[0].Password)
 						{
 							document.getElementById("noAccoutLabel").style.display = "inline";
 						}
@@ -89,7 +89,7 @@ $(function()
 						{
 							//logged in, switch panel visibility
 							dialog.dialog( "close" );
-							document.getElementById('welcomelabel').innerHTML = 'Welcome '+ account[0].name;
+							document.getElementById('welcomelabel').innerHTML = 'Welcome '+ account[0].Name;
 							$('#create-user').fadeOut(3000);
 							$('#validate-user').fadeOut(3000);
 							$('#validate-google').fadeOut(3000);
