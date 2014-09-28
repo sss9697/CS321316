@@ -94,6 +94,7 @@ function validateCommand(input)
 //remove the loop and expand out the commands
 function expandCommand(input, start)
 {
+
 	var temp = [];
 	
 	for(var i = start ; i < input.length ; i ++)
@@ -101,7 +102,7 @@ function expandCommand(input, start)
 		if(input[i].charAt(0) == "O")
 		{
 		console.log("entered o");
-			var temp2 = expandCommand(input, i + 1);
+			var temp2 = expandCommand(this.input, i + 1);
 			console.log("temp2 returned with " + temp2);
 			for ( j = 0 ; j < temp2.length - 1 ; j++)
 			{
