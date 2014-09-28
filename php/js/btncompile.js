@@ -42,8 +42,9 @@ function compileCommand()
 		
 		compileString += numberTimes + " ";
 		//console.log("command is: "+commandType + " " + numberTimes+ " times");
-		return compileString;
 	});
+	console.log("CC: " + compileString);
+	return compileString;
 }
 
 function compilef()
@@ -68,5 +69,5 @@ function compilef()
 	//alert("Second command is: "+test4 + " " + test3+ " times");
 	
 	var command = compileCommand();
-	console.log(command);
+	console.log(command.val());
 }
