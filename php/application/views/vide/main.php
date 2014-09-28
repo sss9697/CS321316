@@ -86,12 +86,12 @@
 										down: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
 									</div>
 								</li>
-								<li id="moveloop" class="command">
+								<li id="moveloopo" class="command">
 									<div id="movediv">
 										loop open
 									</div>
 								</li>
-								<li id="moveloop" class="command">
+								<li id="moveloopc" class="command">
 									<div id="movediv">
 										loop close: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
 									</div>

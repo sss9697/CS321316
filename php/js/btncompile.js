@@ -1,10 +1,48 @@
 function compileCommand()
 {
+	//at this point of time, even if the moveset is invalid, we just compile it as this function may be used to save to DB.
+	//the validity check will be done at another part
+	var compileString = "";
 	$('#droppable').children().each(function () 
 	{
 		var commandType = $(this).attr("id");
 		var numberTimes = $(this).find("input").val();
-		console.log("command is: "+commandType + " " + numberTimes+ " times");
+		
+		if(typeof numberTimes === "undefined")
+		{
+			numberTimes = 0;
+		}
+		
+		switch(commandType)
+		{
+			case "moveleft": compileString += "L";
+				break;
+			case "moveright": compileString += "R";
+				break;
+			case "moveup": compileString += "U";
+				break;
+			case "movedown": compileString += "D";
+				break;
+			case "moveloopo": compileString += "O";
+				break;
+			case "moveloopc": compileString += "C";
+				break;
+			case "movesetx": compileString += "X";
+				break;
+			case "movesety": compileString += "Y";
+				break;
+			case "movechartoggle": compileString += "T";
+				break;
+			case "movebackground": compileString += "B";
+				break;
+			case "movechangechar": compileString += "A";
+				break;
+			default: compileString += "U";
+		}
+		
+		compileString += "numberTimes" + " ";
+		//console.log("command is: "+commandType + " " + numberTimes+ " times");
+		console.log(compileString);
 	});
 }
 
