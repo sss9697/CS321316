@@ -22,7 +22,7 @@ class db_model extends CI_Model
 	
 	public function get_accountm($email)
 	{
-		$this->db->where('email', $email);
+		$this->db->where('Email', $email);
 		
 		$query = $this->db->get('accounts');
 		
