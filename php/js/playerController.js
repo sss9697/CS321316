@@ -8,7 +8,7 @@ function movePlayer(move)
 	var times = parseInt(move.substring(1));
 	var curPosition = $("#sprite").position();
 	var newPosition;
-	
+	console.log(curPosition);
 	switch(move.charAt(0))
 	{
 		case "U":	newPosition = curPosition.top - (times * MULTIPLIER);
@@ -38,7 +38,7 @@ function executeCommand(moves)
 	{
 		if (moves[i].charAt(0) == "U" || moves[i].charAt(0) == "D" || moves[i].charAt(0) == "L" || moves[i].charAt(0) == "R")
 		{
-			setTimeout(movePlayer(moves[i]), 600);
+			setTimeout(movePlayer(moves[i]), 2000);
 		}
 		//the other 3 commands goes here
 	}
