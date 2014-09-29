@@ -161,7 +161,7 @@
 				 <img src= "<?php echo base_url(). "img/1.gif" ?> " height="50" width="50" id="sprite"> 
 			</div>
 			<div id="controldiv">
-				<button id="toggleGrid-btn" value="show">Toggle Grid</button>
+				<button id="toggleGrid-btn" value="show">Toggle Grid</button>&nbsp;&nbsp;&nbsp;<button id="toggleChar-btn" value="show">Toggle Character</button>&nbsp;&nbsp;&nbsp;<button id="changeDefaultChar-btn">Change default char</button>&nbsp;&nbsp;&nbsp;<button id="changeDefaultBackground-btn">Change default background</button>
 			</div>		
 		</div>
 	</head>
