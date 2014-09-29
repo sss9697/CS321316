@@ -1,6 +1,6 @@
 var MULTIPLIER = 50; //used to control how much each movement exactly is
-var BOTTOMBOUNDARY = 800;
-var RIGHTBOUNDARY = 800;
+var BOTTOMBOUNDARY = 800 - 50;//50 offset is for the width of the sprite itself
+var RIGHTBOUNDARY = 800 - 50;
 var TOPBOUNDARY = 0;
 var LEFTBOUNDARY = 0;
 
