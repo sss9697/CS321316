@@ -19,4 +19,9 @@ function processCommand(com)
 	{
 		savef();
 	}
+	
+	if(com === "saveok")
+	{
+		saveok();
+	}
 }

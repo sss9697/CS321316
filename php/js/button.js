@@ -23,4 +23,9 @@ $(function()
 		processCommand("save");
 	});
 	
+	$( "#save-ok-btn" ).button().on( "click", function() 
+	{
+		processCommand("saveok");
+	});
+	
 });

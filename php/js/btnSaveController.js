@@ -37,14 +37,33 @@ function saveMove(moveset)
 	});
 }
 
+function saveok()
+{
+	if ($("#savename").val().length > 0) 
+	{
+		$("saveDivErr").hide();
+		alert("SAVENAME: " + $("#savename").val());
+	}
+	else
+	{
+		$("saveDivErr").show();
+	}
+}
+
 function savef()
 {
 	var commands = compileCommand();
 	var saveString = convertCommand(commands);
 	
-	$('#saveDiv').fadeIn(500);
+	if(saveString.charAt(0) == "E")
+	{
+		alert("Move list is empty");
+		$('#saveDiv').hide();
+	}
+	else
+	{
+		$('#saveDiv').fadeIn(500);
+	}
 	//alert(uID);
 	//console.log(saveString);
-	
-	
 }

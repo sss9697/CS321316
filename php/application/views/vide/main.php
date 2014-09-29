@@ -142,7 +142,7 @@
 				<div id="editorcontrol" align="center">
 					<div id="saveDiv" style="display: none;">
 						<label>Save Name:</label><input type="text" placeholder="esc to hide me" id="savename"></input><button id="save-ok-btn">Save</button>
-
+						<label style="display: none;" color="red" id="saveDivErr">Save name cannot be empty</input>
 					</div>
 					<button id="save-btn">Save</button>&nbsp;&nbsp;&nbsp;<button id="load-btn">Load</button>&nbsp;&nbsp;&nbsp;<button id="clear-btn">Clear</button>&nbsp;&nbsp;&nbsp;<button id="compile-btn">Compile</button>
 				</div>
