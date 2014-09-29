@@ -30,4 +30,13 @@ class db_model extends CI_Model
 		
 		return $results;
 	}
+	
+	public function insert_movem($PID, $Name, $Moveset)
+	{
+		$acc['PID'] = $PID;
+		$acc['Name'] = $Name;
+		$acc['Moveset'] = $Moveset;
+			
+		$this->db->insert('saves', $acc);
+	}
 }

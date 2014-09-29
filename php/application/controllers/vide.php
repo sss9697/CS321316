@@ -46,6 +46,12 @@ class Vide extends CI_Controller
 	
 	public function insert_move()
 	{
-	
+		if ($this->input->post("Name") != "")
+		{
+			$this->db_model->insert_movem(	$this->input->post('PID'),
+												$this->input->post('Name'),
+												$this->input->post('Moveset')
+											);
+		}
 	}
 }
