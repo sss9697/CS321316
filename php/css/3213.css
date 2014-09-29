@@ -59,6 +59,10 @@ body
 	width:250px;
 	height:370px;
 }
+#saveDirErr
+{
+	color:red;
+}
 #playerdiv
 {
 	width:550px;

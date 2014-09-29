@@ -42,11 +42,13 @@ function saveok()
 	if ($("#savename").val().length > 0) 
 	{
 		$("#saveDivErr").hide();
+		$("#savebr").hide();
 		alert("SAVENAME: " + $("#savename").val());
 	}
 	else
 	{
 		$("#saveDivErr").show();
+		$("#savebr").show();
 		console.log("EMPTYU");
 	}
 }
