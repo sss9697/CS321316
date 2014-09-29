@@ -96,13 +96,14 @@ function expandCommand(input, start)
 {
 
 	var temp = [];
-	
+	console.log("input: " + input);
+	console.log("temp: " + temp);
 	for(var i = start ; i < input.length ; i ++)
 	{
 		if(input[i].charAt(0) == "O")
 		{
 		console.log("entered o");
-			var temp2 = expandCommand(this.input, i + 1);
+			var temp2 = expandCommand(input, i + 1); //input on this line has error
 			console.log("temp2 returned with " + temp2);
 			for ( j = 0 ; j < temp2.length - 1 ; j++)
 			{
