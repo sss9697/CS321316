@@ -1,10 +1,10 @@
 $(function() 
 {
-	var dialog, form,
+	var dialog, form, commands
 	name = $( "#name" ),
 	allFields = $( [] ).add( name ),
 	tips = $( ".validateTips" );
-
+	
 	function updateTips( t ) 
 	{
 		tips
@@ -78,12 +78,12 @@ $(function()
 	dialog = $( "#save-form" ).dialog(
 	{
 		autoOpen: false,
-		height: 400,
+		height: 250,
 		width: 550,
 		modal: true,
 		buttons: 
 		{
-			"Create an account": saveMove,
+			"Save moves": saveMove,
 			Cancel: function() 
 			{
 				dialog.dialog( "close" );
@@ -101,13 +101,10 @@ $(function()
 		event.preventDefault();
 		saveMove();
 	});
-	function savef2()
-	{
+	$( "#save-btn" ).button().on( "click", function() 
+	{	
+		commands = compileCommand();
+		console.log(commands);
 		dialog.dialog( "open" );
-	}
+	});
 });
-
-function savef()
-{
-	savef2();
-}

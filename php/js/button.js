@@ -18,9 +18,4 @@ $(function()
 		processCommand("compile");
 	});
 	
-	//save button
-	$( "#save-btn" ).button().on( "click", function() 
-	{
-		processCommand("save");
-	});
 });

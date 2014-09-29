@@ -14,9 +14,4 @@ function processCommand(com)
 	{
 		compilef();
 	}
-	
-	if(com === "save")
-	{
-		savef();
-	}
 }

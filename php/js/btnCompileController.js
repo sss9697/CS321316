@@ -37,7 +37,7 @@ function compileCommand()
 				break;
 			case "movechangechar": compileString += "A";
 				break;
-			default: compileString += "U";
+			default: compileString += "E";
 		}
 		
 		compileString += numberTimes;
