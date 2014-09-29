@@ -112,15 +112,15 @@ function expandCommand(input, start)
 			}
 			
 			var newPosition = temp2[temp2.length - 1];
-			temp2.splice(-1);
+			temp2 = temp2.splice(-1);
 			i = newPosition;
 			console.log(i);
 		}
 		
 		if(input[i].charAt(0) == "C")
 		{
-		console.log("entered C");
-			var newInput = input[i].splice(0,1);
+			console.log("entered C");
+			var newInput = input[i].substring(1);
 			var t = parseInt(newInput)
 			var tempOutput = [];
 			
