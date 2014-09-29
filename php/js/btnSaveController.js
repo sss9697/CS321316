@@ -41,12 +41,13 @@ function saveok()
 {
 	if ($("#savename").val().length > 0) 
 	{
-		$("saveDivErr").hide();
+		$("#saveDivErr").hide();
 		alert("SAVENAME: " + $("#savename").val());
 	}
 	else
 	{
-		$("saveDivErr").show();
+		$("#saveDivErr").show();
+		console.log("EMPTYU");
 	}
 }
 
