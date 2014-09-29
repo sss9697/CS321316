@@ -12,6 +12,7 @@ function movePlayer(move)
 			break;
 			
 		case "D": 	var newDown = curPosition.top + (times * MULTIPLIER);
+					console.log(newDown);
 					$("#sprite").animate({top:'250px'});
 			break;
 			
