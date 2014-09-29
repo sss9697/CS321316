@@ -16,7 +16,7 @@
 		<script src="<?php echo base_url(). "js/btnCompileController.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/btnSaveController.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/commandprocessor.js" ?>"></script>
-		<script src="<?php echo base_url(). "js/button.js" ?>"></script>
+		<script src="<?php echo base_url(). "js/events.js" ?>"></script>
 		
 		<title>Visual IDE Group 16</title>
 		

@@ -18,15 +18,21 @@ $(function()
 		processCommand("compile");
 	});
 	
+	//save button
 	$( "#save-btn" ).button().on( "click", function() 
 	{
 		processCommand("save");
 	});
 	
+	//save button after name entering
 	$( "#save-ok-btn" ).button().on( "click", function() 
 	{
 		processCommand("saveok");
 	});
 	
-	
+	//load dropdown list changed event
+	$("#loadList").on('change', function() 
+	{
+		processCommand("load", this.value);
+	});
 });

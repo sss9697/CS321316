@@ -1,4 +1,4 @@
-function processCommand(com)
+function processCommand(com, param)
 {
 	if( com === "logout")
 	{
@@ -25,4 +25,8 @@ function processCommand(com)
 		saveok();
 	}
 	
+	if(com === "load")
+	{
+		alert(param);
+	}
 }
