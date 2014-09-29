@@ -1,6 +1,8 @@
 var MULTIPLIER = 50; //used to control how much each movement exactly is
-var BOTTOMBOUNDARY;
-var RIGHTBOUNDARY;
+var BOTTOMBOUNDARY = 800;
+var RIGHTBOUNDARY = 800;
+var TOPBOUNDARY = 0;
+var LEFTBOUNDARY = 0;
 
 //control movement of player, because all instructions will be ran before the animation even completes
 //it results in the base position to be a constant 0,0 if we were to use sprite.position(). Thus, we will
@@ -15,18 +17,34 @@ function movePlayer(move, x, y)
 	switch(move.charAt(0))
 	{
 		case "U":	newY = y - (times * MULTIPLIER);
+		
+					if(newY < TOPBOUNDARY)
+						newY = TOPBOUNDARY;
+						
 					$("#sprite").animate({top:newY});
 			break;
 			
 		case "D": 	newY = y + (times * MULTIPLIER);
+		
+					if(newY > BOTTOMBOUNDARY)
+						newY = BOTTOMBOUNDARY;
+		
 					$("#sprite").animate({top:newY});
 			break;
 			
 		case "L":	newX = x - (times * MULTIPLIER);
+		
+					if(newX < LEFTBOUNDARY)
+						newX = LEFTBOUNDARY;
+		
 					$("#sprite").animate({left:newX});
 			break;
 			
 		case "R":	newX = x + (times * MULTIPLIER);
+		
+					if(newX > RIGHTBOUNDARY)
+						newX = RIGHTBOUNDARY;
+						
 					$("#sprite").animate({left:newX});
 			break;
 	}
