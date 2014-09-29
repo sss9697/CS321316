@@ -9,11 +9,11 @@
 		<script src="<?php echo base_url(). "js/newUser.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/signin.js" ?>"></script>
 				
-		<script src="<?php echo base_url(). "js/editordivui.js" ?>"></script>
+		<script src="<?php echo base_url(). "js/editorView.js" ?>"></script>
 		
-		<script src="<?php echo base_url(). "js/btnlogout.js" ?>"></script>
-		<script src="<?php echo base_url(). "js/btnclear.js" ?>"></script>
-		<script src="<?php echo base_url(). "js/btncompile.js" ?>"></script>
+		<script src="<?php echo base_url(). "js/btnLogoutController.js" ?>"></script>
+		<script src="<?php echo base_url(). "js/btnClearController.js" ?>"></script>
+		<script src="<?php echo base_url(). "js/btnCompileController.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/commandprocessor.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/button.js" ?>"></script>
 		
