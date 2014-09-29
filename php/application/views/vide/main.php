@@ -53,6 +53,18 @@
 			</form>
 		</div>
 		
+		<div id="save-form" title="Enter a save name">
+			<p class="validateTips">Name field cannot be empty.</p>
+			<form>
+				<fieldset>
+					<label for="name">Name: </label>
+					<input type="text" name="name" id="name" value="" class="text ui-widget-content ui-corner-all"><br>
+					<!-- Allow form submission with keyboard without duplicating the dialog button -->
+					<input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+				</fieldset>
+			</form>
+		</div>
+		
 		<button id="create-user">New user</button> <button id="validate-user">Sign in</button> <button id="validate-google">Google Sign in</button>
 		<button id="logout-btn" type="button">Logout</button>
 		

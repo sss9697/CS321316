@@ -43,4 +43,9 @@ class Vide extends CI_Controller
 			echo json_encode($query);
 		}
 	}
+	
+	public function insert_move()
+	{
+	
+	}
 }
