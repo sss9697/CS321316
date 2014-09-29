@@ -83,7 +83,7 @@ $(function()
 		modal: true,
 		buttons: 
 		{
-			"Create an account": addUser,
+			"Create an account": saveMove,
 			Cancel: function() 
 			{
 				dialog.dialog( "close" );
