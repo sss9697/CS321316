@@ -65,6 +65,7 @@ body
 }
 #playerdiv
 {
+	position: relative;
 	left: 350px;
 	width:550px;
 	height:800px;
