@@ -1,4 +1,5 @@
 function loadf(moves)
 {
-	alert(moves);
+	var movearray = moves.split(" ");
+	alert(movearray);
 }
