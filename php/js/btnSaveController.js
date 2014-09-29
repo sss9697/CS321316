@@ -18,17 +18,19 @@ function convertCommand(input)
 	return returnString;
 }
 
-function saveMove(moveset)
+function saveMove()
 {
+	var commands = compileCommand();
+	var saveString = convertCommand(commands);
 	$.ajax(
 	{
 		url : "https://php-cs321316.rhcloud.com/index.php/vide/insert_move",
 		type : 'POST',
 		datatype : "json",
-		data : {"ID":uID, "moveset":moveset},
+		data : {"PID":uID, "Name":$("#savename").val(), "Moveset":saveString},
 		success : function()
 		{
-			alert("Account created!!");
+			alert($("#savename").val()+ " Saved");
 		},
 		error : function(jqXHR, textStatus, errorThrown)
 		{
@@ -41,8 +43,8 @@ function saveok()
 {
 	if ($("#savename").val().length > 0) 
 	{
-		alert("SAVENAME: " + $("#savename").val());
 		$('#saveDiv').hide();
+		saveMove();
 	}
 	else
 	{
