@@ -54,4 +54,15 @@ class Vide extends CI_Controller
 											);
 		}
 	}
+	
+	public function get_move()
+	{
+		if ($this->input->post("PID") != "")
+		{
+			$query = $this->db_model->get_movem(	$this->input->post('PID') );
+
+			header('Content-Type: application/json');
+			echo json_encode($query);
+		}
+	}
 }
