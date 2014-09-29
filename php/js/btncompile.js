@@ -141,8 +141,9 @@ function expandCommand(input, start)
 		{
 			temp[temp.length] = input[i];
 		}
-		return temp;
+		
 	}
+	return temp;
 }
 
 function compilef()
