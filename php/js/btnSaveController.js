@@ -35,9 +35,9 @@ function savef()
 	var commands = compileCommand();
 	var saveString = convertCommand(commands);
 	
-	
-	alert(uID);
-	console.log(saveString);
+	$('#saveDiv').fadeIn(500);
+	//alert(uID);
+	//console.log(saveString);
 	
 	
 }
