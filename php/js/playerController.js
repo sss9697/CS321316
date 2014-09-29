@@ -13,19 +13,19 @@ function movePlayer(move, x, y)
 	switch(move.charAt(0))
 	{
 		case "U":	newY = y - (times * MULTIPLIER);
-					$("#sprite").animate({top:newPosition});
+					$("#sprite").animate({top:y});
 			break;
 			
 		case "D": 	newY = y + (times * MULTIPLIER);
-					$("#sprite").animate({top:newPosition});
+					$("#sprite").animate({top:y});
 			break;
 			
 		case "L":	newX = x - (times * MULTIPLIER);
-					$("#sprite").animate({left:newPosition});
+					$("#sprite").animate({left:x});
 			break;
 			
 		case "R":	newX = x + (times * MULTIPLIER);
-					$("#sprite").animate({left:newPosition});
+					$("#sprite").animate({left:x});
 			break;
 	}
 	
