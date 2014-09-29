@@ -41,15 +41,12 @@ function saveok()
 {
 	if ($("#savename").val().length > 0) 
 	{
-		$("#saveDivErr").hide();
-		$("#savebr").hide();
-		$('#saveDiv').hide();
 		alert("SAVENAME: " + $("#savename").val());
+		$('#saveDiv').hide();
 	}
 	else
 	{
-		$("#saveDivErr").show();
-		$("#savebr").show();
+		alert("A name is required to save");
 	}
 }
 
