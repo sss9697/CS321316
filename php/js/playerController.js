@@ -5,6 +5,8 @@ var RIGHTBOUNDARY;
 //control movement of player, using only left and top
 function movePlayer(move)
 {
+	while( $("#sprite").is(':animated') )
+	{}
 	var times = parseInt(move.substring(1));
 	var curPosition = $("#sprite").position();
 	var newPosition;
@@ -12,31 +14,19 @@ function movePlayer(move)
 	switch(move.charAt(0))
 	{
 		case "U":	newPosition = curPosition.top - (times * MULTIPLIER);
-					$("#sprite").animate({top:newPosition}, function()
-					{
-						$("#sprite").css({top:newPosition});
-					});
+					$("#sprite").animate({top:newPosition});
 			break;
 			
 		case "D": 	newPosition = curPosition.top + (times * MULTIPLIER);
-					$("#sprite").animate({top:newPosition}, function()
-					{
-						$("#sprite").css({top:newPosition});
-					});
+					$("#sprite").animate({top:newPosition});
 			break;
 			
 		case "L":	newPosition = curPosition.left - (times * MULTIPLIER);
-					$("#sprite").animate({left:newPosition}, function()
-					{
-						$("#sprite").css({left:newPosition});
-					});
+					$("#sprite").animate({left:newPosition});
 			break;
 			
 		case "R":	newPosition = curPosition.left + (times * MULTIPLIER);
-					$("#sprite").animate({left:newPosition}, function()
-					{
-						$("#sprite").css({left:newPosition});
-					});
+					$("#sprite").animate({left:newPosition});
 			break;
 	}
 }
@@ -44,17 +34,14 @@ function movePlayer(move)
 //depend on command, pass on to the correct function, note: at this point, there will be no more loops
 function executeCommand(moves)
 {
-	$("#sprite").animate({left:'0px', top:'0px'}, 'fast', function()
-	{
-		$("#sprite").css({top: 0, left: 0});
+	$("#sprite").css({top: 0, left: 0});
 	
-		for(i = 0 ; i < moves.length ; i++)
+	for(i = 0 ; i < moves.length ; i++)
+	{
+		if (moves[i].charAt(0) == "U" || moves[i].charAt(0) == "D" || moves[i].charAt(0) == "L" || moves[i].charAt(0) == "R")
 		{
-			if (moves[i].charAt(0) == "U" || moves[i].charAt(0) == "D" || moves[i].charAt(0) == "L" || moves[i].charAt(0) == "R")
-			{
-				movePlayer(moves[i]);
-			}
-			//the other 3 commands goes here
+			movePlayer(moves[i]);
 		}
-	});
+		//the other 3 commands goes here
+	}
 }
