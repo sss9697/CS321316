@@ -1,0 +1,4 @@
+function savef()
+{
+	alert(uID);
+}
