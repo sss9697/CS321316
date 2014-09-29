@@ -18,28 +18,6 @@ function convertCommand(input)
 	return returnString;
 }
 
-function updateList()
-{
-	$.ajax(
-	{
-		url : "https://php-cs321316.rhcloud.com/index.php/vide/get_move",
-		type : 'POST',
-		datatype : "json",
-		data : {"PID":uID},
-		success : function(moves)
-		{
-			for( v = 0 ; v < moves.length ; v ++)
-			{
-				$("#loadList").append($('<option>').text(moves[v].Name).attr('value', moves[v].Moveset));
-			}
-		},
-		error : function(jqXHR, textStatus, errorThrown)
-		{
-			alert(textStatus + " " + errorThrown + " " + jqXHR);
-		}
-	});
-}
-
 function saveMove()
 {
 	var commands = compileCommand();
@@ -53,7 +31,7 @@ function saveMove()
 		success : function()
 		{
 			alert($("#savename").val()+ " Saved");
-			updateList();
+			$("#loadList").append($('<option>').text($("#savename").val()).attr('value', saveString));
 		},
 		error : function(jqXHR, textStatus, errorThrown)
 		{
