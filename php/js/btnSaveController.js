@@ -1,110 +1,43 @@
-$(function() 
+//convert array into string for DB Storage
+function convertCommand(input)
 {
-	var dialog, form, commands
-	name = $( "#name" ),
-	allFields = $( [] ).add( name ),
-	tips = $( ".validateTips" );
+	var returnString = "";
 	
-	function updateTips( t ) 
+	for(i = 0; i < input.length ; i++)
 	{
-		tips
-		.text( t )
-		.addClass( "ui-state-highlight" );
-		setTimeout(function() 
-			{
-			tips.removeClass( "ui-state-highlight", 1500 );
-			}, 500 );
+		returnString += input[i] + " ";
 	}
 	
-	function checkLength( o, n, min, max ) 
+	return returnString;
+}
+
+function saveMove(moveset)
+{
+	$.ajax(
 	{
-		if ( o.val().length > max || o.val().length < min ) 
+		url : "https://php-cs321316.rhcloud.com/index.php/vide/insert_move",
+		type : 'POST',
+		datatype : "json",
+		data : {"ID":uID, "moveset":moveset},
+		success : function()
 		{
-			o.addClass( "ui-state-error" );
-			updateTips( "Length of " + n + " must be between " +
-			min + " and " + max + "." );
-			return false;
-		} 
-		else 
-		{
-			return true;
-		}
-	}
-	
-	function checkRegexp( o, regexp, n ) 
-	{
-		if ( !( regexp.test( o.val() ) ) ) 
-		{
-			o.addClass( "ui-state-error" );
-			updateTips( n );
-			return false;
-		} 
-		else 
-		{
-			return true;
-		}
-	}
-	
-	function saveMove() 
-	{
-		var valid = true;
-		allFields.removeClass( "ui-state-error" );
-		valid = valid && checkLength( name, "username", 3, 16 );
-		valid = valid && checkRegexp( name, /^[a-z]([0-9a-z_\s])+$/i, "Username may consist of a-z, 0-9, underscores, spaces and must begin with a letter." );
-		if ( valid ) 
-		{			
-			//Insert to DB here
-			$.ajax(
-			{
-				url : "https://php-cs321316.rhcloud.com/index.php/vide/insert_account",
-				type : 'POST',
-				datatype : "json",
-				data : {"name":name.val(), "email":email.val(), "password":hash},
-				success : function()
-				{
-					alert("Account created!!");
-				},
-				error : function(jqXHR, textStatus, errorThrown)
-				{
-					alert(textStatus + " " + errorThrown + " " + jqXHR);
-				}
-			});
-			
-			dialog.dialog( "close" );
-		}
-		return valid;
-	}
-	
-	dialog = $( "#save-form" ).dialog(
-	{
-		autoOpen: false,
-		height: 250,
-		width: 550,
-		modal: true,
-		buttons: 
-		{
-			"Save moves": saveMove,
-			Cancel: function() 
-			{
-				dialog.dialog( "close" );
-			}
+			alert("Account created!!");
 		},
-		close: function() 
+		error : function(jqXHR, textStatus, errorThrown)
 		{
-			form[ 0 ].reset();
-			allFields.removeClass( "ui-state-error" );
+			alert(textStatus + " " + errorThrown + " " + jqXHR);
 		}
 	});
+}
+
+function savef()
+{
+	var commands = compileCommand();
+	var saveString = convertCommand(commands);
 	
-	form = dialog.find( "form" ).on( "submit", function( event ) 
-	{
-		event.preventDefault();
-		saveMove();
-	});
-	$( "#save-btn" ).button().on( "click", function() 
-	{	
-		commands = compileCommand();
-		console.log(commands);
-		dialog.dialog( "open" );
-	});
-});
+	
+	alert(uID);
+	console.log(saveString);
+	
+	
+}
