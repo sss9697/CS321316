@@ -72,6 +72,7 @@ body
 	background: #cccccc;
 	float: left;
 	text-align: left;
+	background-image: url('../img/grid.png');
 }
 #sprite
 {
