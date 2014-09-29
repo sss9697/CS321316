@@ -46,19 +46,6 @@ function compileCommand()
 	return commands;
 }
 
-//convert array into string for DB Storage
-function convertCommand(input)
-{
-	var returnString = "";
-	
-	for(i = 0; i < input.length ; i++)
-	{
-		returnString += input[i] + " ";
-	}
-	
-	return returnString;
-}
-
 //validate user input command, the loops, if OPEN, check +1, if close Check -1, at the end must be 0
 //At anytime if check <0, return error
 //0 = ok, 1 = too much open, 2 = too much close, 3 = close before open
