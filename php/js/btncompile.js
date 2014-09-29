@@ -100,9 +100,10 @@ function expandCommand(input, start)
 	console.log("temp: " + temp);
 	for(var i = start ; i < input.length ; i ++)
 	{
+	console.log("input[i]: " + input[i]);
 		if(input[i].charAt(0) == "O")
 		{
-		console.log("entered o");
+			console.log("entered o");
 			var temp2 = expandCommand(input, i + 1); //input on this line has error
 			console.log("temp2 returned with " + temp2);
 			for ( j = 0 ; j < temp2.length - 1 ; j++)
