@@ -92,20 +92,19 @@ function validateCommand(input)
 }
 
 //remove the loop and expand out the commands
+//this is a recursive function that will open a new instance of itself everytime a loop open is found
+//the new instance will then add its own set of commands into its own output
+//on loop close, the function will loop through and expand the array, once return
+//the loop open function will carry on and add what is returned into its original array, as well as forwarding its i value to the latest
 function expandCommand(input, start)
 {
 
 	var temp = [];
-	console.log("input: " + input);
-	console.log("temp: " + temp);
 	for(i = start ; i < input.length ; i ++)
 	{
-	console.log("input[i]: " + input[i]);
 		if(input[i].charAt(0) == "O")
 		{
-			console.log("entered o");
-			var temp2 = expandCommand(input, i + 1); //input on this line has error
-			console.log("temp2 returned with " + temp2);
+			var temp2 = expandCommand(input, i + 1); 
 			for ( j = 0 ; j < temp2.length - 1 ; j++)
 			{
 				temp[temp.length] = temp2[j];
@@ -114,12 +113,10 @@ function expandCommand(input, start)
 			var newPosition = temp2[temp2.length - 1];
 			temp2.splice(-1);
 			i = newPosition;
-			console.log(i);
 		}
 		
 		else if(input[i].charAt(0) == "C")
 		{
-			console.log("entered C");
 			var newInput = input[i].substring(1);
 			var t = parseInt(newInput)
 			var tempOutput = [];
@@ -128,13 +125,10 @@ function expandCommand(input, start)
 			{
 				for( k = 0 ; k < temp.length; k++)
 				{
-					console.log("temp.length " + temp.length);
 					tempOutput[tempOutput.length] = temp[k];
 				}
 			}
 			tempOutput[tempOutput.length] = i;
-			console.log("i is " + i);
-			console.log("tempoutput is " + tempOutput);
 			return tempOutput;
 		}
 		else
@@ -153,16 +147,22 @@ function compilef()
 	
 	var check = validateCommand(command);
 	
-	if(check[0] == 0)
+	if(check[0] == 1)
 	{
-		console.log("OK");
+		alert("Too much open brackets, remove one of them");
+	}
+	else if(check[0] == 2)
+	{
+		alert("Too much close brackets, remove it at line number " + check[1]);
+	}
+	else if (check[0] == 3)
+	{
+		alert("Closed bracket before open brackets at line number " + check[1]);
+	}
+	else
+	{
 		var expanded = expandCommand(command, 0);
 		console.log(expanded);
+		alert(expanded);
 	}
-	else if(check[0] == 1)
-		alert("Too much open brackets, remove one of them");
-	else if(check[0] == 2)
-		alert("Too much close brackets, remove it at line number " + check[1]);
-	else
-		alert("Closed bracket before open brackets at line number " + check[1]);
 }
