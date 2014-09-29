@@ -13,18 +13,22 @@ function movePlayer(move)
 	{
 		case "U":	newPosition = curPosition.top - (times * MULTIPLIER);
 					$("#sprite").animate({top:newPosition});
+					$("#sprite").css({top:newPosition});
 			break;
 			
 		case "D": 	newPosition = curPosition.top + (times * MULTIPLIER);
 					$("#sprite").animate({top:newPosition});
+					$("#sprite").css({top:newPosition});
 			break;
 			
 		case "L":	newPosition = curPosition.left + (times * MULTIPLIER);
 					$("#sprite").animate({left:newPosition});
+					$("#sprite").css({left:newPosition});
 			break;
 			
 		case "R":	newPosition = curPosition.left - (times * MULTIPLIER);
 					$("#sprite").animate({left:newPosition});
+					$("#sprite").css({left:newPosition});
 			break;
 	}
 }
