@@ -98,7 +98,7 @@ function expandCommand(input, start)
 	var temp = [];
 	console.log("input: " + input);
 	console.log("temp: " + temp);
-	for(var i = start ; i < input.length ; i ++)
+	for(i = start ; i < input.length ; i ++)
 	{
 	console.log("input[i]: " + input[i]);
 		if(input[i].charAt(0) == "O")
@@ -114,6 +114,7 @@ function expandCommand(input, start)
 			var newPosition = temp2[temp2.length - 1];
 			temp2.splice(-1);
 			i = newPosition;
+			i += 1;
 			console.log(i);
 		}
 		
