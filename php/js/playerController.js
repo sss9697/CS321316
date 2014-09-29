@@ -3,7 +3,7 @@ var MULTIPLIER = 50; //used to control how much each movement exactly is
 //control movement of player, using only left and top
 function movePlayer(move)
 {
-	var times = parseInt(input[i].substring(1));
+	var times = parseInt(move.substring(1));
 	var curPosition = $("#sprite").position();
 	
 	switch(move.charAt(0))
