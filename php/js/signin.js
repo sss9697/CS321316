@@ -1,5 +1,4 @@
 var uID;
-var moveset;
 $(function() 
 {
 	var dialog, form,
@@ -59,7 +58,10 @@ $(function()
 				data : {"PID":uID},
 				success : function(moves)
 				{
-					console.log(moves);
+					for( v = 0 ; v < moves.length ; v ++)
+					{
+						("#loadList").append($('<option>').text(moves[v].Name).attr('value', moves[v].Moveset));
+					}
 				},
 				error : function(jqXHR, textStatus, errorThrown)
 				{
