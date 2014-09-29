@@ -60,7 +60,7 @@ $(function()
 				{
 					for( v = 0 ; v < moves.length ; v ++)
 					{
-						("#loadList").append($('<option>').text(moves[v].Name).attr('value', moves[v].Moveset));
+						$("#loadList").append($('<option>').text(moves[v].Name).attr('value', moves[v].Moveset));
 					}
 				},
 				error : function(jqXHR, textStatus, errorThrown)
