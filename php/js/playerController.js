@@ -12,23 +12,31 @@ function movePlayer(move)
 	switch(move.charAt(0))
 	{
 		case "U":	newPosition = curPosition.top - (times * MULTIPLIER);
-					$("#sprite").animate({top:newPosition});
-					$("#sprite").css({top:newPosition, left:curPosition.left});
+					$("#sprite").animate({top:newPosition}, function()
+					{
+						$("#sprite").css({top:newPosition});
+					});
 			break;
 			
 		case "D": 	newPosition = curPosition.top + (times * MULTIPLIER);
-					$("#sprite").animate({top:newPosition});
-					$("#sprite").css({top:newPosition, left:curPosition.left});
+					$("#sprite").animate({top:newPosition}, function()
+					{
+						$("#sprite").css({top:newPosition});
+					});
 			break;
 			
 		case "L":	newPosition = curPosition.left - (times * MULTIPLIER);
-					$("#sprite").animate({left:newPosition});
-					$("#sprite").css({top:curPosition.top, left:newPosition});
+					$("#sprite").animate({left:newPosition}, function()
+					{
+						$("#sprite").css({left:newPosition});
+					});
 			break;
 			
 		case "R":	newPosition = curPosition.left + (times * MULTIPLIER);
-					$("#sprite").animate({left:newPosition});
-					$("#sprite").css({top:curPosition.top, left:newPosition});
+					$("#sprite").animate({left:newPosition}, function()
+					{
+						$("#sprite").css({left:newPosition});
+					});
 			break;
 	}
 }
@@ -36,9 +44,10 @@ function movePlayer(move)
 //depend on command, pass on to the correct function, note: at this point, there will be no more loops
 function executeCommand(moves)
 {
-	//$("#sprite").animate({left:'0px'}, 'fast');
-	//$("#sprite").animate({top:'0px'}, 'fast');
-	$("#sprite").css({top: 0, left: 0});
+	$("#sprite").animate({left:'0px', top:'0px'}, 'fast', function()
+	{
+		$("#sprite").css({top: 0, left: 0});
+	});
 	
 	for(i = 0 ; i < moves.length ; i++)
 	{
