@@ -35,4 +35,11 @@ $(function()
 	{
 		processCommand("load", this.value);
 	});
+	
+	//toggle grid
+	$( "#toggleGrid-btn" ).button().on( "click", function() 
+	{
+		processCommand("toggleGrid", this);
+	});
+	
 });

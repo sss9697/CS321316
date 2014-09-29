@@ -13,6 +13,7 @@
 		
 		<script src="<?php echo base_url(). "js/playerController.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/loadController.js" ?>"></script>
+		<script src="<?php echo base_url(). "js/btnToggleGridController.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/btnLogoutController.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/btnClearController.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/btnCompileController.js" ?>"></script>
@@ -160,7 +161,7 @@
 				 <img src= "<?php echo base_url(). "img/1.gif" ?> " height="50" width="50" id="sprite"> 
 			</div>
 			<div id="controldiv">
-				CONTROL SPACE
+				<button id="toggleGrid-btn" value="show">Toggle Grid</button>
 			</div>		
 		</div>
 	</head>

@@ -29,4 +29,9 @@ function processCommand(com, param)
 	{
 		loadf(param);
 	}
+	
+	if(com === "toggleGrid")
+	{
+		toggleGridf(param);
+	}
 }

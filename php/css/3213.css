@@ -66,14 +66,13 @@ body
 #playerdiv
 {
 	position: relative;
-	left: 350;
-	width:100%;
+	width:800px;
 	height:800px;
 	border: 2px solid #a1a1a1;
 	background: #cccccc;
 	float: left;
 	text-align: left;
-	background-image: url('../img/smallgrid.png');
+	background-image: ;
 	background-repeat: repeat;
 }
 #sprite
