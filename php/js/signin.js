@@ -1,4 +1,5 @@
 var uID;
+var moveset;
 $(function() 
 {
 	var dialog, form,
@@ -46,6 +47,25 @@ $(function()
 		{
 			return true;
 		}
+	}
+	
+	function loadList()
+	{
+		$.ajax(
+			{
+				url : "https://php-cs321316.rhcloud.com/index.php/vide/get_account",
+				type : 'POST',
+				datatype : "json",
+				data : {"PID":uID},
+				success : function(moves)
+				{
+					console.log(moves);
+				},
+				error : function(jqXHR, textStatus, errorThrown)
+				{
+					alert(textStatus + " " + errorThrown + " " + jqXHR);
+				}
+			});
 	}
 	
 	function validateUser() 
@@ -97,6 +117,7 @@ $(function()
 							$('#validate-google').fadeOut(3000);
 							$('#logout-btn').hide().fadeIn(3000);
 							$('#maindiv').hide().fadeIn(3000);
+							loadList();
 						}
 					}
 				},

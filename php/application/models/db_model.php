@@ -39,4 +39,15 @@ class db_model extends CI_Model
 			
 		$this->db->insert('saves', $acc);
 	}
+	
+	public function get_movem($PID)
+	{
+		$this->db->where('PID', $PID);
+		
+		$query = $this->db->get('saves');
+		
+		$results = $query->result();
+		
+		return $results;
+	}
 }

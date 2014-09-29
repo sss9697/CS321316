@@ -143,7 +143,15 @@
 					<div id="saveDiv" style="display: none;">
 						<label>Save Name:</label><input type="text" placeholder="esc to hide me" id="savename"></input><button id="save-ok-btn">Save</button>
 					</div>
-					<button id="save-btn">Save</button>&nbsp;&nbsp;&nbsp;<button id="load-btn">Load</button>&nbsp;&nbsp;&nbsp;<button id="clear-btn">Clear</button>&nbsp;&nbsp;&nbsp;<button id="compile-btn">Compile</button>
+					
+					<button id="save-btn">Save</button>&nbsp;&nbsp;&nbsp;
+					
+					<select id="loadList">
+					  <option value="" disabled selected>Load</option>
+					</select>&nbsp;&nbsp;&nbsp;
+					
+					<button id="clear-btn">Clear</button>&nbsp;&nbsp;&nbsp;
+					<button id="compile-btn">Compile</button>
 				</div>
 			</div>
 			<div id="playerdiv">
