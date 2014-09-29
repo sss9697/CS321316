@@ -5,10 +5,9 @@ function loadf(moves)
 	$( "#editorspace ul" ).empty();
 	for( i = 0 ; i < movearray.length ; i++)
 	{
+		var number = movearray[i].substring(1);
 		switch(movearray[i].charAt(0))
-		{
-			var number = movearray[i].substring(1);
-			
+		{			
 			case 'U': $( "#editorspace ul" ).append(
 						$("<li id=\"moveup\" class=\"command\">	<div id=\"movediv\">up: <input type=\"number\" name=\"edittxt\" id=\"edittxt\" value=" + number + " max=\"999\" min=\"-999\" /></div></li>"));
 				break;
