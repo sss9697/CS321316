@@ -14,6 +14,7 @@
 		<script src="<?php echo base_url(). "js/btnLogoutController.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/btnClearController.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/btnCompileController.js" ?>"></script>
+		<script src="<?php echo base_url(). "js/btnSaveController.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/commandprocessor.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/button.js" ?>"></script>
 		

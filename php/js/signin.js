@@ -1,3 +1,4 @@
+var uID;
 $(function() 
 {
 	var dialog, form,
@@ -88,6 +89,8 @@ $(function()
 						else
 						{
 							//logged in, switch panel visibility
+							uID = account[0].ID;
+							console.log(uID);
 							dialog.dialog( "close" );
 							document.getElementById('welcomelabel').innerHTML = 'Welcome '+ account[0].Name;
 							$('#create-user').fadeOut(3000);
