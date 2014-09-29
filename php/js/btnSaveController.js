@@ -45,7 +45,7 @@ $(function()
 		}
 	}
 	
-	function addUser() 
+	function saveMove() 
 	{
 		var valid = true;
 		allFields.removeClass( "ui-state-error" );
@@ -75,7 +75,7 @@ $(function()
 		return valid;
 	}
 	
-	dialog = $( "#newuser-form" ).dialog(
+	dialog = $( "#save-form" ).dialog(
 	{
 		autoOpen: false,
 		height: 400,
@@ -86,7 +86,7 @@ $(function()
 			"Create an account": addUser,
 			Cancel: function() 
 			{
-			dialog.dialog( "close" );
+				dialog.dialog( "close" );
 			}
 		},
 		close: function() 
@@ -99,7 +99,7 @@ $(function()
 	form = dialog.find( "form" ).on( "submit", function( event ) 
 	{
 		event.preventDefault();
-		addUser();
+		saveMove();
 	});
 	function savef2()
 	{
