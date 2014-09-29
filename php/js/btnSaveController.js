@@ -1,32 +1,89 @@
-//convert array into string for DB Storage
-function convertCommand(input)
+$(function() 
 {
-	var returnString = "";
-	
-	for(i = 0; i < input.length ; i++)
+	var dialog, form,
+	name = $( "#name" ),
+	allFields = $( [] ).add( name ),
+	tips = $( ".validateTips" );
+
+	function updateTips( t ) 
 	{
-		returnString += input[i] + " ";
+		tips
+		.text( t )
+		.addClass( "ui-state-highlight" );
+		setTimeout(function() 
+			{
+			tips.removeClass( "ui-state-highlight", 1500 );
+			}, 500 );
 	}
 	
-	return returnString;
-}
-
-function saveMove(moveset)
-{
-	name = $("#name");
+	function checkLength( o, n, min, max ) 
+	{
+		if ( o.val().length > max || o.val().length < min ) 
+		{
+			o.addClass( "ui-state-error" );
+			updateTips( "Length of " + n + " must be between " +
+			min + " and " + max + "." );
+			return false;
+		} 
+		else 
+		{
+			return true;
+		}
+	}
 	
+	function checkRegexp( o, regexp, n ) 
+	{
+		if ( !( regexp.test( o.val() ) ) ) 
+		{
+			o.addClass( "ui-state-error" );
+			updateTips( n );
+			return false;
+		} 
+		else 
+		{
+			return true;
+		}
+	}
 	
-}
-
-dialog = $( "#save-form" ).dialog(
+	function addUser() 
+	{
+		var valid = true;
+		allFields.removeClass( "ui-state-error" );
+		valid = valid && checkLength( name, "username", 3, 16 );
+		valid = valid && checkRegexp( name, /^[a-z]([0-9a-z_\s])+$/i, "Username may consist of a-z, 0-9, underscores, spaces and must begin with a letter." );
+		if ( valid ) 
+		{			
+			//Insert to DB here
+			$.ajax(
+			{
+				url : "https://php-cs321316.rhcloud.com/index.php/vide/insert_account",
+				type : 'POST',
+				datatype : "json",
+				data : {"name":name.val(), "email":email.val(), "password":hash},
+				success : function()
+				{
+					alert("Account created!!");
+				},
+				error : function(jqXHR, textStatus, errorThrown)
+				{
+					alert(textStatus + " " + errorThrown + " " + jqXHR);
+				}
+			});
+			
+			dialog.dialog( "close" );
+		}
+		return valid;
+	}
+	
+	dialog = $( "#newuser-form" ).dialog(
 	{
 		autoOpen: false,
-		height: 250,
+		height: 400,
 		width: 550,
 		modal: true,
 		buttons: 
 		{
-			"Save moves": addUser,
+			"Create an account": addUser,
 			Cancel: function() 
 			{
 			dialog.dialog( "close" );
@@ -38,21 +95,19 @@ dialog = $( "#save-form" ).dialog(
 			allFields.removeClass( "ui-state-error" );
 		}
 	});
-
-form = dialog.find( "form" ).on( "submit", function( event ) 
-{
-	event.preventDefault();
-	saveMove();
+	
+	form = dialog.find( "form" ).on( "submit", function( event ) 
+	{
+		event.preventDefault();
+		addUser();
+	});
+	function savef2()
+	{
+		dialog.dialog( "open" );
+	}
 });
 
 function savef()
 {
-	var commands = compileCommand();
-	var saveString = convertCommand(commands);
-	
-	
-	alert(uID);
-	console.log(saveString);
-	
-	
+	savef2();
 }
