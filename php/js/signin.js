@@ -53,7 +53,7 @@ $(function()
 	{
 		$.ajax(
 			{
-				url : "https://php-cs321316.rhcloud.com/index.php/vide/get_account",
+				url : "https://php-cs321316.rhcloud.com/index.php/vide/get_move",
 				type : 'POST',
 				datatype : "json",
 				data : {"PID":uID},
