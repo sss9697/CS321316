@@ -118,7 +118,7 @@ function expandCommand(input, start)
 			console.log(i);
 		}
 		
-		if(input[i].charAt(0) == "C")
+		if(input[i].charAt(0) == "C" && i < input.length)
 		{
 			console.log("entered C");
 			var newInput = input[i].substring(1);
@@ -140,7 +140,8 @@ function expandCommand(input, start)
 		}
 		else
 		{
-			temp[temp.length] = input[i];
+			if(i<input.length)
+				temp[temp.length] = input[i];
 		}
 		
 	}
