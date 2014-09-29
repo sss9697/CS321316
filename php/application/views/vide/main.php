@@ -156,7 +156,7 @@
 				</div>
 			</div>
 			<div id="playerdiv">
-				 <img src= "<?php echo base_url(). "img/1.gif" ?> " height="50" width="50"> 
+				 <img src= "<?php echo base_url(). "img/1.gif" ?> " height="50" width="50" id="sprite"> 
 			</div>
 			<div id="controldiv">
 				CONTROL SPACE

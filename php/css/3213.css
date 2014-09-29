@@ -72,6 +72,12 @@ body
 	border: 2px solid #a1a1a1;
 	background: #cccccc;
 }
+#sprite
+{
+	position: relative;
+	left: 0px;
+	top: 0px;
+}
 #controldiv
 {
 	background-color:black;
