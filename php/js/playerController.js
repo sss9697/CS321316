@@ -21,12 +21,12 @@ function movePlayer(move)
 					$("#sprite").css({top:newPosition});
 			break;
 			
-		case "L":	newPosition = curPosition.left + (times * MULTIPLIER);
+		case "L":	newPosition = curPosition.left - (times * MULTIPLIER);
 					$("#sprite").animate({left:newPosition});
 					$("#sprite").css({left:newPosition});
 			break;
 			
-		case "R":	newPosition = curPosition.left - (times * MULTIPLIER);
+		case "R":	newPosition = curPosition.left + (times * MULTIPLIER);
 					$("#sprite").animate({left:newPosition});
 					$("#sprite").css({left:newPosition});
 			break;
