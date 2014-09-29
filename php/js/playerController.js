@@ -32,8 +32,9 @@ function movePlayer(move)
 //depend on command, pass on to the correct function, note: at this point, there will be no more loops
 function executeCommand(moves)
 {
-	$("#sprite").animate({left:'0px'}, 'fast');
-	$("#sprite").animate({top:'0px'}, 'fast');
+	//$("#sprite").animate({left:'0px'}, 'fast');
+	//$("#sprite").animate({top:'0px'}, 'fast');
+	$("#sprite").css({top: 0, left: 0});
 	
 	for(i = 0 ; i < moves.length ; i++)
 	{
