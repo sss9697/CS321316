@@ -115,7 +115,7 @@
 							<ul>
 								<li id="movechartoggle" class="command">
 									<div id="movediv">
-										Hide character
+										Toggle character
 									</div>
 								</li>
 								<li id="movebackground" class="command">
