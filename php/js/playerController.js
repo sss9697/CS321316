@@ -5,8 +5,6 @@ var RIGHTBOUNDARY;
 //control movement of player, using only left and top
 function movePlayer(move)
 {
-	while( $("#sprite").is(':animated') )
-	{}
 	var times = parseInt(move.substring(1));
 	var curPosition = $("#sprite").position();
 	var newPosition;
@@ -14,19 +12,19 @@ function movePlayer(move)
 	switch(move.charAt(0))
 	{
 		case "U":	newPosition = curPosition.top - (times * MULTIPLIER);
-					$("#sprite").animate({top:newPosition});
+					$("#sprite").animate({top:newPosition}, 300);
 			break;
 			
 		case "D": 	newPosition = curPosition.top + (times * MULTIPLIER);
-					$("#sprite").animate({top:newPosition});
+					$("#sprite").animate({top:newPosition}, 300);
 			break;
 			
 		case "L":	newPosition = curPosition.left - (times * MULTIPLIER);
-					$("#sprite").animate({left:newPosition});
+					$("#sprite").animate({left:newPosition}, 300);
 			break;
 			
 		case "R":	newPosition = curPosition.left + (times * MULTIPLIER);
-					$("#sprite").animate({left:newPosition});
+					$("#sprite").animate({left:newPosition}, 300);
 			break;
 	}
 }
@@ -40,7 +38,7 @@ function executeCommand(moves)
 	{
 		if (moves[i].charAt(0) == "U" || moves[i].charAt(0) == "D" || moves[i].charAt(0) == "L" || moves[i].charAt(0) == "R")
 		{
-			movePlayer(moves[i]);
+			setTimeout(movePlayer(moves[i]), 600);
 		}
 		//the other 3 commands goes here
 	}
