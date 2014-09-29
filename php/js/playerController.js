@@ -47,14 +47,14 @@ function executeCommand(moves)
 	$("#sprite").animate({left:'0px', top:'0px'}, 'fast', function()
 	{
 		$("#sprite").css({top: 0, left: 0});
-	});
 	
-	for(i = 0 ; i < moves.length ; i++)
-	{
-		if (moves[i].charAt(0) == "U" || moves[i].charAt(0) == "D" || moves[i].charAt(0) == "L" || moves[i].charAt(0) == "R")
+		for(i = 0 ; i < moves.length ; i++)
 		{
-			movePlayer(moves[i]);
+			if (moves[i].charAt(0) == "U" || moves[i].charAt(0) == "D" || moves[i].charAt(0) == "L" || moves[i].charAt(0) == "R")
+			{
+				movePlayer(moves[i]);
+			}
+			//the other 3 commands goes here
 		}
-		//the other 3 commands goes here
-	}
+	});
 }
