@@ -53,5 +53,4 @@ function loadf(moves)
 				break;
 		}
 	}
-	alert(movearray);
 }
