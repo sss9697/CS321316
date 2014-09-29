@@ -3,42 +3,46 @@ var BOTTOMBOUNDARY;
 var RIGHTBOUNDARY;
 
 //control movement of player, using only left and top
-function movePlayer(move)
+function movePlayer(move, x, y)
 {
 	var times = parseInt(move.substring(1));
-	var curPosition = $("#sprite").position();
-	var newPosition;
-	console.log(curPosition);
+	var newX = x;
+	var newY = y;
+	
+	console.log("x: " + x + " y: " + y);
 	switch(move.charAt(0))
 	{
-		case "U":	newPosition = curPosition.top - (times * MULTIPLIER);
-					$("#sprite").animate({top:newPosition}, 300);
+		case "U":	newY = y - (times * MULTIPLIER);
+					$("#sprite").animate({top:newPosition});
 			break;
 			
-		case "D": 	newPosition = curPosition.top + (times * MULTIPLIER);
-					$("#sprite").animate({top:newPosition}, 300);
+		case "D": 	newY = y + (times * MULTIPLIER);
+					$("#sprite").animate({top:newPosition});
 			break;
 			
-		case "L":	newPosition = curPosition.left - (times * MULTIPLIER);
-					$("#sprite").animate({left:newPosition}, 300);
+		case "L":	newX = x - (times * MULTIPLIER);
+					$("#sprite").animate({left:newPosition});
 			break;
 			
-		case "R":	newPosition = curPosition.left + (times * MULTIPLIER);
-					$("#sprite").animate({left:newPosition}, 300);
+		case "R":	newX = x + (times * MULTIPLIER);
+					$("#sprite").animate({left:newPosition});
 			break;
 	}
+	
+	return [x,y];
 }
 
 //depend on command, pass on to the correct function, note: at this point, there will be no more loops
 function executeCommand(moves)
 {
 	$("#sprite").css({top: 0, left: 0});
+	var coords = [0,0];
 	
 	for(i = 0 ; i < moves.length ; i++)
 	{
 		if (moves[i].charAt(0) == "U" || moves[i].charAt(0) == "D" || moves[i].charAt(0) == "L" || moves[i].charAt(0) == "R")
 		{
-			setTimeout(movePlayer(moves[i]), 2000);
+			coords = movePlayer(moves[i], coords[0], coords[1]);
 		}
 		//the other 3 commands goes here
 	}
