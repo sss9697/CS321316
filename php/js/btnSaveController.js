@@ -1,10 +1,3 @@
-$( document ).on( 'click', function ( e ) 
-{
-    if ( $( e.target ).closest( '#saveDiv' ).length === 0 ) {
-        $( '#saveDiv' ).hide();
-    }
-});
-
 $( document ).on( 'keydown', function ( e ) 
 {
     if ( e.keyCode === 27 ) { // ESC
