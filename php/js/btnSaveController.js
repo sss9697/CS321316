@@ -43,13 +43,13 @@ function saveok()
 	{
 		$("#saveDivErr").hide();
 		$("#savebr").hide();
+		$('#saveDiv').hide();
 		alert("SAVENAME: " + $("#savename").val());
 	}
 	else
 	{
 		$("#saveDivErr").show();
 		$("#savebr").show();
-		console.log("EMPTYU");
 	}
 }
 
