@@ -27,6 +27,6 @@ function processCommand(com, param)
 	
 	if(com === "load")
 	{
-		alert(param);
+		loadf(param);
 	}
 }
