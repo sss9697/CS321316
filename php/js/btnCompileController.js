@@ -149,7 +149,6 @@ function compilef()
 	else
 	{
 		var expanded = expandCommand(command, 0);
-		console.log(expanded);
-		alert(expanded);
+		executeCommand(expanded);
 	}
 }

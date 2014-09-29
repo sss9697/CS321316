@@ -11,6 +11,7 @@
 		
 		<script src="<?php echo base_url(). "js/editorView.js" ?>"></script>
 		
+		<script src="<?php echo base_url(). "js/playerController.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/loadController.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/btnLogoutController.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/btnClearController.js" ?>"></script>
