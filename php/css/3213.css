@@ -31,20 +31,20 @@ body
 {
 	background-color:#eeeeee;
 	float:left;
-	width:300px;
+	width:350px;
 	height:800px;
 	font-size:80%;
 }
 #movecontainer
 {
 	float:left;
-	width:300px;
+	width:350px;
 	height:300px;
 }
 #editorspace
 {
 	float:left;
-	width:300px;
+	width:350px;
 	height: 470px;
 	font-size: 120%
 }
@@ -56,7 +56,7 @@ body
 #droppable
 {
 	float:left;
-	width:250px;
+	width:300px;
 	height:370px;
 }
 #saveDirErr
