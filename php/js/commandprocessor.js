@@ -34,4 +34,9 @@ function processCommand(com, param)
 	{
 		toggleGridf(param);
 	}
+	
+	if(com === "toggleChar")
+	{
+		toggleCharf();
+	}
 }

@@ -42,4 +42,9 @@ $(function()
 		processCommand("toggleGrid", this);
 	});
 	
+	//toggle char
+	$( "#toggleChar-btn" ).button().on( "click", function() 
+	{
+		processCommand("toggleChar");
+	});
 });
