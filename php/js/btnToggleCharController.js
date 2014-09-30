@@ -3,12 +3,13 @@ function toggleCharf()
 	var cha = $('#sprite');
 	if(cha.value == "show")
 	{
-		cha.fadeIn(500);
+		$('#sprite').fadeIn(500);
 		cha.value = "hide";
 	}
 	else
 	{
-		cha.fadeOut(500);
+		$('#sprite').fadeOut(500);
 		cha.value = "show";
 	}
+	console.log(cha.value);
 }
