@@ -13,4 +13,4 @@ $(document).ready(function () {
 			cha.value = "show";
 		}
 	}
-}
+});
