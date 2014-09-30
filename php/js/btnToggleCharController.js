@@ -1,7 +1,7 @@
 function toggleCharf()
 {
 	var cha = $('#sprite');
-	console.log(cha.value);
+	console.log($('#sprite').value);
 	if(cha.value == "show")
 	{
 		cha.fadeIn(500);
