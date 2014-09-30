@@ -86,6 +86,10 @@ function executeCommand(moves)
 		{
 			coords = teleportPlayer(moves[i], coords[0], coords[1]);
 		}
-		//the other 3 commands goes here
+		else if(moves[i].charAt(0) == "T")
+		{
+			toggleCharf();
+		}
+		//the other 2 commands goes here
 	}
 }
