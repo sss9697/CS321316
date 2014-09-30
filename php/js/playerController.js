@@ -13,7 +13,6 @@ function movePlayer(move, x, y)
 	var newX = x;
 	var newY = y;
 	
-	console.log("x: " + x + " y: " + y);
 	switch(move.charAt(0))
 	{
 		case "U":	newY = y - (times * MULTIPLIER);
@@ -51,6 +50,26 @@ function movePlayer(move, x, y)
 	
 	return [newX, newY];
 }
+
+function teleportPlayer(move, x, y)
+{
+	var times = parseInt(move.substring(1));
+	var newX = x;
+	var newY = y;
+	
+	switch(move.charAt(0))
+	{
+		case "X":	newX = (times * MULTIPLIER);						
+					$("#sprite").animate({top:newX});
+			break;
+			
+		case "Y": 	newY = (times * MULTIPLIER);		
+					$("#sprite").animate({top:newY});
+			break;
+	}
+	
+	return [newX, newY];
+}
 //depend on command, pass on to the correct function, note: at this point, there will be no more loops
 function executeCommand(moves)
 {
@@ -62,6 +81,10 @@ function executeCommand(moves)
 		if (moves[i].charAt(0) == "U" || moves[i].charAt(0) == "D" || moves[i].charAt(0) == "L" || moves[i].charAt(0) == "R")
 		{
 			coords = movePlayer(moves[i], coords[0], coords[1]);
+		}
+		else if(moves[i].charAt(0) == "X" || moves[i].charAt(0) == "Y")
+		{
+			coords = teleportPlayer(moves[i], coords[0], coords[1]);
 		}
 		//the other 3 commands goes here
 	}
