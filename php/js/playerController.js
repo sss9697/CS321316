@@ -75,6 +75,7 @@ function teleportPlayer(move, x, y)
 function executeCommand(moves)
 {
 	$("#sprite").css({top: 0, left: 0});
+	$('#playerdiv').css('background-color', $("#defaultBackgroundList").val());
 	var coords = [0,0];
 	
 	for(i = 0 ; i < moves.length ; i++)

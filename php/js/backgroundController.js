@@ -31,6 +31,6 @@ function defaultBackgroundCom(value)
 function changePlayerBackground(move)
 {
 	console.log(move);
-	var value = parseInt(move.substring(1));
+	var value = move.substring(1);
 	$('#playerdiv').css('background-color', value);
 }
