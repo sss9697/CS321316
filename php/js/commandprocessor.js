@@ -37,7 +37,7 @@ function processCommand(com, param)
 	
 	if(com === "toggleChar")
 	{
-		toggleCharf();
+		toggleCharf(0);
 	}
 	
 	if(com === "deleteMove")

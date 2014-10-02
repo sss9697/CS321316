@@ -7,7 +7,7 @@ var LEFTBOUNDARY = 0;
 //control movement of player, because all instructions will be ran before the animation even completes
 //it results in the base position to be a constant 0,0 if we were to use sprite.position(). Thus, we will
 //manually calculate the position with each iteration of this function outselves to pass to the animation queue.
-function movePlayer(move, x, y)
+function movePlayer(move, x, y, delayTime)
 {
 	var times = parseInt(move.substring(1));
 	var newX = x;
@@ -20,7 +20,7 @@ function movePlayer(move, x, y)
 					if(newY < TOPBOUNDARY)
 						newY = TOPBOUNDARY;
 						
-					$("#sprite").animate({top:newY}, 500);
+					$("#sprite").delay(delayTime).animate({top:newY}, 500);
 			break;
 			
 		case "D": 	newY = y + (times * MULTIPLIER);
@@ -28,7 +28,7 @@ function movePlayer(move, x, y)
 					if(newY > BOTTOMBOUNDARY)
 						newY = BOTTOMBOUNDARY;
 		
-					$("#sprite").animate({top:newY}, 500);
+					$("#sprite").delay(delayTime).animate({top:newY}, 500);
 			break;
 			
 		case "L":	newX = x - (times * MULTIPLIER);
@@ -36,7 +36,7 @@ function movePlayer(move, x, y)
 					if(newX < LEFTBOUNDARY)
 						newX = LEFTBOUNDARY;
 		
-					$("#sprite").animate({left:newX}, 500);
+					$("#sprite").delay(delayTime).animate({left:newX}, 500);
 			break;
 			
 		case "R":	newX = x + (times * MULTIPLIER);
@@ -44,14 +44,14 @@ function movePlayer(move, x, y)
 					if(newX > RIGHTBOUNDARY)
 						newX = RIGHTBOUNDARY;
 						
-					$("#sprite").animate({left:newX}, 500);
+					$("#sprite").delay(delayTime).animate({left:newX}, 500);
 			break;
 	}
 	
 	return [newX, newY];
 }
 
-function teleportPlayer(move, x, y)
+function teleportPlayer(move, x, y, delayTime)
 {
 	var times = parseInt(move.substring(1));
 	var newX = x;
@@ -60,11 +60,11 @@ function teleportPlayer(move, x, y)
 	switch(move.charAt(0))
 	{
 		case "X":	newX = (times * MULTIPLIER);						
-					$("#sprite").animate({left:newX}, 500);
+					$("#sprite").delay(delayTime).animate({left:newX}, 500);
 			break;
 			
 		case "Y": 	newY = (times * MULTIPLIER);		
-					$("#sprite").animate({top:newY}, 500);
+					$("#sprite").delay(delayTime).animate({top:newY}, 500);
 			break;
 	}
 	
@@ -82,27 +82,32 @@ function executeCommand(moves)
 	$('#playerdiv').css('background-color', $("#defaultBackgroundList").val());
 	var coords = [0,0];
 	var delay = -500;
+	var spriteDelay = 0;
 	
 	for(i = 0 ; i < moves.length ; i++)
 	{
 		delay += 500;
 		if (moves[i].charAt(0) == "U" || moves[i].charAt(0) == "D" || moves[i].charAt(0) == "L" || moves[i].charAt(0) == "R")
 		{
-			coords = movePlayer(moves[i], coords[0], coords[1]);
+			coords = movePlayer(moves[i], coords[0], coords[1], spriteDelay);
+			spriteDelay = 0;
 		}
 		else if(moves[i].charAt(0) == "X" || moves[i].charAt(0) == "Y")
 		{
-			coords = teleportPlayer(moves[i], coords[0], coords[1]);
+			coords = teleportPlayer(moves[i], coords[0], coords[1], spriteDelay);
+			spriteDelay = 0;
 		}
 		else if(moves[i].charAt(0) == "T")
 		{
-			toggleCharf();
+			toggleCharf(spriteDelay);
+			spriteDelay = 0;
 		}
 		else if(moves[i].charAt(0) == "B")
 		{
 			changePlayerBackground(moves[i], delay);
+			spriteDelay = 500;
 			delay = -1000;
 		}
-		//the other 2 commands goes here
+		//the other command goes here
 	}
 }
