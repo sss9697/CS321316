@@ -74,10 +74,10 @@ function teleportPlayer(move, x, y, delayTime)
 //depend on command, pass on to the correct function, note: at this point, there will be no more loops
 function executeCommand(moves)
 {
-	$("#sprite").stop();
-	$('#playerdiv').stop();
 	$("#sprite").clearQueue();
 	$('#playerdiv').clearQueue();
+	$("#sprite").stop();
+	$('#playerdiv').stop();
 	$("#sprite").css({top: 0, left: 0});
 	$('#playerdiv').css('background-color', $("#defaultBackgroundList").val());
 	var coords = [0,0];
@@ -106,7 +106,7 @@ function executeCommand(moves)
 		{
 			changePlayerBackground(moves[i], delay);
 			spriteDelay += 500;
-			delay = -1000;
+			delay = -500;
 		}
 		//the other command goes here
 	}
