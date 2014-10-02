@@ -60,11 +60,11 @@ function teleportPlayer(move, x, y)
 	switch(move.charAt(0))
 	{
 		case "X":	newX = (times * MULTIPLIER);						
-					$("#sprite").css({left:newX});
+					$("#sprite").animate({left:newX});
 			break;
 			
 		case "Y": 	newY = (times * MULTIPLIER);		
-					$("#sprite").css({top:newY});
+					$("#sprite").animate({top:newY});
 			break;
 	}
 	
