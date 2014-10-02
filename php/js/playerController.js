@@ -70,6 +70,7 @@ function teleportPlayer(move, x, y)
 	
 	return [newX, newY];
 }
+
 //depend on command, pass on to the correct function, note: at this point, there will be no more loops
 function executeCommand(moves)
 {
@@ -89,6 +90,10 @@ function executeCommand(moves)
 		else if(moves[i].charAt(0) == "T")
 		{
 			toggleCharf();
+		}
+		else if(moves[i].charAt(0) == "B")
+		{
+			changePlayerBackground(moves[i]);
 		}
 		//the other 2 commands goes here
 	}

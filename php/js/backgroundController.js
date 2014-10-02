@@ -27,3 +27,9 @@ function defaultBackgroundCom(value)
 {
 	$(this).css('background-color', this.value);
 }
+
+function changePlayerBackground(move)
+{
+	var value = parseInt(move.substring(1));
+	$('#playerdiv').css('background-color', value);
+}

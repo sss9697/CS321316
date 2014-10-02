@@ -1,10 +1,5 @@
 $(function() 
 {
-	$("#movebackgroundlist").on('change', function() 
-	{
-		$(this).css('background-color', this.value);
-	});
-	
 	$( "#movelist" ).accordion(
 	{
 		heightStyle: "content"
@@ -24,6 +19,11 @@ $(function()
 		accept: ".command",
 		drop: function( event, ui ) 
 		{
+			$("#movebackgroundlist").on('change', function() 
+			{
+				$(this).css('background-color', this.value);
+			});
+			
 			$( this ).find( ".placeholder" ).remove();
 			//$( "<li class=\"added\" id=\"added\" ></li>" ).text( ui.draggable.text() ).appendTo( this );
 			$(this).append($(ui.draggable).clone());
