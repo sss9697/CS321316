@@ -68,14 +68,14 @@ class Vide extends CI_Controller
 	
 	public function delete_move()
 	{
-		$this->db_model->delete_movem(	$this->input->post('PID')
+		$this->db_model->delete_movem(	$this->input->post('PID'),
 										$this->input->post('Name'));
 	}
 	
 	public function update_background()
 	{
-		$this->db_model->update_backgroundm(	$this->input->post('PID')
-												$this->input->post('DefaultBackground'),
+		$this->db_model->update_backgroundm(	$this->input->post('PID'),
+												$this->input->post('DefaultBackground')
 											);
 	}
 }
