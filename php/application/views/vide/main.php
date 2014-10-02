@@ -125,7 +125,7 @@
 									</div>
 								</li>
 								<li id="movebackground" class="command">
-									<select id="commandBackgroundList" class="backgroundSelected">
+									<select id="movebackground" class="backgroundSelectedCom">
 										  <option value="" disabled selected>Background</option>
 										  <option value="#cccccc" class="Grey">Grey</option>
 										  <option value="#000000" class="Black">Black</option>

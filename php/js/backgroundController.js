@@ -1,6 +1,6 @@
 function updateBackgroundCom(value)
 {
-	$('.backgroundSelected').css('background-color', value);
+	$('#movebackground').css('background-color', value);
 }
 
 function updateBackground(value)
