@@ -50,9 +50,17 @@ class db_model extends CI_Model
 		return $results;
 	}
 	
-	public function delete_movem($Name)
+	public function delete_movem($PID, $Name)
 	{
 		$this->db->where('Name', $Name);
+		$this->db->where('PID', $PID);
 		$this->db->delete('saves');
+	}
+	
+	public function update_background($PID, $DefaultBackground)
+	{
+		$this->db->where('PID', $PID);
+		$acc['DefaultBackground'] = $DefaultBackground;
+		$this->db->update('accounts', $acc); 
 	}
 }
