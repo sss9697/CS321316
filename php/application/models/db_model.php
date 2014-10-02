@@ -57,7 +57,7 @@ class db_model extends CI_Model
 		$this->db->delete('saves');
 	}
 	
-	public function update_background($PID, $DefaultBackground)
+	public function update_backgroundm($PID, $DefaultBackground)
 	{
 		$this->db->where('PID', $PID);
 		$acc['DefaultBackground'] = $DefaultBackground;

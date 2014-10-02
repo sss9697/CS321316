@@ -34,8 +34,10 @@ function compileCommand()
 			case "movechartoggle": compileString += "T";
 				break;
 			case "movebackground": compileString += "B";
+					//change numberTimes into its own value which is color code
 				break;
 			case "movechangechar": compileString += "A";
+					//change numberTimes into its own value, which is a number
 				break;
 			default: compileString += "E";
 		}
