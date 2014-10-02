@@ -48,6 +48,12 @@ $(function()
 		processCommand("defaultBackground", this.value);
 	});
 	
+	//commandBackground dropdown list changed event
+	$("#commandBackgroundList").on('change', function() 
+	{
+		processCommand("defaultBackground2", this.value);
+	});
+	
 	//toggle grid
 	$( "#toggleGrid-btn" ).button().on( "click", function() 
 	{

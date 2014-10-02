@@ -1,7 +1,9 @@
-function updateBackground(value)
+function updateBackground(value, param)
 {
+	if(param)
+		$('#playerdiv').css('background-color', value);
+	
 	$('.backgroundSelected').css('background-color', value);
-	$('#playerdiv').css('background-color', value);
 }
 
 function defaultBackgroundf(value)
@@ -14,7 +16,7 @@ function defaultBackgroundf(value)
 		data : {"PID":uID, "DefaultBackground":value},
 		success : function()
 		{
-			updateBackground(this.value);
+			updateBackground(this.value, true);
 		},
 		error : function(jqXHR, textStatus, errorThrown)
 		{

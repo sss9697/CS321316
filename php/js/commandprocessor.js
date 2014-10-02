@@ -49,4 +49,9 @@ function processCommand(com, param)
 	{
 		defaultBackgroundf(param);
 	}
+	
+	if(com === "defaultBackground2")
+	{
+		updateBackground(param, false)
+	}
 }
