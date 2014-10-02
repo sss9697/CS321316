@@ -162,7 +162,16 @@
 				 <img src= "<?php echo base_url(). "img/1.gif" ?> " height="50" width="50" id="sprite" value="hide"> 
 			</div>
 			<div id="controldiv">
-				<button id="compile-btn">Compile</button>&nbsp;&nbsp;&nbsp;<button id="toggleGrid-btn" value="show">Toggle Grid</button>&nbsp;&nbsp;&nbsp;<button id="toggleChar-btn" value="hide">Toggle Character</button>&nbsp;&nbsp;&nbsp;<button id="changeDefaultChar-btn">Change default char</button>&nbsp;&nbsp;&nbsp;<button id="changeDefaultBackground-btn">Change default background</button>
+				<button id="compile-btn">Compile</button>&nbsp;&nbsp;&nbsp;
+				<button id="toggleGrid-btn" value="show">Toggle Grid</button>&nbsp;&nbsp;&nbsp;
+				<button id="toggleChar-btn" value="hide">Toggle Character</button>&nbsp;&nbsp;&nbsp;
+				<button id="changeDefaultChar-btn">Change default char</button>&nbsp;&nbsp;&nbsp;
+				<select id="defaultBackgroundList">
+					  <option value="" disabled selected>Change default background</option>
+					  <option value="#cccccc" class="Grey">Grey</option>
+					  <option value="#000000" class="Black">Black</option>
+					  <option value="#ffffff" class="White">White</option>
+				</select>
 			</div>		
 		</div>
 	</head>

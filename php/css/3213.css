@@ -7,6 +7,10 @@ body
 	display:none;        
 	color:Red;
 }
+option.Grey {background-color:#cccccc; color:white;}
+option.Black {background-color:#000000; color:white;}
+option.White{background-color:#ffffff; color:black;}
+
 #logout-btn
 {
 	display: none;
