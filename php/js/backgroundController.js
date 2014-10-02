@@ -1,3 +1,9 @@
+function updateBackground(value)
+{
+	$('.backgroundSelected').css('background-color', value);
+	$('#playerdiv').css('background-color', value);
+}
+
 function defaultBackgroundf(value)
 {
 	$.ajax(
@@ -8,8 +14,7 @@ function defaultBackgroundf(value)
 		data : {"PID":uID, "DefaultBackground":value},
 		success : function()
 		{
-			$('.backgroundSelected').css('background-color', value);
-			$('#playerdiv').css('background-color', value);
+			updateBackground(this.value);
 		},
 		error : function(jqXHR, textStatus, errorThrown)
 		{
