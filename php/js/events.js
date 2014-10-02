@@ -51,7 +51,7 @@ $(function()
 	//commandBackground dropdown list changed event
 	$("#commandBackgroundList").on('change', function() 
 	{
-		processCommand("defaultBackground2", this.value);
+		processCommand("defaultBackgroundCom", this.value);
 	});
 	
 	//toggle grid
