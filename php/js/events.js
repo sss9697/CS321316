@@ -49,9 +49,9 @@ $(function()
 	});
 	
 	//commandBackground dropdown list changed event
-	$("#commandBackgroundList").on('change', function() 
+	$("#movebackground").on('change', function() 
 	{
-		processCommand("defaultBackgroundCom", this.value);
+		processCommand("defaultBackgroundCom", this);
 	});
 	
 	//toggle grid
