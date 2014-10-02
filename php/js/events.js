@@ -42,6 +42,12 @@ $(function()
 		processCommand("load", this.value);
 	});
 	
+	//defaultBackground dropdown list changed event
+	$("#defaultBackgroundList").on('change', function() 
+	{
+		processCommand("defaultBackground", this.value);
+	});
+	
 	//toggle grid
 	$( "#toggleGrid-btn" ).button().on( "click", function() 
 	{

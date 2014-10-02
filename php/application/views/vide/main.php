@@ -13,6 +13,7 @@
 		
 		<script src="<?php echo base_url(). "js/editorView.js" ?>"></script>
 		
+		<script src="<?php echo base_url(). "js/backgroundController.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/playerController.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/btnDeleteController.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/loadController.js" ?>"></script>
@@ -166,7 +167,7 @@
 				<button id="toggleGrid-btn" value="show">Toggle Grid</button>&nbsp;&nbsp;&nbsp;
 				<button id="toggleChar-btn" value="hide">Toggle Character</button>&nbsp;&nbsp;&nbsp;
 				<button id="changeDefaultChar-btn">Change default char</button>&nbsp;&nbsp;&nbsp;
-				<select id="defaultBackgroundList">
+				<select id="defaultBackgroundList" class="backgroundSelected">
 					  <option value="" disabled selected>Change default background</option>
 					  <option value="#cccccc" class="Grey">Grey</option>
 					  <option value="#000000" class="Black">Black</option>

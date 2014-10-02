@@ -44,4 +44,9 @@ function processCommand(com, param)
 	{
 		deleteMovef();
 	}
+	
+	if(com === "defaultBackground")
+	{
+		defaultBackgroundf(param);
+	}
 }
