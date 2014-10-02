@@ -1,9 +1,3 @@
-function updateBackgroundCom(value)
-{
-	console.log(value);
-	value.css('background-color', value.val());
-}
-
 function updateBackground(value)
 {
 	$('#playerdiv').css('background-color', value);

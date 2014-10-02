@@ -47,13 +47,7 @@ $(function()
 	{
 		processCommand("defaultBackground", this.value);
 	});
-	
-	//commandBackground dropdown list changed event
-	$("#movebackground").on('change', function() 
-	{
-		processCommand("defaultBackgroundCom", this);
-	});
-	
+
 	//toggle grid
 	$( "#toggleGrid-btn" ).button().on( "click", function() 
 	{
