@@ -59,7 +59,7 @@ class db_model extends CI_Model
 	
 	public function update_backgroundm($PID, $DefaultBackground)
 	{
-		$this->db->where('PID', $PID);
+		$this->db->where('ID', $PID);
 		$acc['DefaultBackground'] = $DefaultBackground;
 		$this->db->update('accounts', $acc); 
 	}
