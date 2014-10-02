@@ -14,7 +14,7 @@ function defaultBackgroundf(value)
 		data : {"PID":uID, "DefaultBackground":value},
 		success : function()
 		{
-			updateBackground(this.value);
+			updateBackground(value);
 		},
 		error : function(jqXHR, textStatus, errorThrown)
 		{
