@@ -59,4 +59,10 @@ $(function()
 	{
 		processCommand("toggleChar");
 	});
+	
+	//defaultBackground dropdown list changed event
+	$("#movebackgroundlist").on('change', function() 
+	{
+		$(this).css('background-color', this.value);
+	});
 });
