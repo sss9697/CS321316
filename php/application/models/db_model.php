@@ -14,7 +14,7 @@ class db_model extends CI_Model
 		$acc['Password'] = $password;
 		$acc['GoogleAcc'] = 0;
 		$acc['DefaultChar'] = "1";
-		$acc['DefaultBackground'] = "1";
+		$acc['DefaultBackground'] = "#cccccc";
 			
 		$this->db->insert('accounts', $acc);
 	}
