@@ -20,7 +20,7 @@ function movePlayer(move, x, y)
 					if(newY < TOPBOUNDARY)
 						newY = TOPBOUNDARY;
 						
-					$("#sprite").animate({top:newY});
+					$("#sprite").animate({top:newY}, 500);
 			break;
 			
 		case "D": 	newY = y + (times * MULTIPLIER);
@@ -28,7 +28,7 @@ function movePlayer(move, x, y)
 					if(newY > BOTTOMBOUNDARY)
 						newY = BOTTOMBOUNDARY;
 		
-					$("#sprite").animate({top:newY});
+					$("#sprite").animate({top:newY}, 500);
 			break;
 			
 		case "L":	newX = x - (times * MULTIPLIER);
@@ -36,7 +36,7 @@ function movePlayer(move, x, y)
 					if(newX < LEFTBOUNDARY)
 						newX = LEFTBOUNDARY;
 		
-					$("#sprite").animate({left:newX});
+					$("#sprite").animate({left:newX}, 500);
 			break;
 			
 		case "R":	newX = x + (times * MULTIPLIER);
@@ -44,7 +44,7 @@ function movePlayer(move, x, y)
 					if(newX > RIGHTBOUNDARY)
 						newX = RIGHTBOUNDARY;
 						
-					$("#sprite").animate({left:newX});
+					$("#sprite").animate({left:newX}, 500);
 			break;
 	}
 	
@@ -60,11 +60,11 @@ function teleportPlayer(move, x, y)
 	switch(move.charAt(0))
 	{
 		case "X":	newX = (times * MULTIPLIER);						
-					$("#sprite").animate({left:newX});
+					$("#sprite").animate({left:newX}, 500);
 			break;
 			
 		case "Y": 	newY = (times * MULTIPLIER);		
-					$("#sprite").animate({top:newY});
+					$("#sprite").animate({top:newY}, 500);
 			break;
 	}
 	
@@ -94,7 +94,7 @@ function executeCommand(moves)
 		}
 		else if(moves[i].charAt(0) == "B")
 		{
-			changePlayerBackground(moves[i]);
+			changePlayerBackground(moves[i], i * 500);
 		}
 		//the other 2 commands goes here
 	}
