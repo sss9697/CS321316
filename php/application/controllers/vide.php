@@ -65,4 +65,9 @@ class Vide extends CI_Controller
 			echo json_encode($query);
 		}
 	}
+	
+	public function delete_move()
+	{
+		$this->db_model->delete_movem(	$this->input->post('Name'));
+	}
 }
