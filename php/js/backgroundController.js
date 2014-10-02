@@ -32,5 +32,5 @@ function changePlayerBackground(move)
 {
 	console.log(move);
 	var value = move.substring(1);
-	$('#playerdiv').delay(500).css('background-color', value);
+	$('#playerdiv').css({opacity: 1.0}).animate({'background-color', value}, 200);
 }
