@@ -49,4 +49,10 @@ class db_model extends CI_Model
 		
 		return $results;
 	}
+	
+	public function delete_movem($Name)
+	{
+		$this->db->where('Name', $Name);
+		$this->db->delete('saves');
+	}
 }
