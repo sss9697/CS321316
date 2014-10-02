@@ -22,3 +22,8 @@ function defaultBackgroundf(value)
 		}
 	});
 }
+
+function defaultBackgroundCom(value)
+{
+	$(this).css('background-color', this.value);
+}

@@ -50,4 +50,8 @@ function processCommand(com, param)
 		defaultBackgroundf(param);
 	}
 	
+	if(com === "defaultBackgroundCom")
+	{
+		defaultBackgroundCom(param);
+	}
 }

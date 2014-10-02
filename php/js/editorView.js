@@ -1,5 +1,10 @@
 $(function() 
 {
+	$("#movebackgroundlist").on('change', function() 
+	{
+		$(this).css('background-color', this.value);
+	});
+	
 	$( "#movelist" ).accordion(
 	{
 		heightStyle: "content"
