@@ -63,6 +63,6 @@ $(function()
 	//defaultBackground dropdown list changed event
 	$("#movebackgroundlist").on('change', function() 
 	{
-		processCommand("defaultBackgroundCom", this.value);
+		processCommand("defaultBackgroundCom", this);
 	});
 });

@@ -25,7 +25,7 @@ function defaultBackgroundf(value)
 
 function defaultBackgroundCom(value)
 {
-	$(this).css('background-color', this.value);
+	$(value).css('background-color', value.value);
 }
 
 function changePlayerBackground(move)
