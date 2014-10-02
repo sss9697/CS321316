@@ -30,7 +30,11 @@ function defaultBackgroundCom(value)
 
 function changePlayerBackground(move, delayTime)
 {
-	console.log(move);
+	console.log(delayTime);
+	
+	if(delayTime < 0)
+		delayTime = 0;
+		
 	var value = move.substring(1);
-	$('#playerdiv').delay(delayTime).css({opacity: 1.0}).animate({'background-color': value});
+	$('#playerdiv').delay(delayTime).css({opacity: 1.0}).animate({'background-color': value}, 500);
 }
