@@ -74,12 +74,16 @@ function teleportPlayer(move, x, y)
 //depend on command, pass on to the correct function, note: at this point, there will be no more loops
 function executeCommand(moves)
 {
+	$("#sprite").stop();
+	$('#playerdiv').stop();
 	$("#sprite").css({top: 0, left: 0});
 	$('#playerdiv').css('background-color', $("#defaultBackgroundList").val());
 	var coords = [0,0];
+	var delay = 0;
 	
 	for(i = 0 ; i < moves.length ; i++)
 	{
+		delay += 500;
 		if (moves[i].charAt(0) == "U" || moves[i].charAt(0) == "D" || moves[i].charAt(0) == "L" || moves[i].charAt(0) == "R")
 		{
 			coords = movePlayer(moves[i], coords[0], coords[1]);
@@ -94,7 +98,8 @@ function executeCommand(moves)
 		}
 		else if(moves[i].charAt(0) == "B")
 		{
-			changePlayerBackground(moves[i], i * 500);
+			changePlayerBackground(moves[i], delay);
+			delay = 0;
 		}
 		//the other 2 commands goes here
 	}
