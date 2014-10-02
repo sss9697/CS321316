@@ -101,7 +101,7 @@ function executeCommand(moves)
 		else if(moves[i].charAt(0) == "B")
 		{
 			changePlayerBackground(moves[i], delay);
-			delay = 0;
+			delay = -500;
 		}
 		//the other 2 commands goes here
 	}

@@ -43,11 +43,13 @@ function loadf(moves)
 			case 'A': $( "#editorspace ul" ).append(
 						$("<li id=\"movechangechar\" class=\"command\">	<div id=\"movediv\">change char</div></li>"));
 						//this one is to be very complicated as it is supposed to be a dropdownlsit
+						//need to set selected
 				break;
 				
 			case 'B': $( "#editorspace ul" ).append(
 						$("<li id=\"movebackground\" class=\"command\">	<div id=\"movediv\">change background</div></li>"));
 						//This one is to be very complicated as it is supposed to be a dropdownlist
+						//need to set selected
 				break;
 				
 			case 'T': $( "#editorspace ul" ).append(
