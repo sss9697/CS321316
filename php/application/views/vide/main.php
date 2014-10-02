@@ -14,6 +14,7 @@
 		<script src="<?php echo base_url(). "js/editorView.js" ?>"></script>
 		
 		<script src="<?php echo base_url(). "js/playerController.js" ?>"></script>
+		<script src="<?php echo base_url(). "js/btnDeleteController.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/loadController.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/btnToggleGridController.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/btnLogoutController.js" ?>"></script>
@@ -148,22 +149,20 @@
 					<div id="saveDiv" style="display: none;">
 						<label>Save Name:</label><input type="text" placeholder="esc to hide me" id="savename"></input><button id="save-ok-btn">Save</button>
 					</div>
-					
+					<button id="clear-btn">Clear</button>&nbsp;&nbsp;&nbsp;
 					<button id="save-btn">Save</button>&nbsp;&nbsp;&nbsp;
 					
 					<select id="loadList">
 					  <option value="" disabled selected>Load</option>
-					</select>&nbsp;&nbsp;&nbsp;
-					
-					<button id="clear-btn">Clear</button>&nbsp;&nbsp;&nbsp;
-					<button id="compile-btn">Compile</button>
+					</select>&nbsp;&nbsp;&nbsp;					
+					<button id="delete-btn">Delete</button>
 				</div>
 			</div>
 			<div id="playerdiv">
 				 <img src= "<?php echo base_url(). "img/1.gif" ?> " height="50" width="50" id="sprite" value="hide"> 
 			</div>
 			<div id="controldiv">
-				<button id="toggleGrid-btn" value="show">Toggle Grid</button>&nbsp;&nbsp;&nbsp;<button id="toggleChar-btn" value="hide">Toggle Character</button>&nbsp;&nbsp;&nbsp;<button id="changeDefaultChar-btn">Change default char</button>&nbsp;&nbsp;&nbsp;<button id="changeDefaultBackground-btn">Change default background</button>
+				<button id="compile-btn">Compile</button>&nbsp;&nbsp;&nbsp;<button id="toggleGrid-btn" value="show">Toggle Grid</button>&nbsp;&nbsp;&nbsp;<button id="toggleChar-btn" value="hide">Toggle Character</button>&nbsp;&nbsp;&nbsp;<button id="changeDefaultChar-btn">Change default char</button>&nbsp;&nbsp;&nbsp;<button id="changeDefaultBackground-btn">Change default background</button>
 			</div>		
 		</div>
 	</head>

@@ -18,6 +18,12 @@ $(function()
 		processCommand("compile");
 	});
 	
+	//delete button
+	$( "#delete-btn" ).button().on( "click", function() 
+	{
+		processCommand("deleteMove");
+	});
+	
 	//save button
 	$( "#save-btn" ).button().on( "click", function() 
 	{

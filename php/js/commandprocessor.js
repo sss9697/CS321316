@@ -39,4 +39,9 @@ function processCommand(com, param)
 	{
 		toggleCharf();
 	}
+	
+	if(com === "deleteMove")
+	{
+		deleteMovef();
+	}
 }
