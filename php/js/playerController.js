@@ -120,7 +120,7 @@ function executeCommand(moves)
 		}
 		else if(moves[i].charAt(0) == "A")
 		{
-			$("#sprite2").css({top: coords[0], left: coords[1]});
+			$("#sprite2").css({left: coords[0], top: coords[1]});
 			var charChangeD = charChangeCount % 2;
 			
 			changePlayerCommand(moves[i], charDelay, charChangeD);
