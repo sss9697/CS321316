@@ -79,6 +79,7 @@ function executeCommand(moves)
 	$("#sprite").stop();
 	$('#playerdiv').stop();
 	$("#sprite").css({top: 0, left: 0});
+	$("#sprite").attr("src","img/"+$("#defaultCharList").val()+".gif");
 	$('#playerdiv').css('background-color', $("#defaultBackgroundList").val());
 	var coords = [0,0];
 	var delay = -500;
