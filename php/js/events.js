@@ -65,4 +65,10 @@ $(function()
 	{
 		processCommand("defaultBackgroundCom", this);
 	});
+	
+	//defaultCharacter dropdown list changed event
+	$("#defaultCharList").on('change', function() 
+	{
+		processCommand("defaultChar", this);
+	});
 });

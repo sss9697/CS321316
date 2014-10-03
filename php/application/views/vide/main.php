@@ -13,6 +13,7 @@
 		
 		<script src="<?php echo base_url(). "js/editorView.js" ?>"></script>
 		
+		<script src="<?php echo base_url(). "js/defaultCharController.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/backgroundController.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/playerController.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/btnDeleteController.js" ?>"></script>
@@ -194,6 +195,10 @@
 				<select id="defaultCharList" class="characterSelected">
 					<option value="" disabled selected>Change default char</option>
 					<option value="1"> Yellow Mouse</option>
+					<option value="2">Orange Lizard</option>
+					<option value="3">Green Elf</option>
+					<option value="4">Blue Turtle</option>
+					<option value="5">Larry</option>
 				</select>
 				<img src= "<?php echo base_url(). "img/1.gif" ?> " height="35" width="35" id="placeholderSprite">
 			</div>		
