@@ -6,13 +6,13 @@ function changePlayerCommand(move, delayTime, flag)
 	{
 		$("#sprite").delay(delayTime).fadeOut(500);
 		$("#sprite2").attr("src","img/"+value+".gif");
-		$("#sprite2").delay(delayTime).fadeIn(500);
+		$("#sprite2").delay(delayTime + 500).fadeIn(0);
 	}
 	else
 	{
 		$("#sprite2").delay(delayTime).fadeOut(500);
 		$("#sprite").attr("src","img/"+value+".gif");
-		$("#sprite").delay(delayTime).fadeIn(500);
+		$("#sprite").delay(delayTime + 500).fadeIn(0);
 	}
 
 	//$('#playerdiv').delay(delayTime).css({opacity: 1.0}).animate({'background-color': value}, 500);
