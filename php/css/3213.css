@@ -92,6 +92,11 @@ option.Lilac{background-color:#c8a2c8; color:black;}
 	left: 0px;
 	top: 0px;
 }
+
+#placeholderSprite
+{
+	top: 10px;
+}
 #controldiv
 {
 	background-color:black;
