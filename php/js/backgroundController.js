@@ -26,7 +26,8 @@ function defaultBackgroundf(value)
 function defaultBackgroundCom(value)
 {
 	$(value).css('background-color', value.value);
-	$(value).val(value.value);
+	$('select[id^="movebackgroundlist"] option:selected').attr("selected",null);
+	$('select[id^="movebackgroundlist"] option[value="' + value.value + '"]').attr("selected","selected");
 }
 
 function changePlayerBackground(move, delayTime)
