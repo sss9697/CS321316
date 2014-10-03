@@ -39,7 +39,6 @@ function compileCommand()
 				break;
 			case "movechangechar": compileString += "A";
 					numberTimes = $(this).find("#defaultCharListCom").val();
-					console.log("IN A " + $(this).find("#defaultCharListCom").val());
 					//change numberTimes into its own value, which is a number
 				break;
 			default: compileString += "E";
