@@ -9,6 +9,7 @@ function defaultCharf(value)
 		success : function()
 		{
 			$("#placeholderSprite").attr("src","img/"+value+".gif");
+			$("#sprite").attr("src","img/"+value+".gif");
 		},
 		error : function(jqXHR, textStatus, errorThrown)
 		{
