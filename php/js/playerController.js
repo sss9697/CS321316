@@ -21,6 +21,7 @@ function movePlayer(move, x, y, delayTime)
 						newY = TOPBOUNDARY;
 						
 					$("#sprite").delay(delayTime).animate({top:newY}, 500);
+					$("#sprite2").delay(delayTime).animate({top:newY}, 500);
 			break;
 			
 		case "D": 	newY = y + (times * MULTIPLIER);
@@ -29,6 +30,7 @@ function movePlayer(move, x, y, delayTime)
 						newY = BOTTOMBOUNDARY;
 		
 					$("#sprite").delay(delayTime).animate({top:newY}, 500);
+					$("#sprite2").delay(delayTime).animate({top:newY}, 500);
 			break;
 			
 		case "L":	newX = x - (times * MULTIPLIER);
@@ -37,6 +39,7 @@ function movePlayer(move, x, y, delayTime)
 						newX = LEFTBOUNDARY;
 		
 					$("#sprite").delay(delayTime).animate({left:newX}, 500);
+					$("#sprite2").delay(delayTime).animate({left:newX}, 500);
 			break;
 			
 		case "R":	newX = x + (times * MULTIPLIER);
@@ -45,6 +48,7 @@ function movePlayer(move, x, y, delayTime)
 						newX = RIGHTBOUNDARY;
 						
 					$("#sprite").delay(delayTime).animate({left:newX}, 500);
+					$("#sprite2").delay(delayTime).animate({left:newX}, 500);
 			break;
 	}
 	
@@ -61,10 +65,12 @@ function teleportPlayer(move, x, y, delayTime)
 	{
 		case "X":	newX = (times * MULTIPLIER);						
 					$("#sprite").delay(delayTime).animate({left:newX}, 500);
+					$("#sprite2").delay(delayTime).animate({left:newX}, 500);
 			break;
 			
 		case "Y": 	newY = (times * MULTIPLIER);		
 					$("#sprite").delay(delayTime).animate({top:newY}, 500);
+					$("#sprite2").delay(delayTime).animate({top:newY}, 500);
 			break;
 	}
 	
@@ -120,7 +126,6 @@ function executeCommand(moves)
 		}
 		else if(moves[i].charAt(0) == "A")
 		{
-			$("#sprite2").css({left: coords[0], top: coords[1]});
 			var charChangeD = charChangeCount % 2;
 			
 			changePlayerCommand(moves[i], charDelay, charChangeD);
