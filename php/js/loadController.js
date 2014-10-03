@@ -41,10 +41,8 @@ function loadf(moves)
 				break;			
 				
 			case 'A': $( "#editorspace ul" ).append(
-						$("<li id=\"movechangechar\" class=\"command\">	<div id=\"movediv\">change char</div></li>"));
-						//this one is to be very complicated as it is supposed to be a dropdownlsit
-						//need to set selected //use .last(), it should point to the latest item
-						//which is this dropdown, then use jquery .val() to add
+						$("<li id=\"movechangechar\" class=\"command\"><select id=\"defaultCharListCom\" class=\"characterSelected\"><option value=\"\" disabled selected>Change char</option><option value=\"1\">Yellow Mouse</option><option value=\"2\">Orange Lizard</option><option value=\"3\">Green Elf</option><option value=\"4\">Blue Turtle</option><option value=\"5\">Larry</option></select></li>"));
+						$("#editorspace ul li").last().find("#defaultCharListCom").val(number);
 				break;
 				
 			case 'B': $( "#editorspace ul" ).append(
