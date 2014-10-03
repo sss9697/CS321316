@@ -26,6 +26,7 @@ function defaultBackgroundf(value)
 function defaultBackgroundCom(value)
 {
 	$(value).css('background-color', value.value);
+	$(value).val(value.value);
 }
 
 function changePlayerBackground(move, delayTime)
