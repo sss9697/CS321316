@@ -116,7 +116,11 @@ $(function()
 							document.getElementById('welcomelabel').innerHTML = 'Welcome '+ account[0].Name;
 							$('#defaultBackgroundList').val(account[0].DefaultBackground);
 							$('#defaultBackgroundList').css('background-color', account[0].DefaultBackground);
+							
 							$('#defaultCharList').val(account[0].DefaultChar);
+							$("#placeholderSprite").attr("src","img/"+account[0].DefaultChar+".gif");
+							$("#sprite").attr("src","img/"+account[0].DefaultChar+".gif");
+							
 							$('#playerdiv').css('background-color', account[0].DefaultBackground);
 							$('#create-user').fadeOut(3000);
 							$('#validate-user').fadeOut(3000);
