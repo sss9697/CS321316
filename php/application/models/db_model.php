@@ -67,7 +67,7 @@ class db_model extends CI_Model
 	public function update_characterm($PID, $DefaultCharacter)
 	{
 		$this->db->where('ID', $PID);
-		$acc['DefaultCharacter'] = $DefaultCharacter;
+		$acc['DefaultChar'] = $DefaultCharacter;
 		$this->db->update('accounts', $acc); 
 	}
 }
