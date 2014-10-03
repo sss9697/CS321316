@@ -42,3 +42,17 @@ function changePlayerBackground(move, delayTime)
 	var value = move.substring(1);
 	$('#playerdiv').delay(delayTime).css({opacity: 1.0}).animate({'background-color': value}, 500);
 }
+
+function toggleGridf(state)
+{
+	if(state.value == "show")
+	{
+		$('#playerdiv').css("background-image", "url('../img/smallgrid.png')"); 
+		state.value = "hide";
+	}
+	else
+	{
+		$('#playerdiv').css("background-image", ""); 
+		state.value = "show";
+	}
+}

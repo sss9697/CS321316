@@ -6,23 +6,20 @@
 		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
 		<script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 		
-		<script src="<?php echo base_url(). "js/newUser.js" ?>"></script>
-		<script src="<?php echo base_url(). "js/signin.js" ?>"></script>
+		<script src="<?php echo base_url(). "js/dialogNewUser.js" ?>"></script>
+		<script src="<?php echo base_url(). "js/dialogSignin.js" ?>"></script>
 		
-		<script src="<?php echo base_url(). "js/btnToggleCharController.js" ?>"></script>
+		<script src="<?php echo base_url(). "js/viewEditorDiv.js" ?>"></script>
 		
-		<script src="<?php echo base_url(). "js/editorView.js" ?>"></script>
+		<script src="<?php echo base_url(). "js/controllerLogout.js" ?>"></script>
+		<script src="<?php echo base_url(). "js/controllerPlayerDivBackground.js" ?>"></script>
+		<script src="<?php echo base_url(). "js/controllerCompile.js" ?>"></script>
+		<script src="<?php echo base_url(). "js/controllerCharacterSprite.js" ?>"></script>
+		<script src="<?php echo base_url(). "js/controllerPlayerMovement.js" ?>"></script>		
+		<script src="<?php echo base_url(). "js/controllerLoadMove.js" ?>"></script>	
+		<script src="<?php echo base_url(). "js/controllerSaveMove.js" ?>"></script>		
+		<script src="<?php echo base_url(). "js/controllerBinFunction.js" ?>"></script>				
 		
-		<script src="<?php echo base_url(). "js/defaultCharController.js" ?>"></script>
-		<script src="<?php echo base_url(). "js/backgroundController.js" ?>"></script>
-		<script src="<?php echo base_url(). "js/playerController.js" ?>"></script>
-		<script src="<?php echo base_url(). "js/btnDeleteController.js" ?>"></script>
-		<script src="<?php echo base_url(). "js/loadController.js" ?>"></script>
-		<script src="<?php echo base_url(). "js/btnToggleGridController.js" ?>"></script>
-		<script src="<?php echo base_url(). "js/btnLogoutController.js" ?>"></script>
-		<script src="<?php echo base_url(). "js/btnClearController.js" ?>"></script>
-		<script src="<?php echo base_url(). "js/btnCompileController.js" ?>"></script>
-		<script src="<?php echo base_url(). "js/btnSaveController.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/commandprocessor.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/events.js" ?>"></script>
 		
