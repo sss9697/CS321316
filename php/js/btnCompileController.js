@@ -38,6 +38,7 @@ function compileCommand()
 					//change numberTimes into its own value which is color code
 				break;
 			case "movechangechar": compileString += "A";
+					numberTimes = $(this).find("#defaultCharListCom").val();
 					//change numberTimes into its own value, which is a number
 				break;
 			default: compileString += "E";

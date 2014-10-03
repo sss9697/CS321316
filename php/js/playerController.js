@@ -108,6 +108,10 @@ function executeCommand(moves)
 			spriteDelay += 500;
 			delay = -500;
 		}
-		//the other command goes here
+		else if(moves[i].charAt(0) == "A")
+		{
+			toggleCharf(moves[i], spriteDelay);
+			spriteDelay = 0;
+		}
 	}
 }
