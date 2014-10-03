@@ -113,8 +113,8 @@ function executeCommand(moves)
 		}
 		else if(moves[i].charAt(0) == "A")
 		{
-			setTimeout(changePlayerCommand(moves[i]), charDelay);
-			//changePlayerCommand(moves[i]);
+			//setTimeout(changePlayerCommand(moves[i]), charDelay);
+			changePlayerCommand(moves[i], charDelay);
 			spriteDelay = 0;
 			charDelay = -500;
 		}
