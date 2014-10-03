@@ -69,6 +69,6 @@ $(function()
 	//defaultCharacter dropdown list changed event
 	$("#defaultCharList").on('change', function() 
 	{
-		processCommand("defaultChar", this);
+		processCommand("defaultChar", this.value);
 	});
 });

@@ -54,4 +54,9 @@ function processCommand(com, param)
 	{
 		defaultBackgroundCom(param);
 	}
+	
+	if(com === "defaultChar")
+	{
+		defaultCharf(param);
+	}
 }
