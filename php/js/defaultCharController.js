@@ -1,10 +1,20 @@
-function changePlayerCommand(move, delayTime)
+function changePlayerCommand(move, delayTime, flag)
 {
 	var value = move.substring(1);
-	$("#sprite").delay(delayTime).fadeOut(250);
-	$("#sprite").attr("src","img/"+value+".gif");
-	$("#sprite").fadeIn(250);
 	
+	if(flag == 0)
+	{
+		$("#sprite").delay(delayTime).fadeOut(500);
+		$("#sprite2").attr("src","img/"+value+".gif");
+		$("#sprite2").delay(delayTime).fadeIn(500);
+	}
+	else
+	{
+		$("#sprite2").delay(delayTime).fadeOut(500);
+		$("#sprite").attr("src","img/"+value+".gif");
+		$("#sprite").delay(delayTime).fadeIn(500);
+	}
+
 	//$('#playerdiv').delay(delayTime).css({opacity: 1.0}).animate({'background-color': value}, 500);
 }
 function defaultCharf(value)

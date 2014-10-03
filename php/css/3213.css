@@ -92,7 +92,12 @@ option.Lilac{background-color:#c8a2c8; color:black;}
 	left: 0px;
 	top: 0px;
 }
-
+#sprite2
+{
+	position: relative;
+	left: 0px;
+	top: 0px;
+}
 #placeholderSprite
 {
 	position: relative;

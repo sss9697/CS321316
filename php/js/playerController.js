@@ -70,21 +70,28 @@ function teleportPlayer(move, x, y, delayTime)
 	
 	return [newX, newY];
 }
-
-//depend on command, pass on to the correct function, note: at this point, there will be no more loops
-function executeCommand(moves)
+function resetPlayerWindow()
 {
 	$("#sprite").clearQueue();
 	$('#playerdiv').clearQueue();
 	$("#sprite").stop();
 	$('#playerdiv').stop();
 	$("#sprite").css({top: 0, left: 0});
+	$("#sprite2").css({top: 0, left: 0});
 	$("#sprite").attr("src","img/"+$("#defaultCharList").val()+".gif");
 	$('#playerdiv').css('background-color', $("#defaultBackgroundList").val());
+	$("#sprite").show();
+	$("#sprite2").hide();
+}
+//depend on command, pass on to the correct function, note: at this point, there will be no more loops
+function executeCommand(moves)
+{
+	resetPlayerWindow();
 	var coords = [0,0];
 	var delay = -500;
 	var spriteDelay = 0;
 	var charDelay = -500;
+	var charChangeCount = 0;
 	
 	for(i = 0 ; i < moves.length ; i++)
 	{
@@ -113,10 +120,14 @@ function executeCommand(moves)
 		}
 		else if(moves[i].charAt(0) == "A")
 		{
-			//setTimeout(changePlayerCommand(moves[i]), charDelay);
-			changePlayerCommand(moves[i], charDelay);
+			$("#sprite2").css({top: coords[0], left: coords[1]});
+			var charChangeD = charChangeCount % 2;
+			
+			changePlayerCommand(moves[i], charDelay, charChangeD);
 			spriteDelay = 0;
 			charDelay = -500;
+			
+			charChangeCount += 1;
 		}
 	}
 }
