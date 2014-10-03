@@ -79,13 +79,19 @@ function teleportPlayer(move, x, y, delayTime)
 function resetPlayerWindow()
 {
 	$("#sprite").clearQueue();
+	$('#sprite2').clearQueue();
 	$('#playerdiv').clearQueue();
+	
 	$("#sprite").stop();
+	$("#sprite2").stop();
 	$('#playerdiv').stop();
+	
 	$("#sprite").css({top: 0, left: 0});
 	$("#sprite2").css({top: 0, left: 0});
+	
 	$("#sprite").attr("src","img/"+$("#defaultCharList").val()+".gif");
 	$('#playerdiv').css('background-color', $("#defaultBackgroundList").val());
+	
 	$("#sprite").show();
 	$("#sprite2").hide();
 }

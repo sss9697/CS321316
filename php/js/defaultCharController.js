@@ -4,13 +4,13 @@ function changePlayerCommand(move, delayTime, flag)
 	
 	if(flag == 0)
 	{
-		$("#sprite").delay(delayTime).fadeOut(500);
+		$("#sprite").delay(delayTime).fadeOut(450);
 		$("#sprite2").attr("src","img/"+value+".gif");
 		$("#sprite2").delay(delayTime + 500).fadeIn(0);
 	}
 	else
 	{
-		$("#sprite2").delay(delayTime).fadeOut(500);
+		$("#sprite2").delay(delayTime).fadeOut(450);
 		$("#sprite").attr("src","img/"+value+".gif");
 		$("#sprite").delay(delayTime + 500).fadeIn(0);
 	}
