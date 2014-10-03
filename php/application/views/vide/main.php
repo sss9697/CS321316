@@ -176,7 +176,10 @@
 				<button id="compile-btn">Compile</button>&nbsp;&nbsp;&nbsp;
 				<button id="toggleGrid-btn" value="show">Toggle Grid</button>&nbsp;&nbsp;&nbsp;
 				<button id="toggleChar-btn" value="hide">Toggle Character</button>&nbsp;&nbsp;&nbsp;
-				<button id="changeDefaultChar-btn">Change default char</button>&nbsp;&nbsp;&nbsp;
+				<select id="defaultCharList" class="characterSelected">
+					<option value="" disabled selected>Change default char</option>
+					<option value="1"><img src= "<?php echo base_url(). "img/1.gif" ?> " height="20" width="20"> Yellow Mouse</option>
+				</select>&nbsp;&nbsp;&nbsp;
 				<select id="defaultBackgroundList" class="backgroundSelected">
 					  <option value="" disabled selected>Change default background</option>
 					  <option value="#cccccc" class="Grey">Grey</option>
