@@ -195,7 +195,7 @@
 					<option value="" disabled selected>Change default char</option>
 					<option value="1"> Yellow Mouse</option>
 				</select>
-				<img src= "<?php echo base_url(). "img/1.gif" ?> " height="20" width="20">
+				<img src= "<?php echo base_url(). "img/1.gif" ?> " height="35" width="35">
 			</div>		
 		</div>
 	</head>

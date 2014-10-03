@@ -28,6 +28,8 @@ function defaultBackgroundCom(value)
 	$(value).css('background-color', value.value);
 	$('select[id^="movebackgroundlist"] option:selected').attr("selected",null);
 	$('select[id^="movebackgroundlist"] option[value="' + value.value + '"]').attr("selected","selected");
+	$(value).val(value.value);
+	//the above works but the value is not read into the compile
 }
 
 function changePlayerBackground(move, delayTime)
