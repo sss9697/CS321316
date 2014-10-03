@@ -110,7 +110,7 @@ function executeCommand(moves)
 		}
 		else if(moves[i].charAt(0) == "A")
 		{
-			toggleCharf(moves[i], spriteDelay);
+			changePlayerCommand(moves[i], spriteDelay);
 			spriteDelay = 0;
 		}
 	}
