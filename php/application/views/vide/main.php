@@ -141,7 +141,7 @@
 									</select>
 								</li>
 								<li id="movechangechar" class="command">
-									<select id="defaultCharList" class="characterSelected">
+									<select id="defaultCharListCom" class="characterSelected">
 										<option value="" disabled selected>Change char</option>
 										<option value="1"> Yellow Mouse</option>
 										<option value="2">Orange Lizard</option>
