@@ -78,4 +78,11 @@ class Vide extends CI_Controller
 												$this->input->post('DefaultBackground')
 											);
 	}
+	
+	public function update_character()
+	{
+		$this->db_model->update_characterm(	$this->input->post('PID'),
+												$this->input->post('DefaultCharacter')
+											);
+	}
 }

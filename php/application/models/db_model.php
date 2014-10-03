@@ -63,4 +63,11 @@ class db_model extends CI_Model
 		$acc['DefaultBackground'] = $DefaultBackground;
 		$this->db->update('accounts', $acc); 
 	}
+	
+	public function update_characterm($PID, $DefaultCharacter)
+	{
+		$this->db->where('ID', $PID);
+		$acc['DefaultCharacter'] = $DefaultCharacter;
+		$this->db->update('accounts', $acc); 
+	}
 }
