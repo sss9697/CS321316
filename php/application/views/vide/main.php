@@ -141,9 +141,14 @@
 									</select>
 								</li>
 								<li id="movechangechar" class="command">
-									<div id="movediv">
-										change char
-									</div>
+									<select id="defaultCharList" class="characterSelected">
+										<option value="" disabled selected>Change char</option>
+										<option value="1"> Yellow Mouse</option>
+										<option value="2">Orange Lizard</option>
+										<option value="3">Green Elf</option>
+										<option value="4">Blue Turtle</option>
+										<option value="5">Larry</option>
+									</select>
 								</li>
 							</ul>
 						</div>
