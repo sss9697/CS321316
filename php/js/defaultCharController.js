@@ -2,7 +2,7 @@ function changePlayerCommand(move, delayTime)
 {
 	var value = move.substring(1);
 	$("#sprite").attr("src","img/"+value+".gif");
-	$("#sprite").delay(delayTime).fadeIn(500);
+	$("#sprite").hide().delay(delayTime).fadeIn(500);
 }
 function defaultCharf(value)
 {

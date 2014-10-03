@@ -84,10 +84,12 @@ function executeCommand(moves)
 	var coords = [0,0];
 	var delay = -500;
 	var spriteDelay = 0;
+	var charDelay = -500;
 	
 	for(i = 0 ; i < moves.length ; i++)
 	{
 		delay += 500;
+		charDelay += 500;
 		if (moves[i].charAt(0) == "U" || moves[i].charAt(0) == "D" || moves[i].charAt(0) == "L" || moves[i].charAt(0) == "R")
 		{
 			coords = movePlayer(moves[i], coords[0], coords[1], spriteDelay);
@@ -111,8 +113,9 @@ function executeCommand(moves)
 		}
 		else if(moves[i].charAt(0) == "A")
 		{
-			changePlayerCommand(moves[i], spriteDelay);
+			changePlayerCommand(moves[i], charDelay);
 			spriteDelay = 0;
+			charDelay = -500;
 		}
 	}
 }
