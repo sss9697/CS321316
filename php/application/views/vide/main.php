@@ -60,7 +60,7 @@
 		    for (var i=0; i < resp.emails.length; i++) {
 		      if (resp.emails[i].type === 'account') primaryEmail = resp.emails[i].value;
 		    }
-		    displayName = resp.displayName.value;
+		    displayName = resp.displayName;
 		    document.getElementById('userinfo').innerHTML = 'Primary email: ' +
 		        primaryEmail + '\n\nDisplay Name:\n' + displayName;
 		  }
