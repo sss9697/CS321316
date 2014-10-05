@@ -124,7 +124,7 @@ $(function()
 							$('#playerdiv').css('background-color', account[0].DefaultBackground);
 							$('#create-user').fadeOut(3000);
 							$('#validate-user').fadeOut(3000);
-							$('#validate-google').fadeOut(3000);
+							$('#gConnect').fadeOut(3000);
 							$('#logout-btn').hide().fadeIn(3000);
 							$('#maindiv').hide().fadeIn(3000);
 							loadList();
