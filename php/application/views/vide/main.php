@@ -56,12 +56,13 @@
 	   * @param resp The API response object with the user email and profile information.
 	   */
 		  function handleEmailResponse(resp) {
-		    var primaryEmail;
+		    var primaryEmail, displayName;
 		    for (var i=0; i < resp.emails.length; i++) {
 		      if (resp.emails[i].type === 'account') primaryEmail = resp.emails[i].value;
 		    }
+		    displayName = resp.displayName.value;
 		    document.getElementById('userinfo').innerHTML = 'Primary email: ' +
-		        primaryEmail + '\n\nFull Response:\n' + JSON.stringify(resp);
+		        primaryEmail + '\n\nDisplay Name:\n' + displayName;
 		  }
 
 	  </script>
