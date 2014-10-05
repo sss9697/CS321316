@@ -27,8 +27,6 @@ function localDBAccCheck(email) {
 					return {};
 				}
 			});
-			
-	return {};
 }
 
 function createLocalDBAcc(email, name) {
