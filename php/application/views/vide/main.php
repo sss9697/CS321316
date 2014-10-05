@@ -100,7 +100,7 @@
 			</form>
 		</div>
 		
-		<button id="create-user">New user</button> <button id="validate-user">Sign in</button> <button onload ="renderBtn()"><div id="validate-google">Google Sign in</button>
+		<button id="create-user">New user</button> <button id="validate-user">Sign in</button> <button onload ="renderBtn()"><div id="validate-google">Google Sign in</div></button>
 		<button id="logout-btn" type="button">Logout</button>
 		
 		<div id="maindiv">
