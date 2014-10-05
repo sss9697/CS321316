@@ -23,8 +23,30 @@
 		<script src="<?php echo base_url(). "js/commandprocessor.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/events.js" ?>"></script>
 		
+
+		<meta name="google-signin-clientid" content="CLIENT_ID" />
+		<meta name="google-signin-scope" content="https://www.googleapis.com/auth/plus.login" />
+		<meta name="google-signin-requestvisibleactions" content="http://schema.org/AddAction" />
+		<meta name="google-signin-cookiepolicy" content="single_host_origin" />
+		<script src="https://apis.google.com/js/client:platform.js?onload=render" async defer>
+		 /* Executed when the APIs finish loading */
+		 function render() {
+
+		   // Additional params including the callback, the rest of the params will
+		   // come from the page-level configuration.
+		   var additionalParams = {
+		     'callback': signinCallback
+		   };
+
+		   // Attach a click listener to a button to trigger the flow.
+		   var validate-google = document.getElementById('validate-google');
+		   validate-google.addEventListener('click', function() {
+		     gapi.auth.signIn(additionalParams); // Will use page level configuration
+		   });
+		 }
+		</script>
+
 		<title>Visual IDE Group 16</title>
-		
 		
 		
 		<div id="newuser-form" title="Create new user">
