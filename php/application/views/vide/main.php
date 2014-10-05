@@ -211,7 +211,7 @@
 	  <span
 	    class="g-signin"
 	    data-callback="signinCallback"
-	    data-clientid="CLIENT_ID"
+	    data-clientid="177325121472-1rgfp4ninj9t32d6pb1v68vm8cb7avie.apps.googleusercontent.com"
 	    data-cookiepolicy="single_host_origin"
 	    data-requestvisibleactions="http://schema.org/AddAction"
 	    data-scope="https://www.googleapis.com/auth/plus.login">
