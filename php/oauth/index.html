@@ -1,76 +1,202 @@
-<!DOCTYPE html>
+<!--
+
+/*
+ *
+ * Copyright 2013 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+-->
+
 <html>
-  <head>
-    <meta charset='utf-8' />
-  </head>
-  <body>
-    <!--Add a button for the user to click to initiate auth sequence -->
-    <button id="authorize-button">Authorize</button>
-    <script type="text/javascript">
-      // Enter a client ID for a web application from the Google Developer Console.
-      // The provided clientId will only work if the sample is run directly from
-      // https://google-api-javascript-client.googlecode.com/hg/samples/authSample.html
-      // In your Developer Console project, add a JavaScript origin that corresponds to the domain
-      // where you will be running the script.
-      var clientId = '177325121472-1rgfp4ninj9t32d6pb1v68vm8cb7avie.apps.googleusercontent.com';
+<head>
+  <title>Google+ JavaScript Quickstart</title>
+  <script type="text/javascript">
+  (function() {
+    var po = document.createElement('script');
+    po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://plus.google.com/js/client:plusone.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(po, s);
+  })();
+  </script>
+  <!-- JavaScript specific to this application that is not related to API
+     calls -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" ></script>
+</head>
+<body>
+  <div id="gConnect">
+    <button class="g-signin"
+        data-scope="https://www.googleapis.com/auth/plus.login"
+        data-requestvisibleactions="http://schemas.google.com/AddActivity"
+        data-clientId="YOUR_CLIENT_ID"
+        data-callback="onSignInCallback"
+        data-theme="dark"
+        data-cookiepolicy="single_host_origin">
+    </button>
+  </div>
+  <div id="authOps" style="display:none">
+    <h2>User is now signed in to the app using Google+</h2>
+    <p>If the user chooses to disconnect, the app must delete all stored
+    information retrieved from Google for the given user.</p>
+    <button id="disconnect" >Disconnect your Google account from this app</button>
 
-      // Enter the API key from the Google Develoepr Console - to handle any unauthenticated
-      // requests in the code.
-      // The provided key works for this sample only when run from
-      // https://google-api-javascript-client.googlecode.com/hg/samples/authSample.html
-      // To use in your own application, replace this API key with your own.
-      var apiKey = 'DzPl4wI4e0XmahTrd0Ikk3Zq';
+    <h2>User's profile information</h2>
+    <div id="profile"></div>
 
-      // To enter one or more authentication scopes, refer to the documentation for the API.
-      var scopes = 'https://www.googleapis.com/auth/plus.me';
+    <h2>User's friends that are visible to this app</h2>
+    <div id="visiblePeople"></div>
 
-      // Use a button to handle authentication the first time.
-      function handleClientLoad() {
-        gapi.client.setApiKey(apiKey);
-        window.setTimeout(checkAuth,1);
-      }
+    <h2>Authentication Logs</h2>
+    <pre id="authResult"></pre>
+  </div>
+  <div id="loaderror">
+    This section will be hidden by JQuery. If you can see this message, you
+    may be viewing the file rather than running a web server.<br />
+    The sample must be run from http or https. See instructions at
+    <a href="https://developers.google.com/+/quickstart/javascript">
+    https://developers.google.com/+/quickstart/javascript</a>.
+  </div>
+</body>
+<script type="text/javascript">
+var helper = (function() {
+  var BASE_API_PATH = 'plus/v1/';
 
-      function checkAuth() {
-        gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: true}, handleAuthResult);
-      }
-
-
-      function handleAuthResult(authResult) {
-        var authorizeButton = document.getElementById('authorize-button');
-        if (authResult && !authResult.error) {
-          authorizeButton.style.visibility = 'hidden';
-          makeApiCall();
-        } else {
-          authorizeButton.style.visibility = '';
-          authorizeButton.onclick = handleAuthClick;
+  return {
+    /**
+     * Hides the sign in button and starts the post-authorization operations.
+     *
+     * @param {Object} authResult An Object which contains the access token and
+     *   other authentication information.
+     */
+    onSignInCallback: function(authResult) {
+      gapi.client.load('plus','v1', function(){
+        $('#authResult').html('Auth Result:<br/>');
+        for (var field in authResult) {
+          $('#authResult').append(' ' + field + ': ' +
+              authResult[field] + '<br/>');
         }
-      }
+        if (authResult['access_token']) {
+          $('#authOps').show('slow');
+          $('#gConnect').hide();
+          helper.profile();
+          helper.people();
+        } else if (authResult['error']) {
+          // There was an error, which means the user is not signed in.
+          // As an example, you can handle by writing to the console:
+          console.log('There was an error: ' + authResult['error']);
+          $('#authResult').append('Logged out');
+          $('#authOps').hide('slow');
+          $('#gConnect').show();
+        }
+        console.log('authResult', authResult);
+      });
+    },
 
-      function handleAuthClick(event) {
-        gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: false}, handleAuthResult);
-        return false;
-      }
+    /**
+     * Calls the OAuth2 endpoint to disconnect the app for the user.
+     */
+    disconnect: function() {
+      // Revoke the access token.
+      $.ajax({
+        type: 'GET',
+        url: 'https://accounts.google.com/o/oauth2/revoke?token=' +
+            gapi.auth.getToken().access_token,
+        async: false,
+        contentType: 'application/json',
+        dataType: 'jsonp',
+        success: function(result) {
+          console.log('revoke response: ' + result);
+          $('#authOps').hide();
+          $('#profile').empty();
+          $('#visiblePeople').empty();
+          $('#authResult').empty();
+          $('#gConnect').show();
+        },
+        error: function(e) {
+          console.log(e);
+        }
+      });
+    },
 
-      // Load the API and make an API call.  Display the results on the screen.
-      function makeApiCall() {
-        gapi.client.load('plus', 'v1', function() {
-          var request = gapi.client.plus.people.get({
-            'userId': 'me'
-          });
-          request.execute(function(resp) {
-            var heading = document.createElement('h4');
-            var image = document.createElement('img');
-            image.src = resp.image.url;
-            heading.appendChild(image);
-            heading.appendChild(document.createTextNode(resp.displayName));
+    /**
+     * Gets and renders the list of people visible to this app.
+     */
+    people: function() {
+      var request = gapi.client.plus.people.list({
+        'userId': 'me',
+        'collection': 'visible'
+      });
+      request.execute(function(people) {
+        $('#visiblePeople').empty();
+        $('#visiblePeople').append('Number of people visible to this app: ' +
+            people.totalItems + '<br/>');
+        for (var personIndex in people.items) {
+          person = people.items[personIndex];
+          $('#visiblePeople').append('<img src="' + person.image.url + '">');
+        }
+      });
+    },
 
-            document.getElementById('content').appendChild(heading);
-          });
-        });
-      }
-    </script>
-    <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
-    <div id="content"></div>
-    <p>Retrieves your profile name using the Google Plus API.</p>
-  </body>
+    /**
+     * Gets and renders the currently signed in user's profile data.
+     */
+    profile: function(){
+      var request = gapi.client.plus.people.get( {'userId' : 'me'} );
+      request.execute( function(profile) {
+        $('#profile').empty();
+        if (profile.error) {
+          $('#profile').append(profile.error);
+          return;
+        }
+        $('#profile').append(
+            $('<p><img src=\"' + profile.image.url + '\"></p>'));
+        $('#profile').append(
+            $('<p>Hello ' + profile.displayName + '!<br />Tagline: ' +
+            profile.tagline + '<br />About: ' + profile.aboutMe + '</p>'));
+        if (profile.cover && profile.coverPhoto) {
+          $('#profile').append(
+              $('<p><img src=\"' + profile.cover.coverPhoto.url + '\"></p>'));
+        }
+      });
+    }
+  };
+})();
+
+/**
+ * jQuery initialization
+ */
+$(document).ready(function() {
+  $('#disconnect').click(helper.disconnect);
+  $('#loaderror').hide();
+  if ($('[data-clientid="YOUR_CLIENT_ID"]').length > 0) {
+    alert('This sample requires your OAuth credentials (client ID) ' +
+        'from the Google APIs console:\n' +
+        '    https://code.google.com/apis/console/#:access\n\n' +
+        'Find and replace YOUR_CLIENT_ID with your client ID.'
+    );
+  }
+});
+
+/**
+ * Calls the helper method that handles the authentication flow.
+ *
+ * @param {Object} authResult An Object which contains the access token and
+ *   other authentication information.
+ */
+function onSignInCallback(authResult) {
+  helper.onSignInCallback(authResult);
+}
+</script>
 </html>
