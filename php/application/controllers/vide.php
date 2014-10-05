@@ -96,7 +96,7 @@ class Vide extends CI_Controller
 	
 	public function google_signup()
 	{
-		$this->db_model->google_signupm(	$this->input->post('Email')	
+		$this->db_model->google_signupm(	$this->input->post('Email'),	
 													$this->input->post('Name')	
 												);
 	}
