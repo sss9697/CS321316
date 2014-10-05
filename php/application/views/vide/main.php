@@ -84,7 +84,7 @@
 					<div id="movelist">
 						<h2><a href="#">Moves</a></h2>
 						<div>
-							<ul>
+							<ul id="drag-elements">
 								<li id="moveleft" class="command">
 									<div id="movediv">
 										left: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />

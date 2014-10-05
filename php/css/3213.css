@@ -18,6 +18,21 @@ option.Cyan{background-color:#00ffff; color:black;}
 option.Pink{background-color:#ff69b4; color:black;}
 option.Lilac{background-color:#c8a2c8; color:black;}
 
+#drag-elements
+{
+	list-style:none;
+	padding:0;
+	margin:0 0 1em
+}
+#drag-elements li
+{
+	display:inline-block;
+	padding:.5em 1em;
+	margin:0 1em 1em 0;
+	border:1px solid #d9d9d9;
+	background:#f7f7f7;border-radius:3px
+}.clearfix{*zoom: 1}.clearfix:before,.clearfix:after{display:table;line-height:0;content:""}.clearfix:after{clear:both}
+
 #logout-btn
 {
 	display: none;
