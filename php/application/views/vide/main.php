@@ -60,9 +60,6 @@
 	   */
 		  function handleEmailResponse(resp) {
 		    var primaryEmail;
-		    for (var i=0; i < resp.emails.length; i++) {
-		      if (resp.emails[i].type === 'account') primaryEmail = resp.emails[i].value;
-		    }
 		    document.getElementById('responseContainer').value = 'Primary email: ' +
 		        primaryEmail + '\n\nFull Response:\n' + JSON.stringify(resp);
 		  }
