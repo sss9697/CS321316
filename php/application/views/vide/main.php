@@ -32,14 +32,7 @@
 	          data-theme="dark"
 	          data-cookiepolicy="single_host_origin">
 	        </button>
-	        <!-- Textarea for outputting data -->
-	        <div id="response" class="hide">
-	        	<textarea id="responseContainer" style="width:100%; height:150px"></textarea>
-	        </div>
-
-	        <p id = "userinfo">
-
-	        </p>
+	        <p id = "userinfo"></p>
     	</div>
 
 	    <script type="text/javascript">
@@ -67,7 +60,7 @@
 		    for (var i=0; i < resp.emails.length; i++) {
 		      if (resp.emails[i].type === 'account') primaryEmail = resp.emails[i].value;
 		    }
-		    document.getElementById('userinfo').value = 'Primary email: ' +
+		    document.getElementById('userinfo').innerHTML = 'Primary email: ' +
 		        primaryEmail + '\n\nFull Response:\n' + JSON.stringify(resp);
 		  }
 
