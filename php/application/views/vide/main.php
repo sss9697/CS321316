@@ -22,8 +22,9 @@
 		
 		<script src="<?php echo base_url(). "js/commandprocessor.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/events.js" ?>"></script>
-		
 
+		<title>Visual IDE Group 16</title>
+		
 		<meta name="google-signin-clientid" content="177325121472-1rgfp4ninj9t32d6pb1v68vm8cb7avie.apps.googleusercontent.com" />
 		<meta name="google-signin-scope" content="https://www.googleapis.com/auth/plus.login" />
 		<meta name="google-signin-requestvisibleactions" content="http://schema.org/AddAction" />
@@ -39,15 +40,13 @@
 		   };
 
 		   // Attach a click listener to a button to trigger the flow.
-		   var buttonListener = document.getElementById('validate-google');
-		   buttonListener.addEventListener('click', function() {
+		   var signinButton = document.getElementById('signinButton');
+		   signinButton.addEventListener('click', function() {
 		     gapi.auth.signIn(additionalParams); // Will use page level configuration
 		   });
 		 }
 		</script>
-
-		<title>Visual IDE Group 16</title>
-		
+		<button id="signinButton">Sign in with Google</button>
 		
 		<div id="newuser-form" title="Create new user">
 			<p class="validateTips">All form fields are required.</p>
