@@ -5,6 +5,9 @@
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
 		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
 		<script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+
+		<script src = "https://plus.google.com/js/client:plusone.js"></script>
+		
 		<script src="<?php echo base_url(). "js/dialogNewUser.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/dialogSignin.js" ?>"></script>
 		
@@ -22,9 +25,36 @@
 		<script src="<?php echo base_url(). "js/commandprocessor.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/events.js" ?>"></script>
 
-		<script src = "https://plus.google.com/js/client:plusone.js"></script>
 
-		<script src="<?php echo base_url(). "js/oauth_google.js" ?>"></script>
+		<script type="text/javascript">
+			function onSignInCallback(resp) {
+			gapi.client.load('plus', 'v1', apiClientLoaded);
+		}
+
+		/**
+		* Sets up an API call after the Google API client loads.
+		*/
+		function apiClientLoaded() {
+			gapi.client.plus.people.get({userId: 'me'}).execute(handleEmailResponse);
+		}
+
+		/**
+		* Response callback for when the API client receives a response.
+		*
+		* @param resp The API response object with the user email and profile information.
+		*/
+		function handleEmailResponse(resp) {
+			var primaryEmail, displayName;
+			
+			for (var i=0; i < resp.emails.length; i++) 
+			{
+				if (resp.emails[i].type === 'account') primaryEmail = resp.emails[i].value;
+			}
+			
+			displayName = resp.displayName;
+			
+			document.getElementById('userinfo').innerHTML = 'Primary email: ' + primaryEmail + 'Display Name:' + displayName;
+		}</script>
 
 		<title>Visual IDE Group 16</title>
 		
@@ -59,7 +89,10 @@
 			</form>
 		</div>
 		
-		<button id="create-user">New user</button> <button id="validate-user">Sign in</button> <div id="gConnect" class="button">
+		<button id="create-user">New user</button> 
+		<button id="validate-user">Sign in</button> 
+		
+		<div id="gConnect" class="button">
 	        <button class="g-signin"
 	          data-scope="email"
 	          data-clientid="177325121472-1rgfp4ninj9t32d6pb1v68vm8cb7avie.apps.googleusercontent.com"
@@ -69,6 +102,7 @@
 	        </button>
 	        <p id = "userinfo"></p>
     	</div>
+		
 		<button id="logout-btn" type="button">Logout</button>
 		
 		<div id="maindiv">
