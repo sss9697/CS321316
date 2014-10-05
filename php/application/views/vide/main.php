@@ -5,8 +5,6 @@
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
 		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
 		<script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
-		<script src="https://apis.google.com/js/client:platform.js" type="text/javascript"></script>
-  
 		
 		<script src="<?php echo base_url(). "js/dialogNewUser.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/dialogSignin.js" ?>"></script>
@@ -24,47 +22,9 @@
 		
 		<script src="<?php echo base_url(). "js/commandprocessor.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/events.js" ?>"></script>
-	
-		<script type="text/javascript">
-
-		  var options = {
-		      'callback': loginFinished,
-		      'approvalprompt': 'force',
-		      'clientid': '177325121472-1rgfp4ninj9t32d6pb1v68vm8cb7avie.apps.googleusercontent.com',
-		      'scope': 'https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email',
-		      'requestvisibleactions': 'http://schemas.google.com/CommentActivity http://schemas.google.com/ReviewActivity',
-		      'data-accesstype' : 'online',
-		      'cookiepolicy': 'single_host_origin'
-		    };
-
-		  var renderBtn = function()
-		    {
-		      gapi.signin.render('validate-google', options);
-		    }
-
-		    var loginFinished = function(authResult)
-		    {
-		      if (authResult)
-		      {
-		        console.log(authResult);
-		      }
-
-		      gapi.client.load('oauth2', 'v2', function()
-		      {
-		        gapi.client.oauth2.userinfo.get()
-		          .execute(function(resp)
-		          {
-		            // Shows user email
-		            console.log(resp.email);
-		          });
-		      });
-
-		    };
-		    
-		  </script>
-
-
+		
 		<title>Visual IDE Group 16</title>
+		
 		
 		
 		<div id="newuser-form" title="Create new user">
@@ -98,7 +58,7 @@
 			</form>
 		</div>
 		
-		<button id="create-user">New user</button> <button id="validate-user">Sign in</button> <div id="validate-google" onload ="renderBtn()">Google Sign in</div>
+		<button id="create-user">New user</button> <button id="validate-user">Sign in</button> <button id="validate-google">Google Sign in</button>
 		<button id="logout-btn" type="button">Logout</button>
 		
 		<div id="maindiv">
