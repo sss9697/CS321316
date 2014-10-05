@@ -5,8 +5,6 @@
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
 		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
 		<script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
-		<script src="https://apis.google.com/js/client:platform.js" async defer></script>
-		
 		<script src="<?php echo base_url(). "js/dialogNewUser.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/dialogSignin.js" ?>"></script>
 		
@@ -25,44 +23,6 @@
 		<script src="<?php echo base_url(). "js/events.js" ?>"></script>
 
 		<title>Visual IDE Group 16</title>
-		
-		<meta name="google-signin-clientid" content="177325121472-1rgfp4ninj9t32d6pb1v68vm8cb7avie.apps.googleusercontent.com" />
-		<meta name="google-signin-scope" content="https://www.googleapis.com/auth/plus.login" />
-		<meta name="google-signin-requestvisibleactions" content="http://schema.org/AddAction" />
-		<meta name="google-signin-cookiepolicy" content="single_host_origin" />
-		<script src="https://apis.google.com/js/client:platform.js?onload=render" async defer>
-		 /* Executed when the APIs finish loading */
-		 function render() {
-
-		   // Additional params including the callback, the rest of the params will
-		   // come from the page-level configuration.
-		   var additionalParams = {
-		     'callback': signinCallback
-		   };
-
-		   // Attach a click listener to a button to trigger the flow.
-		   var signinButton = document.getElementById('signinButton');
-		   signinButton.addEventListener('click', function() {
-		     gapi.auth.signIn(additionalParams); // Will use page level configuration
-		   });
-		 }
-
-		 function signinCallback(authResult) {
-			  if (authResult['status']['signed_in']) {
-			    // Update the app to reflect a signed in user
-			    // Hide the sign-in button now that the user is authorized, for example:
-			    document.getElementById('signinButton').setAttribute('style', 'display: none');
-			  } else {
-			    // Update the app to reflect a signed out user
-			    // Possible error values:
-			    //   "user_signed_out" - User is signed-out
-			    //   "access_denied" - User denied access to your app
-			    //   "immediate_failed" - Could not automatically log in the user
-			    console.log('Sign-in state: ' + authResult['error']);
-			  }
-			}
-		</script>
-		<button id="signinButton">Sign in with Google</button>
 		
 		<div id="newuser-form" title="Create new user">
 			<p class="validateTips">All form fields are required.</p>
@@ -244,4 +204,43 @@
 			</div>		
 		</div>
 	</head>
+
+	<body>
+
+	<span id="signinButton">
+	  <span
+	    class="g-signin"
+	    data-callback="signinCallback"
+	    data-clientid="CLIENT_ID"
+	    data-cookiepolicy="single_host_origin"
+	    data-requestvisibleactions="http://schema.org/AddAction"
+	    data-scope="https://www.googleapis.com/auth/plus.login">
+	  </span>
+	</span>
+
+	<script type="text/javascript">
+      (function() {
+       var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+       po.src = 'https://apis.google.com/js/client:plusone.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+     })();
+
+     function signinCallback(authResult) {
+  if (authResult['status']['signed_in']) {
+    // Update the app to reflect a signed in user
+    // Hide the sign-in button now that the user is authorized, for example:
+    document.getElementById('signinButton').setAttribute('style', 'display: none');
+  } else {
+    // Update the app to reflect a signed out user
+    // Possible error values:
+    //   "user_signed_out" - User is signed-out
+    //   "access_denied" - User denied access to your app
+    //   "immediate_failed" - Could not automatically log in the user
+    console.log('Sign-in state: ' + authResult['error']);
+  }
+}
+
+    </script>
+
+	</body>
 </html>
