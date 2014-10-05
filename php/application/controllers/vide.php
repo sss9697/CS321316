@@ -85,4 +85,19 @@ class Vide extends CI_Controller
 												$this->input->post('DefaultCharacter')
 											);
 	}
+	
+	public function google_check()
+	{
+		$query = $this->db_model->google_checkm(	$this->input->post('Email')	);
+											
+		header('Content-Type: application/json');
+			echo json_encode($query);
+	}
+	
+	public function google_signup()
+	{
+		$this->db_model->google_signupm(	$this->input->post('Email')	
+													$this->input->post('Name')	
+												);
+	}
 }

@@ -70,4 +70,28 @@ class db_model extends CI_Model
 		$acc['DefaultChar'] = $DefaultCharacter;
 		$this->db->update('accounts', $acc); 
 	}
+	
+	public function google_checkm($Email)
+	{
+		$this->db->where('Email', $Email);
+		$this->db->where('GoogleAcc', 1);
+		
+		$query = $this->db->get('accounts');
+		
+		$results = $query->result();
+		
+		return $results;
+	}
+	
+	public function google_signupm($email, $name)
+	{
+		$acc['Name'] = $name;
+		$acc['Email'] = $email;
+		$acc['Password'] = null;
+		$acc['GoogleAcc'] = 1;
+		$acc['DefaultChar'] = "1";
+		$acc['DefaultBackground'] = "#cccccc";
+			
+		$this->db->insert('accounts', $acc);
+	}
 }

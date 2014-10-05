@@ -25,37 +25,6 @@
 		<script src="<?php echo base_url(). "js/commandprocessor.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/events.js" ?>"></script>
 
-
-		<script type="text/javascript">
-			function onSignInCallback(resp) {
-			gapi.client.load('plus', 'v1', apiClientLoaded);
-		}
-
-		/**
-		* Sets up an API call after the Google API client loads.
-		*/
-		function apiClientLoaded() {
-			gapi.client.plus.people.get({userId: 'me'}).execute(handleEmailResponse);
-		}
-
-		/**
-		* Response callback for when the API client receives a response.
-		*
-		* @param resp The API response object with the user email and profile information.
-		*/
-		function handleEmailResponse(resp) {
-			var primaryEmail, displayName;
-			
-			for (var i=0; i < resp.emails.length; i++) 
-			{
-				if (resp.emails[i].type === 'account') primaryEmail = resp.emails[i].value;
-			}
-			
-			displayName = resp.displayName;
-			
-			document.getElementById('userinfo').innerHTML = 'Primary email: ' + primaryEmail + 'Display Name:' + displayName;
-		}</script>
-
 		<title>Visual IDE Group 16</title>
 		
 		<div id="newuser-form" title="Create new user">
@@ -100,7 +69,6 @@
 	          data-theme="dark"
 	          data-cookiepolicy="single_host_origin">
 	        </button>
-	        <p id = "userinfo"></p>
     	</div>
 		
 		<button id="logout-btn" type="button">Logout</button>
