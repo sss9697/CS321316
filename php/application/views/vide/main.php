@@ -24,7 +24,7 @@
 		<script src="<?php echo base_url(). "js/events.js" ?>"></script>
 		
 
-		<meta name="google-signin-clientid" content="CLIENT_ID" />
+		<meta name="google-signin-clientid" content="177325121472-1rgfp4ninj9t32d6pb1v68vm8cb7avie.apps.googleusercontent.com" />
 		<meta name="google-signin-scope" content="https://www.googleapis.com/auth/plus.login" />
 		<meta name="google-signin-requestvisibleactions" content="http://schema.org/AddAction" />
 		<meta name="google-signin-cookiepolicy" content="single_host_origin" />
@@ -39,8 +39,8 @@
 		   };
 
 		   // Attach a click listener to a button to trigger the flow.
-		   var validate-google = document.getElementById('validate-google');
-		   validate-google.addEventListener('click', function() {
+		   var buttonListener = document.getElementById('validate-google');
+		   buttonListener.addEventListener('click', function() {
 		     gapi.auth.signIn(additionalParams); // Will use page level configuration
 		   });
 		 }
