@@ -10,6 +10,7 @@
 		
 		<script src="<?php echo base_url(). "js/dialogNewUser.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/dialogSignin.js" ?>"></script>
+		<script src="<?php echo base_url(). "js/oauth_google.js" ?>"></script>
 		
 		<script src="<?php echo base_url(). "js/viewEditorDiv.js" ?>"></script>
 		
