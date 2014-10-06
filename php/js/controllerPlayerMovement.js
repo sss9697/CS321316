@@ -101,7 +101,7 @@ function executeCommand(moves)
 	resetPlayerWindow();
 	var coords = [0,0];
 	var delay = -500;
-	var spriteDelay = -500;
+	var spriteDelay = 0;
 	var charDelay = -500;
 	var charChangeCount = 0;
 	
