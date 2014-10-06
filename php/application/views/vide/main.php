@@ -168,7 +168,7 @@
 					<h1 class="ui-widget-header">Editor</h1>
 					<div class="ui-widget-content">
 						<ul id="droppable">
-							<li class="placeholder">drag command here</li>
+							<div class="placeholder">drag command here</div>
 						</ul>
 					</div>
 				</div>
