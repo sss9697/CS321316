@@ -135,7 +135,7 @@ function executeCommand(moves)
 			var charChangeD = charChangeCount % 2;
 			
 			changePlayerCommand(moves[i], charDelay, charChangeD);
-			spriteDelay = 0;
+			spriteDelay += 500;
 			charDelay = -500;
 			
 			charChangeCount += 1;
