@@ -87,42 +87,42 @@
 							<ul id="drag-elements">
 								<li id="moveleft" class="command">
 									<div id="movediv">
-										left: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
+										MOVE LEFT: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
 									</div>
 								</li>
 								<li id="moveright" class="command">
 									<div id="movediv">
-										right: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
+										MOVE RIGHT: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
 									</div>
 								</li>
 								<li id="moveup" class="command">
 									<div id="movediv">
-										up: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
+										MOVE UP: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
 									</div>
 								</li>
 								<li id="movedown" class="command">
 									<div id="movediv">
-										down: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
+										MOVE DOWN: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
 									</div>
 								</li>
 								<li id="moveloopo" class="command">
 									<div id="movediv">
-										loop open
+										OPEN LOOP
 									</div>
 								</li>
 								<li id="moveloopc" class="command">
 									<div id="movediv">
-										loop close: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
+										CLOSE LOOP: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
 									</div>
 								</li>
 								<li id="movesetx" class="command">
 									<div id="movediv">
-										set x: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
+										SET X: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
 									</div>
 								</li>
 								<li id="movesety" class="command">
 									<div id="movediv">
-										set y: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
+										SET Y: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
 									</div>
 								</li>
 							</ul>
@@ -132,7 +132,7 @@
 							<ul>
 								<li id="movechartoggle" class="command">
 									<div id="movediv">
-										Toggle character
+										TOGGLE CHARACTER
 									</div>
 								</li>
 								<li id="movebackground" class="command">
@@ -185,9 +185,7 @@
 					<button id="delete-btn">Delete</button>
 				</div>
 			</div>
-			<div class="verticalLine">
 
-			</div>
 			<div id="playerdiv">
 				 <img src= "<?php echo base_url(). "img/1.gif" ?> " height="50" width="50" id="sprite" value="hide"> 
 				 <img src= "<?php echo base_url(). "img/1.gif" ?> " height="50" width="50" id="sprite2" value="hide" style="display: none;"> 
