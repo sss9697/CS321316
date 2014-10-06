@@ -95,6 +95,18 @@ option.Lilac{background-color:#c8a2c8; color:black;}
 	float:left;
 	width:300px;
 	height:280px;
+	list-style:none;
+	padding:0;
+	margin:0 0 1em
+}
+#droppable li
+{
+	display:inline-block;
+	padding:.5em 1em;
+	margin:0 1em 1em 0;
+	border:1px solid #d9d9d9;
+	background:#f7f7f7;
+	border-radius:3px
 }
 #saveDirErr
 {
