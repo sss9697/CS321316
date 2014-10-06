@@ -43,6 +43,9 @@ option.Lilac{background-color:#c8a2c8; color:black;}
 	background:#f7f7f7;
 	border-radius:3px
 }
+.verticalLine {
+    border-left: thick solid #ff0000;
+}
 
 #logout-btn
 {
@@ -95,15 +98,11 @@ option.Lilac{background-color:#c8a2c8; color:black;}
 	float:left;
 	width:300px;
 	height:280px;
-	list-style:none;
-	padding:0;
-	margin:0 0 1em
+	list-style:decimal-leading-zero;;
 }
 #droppable li
 {
-	display:inline-block;
 	padding:.5em 1em;
-	margin:0 1em 1em 0;
 	border:1px solid #d9d9d9;
 	background:#f7f7f7;
 	border-radius:3px

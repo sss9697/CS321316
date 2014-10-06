@@ -185,6 +185,9 @@
 					<button id="delete-btn">Delete</button>
 				</div>
 			</div>
+			<div class="verticalLine">
+
+			</div>
 			<div id="playerdiv">
 				 <img src= "<?php echo base_url(). "img/1.gif" ?> " height="50" width="50" id="sprite" value="hide"> 
 				 <img src= "<?php echo base_url(). "img/1.gif" ?> " height="50" width="50" id="sprite2" value="hide" style="display: none;"> 
