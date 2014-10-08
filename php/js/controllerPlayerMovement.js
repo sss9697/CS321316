@@ -20,6 +20,9 @@ function movePlayer(move, x, y, delayTime)
 					if(newY < TOPBOUNDARY)
 						newY = TOPBOUNDARY;
 						
+					if(newY > BOTTOMBOUNDARY)
+						newY = BOTTOMBOUNDARY;
+						
 					$("#sprite").delay(delayTime).animate({top:newY}, 500);
 					$("#sprite2").delay(delayTime).animate({top:newY}, 500);
 			break;
@@ -28,6 +31,9 @@ function movePlayer(move, x, y, delayTime)
 		
 					if(newY > BOTTOMBOUNDARY)
 						newY = BOTTOMBOUNDARY;
+						
+					if(newY < TOPBOUNDARY)
+						newY = TOPBOUNDARY;
 		
 					$("#sprite").delay(delayTime).animate({top:newY}, 500);
 					$("#sprite2").delay(delayTime).animate({top:newY}, 500);
@@ -37,6 +43,9 @@ function movePlayer(move, x, y, delayTime)
 		
 					if(newX < LEFTBOUNDARY)
 						newX = LEFTBOUNDARY;
+						
+					if(newX > RIGHTBOUNDARY)
+						newX = RIGHTBOUNDARY;
 		
 					$("#sprite").delay(delayTime).animate({left:newX}, 500);
 					$("#sprite2").delay(delayTime).animate({left:newX}, 500);
@@ -46,6 +55,9 @@ function movePlayer(move, x, y, delayTime)
 		
 					if(newX > RIGHTBOUNDARY)
 						newX = RIGHTBOUNDARY;
+						
+					if(newX < LEFTBOUNDARY)
+						newX = LEFTBOUNDARY;
 						
 					$("#sprite").delay(delayTime).animate({left:newX}, 500);
 					$("#sprite2").delay(delayTime).animate({left:newX}, 500);
