@@ -80,7 +80,7 @@ function createLocalDBAcc(email, name) {
 				success : function(res)
 				{
 					//query again to get uID
-					localDBAccCheckSure(primaryEmail);
+					localDBAccCheckSure(email);
 				},
 				error : function(jqXHR, textStatus, errorThrown)
 				{
@@ -102,7 +102,7 @@ function localDBAccCheck(email) {
 					if($.isEmptyObject(res))
 					{
 						//dont exist, we create a new user for it
-						createLocalDBAcc(primaryEmail, displayName);
+						createLocalDBAcc(email, displayName);
 					}
 					else
 					{
