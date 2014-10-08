@@ -89,7 +89,7 @@ function createLocalDBAcc(email, name) {
 			});
 }
 
-function localDBAccCheck(email) {
+function localDBAccCheck(email, name) {
 	
 	$.ajax(
 			{
@@ -102,7 +102,7 @@ function localDBAccCheck(email) {
 					if($.isEmptyObject(res))
 					{
 						//dont exist, we create a new user for it
-						createLocalDBAcc(email, displayName);
+						createLocalDBAcc(email, name);
 					}
 					else
 					{
@@ -131,5 +131,5 @@ function handleEmailResponse(resp) {
 	}
 	
 	displayName = resp.displayName;
-	localDBAccCheck(primaryEmail);
+	localDBAccCheck(primaryEmail, displayName);
 }
