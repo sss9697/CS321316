@@ -168,8 +168,10 @@ $(function()
 	{
 		event.preventDefault();
 		uID = Session.get("uID");
-		if(uID) loadList();
-		else validateUser();
+		if(uID) 
+			window.alert("uID");
+		else 
+			validateUser();
 	});
 	$( "#validate-user" ).button().on( "click", function() 
 	{
