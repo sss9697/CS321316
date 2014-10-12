@@ -128,6 +128,7 @@ $(function()
 							$('#logout-btn').hide().fadeIn(3000);
 							$('#maindiv').hide().fadeIn(3000);
 							loadList();
+							controllerSession.set("name",uID);
 						}
 					}
 				},
