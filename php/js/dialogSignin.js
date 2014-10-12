@@ -167,11 +167,7 @@ $(function()
 	form = dialog.find( "form" ).on( "submit", function( event ) 
 	{
 		event.preventDefault();
-		uID = Session.get("uID");
-		if(uID) 
-			window.alert("uID");
-		else 
-			validateUser();
+		validateUser();
 	});
 	$( "#validate-user" ).button().on( "click", function() 
 	{
