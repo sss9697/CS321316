@@ -1,5 +1,4 @@
 <script type="text/javascript" src="json-serialization.js"></script>
-<script type="text/javascript" src="controllerSession.js"></script>
 <?php
 
 /*
