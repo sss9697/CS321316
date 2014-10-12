@@ -128,7 +128,7 @@ $(function()
 							$('#logout-btn').hide().fadeIn(3000);
 							$('#maindiv').hide().fadeIn(3000);
 							loadList();
-							Session.set("name",uID);
+							Session.set("uID",uID);
 						}
 					}
 				},
@@ -167,7 +167,9 @@ $(function()
 	form = dialog.find( "form" ).on( "submit", function( event ) 
 	{
 		event.preventDefault();
-		validateUser();
+		uID = Session.get("uID");
+		if(uID) loadList();
+		else validateUser();
 	});
 	$( "#validate-user" ).button().on( "click", function() 
 	{
