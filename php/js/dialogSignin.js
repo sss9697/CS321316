@@ -128,7 +128,7 @@ $(function()
 							$('#logout-btn').hide().fadeIn(3000);
 							$('#maindiv').hide().fadeIn(3000);
 							loadList();
-							Session.set("uID",uID);
+							Session.set("uID",uID);//Store uID in session
 						}
 					}
 				},
