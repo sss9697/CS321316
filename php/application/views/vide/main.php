@@ -77,18 +77,20 @@ window.onload = function() {
 			</form>
 		</div>
 		
-		<button id="create-user">New user</button> 
-		<button id="validate-user">Sign in</button> 
-		
-		<div id="gConnect" class="button">
-	        <button class="g-signin"
-	          data-scope="email"
-	          data-clientid="177325121472-1rgfp4ninj9t32d6pb1v68vm8cb7avie.apps.googleusercontent.com"
-	          data-callback="onSignInCallback"
-	          data-theme="dark"
-	          data-cookiepolicy="single_host_origin">
-	        </button>
-    	</div>
+		<div id="login-page-controls">
+			<button id="create-user">New user</button> 
+			<button id="validate-user">Sign in</button> 
+			
+			<div id="gConnect" class="button">
+				<button class="g-signin"
+				  data-scope="email"
+				  data-clientid="177325121472-1rgfp4ninj9t32d6pb1v68vm8cb7avie.apps.googleusercontent.com"
+				  data-callback="onSignInCallback"
+				  data-theme="dark"
+				  data-cookiepolicy="single_host_origin">
+				</button>
+			</div>
+		<div>
 		
 		<button id="logout-btn" type="button">Logout</button>
 		
