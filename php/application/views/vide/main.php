@@ -86,7 +86,7 @@ window.onload = function() {
 		<div id="login-page-controls">
 			<button id="create-user">New user</button> 
 			<button id="validate-user">Sign in</button> 
-			
+			<br/><br/>
 			<div id="gConnect" class="button">
 				<button class="g-signin"
 				  data-scope="email"
