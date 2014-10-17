@@ -76,7 +76,11 @@ window.onload = function() {
 				</fieldset>
 			</form>
 		</div>
-		
+		<img src="img/1.gif" width="50" height="50">
+		<img src="img/2.gif" width="50" height="50">
+		<img src="img/3.gif" width="50" height="50">
+		<img src="img/4.gif" width="50" height="50">
+		<img src="img/5.gif" width="50" height="50">
 		<div id="login-page-controls">
 			<button id="create-user">New user</button> 
 			<button id="validate-user">Sign in</button> 
