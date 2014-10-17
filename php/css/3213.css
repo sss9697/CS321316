@@ -2,7 +2,7 @@ body
 {
 	font-size: 80%
 }
-.login-page-controls {
+#login-page-controls {
     margin-left: auto;
     margin-right: auto;
     width: 70%;
