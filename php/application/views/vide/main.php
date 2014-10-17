@@ -96,7 +96,7 @@ window.onload = function() {
 				  data-cookiepolicy="single_host_origin">
 				</button>
 			</div>
-		<div>
+		</div>
 		
 		<button id="logout-btn" type="button">Logout</button>
 		
