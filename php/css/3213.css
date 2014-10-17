@@ -2,6 +2,13 @@ body
 {
 	font-size: 80%
 }
+#login-page-image {
+    margin-left: auto;
+	margin-right: auto;
+	width: 300px;
+	text-align: center;
+	margin-top: 5%;
+}
 #login-page-controls {
     margin-left: auto;
 	margin-right: auto;
