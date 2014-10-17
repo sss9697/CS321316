@@ -24,7 +24,7 @@ body
 	color:Red;
 }
 option.Grey {background-color:#cccccc; color:white;}
-option.Black {background-color:#000000; color:white !important;}
+option.Black {background-color:#000000; color:white;}
 option.White{background-color:#ffffff; color:black;}
 option.Blue{background-color:#0000ff; color:white;}
 option.Red{background-color:#ff0000; color:white;}
@@ -33,6 +33,10 @@ option.Yellow {background-color:#ffff00; color:black;}
 option.Cyan{background-color:#00ffff; color:black;}
 option.Pink{background-color:#ff69b4; color:black;}
 option.Lilac{background-color:#c8a2c8; color:black;}
+
+select option[val="1"]{
+    color:white;;
+}
 
 #drag-elements
 {
