@@ -45,7 +45,7 @@ window.onload = function() {
 		<script src="<?php echo base_url(). "js/controllerSession.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/json-serialization.js" ?>"></script>
 		<title>Visual IDE Group 16</title>
-		<p><a href="#" onclick="alert(Session.dump());">(view session dump)</a></p>
+		
 		<div id="newuser-form" title="Create new user">
 			<p class="validateTips">All form fields are required.</p>
 			<form>
