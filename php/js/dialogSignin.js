@@ -122,13 +122,13 @@ $(function()
 							$("#sprite").attr("src","img/"+account[0].DefaultChar+".gif");
 							
 							$('#playerdiv').css('background-color', account[0].DefaultBackground);
-							$('#create-user').fadeOut(3000);
-							$('#validate-user').fadeOut(3000);
-							$('#login-page-image').fadeOut(3000);
-							$('#login-page-controls').fadeOut(3000);
-							$('#gConnect').fadeOut(3000);
-							$('#logout-btn').hide().fadeIn(3000);
-							$('#maindiv').hide().fadeIn(3000);
+							$('#create-user').fadeOut(500);
+							$('#validate-user').fadeOut(500);
+							$('#login-page-image').fadeOut(500);
+							$('#login-page-controls').fadeOut(500);
+							$('#gConnect').fadeOut(500);
+							$('#logout-btn').hide().fadeIn(500);
+							$('#maindiv').hide().fadeIn(500);
 							loadList();
 							Session.set("uID",uID);//Store uID in session
 						}
