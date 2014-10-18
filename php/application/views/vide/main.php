@@ -25,22 +25,7 @@
 		
 		<script src="<?php echo base_url(). "js/commandprocessor.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/events.js" ?>"></script>
-		<script type="text/javascript">
-// <![CDATA[
 
-// initialize application defaults
-var userName = Session.get("uID") || {
-	uID : ""
-};
-
-// onload
-window.onload = function() {
-	if(userName != "")//if session exist, use the existing uID
-	{
-		document.getElementsByID('welcomelabel').value = "Welcome "+ uID;
-	}
-}
-</script>
 		
 		<script src="<?php echo base_url(). "js/controllerSession.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/json-serialization.js" ?>"></script>

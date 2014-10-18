@@ -7,5 +7,4 @@
 		$('#logout-btn').fadeOut(3000);
 		$('#maindiv').fadeOut(3000);
 		//dirty check?? optional so depend on time
-		Session.clear();//Destroy the session
 	}
