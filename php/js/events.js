@@ -67,7 +67,7 @@ $(function()
 	});
 			
 	//defaultBackground dropdown list changed event
-	$("#editorspace #movebackgroundlist").on('change', function() 
+	$("#newmovebackgroundlist").on('change', function() 
 	{
 		processCommand("defaultBackgroundCom", this);
 	});
