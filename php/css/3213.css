@@ -34,10 +34,6 @@ option.Cyan{background-color:#00ffff; color:black;}
 option.Pink{background-color:#ff69b4; color:black;}
 option.Lilac{background-color:#c8a2c8; color:black;}
 
-select option[val="1"]{
-    color:white;;
-}
-
 #drag-elements
 {
 	list-style:none;
