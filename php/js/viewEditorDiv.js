@@ -24,14 +24,10 @@ $(function()
 			//$( "<li class=\"added\" id=\"added\" ></li>" ).text( ui.draggable.text() ).appendTo( this );
 			$(this).append($(ui.draggable).clone());
 			$( this ).find( "#movebackgroundlist" ).attr("id", "newmovebackgroundlist"+bIndex);
-			var test = "#newmovebackgroundlist"+bIndex;
-			console.log((ui.draggable).clone().find("#movebackgroundlist"));
-			//console.log((ui.draggable).clone().find("#movebackgroundlist").attr("selected"));
-			console.log((ui.draggable).clone().find("#movebackgroundlist").attr("style"));
-			console.log((ui.draggable).clone().find("#movebackgroundlist").css( "background-color" ));
-			//console.log((ui.draggable).clone().find("#movebackgroundlist").attr("option"));
-			console.log((ui.draggable).clone().find("#movebackgroundlist").val());
-			$(test).on('change', function() 
+			var newId = "#newmovebackgroundlist"+bIndex;
+			var newColor = rgb2hex((ui.draggable).clone().find("#movebackgroundlist").css( "background-color" ));
+			$(newId).val(newColor);
+			$(newId).on('change', function() 
 			{
 				processCommand("defaultBackgroundCom", this);
 			});
