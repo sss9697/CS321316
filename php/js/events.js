@@ -66,6 +66,12 @@ $(function()
 		processCommand("defaultBackgroundCom", this);
 	});
 	
+	//defaultBackground dropdown list changed event
+	$("#newmovebackgroundlist").on('change', function() 
+	{
+		processCommand("defaultBackgroundCom", this);
+	});
+	
 	//defaultCharacter dropdown list changed event
 	$("#defaultCharList").on('change', function() 
 	{
