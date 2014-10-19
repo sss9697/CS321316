@@ -26,9 +26,11 @@ $(function()
 			$( this ).find( "#movebackgroundlist" ).attr("id", "newmovebackgroundlist"+bIndex);
 			var test = "#newmovebackgroundlist"+bIndex;
 			console.log((ui.draggable).clone().find("#movebackgroundlist"));
-			console.log((ui.draggable).clone().find("#movebackgroundlist").attr("selected"));
+			//console.log((ui.draggable).clone().find("#movebackgroundlist").attr("selected"));
 			console.log((ui.draggable).clone().find("#movebackgroundlist").attr("style"));
-			console.log((ui.draggable).clone().find("#movebackgroundlist").attr("option"));
+			console.log((ui.draggable).clone().find("#movebackgroundlist").attr("style").attr("background-color"));
+			console.log((ui.draggable).clone().find("#movebackgroundlist").attr("style").attr("background-color").val());
+			//console.log((ui.draggable).clone().find("#movebackgroundlist").attr("option"));
 			console.log((ui.draggable).clone().find("#movebackgroundlist").val());
 			$(test).on('change', function() 
 			{
