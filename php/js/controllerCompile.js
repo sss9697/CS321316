@@ -34,7 +34,7 @@ function compileCommand()
 			case "movechartoggle": compileString += "T";
 				break;
 			case "movebackground": compileString += "B";
-					numberTimes = $(this).find("#movebackgroundlist").val();
+					numberTimes = $(this).find(".backgroundSelectedCom").val();
 					//change numberTimes into its own value which is color code
 				break;
 			case "movechangechar": compileString += "A";
