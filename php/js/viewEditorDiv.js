@@ -12,6 +12,7 @@ $(function()
 		cursor: "move"
 	});
 	
+	var bIndex = 0;
 	$( "#editorspace ul" ).droppable(
 	{
 		activeClass: "ui-state-default",
@@ -22,7 +23,11 @@ $(function()
 			$( this ).find( ".placeholder" ).remove();
 			//$( "<li class=\"added\" id=\"added\" ></li>" ).text( ui.draggable.text() ).appendTo( this );
 			$(this).append($(ui.draggable).clone());
-			$( this ).find( "#movebackgroundlist" ).attr("id", "newmovebackgroundlist");
+			$( this ).find( "#movebackgroundlist" ).attr("id", "newmovebackgroundlist"+bIndex);
+			$("#newmovebackgroundlist"+bIndex).on('change', function() 
+			{
+				processCommand("defaultBackgroundCom", this);
+			});
 			$("#editorspace .command").addClass("item");
 			$(".item").removeClass("ui-draggable command");
 	
