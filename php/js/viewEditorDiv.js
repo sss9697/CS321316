@@ -22,9 +22,10 @@ $(function()
 		{			
 			$( this ).find( ".placeholder" ).remove();
 			//$( "<li class=\"added\" id=\"added\" ></li>" ).text( ui.draggable.text() ).appendTo( this );
-			$(this).append($(ui.draggable).clone(true));
+			$(this).append($(ui.draggable).clone());
 			$( this ).find( "#movebackgroundlist" ).attr("id", "newmovebackgroundlist"+bIndex);
 			var test = "#newmovebackgroundlist"+bIndex;
+			console.log((ui.draggable).clone().children().find("#movebackgroundlist").val());
 			$(test).on('change', function() 
 			{
 				processCommand("defaultBackgroundCom", this);
