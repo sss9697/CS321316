@@ -24,7 +24,8 @@ $(function()
 			//$( "<li class=\"added\" id=\"added\" ></li>" ).text( ui.draggable.text() ).appendTo( this );
 			$(this).append($(ui.draggable).clone());
 			$( this ).find( "#movebackgroundlist" ).attr("id", "newmovebackgroundlist"+bIndex);
-			$("#newmovebackgroundlist"+bIndex).on('change', function() 
+			var test = "#newmovebackgroundlist"+bIndex;
+			$(test).on('change', function() 
 			{
 				processCommand("defaultBackgroundCom", this);
 			});
@@ -32,6 +33,7 @@ $(function()
 			$(".item").removeClass("ui-draggable command");
 	
 		}
+		bIndex++;
 	});
 	
 	var sortableIn = 0;
