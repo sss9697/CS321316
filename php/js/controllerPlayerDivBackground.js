@@ -26,6 +26,7 @@ function defaultBackgroundf(value)
 function defaultBackgroundCom(value)
 {
 	$(value).css('background-color', value.value);
+	console.log(value);
 	//$('select[id^="movebackgroundlist"] option:selected').attr("selected",null);
 	//$('select[id^="movebackgroundlist"] option[value="' + value.value + '"]').attr("selected","selected");
 	//$(value).val(value.value);
