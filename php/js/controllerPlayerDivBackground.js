@@ -2,6 +2,12 @@ function updateBackground(value)
 {
 	$('#playerdiv').css('background-color', value);
 	$('.backgroundSelected').css('background-color', value);
+	if(value == "#000000" || value == "#0000ff"){
+		$('.backgroundSelected').css('color', "#ffffff");
+	}
+	else{
+		$('.backgroundSelected').css('color', "#000000");
+	}
 }
 
 function defaultBackgroundf(value)
