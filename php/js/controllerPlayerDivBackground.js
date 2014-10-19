@@ -26,7 +26,12 @@ function defaultBackgroundf(value)
 function defaultBackgroundCom(value)
 {
 	$(value).css('background-color', value.value);
-	console.log(value.value);
+	if(value.value == "#000000" || value.value == "#0000ff"){
+		$(value).css('color', "#ffffff");
+	}
+	else{
+		$(value).css('color', "#000000");
+	}
 	//$('select[id^="movebackgroundlist"] option:selected').attr("selected",null);
 	//$('select[id^="movebackgroundlist"] option[value="' + value.value + '"]').attr("selected","selected");
 	//$(value).val(value.value);
