@@ -21,9 +21,10 @@ $(function()
 		{			
 			$( this ).find( ".placeholder" ).remove();
 			//$( "<li class=\"added\" id=\"added\" ></li>" ).text( ui.draggable.text() ).appendTo( this );
-			$(this).append($(ui.draggable).clone().children.attr('id', 'newmovebackgroundlist'));
+			$(this).append($(ui.draggable).clone());
 			$("#editorspace .command").addClass("item");
 			$(".item").removeClass("ui-draggable command");
+	
 		}
 	});
 	
