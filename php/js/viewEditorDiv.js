@@ -29,11 +29,11 @@ $(function()
 			{
 				processCommand("defaultBackgroundCom", this);
 			});
+			bIndex++;
 			$("#editorspace .command").addClass("item");
 			$(".item").removeClass("ui-draggable command");
 	
 		}
-		bIndex++;
 	});
 	
 	var sortableIn = 0;
