@@ -117,6 +117,7 @@ function executeCommand(moves)
 	var charDelay = -500;
 	var charChangeCount = 0;
 	var foreverloopIndex = 0;
+	var loopCount = 0;
 	
 	for(i = 0 ; i < moves.length ; i++)
 	{
@@ -162,7 +163,15 @@ function executeCommand(moves)
 			}
 			else
 			{
-				i = foreverloopIndex - 1;
+				var spriteQueue = $("#sprite").queue("sfx");
+				var sprite2Queue = $('#sprite2').queue("s2fx");
+				var playerQueue = $('#playerdiv').queue("qfx");
+				
+				loopCount = loopCount + 1;
+				if(spriteQueue.length > 200 || sprite2Queue.length > 200 || playerQueue > 200)
+					i = i -1 ;
+				else
+					i = foreverloopIndex - 1;
 			}
 		}
 	}
