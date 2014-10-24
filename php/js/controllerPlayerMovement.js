@@ -116,6 +116,7 @@ function executeCommand(moves)
 	var spriteDelay = 0;
 	var charDelay = -500;
 	var charChangeCount = 0;
+	var foreverloopIndex = 0;
 	
 	for(i = 0 ; i < moves.length ; i++)
 	{
@@ -151,6 +152,18 @@ function executeCommand(moves)
 			charDelay = -500;
 			
 			charChangeCount += 1;
+		}
+		else if(moves[i].charAt(0) == "F")
+		{
+			var foreverIndex = parseInt(moves[i].substring(1));
+			if(foreverIndex == 0)
+			{
+				foreverloopIndex = i;
+			}
+			else
+			{
+				i = foreverloopIndex - 1;
+			}
 		}
 	}
 }

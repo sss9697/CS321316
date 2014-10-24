@@ -112,11 +112,27 @@ function expandCommand(input, start)
 			var t = parseInt(newInput)
 			var tempOutput = [];
 			
-			for ( j = 0 ; j < t ; j++)
+			//check for t = 0, if t == 0, do a forever loop
+			if( t == 0 )
 			{
-				for( k = 0 ; k < temp.length; k++)
+				for ( j = 0 ; j < 1 ; j++)
 				{
-					tempOutput[tempOutput.length] = temp[k];
+					tempOutput[tempOutput.length] = "F0";
+					for( k = 0 ; k < temp.length; k++)
+					{
+						tempOutput[tempOutput.length] = temp[k];
+					}
+					tempOutput[tempOutput.length] = "F1";
+				}
+			}
+			else
+			{
+				for ( j = 0 ; j < t ; j++)
+				{
+					for( k = 0 ; k < temp.length; k++)
+					{
+						tempOutput[tempOutput.length] = temp[k];
+					}
 				}
 			}
 			tempOutput[tempOutput.length] = i;
