@@ -163,14 +163,8 @@ function executeCommand(moves)
 			}
 			else
 			{
-				var spriteQueue = $("#sprite").queue("sfx");
-				var sprite2Queue = $('#sprite2').queue("s2fx");
-				var playerQueue = $('#playerdiv').queue("qfx");
-				
 				loopCount = loopCount + 1;
-				if(spriteQueue.length > 200 || sprite2Queue.length > 200 || playerQueue > 200)
-					i = i -1 ;
-				else
+				if(loopCount != 999)
 					i = foreverloopIndex - 1;
 			}
 		}
