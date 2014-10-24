@@ -163,11 +163,8 @@ function executeCommand(moves)
 			}
 			else
 			{
-				var playerSprite = $("#sprite").queue("fx");
-				//loopCount = loopCount + 1;
-				//if(loopCount != 999)
-				while(playerSprite.length > 200)
-				{}
+				loopCount = loopCount + 1;
+				if(loopCount != 6307200)
 					i = foreverloopIndex - 1;
 			}
 		}
