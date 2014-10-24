@@ -164,7 +164,7 @@ function executeCommand(moves)
 			else
 			{
 				loopCount = loopCount + 1;
-				if(loopCount != 6307200)
+				if(loopCount != 630720)
 					i = foreverloopIndex - 1;
 			}
 		}
