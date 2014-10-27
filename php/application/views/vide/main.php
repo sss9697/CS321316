@@ -155,14 +155,20 @@
 								
 								<li id="movevariable" class="command">
 									<div id="movediv">
-										Set: 
 										<select id="movevariablefirstlist">
 										  <option value="i">i</option>
 										  <option value="j">j</option>
 										  <option value="k">k</option>
 										</select>
 										
-										=
+										<select id="movevariablesecondlist">
+										  <option value="=">=</option>
+										  <option value="+">+</option>
+										  <option value="-">-</option>
+										  <option value="*">*</option>
+										  <option value="/">/</option>
+										  <option value="%">%</option>
+										</select>
 										
 										<input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
 										

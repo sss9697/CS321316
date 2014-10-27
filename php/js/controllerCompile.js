@@ -56,7 +56,7 @@ function compileCommand()
 				else
 					compileString += "k";
 					
-				numberTimes = $(this).find("input").val();
+				numberTimes = $(this).find("#movevariablesecondlist").val()  + $(this).find("input").val();
 				//this is for set variable, so first char will be variable name, number times will be value
 				break;
 				
@@ -130,6 +130,46 @@ function validateIfCommand(input)
 		return [0,0];	
 }
 
+function validateVariables(input)
+{
+	var checkI = 0;
+	var checkJ = 0;
+	var checkK = 0;
+	
+	for(i = 0; i < input.length ; i++)
+	{
+		//check if variables has been initialized
+		if(input[i].charAt(0) == "i")
+		{
+			checkI = 1;
+		}
+		if(input[i].charAt(0) == "j")
+		{
+			checkJ = 1;
+		}
+		if(input[i].charAt(0) == "k")
+		{
+			checkK = 1;
+		}
+		
+		//check if variables are used, variables also have to be declared before it is used
+		if(input[i].charAt(0) == "{")
+		{
+			if(input[i].charAt(1) == "i")
+			{
+			}
+			if(input[i].charAt(1) == "j")
+			{
+			}
+			if(input[i].charAt(1) == "k")
+			{
+
+			}
+		}
+	}
+	
+	//if variables are used and not init, return error, else all ok
+}
 //remove the loop and expand out the commands
 //this is a recursive function that will open a new instance of itself everytime a loop open is found
 //the new instance will then add its own set of commands into its own output
