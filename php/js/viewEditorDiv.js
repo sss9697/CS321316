@@ -23,11 +23,12 @@ $(function()
 			$( this ).find( ".placeholder" ).remove();
 			//$( "<li class=\"added\" id=\"added\" ></li>" ).text( ui.draggable.text() ).appendTo( this );
 			$(this).append($(ui.draggable).clone());
-			console.log($( this ).find( "#movebackgroundlist" ).attr("id"));
 			if($( this ).find( "#movebackgroundlist" ).attr("id") == "movebackgroundlist"){
 				$( this ).find( "#movebackgroundlist" ).attr("id", "newmovebackgroundlist"+bIndex);
 				var newId = "#newmovebackgroundlist"+bIndex;
-				var newColor = rgb2hex((ui.draggable).clone().find("#movebackgroundlist").css( "background-color" ));
+				var rgb = (ui.draggable).clone().find("#movebackgroundlist").css( "background-color" );
+				console.log(rgb);
+				var newColor = rgb2hex(rgb);
 				$(newId).val(newColor);
 				$(newId).on('change', function() 
 				{
