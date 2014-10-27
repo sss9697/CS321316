@@ -129,7 +129,7 @@
 								
 								<li id="moveifopen" class="command">
 									<div id="movediv">
-										If: <select id="moveifopenfirstlist" class="backgroundSelectedCom">
+										If: <select id="moveifopenfirstlist">
 										  <option value="i" class="Grey">i</option>
 										  <option value="j" class="Black">j</option>
 										  <option value="k" class="White">k</option>
@@ -137,7 +137,7 @@
 										  <option value="y" class="White">y (pos)</option>
 										</select>
 										
-										<select id="moveifopensecondlist" class="backgroundSelectedCom">
+										<select id="moveifopensecondlist">
 										  <option value=">" class="Grey">></option>
 										  <option value="<" class="Black"><</option>
 										  <option value="=" class="White">=</option>
@@ -155,13 +155,13 @@
 								
 								<li id="movevariable" class="command">
 									<div id="movediv">
-										<select id="movevariablefirstlist" class="backgroundSelectedCom">
+										<select id="movevariablefirstlist">
 										  <option value="i" class="Grey">i</option>
 										  <option value="j" class="Black">j</option>
 										  <option value="k" class="White">k</option>
 										</select>
 										
-										<select id="movevariablesecondlist" class="backgroundSelectedCom">
+										<select id="movevariablesecondlist">
 										  <option value=">" class="Grey">></option>
 										  <option value="<" class="Black"><</option>
 										  <option value="=" class="White">=</option>
