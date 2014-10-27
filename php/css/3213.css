@@ -85,25 +85,34 @@ option.Lilac{background-color:#c8a2c8; color:black;}
 }
 #editordiv
 {
-	background-color:#eeeeee;
-	float:left;
-	width:350px;
-	height:800px;
-	font-size:80%;
-	margin-left: 200px;
+	float: left;
+	width: 710px;
+	height: 800px;
+	font-size: 80%;
+	margin-left: 10%;
 }
 #movecontainer
 {
-	float:left;
-	width:350px;
-	height:360px;
+	background-color: #eeeeee;
+	float: left;
+	width: 350px;
+	height: 800px;
 }
 #editorspace
 {
-	float:left;
-	width:350px;
-	height: 380px;
-	font-size: 120%;
+	background-color: #eeeeee;
+	float: left;
+	width: 350px;
+	height: 800px;
+	margin-left: 5px;
+}
+#editorcontrol
+{
+	float: left;
+	border: black;
+	border-style: double;
+	padding: 15px;
+	margin: 15px;
 }
 #edittxt
 {
@@ -112,17 +121,19 @@ option.Lilac{background-color:#c8a2c8; color:black;}
 }
 #droppable
 {
-	float:left;
-	width:300px;
-	height:280px;
-	list-style:decimal-leading-zero;
-	overflow: hidden; 
-	overflow-y:auto;
+	float: left;
+	width: 300px;
+	height: 600px;
+	list-style: decimal-leading-zero;
+	font-size: 110%;
+	overflow: hidden;
+	overflow-y: auto;
+	font-family: Verdana,Arial,sans-serif;
 }
 #droppable li
 {
 	padding:.5em 1em;
-	width: 150px;
+	width: 270px;
 	border:1px solid #d9d9d9;
 	background:#f7f7f7;
 	border-radius:3px

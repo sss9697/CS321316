@@ -298,18 +298,19 @@
 							<div class="placeholder">drag command here</div>
 						</ul>
 					</div>
-				</div>
-				<div id="editorcontrol" align="center">
-					<div id="saveDiv" style="display: none;">
-						<label>Save Name:</label><input type="text" placeholder="esc to hide me" id="savename"></input><button id="save-ok-btn">Save</button>
+				
+					<div id="editorcontrol" align="center">
+						<div id="saveDiv" style="display: none;">
+							<label>Save Name:</label><input type="text" placeholder="esc to hide me" id="savename"></input><button id="save-ok-btn">Save</button>
+						</div>
+						<button id="clear-btn">Clear</button>&nbsp;&nbsp;&nbsp;
+						<button id="save-btn">Save</button>&nbsp;&nbsp;&nbsp;
+						
+						<select id="loadList">
+						  <option value="" disabled selected>Load</option>
+						</select>&nbsp;&nbsp;&nbsp;					
+						<button id="delete-btn">Delete</button>
 					</div>
-					<button id="clear-btn">Clear</button>&nbsp;&nbsp;&nbsp;
-					<button id="save-btn">Save</button>&nbsp;&nbsp;&nbsp;
-					
-					<select id="loadList">
-					  <option value="" disabled selected>Load</option>
-					</select>&nbsp;&nbsp;&nbsp;					
-					<button id="delete-btn">Delete</button>
 				</div>
 			</div>
 
