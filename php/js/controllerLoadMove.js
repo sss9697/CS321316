@@ -66,10 +66,10 @@ function loadf(moves)
 				break;
 				
 			case 'i': 
-				break;
 			case 'j':
-				break;
-			case 'k':
+			case 'k':$( "#editorspace ul" ).append(
+						$("<li id=\"movevariable\" class=\"command\"><div id=\"movediv\">Set:<select id=\"movevariablefirstlist\"><option value=\"i\">i</option><option value=\"j\">j</option><option value=\"k\">k</option></select>=<input type=\"number\" name=\"edittxt\" id=\"edittxt\" value=" + number + " max=\"999\" min=\"-999\" /></div></li>"));
+					$("#editorspace ul li").last().find("#movevariablefirstlist").val(movearray[i].charAt(0));
 				break;
 		}
 	}
