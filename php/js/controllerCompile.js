@@ -41,6 +41,24 @@ function compileCommand()
 					numberTimes = $(this).find("#defaultCharListCom").val();
 					//change numberTimes into its own value, which is a number
 				break;
+			case "moveifopen": compileString += "{";
+					numberTimes = $(this).find("#moveifopenfirstlist").val() + $(this).find("#moveifopensecondlist").val() + $(this).find("input").val();
+					//first char is variable, 2nd char is boolean comparator, after that all inputs
+				break;
+			case "moveifclose": compileString += "}";
+				break;
+				
+			case "movevariable": var tempVar =  $(this).find("#movevariablefirstlist").val();
+				if (tempVar == "i")
+					compileString += "i";
+				else if(tempVar == "j")
+					compileString += "j";
+				else
+					compileString += "k";
+					
+				numberTimes = $(this).find("#movevariablesecondlist").val() + $(this).find("input").val();
+				break;
+				
 			default: compileString += "E";
 		}
 		
@@ -169,6 +187,8 @@ function compilef()
 	else
 	{
 		var expanded = expandCommand(command, 0);
+		
+		Console.log(expanded);
 		executeCommand(expanded);
 	}
 }
