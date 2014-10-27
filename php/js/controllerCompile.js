@@ -152,11 +152,11 @@ function validateVariables(input)
 			}
 			else
 			{
-				if(checkI != 1)
+				if(checkI == 0)
 					return [1, i];
 			}
 		}
-		if(input[i].charAt(0) == "j")
+		else if(input[i].charAt(0) == "j")
 		{
 			if(input[i].charAt(1) == "=")
 			{
@@ -164,11 +164,11 @@ function validateVariables(input)
 			}
 			else
 			{
-				if(checkJ != 1)
+				if(checkJ == 0)
 					return [2, i];
 			}
 		}
-		if(input[i].charAt(0) == "k")
+		else if(input[i].charAt(0) == "k")
 		{
 			if(input[i].charAt(1) == "=")
 			{
@@ -176,27 +176,27 @@ function validateVariables(input)
 			}
 			else
 			{
-				if(checkK != 1)
+				if(checkK == 0)
 					return [3, i];
 			}
 		}
 		
 		//check if variables are used, variables also have to be declared before it is used
-		if(input[i].charAt(0) == "{")
+		else if(input[i].charAt(0) == "{")
 		{
 			if(input[i].charAt(1) == "i")
 			{
-				if(checkI != 1)
+				if(checkI == 0)
 					return [1, i];
 			}
 			if(input[i].charAt(1) == "j")
 			{
-				if(checkJ != 1)
+				if(checkJ == 0)
 					return [2, i];
 			}
 			if(input[i].charAt(1) == "k")
 			{
-				if(checkK != 1)
+				if(checkK == 0)
 					return [3, i];
 			}
 		}
