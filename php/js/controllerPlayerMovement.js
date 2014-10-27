@@ -121,69 +121,171 @@ function executeCommand(moves)
 	var varI = 0;
 	var varJ = 0;
 	var varK = 0;
+	var skip = 0;
 	
 	for(i = 0 ; i < moves.length ; i++)
 	{
-		delay += 500;
-		charDelay += 500;
-		if (moves[i].charAt(0) == "U" || moves[i].charAt(0) == "D" || moves[i].charAt(0) == "L" || moves[i].charAt(0) == "R")
+		if(skip == 1)
 		{
-			coords = movePlayer(moves[i], coords[0], coords[1], spriteDelay);
-			spriteDelay = 0;
+			if(moves[i].charAt(0) == "}")
+				skip = 0;
 		}
-		else if(moves[i].charAt(0) == "X" || moves[i].charAt(0) == "Y")
+		else
 		{
-			coords = teleportPlayer(moves[i], coords[0], coords[1], spriteDelay);
-			spriteDelay = 0;
-		}
-		else if(moves[i].charAt(0) == "T")
-		{
-			toggleCharf(spriteDelay);
-			spriteDelay = 0;
-		}
-		else if(moves[i].charAt(0) == "B")
-		{
-			changePlayerBackground(moves[i], delay);
-			spriteDelay += 500;
-			delay = -500;
-		}
-		else if(moves[i].charAt(0) == "A")
-		{
-			var charChangeD = charChangeCount % 2;
-			
-			changePlayerCommand(moves[i], charDelay, charChangeD);
-			spriteDelay += 500;
-			charDelay = -500;
-			
-			charChangeCount += 1;
-		}
-		else if(moves[i].charAt(0) == "F")
-		{
-			var foreverIndex = parseInt(moves[i].substring(1));
-			if(foreverIndex == 0)
+			delay += 500;
+			charDelay += 500;
+			if (moves[i].charAt(0) == "U" || moves[i].charAt(0) == "D" || moves[i].charAt(0) == "L" || moves[i].charAt(0) == "R")
 			{
-				foreverloopIndex = i;
+				coords = movePlayer(moves[i], coords[0], coords[1], spriteDelay);
+				spriteDelay = 0;
 			}
-			else
+			else if(moves[i].charAt(0) == "X" || moves[i].charAt(0) == "Y")
 			{
-				loopCount = loopCount + 1;
-				if(loopCount != 9999)
-					i = foreverloopIndex - 1;
+				coords = teleportPlayer(moves[i], coords[0], coords[1], spriteDelay);
+				spriteDelay = 0;
 			}
-		}
-		else if(moves[i].charAt(0) == "i")
-		{
-			var value = parseInt(moves[i].substring(2));
-			switch(moves[i].charAt(1))
+			else if(moves[i].charAt(0) == "T")
 			{
-				case "=" : varI = value; break;
-				case "+" : varI += value; break;
-				case "-" : varI -= value; break;
-				case "*" : varI *= value; break;
-				case "/" : varI /= value; break;
-				case "%" : varI %= value; break;
+				toggleCharf(spriteDelay);
+				spriteDelay = 0;
 			}
-			console.log(varI);
+			else if(moves[i].charAt(0) == "B")
+			{
+				changePlayerBackground(moves[i], delay);
+				spriteDelay += 500;
+				delay = -500;
+			}
+			else if(moves[i].charAt(0) == "A")
+			{
+				var charChangeD = charChangeCount % 2;
+				
+				changePlayerCommand(moves[i], charDelay, charChangeD);
+				spriteDelay += 500;
+				charDelay = -500;
+				
+				charChangeCount += 1;
+			}
+			else if(moves[i].charAt(0) == "F")
+			{
+				var foreverIndex = parseInt(moves[i].substring(1));
+				if(foreverIndex == 0)
+				{
+					foreverloopIndex = i;
+				}
+				else
+				{
+					loopCount = loopCount + 1;
+					if(loopCount != 9999)
+						i = foreverloopIndex - 1;
+				}
+			}
+			else if(moves[i].charAt(0) == "i")
+			{
+				var value = parseInt(moves[i].substring(2));
+				switch(moves[i].charAt(1))
+				{
+					case "=" : varI = value; break;
+					case "+" : varI += value; break;
+					case "-" : varI -= value; break;
+					case "*" : varI *= value; break;
+					case "/" : varI /= value; break;
+					case "%" : varI %= value; break;
+				}
+			}
+			else if(moves[i].charAt(0) == "j")
+			{
+				var value = parseInt(moves[i].substring(2));
+				switch(moves[i].charAt(1))
+				{
+					case "=" : varJ = value; break;
+					case "+" : varJ += value; break;
+					case "-" : varJ -= value; break;
+					case "*" : varJ *= value; break;
+					case "/" : varJ /= value; break;
+					case "%" : varJ %= value; break;
+				}
+			}
+			else if(moves[i].charAt(0) == "k")
+			{
+				var value = parseInt(moves[i].substring(2));
+				switch(moves[i].charAt(1))
+				{
+					case "=" : varK = value; break;
+					case "+" : varK += value; break;
+					case "-" : varK -= value; break;
+					case "*" : varK *= value; break;
+					case "/" : varK /= value; break;
+					case "%" : varK %= value; break;
+				}
+			}
+			else if(moves[i].charAt(0) == "{")
+			{
+				var value = parseInt(moves[i].substring(3));
+				
+				switch(moves[i].charAt(2))
+				{
+					case "=":	
+						switch(moves[i].charAt(1))
+						{
+							case "i": if(varI != value)
+										skip = 1;
+								break;
+							case "j": if(varJ != value)
+										skip = 1;
+								break;
+							case "k": if(varK != value)
+										skip = 1;
+								break;
+							case "x": if(coords[0] != value)
+										skip = 1;
+								break;
+							case "y": if(coords[1] != value)
+										skip = 1;
+								break;
+						}						
+						break;
+					case "<":
+						switch(moves[i].charAt(1))
+						{
+							case "i": if(!(varI < value))
+										skip = 1;
+								break;
+							case "j": if(!(varJ < value))
+										skip = 1;
+								break;
+							case "k": if(!(varK < value))
+										skip = 1;
+								break;
+							case "x": if(!(coords[0] < value))
+										skip = 1;
+								break;
+							case "y": if(!(coords[1] < value))
+										skip = 1;
+								break;
+						}	
+						break;
+					case ">":
+						switch(moves[i].charAt(1))
+						{
+							case "i": if(!(varI > value))
+										skip = 1;
+								break;
+							case "j": if(!(varJ > value))
+										skip = 1;
+								break;
+							case "k": if(!(varK > value))
+										skip = 1;
+								break;
+							case "x": if(!(coords[0] > value))
+										skip = 1;
+								break;
+							case "y": if(!(coords[1] > value))
+										skip = 1;
+								break;
+						}
+						break;
+				}
+			}
 		}
 	}
 }
