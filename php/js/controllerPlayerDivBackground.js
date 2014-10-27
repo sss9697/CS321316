@@ -70,7 +70,7 @@ function toggleGridf(state)
 }
 
 function rgb2hex(rgb) {
-    if ((/^#[0-9A-F]{6}$/i.test(rgb)) || rgb == null) return rgb;
+    if ((/^#[0-9A-F]{6}$/i.test(rgb)) || rgb == null || rgb == "") return rgb;
 
     rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
     function hex(x) {
