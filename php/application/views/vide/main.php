@@ -126,6 +126,52 @@
 										CLOSE LOOP: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
 									</div>
 								</li>
+								
+								<li id="moveifopen" class="command">
+									<div id="movediv">
+										If: <select id="moveifopenfirstlist" class="backgroundSelectedCom">
+										  <option value="i" class="Grey">i</option>
+										  <option value="j" class="Black">j</option>
+										  <option value="k" class="White">k</option>
+										  <option value="x" class="Black">x (pos)</option>
+										  <option value="y" class="White">y (pos)</option>
+										</select>
+										
+										<select id="moveifopensecondlist" class="backgroundSelectedCom">
+										  <option value=">" class="Grey">></option>
+										  <option value="<" class="Black"><</option>
+										  <option value="=" class="White">=</option>
+										</select>
+										
+										<input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
+									</div>
+								</li>
+								
+								<li id="moveifclose" class="command">
+									<div id="movediv">
+										End If 
+									</div>
+								</li>
+								
+								<li id="movevariable" class="command">
+									<div id="movediv">
+										<select id="movevariablefirstlist" class="backgroundSelectedCom">
+										  <option value="i" class="Grey">i</option>
+										  <option value="j" class="Black">j</option>
+										  <option value="k" class="White">k</option>
+										</select>
+										
+										<select id="movevariablesecondlist" class="backgroundSelectedCom">
+										  <option value=">" class="Grey">></option>
+										  <option value="<" class="Black"><</option>
+										  <option value="=" class="White">=</option>
+										</select>
+										
+										<input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
+										
+									</div>
+								</li>
+								
 								<li id="movesetx" class="command">
 									<div id="movediv">
 										SET X: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
