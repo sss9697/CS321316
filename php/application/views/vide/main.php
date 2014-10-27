@@ -133,8 +133,8 @@
 										  <option value="i">i</option>
 										  <option value="j">j</option>
 										  <option value="k">k</option>
-										  <option value="x">x (pos)</option>
-										  <option value="y">y (pos)</option>
+										  <option value="x">x</option>
+										  <option value="y">y</option>
 										</select>
 										
 										<select id="moveifopensecondlist">
@@ -155,17 +155,14 @@
 								
 								<li id="movevariable" class="command">
 									<div id="movediv">
+										Set: 
 										<select id="movevariablefirstlist">
 										  <option value="i">i</option>
 										  <option value="j">j</option>
 										  <option value="k">k</option>
 										</select>
 										
-										<select id="movevariablesecondlist">
-										  <option value=">">></option>
-										  <option value="<"><</option>
-										  <option value="=">=</option>
-										</select>
+										=
 										
 										<input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
 										

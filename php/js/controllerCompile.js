@@ -56,7 +56,8 @@ function compileCommand()
 				else
 					compileString += "k";
 					
-				numberTimes = $(this).find("#movevariablesecondlist").val() + $(this).find("input").val();
+				numberTimes = $(this).find("input").val();
+				//this is for set variable, so first char will be variable name, number times will be value
 				break;
 				
 			default: compileString += "E";
@@ -82,6 +83,35 @@ function validateCommand(input)
 			check += 1;
 		}
 		if(input[i].charAt(0) == "C")
+		{
+			check -= 1;
+		}
+		
+		if(check < 0 && i < input.length -1)
+		{
+			return [3, i+1];
+		}
+	}
+	
+	if(check > 0)
+		return [1, 0];
+	else if(check < 0)
+		return [2, input.length];
+	else
+		return [0,0];	
+}
+
+function validateIfCommand(input)
+{
+	var check = 0;
+	
+	for(i = 0; i < input.length ; i++)
+	{
+		if(input[i].charAt(0) == "{")
+		{
+			check += 1;
+		}
+		if(input[i].charAt(0) == "}")
 		{
 			check -= 1;
 		}
@@ -168,7 +198,6 @@ function expandCommand(input, start)
 function compilef()
 {	
 	var command = compileCommand();
-	console.log(command);
 	
 	var check = validateCommand(command);
 	
@@ -186,9 +215,26 @@ function compilef()
 	}
 	else
 	{
-		var expanded = expandCommand(command, 0);
-		
-		Console.log(expanded);
-		executeCommand(expanded);
+		check = validateIfCommand(command);
+	
+		if(check[0] == 1)
+		{
+			alert("Too much IF open command");
+		}
+		else if(check[0] == 2)
+		{
+			alert("Too much if closure, remove it at line number " + check[1]);
+		}
+		else if (check[0] == 3)
+		{
+			alert("IF closure before IF open at line number " + check[1]);
+		}
+		else
+		{
+			var expanded = expandCommand(command, 0);
+			
+			console.log(expanded);
+			executeCommand(expanded);
+		}
 	}
 }
