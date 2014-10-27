@@ -170,5 +170,6 @@ function compilef()
 	{
 		var expanded = expandCommand(command, 0);
 		executeCommand(expanded);
+		console.log(expanded);
 	}
 }
