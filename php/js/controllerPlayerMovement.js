@@ -174,7 +174,7 @@ function executeCommand(moves)
 		else if(moves[i].charAt(0) == "i")
 		{
 			var value = parseInt(moves[i].substring(2));
-			switch(moves[i].chatAt(1))
+			switch(moves[i].charAt(1))
 			{
 				case "=" : varI = value; break;
 				case "+" : varI += value; break;

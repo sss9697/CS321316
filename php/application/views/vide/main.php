@@ -98,7 +98,13 @@
 							<ul id="drag-elements">
 								<li id="moveleft" class="command">
 									<div id="movediv">
-										MOVE LEFT: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
+										MOVE LEFT: 
+										<select id="moveiffdsfds">
+										  <option value="i">i</option>
+										  <option value="j">j</option>
+										  <option value="k">k</option>
+										  <option value="man"><input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" /></option>
+										</select>
 									</div>
 								</li>
 								<li id="moveright" class="command">
