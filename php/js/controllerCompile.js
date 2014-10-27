@@ -138,7 +138,7 @@ function validateVariables(input)
 	
 	for(i = 0; i < input.length ; i++)
 	{
-		if(checkI == 1 && checkK == 1 && checkK == 1)
+		if(checkI == 1 && checkJ == 1 && checkK == 1)
 		{
 			break;
 		}
