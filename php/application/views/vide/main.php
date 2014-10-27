@@ -130,17 +130,17 @@
 								<li id="moveifopen" class="command">
 									<div id="movediv">
 										If: <select id="moveifopenfirstlist">
-										  <option value="i" class="Grey">i</option>
-										  <option value="j" class="Black">j</option>
-										  <option value="k" class="White">k</option>
-										  <option value="x" class="Black">x (pos)</option>
-										  <option value="y" class="White">y (pos)</option>
+										  <option value="i">i</option>
+										  <option value="j">j</option>
+										  <option value="k">k</option>
+										  <option value="x">x (pos)</option>
+										  <option value="y">y (pos)</option>
 										</select>
 										
 										<select id="moveifopensecondlist">
-										  <option value=">" class="Grey">></option>
-										  <option value="<" class="Black"><</option>
-										  <option value="=" class="White">=</option>
+										  <option value=">">></option>
+										  <option value="<"><</option>
+										  <option value="=">=</option>
 										</select>
 										
 										<input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
@@ -156,15 +156,15 @@
 								<li id="movevariable" class="command">
 									<div id="movediv">
 										<select id="movevariablefirstlist">
-										  <option value="i" class="Grey">i</option>
-										  <option value="j" class="Black">j</option>
-										  <option value="k" class="White">k</option>
+										  <option value="i">i</option>
+										  <option value="j">j</option>
+										  <option value="k">k</option>
 										</select>
 										
 										<select id="movevariablesecondlist">
-										  <option value=">" class="Grey">></option>
-										  <option value="<" class="Black"><</option>
-										  <option value="=" class="White">=</option>
+										  <option value=">">></option>
+										  <option value="<"><</option>
+										  <option value="=">=</option>
 										</select>
 										
 										<input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
