@@ -9,35 +9,35 @@ function loadf(moves)
 		switch(movearray[i].charAt(0))
 		{			
 			case 'U': $( "#editorspace ul" ).append(
-						$("<li id=\"moveup\" class=\"command\">	<div id=\"movediv\">up: <input type=\"number\" name=\"edittxt\" id=\"edittxt\" value=" + number + " max=\"999\" min=\"-999\" /></div></li>"));
+						$("<li id=\"moveup\" class=\"command\">	<div id=\"movediv\">MOVE UP: <input type=\"number\" name=\"edittxt\" id=\"edittxt\" value=" + number + " max=\"999\" min=\"-999\" /></div></li>"));
 				break;
 				
 			case 'D': $( "#editorspace ul" ).append(
-						$("<li id=\"movedown\" class=\"command\">	<div id=\"movediv\">down: <input type=\"number\" name=\"edittxt\" id=\"edittxt\" value=" + number + " max=\"999\" min=\"-999\" /></div></li>"));
+						$("<li id=\"movedown\" class=\"command\">	<div id=\"movediv\">MOVE DOWN: <input type=\"number\" name=\"edittxt\" id=\"edittxt\" value=" + number + " max=\"999\" min=\"-999\" /></div></li>"));
 				break;
 				
 			case 'L': $( "#editorspace ul" ).append(
-						$("<li id=\"moveleft\" class=\"command\">	<div id=\"movediv\">left: <input type=\"number\" name=\"edittxt\" id=\"edittxt\" value=" + number + " max=\"999\" min=\"-999\" /></div></li>"));
+						$("<li id=\"moveleft\" class=\"command\">	<div id=\"movediv\">MOVE LEFT: <input type=\"number\" name=\"edittxt\" id=\"edittxt\" value=" + number + " max=\"999\" min=\"-999\" /></div></li>"));
 				break;
 				
 			case 'R': $( "#editorspace ul" ).append(
-						$("<li id=\"moveright\" class=\"command\">	<div id=\"movediv\">right: <input type=\"number\" name=\"edittxt\" id=\"edittxt\" value=" + number + " max=\"999\" min=\"-999\" /></div></li>"));
+						$("<li id=\"moveright\" class=\"command\">	<div id=\"movediv\">MOVE RIGHT: <input type=\"number\" name=\"edittxt\" id=\"edittxt\" value=" + number + " max=\"999\" min=\"-999\" /></div></li>"));
 				break;
 				
 			case 'O': $( "#editorspace ul" ).append(
-						$("<li id=\"moveloopo\" class=\"command\">	<div id=\"movediv\">loop open</div></li>"));
+						$("<li id=\"moveloopo\" class=\"command\">	<div id=\"movediv\">OPEN LOOP</div></li>"));
 				break;
 				
 			case 'C': $( "#editorspace ul" ).append(
-						$("<li id=\"moveloopc\" class=\"command\">	<div id=\"movediv\">loop close: <input type=\"number\" name=\"edittxt\" id=\"edittxt\" value=" + number + " max=\"999\" min=\"-999\" /></div></li>"));
+						$("<li id=\"moveloopc\" class=\"command\">	<div id=\"movediv\">CLOSE LOOP: <input type=\"number\" name=\"edittxt\" id=\"edittxt\" value=" + number + " max=\"999\" min=\"-999\" /></div></li>"));
 				break;
 			
 			case 'X': $( "#editorspace ul" ).append(
-						$("<li id=\"movesetx\" class=\"command\">	<div id=\"movediv\">set x: <input type=\"number\" name=\"edittxt\" id=\"edittxt\" value=" + number + " max=\"999\" min=\"-999\" /></div></li>")); 
+						$("<li id=\"movesetx\" class=\"command\">	<div id=\"movediv\">SET X: <input type=\"number\" name=\"edittxt\" id=\"edittxt\" value=" + number + " max=\"999\" min=\"-999\" /></div></li>")); 
 				break;
 				
 			case 'Y': $( "#editorspace ul" ).append(
-						$("<li id=\"movesety\" class=\"command\">	<div id=\"movediv\">set y: <input type=\"number\" name=\"edittxt\" id=\"edittxt\" value=" + number + " max=\"999\" min=\"-999\" /></div></li>"));
+						$("<li id=\"movesety\" class=\"command\">	<div id=\"movediv\">SET Y: <input type=\"number\" name=\"edittxt\" id=\"edittxt\" value=" + number + " max=\"999\" min=\"-999\" /></div></li>"));
 				break;			
 				
 			case 'A': $( "#editorspace ul" ).append(
@@ -53,6 +53,23 @@ function loadf(moves)
 				
 			case 'T': $( "#editorspace ul" ).append(
 						$("<li id=\"movechartoggle\" class=\"command\">	<div id=\"movediv\">Toggle character</div></li>"));
+				break;
+				
+			case '{': $( "#editorspace ul" ).append(
+						$("<li id=\"moveifopen\" class=\"command\"><div 		id=\"movediv\">If: <select id=\"moveifopenfirstlist\"> <option value=\"i\">i</option><option value=\"j\">j</option><option value=\"k\">k</option><option value=\"x\">x</option><option value=\"y\">y</option></select><select id=\"moveifopensecondlist\"><option value=\">\">></option><option value=\"<\"><</option><option value=\"=\">=</option></select><input type=\"number\" name=\"edittxt\" id=\"edittxt\" value="+ number.substring(2) +" max=\"999\" min=\"-999\" /></div></li>"));
+						$("#editorspace ul li").last().find("#moveifopenfirstlist").val(number.substring(0,1));
+						$("#editorspace ul li").last().find("#moveifopensecondlist").val(number.substring(1,2));
+				break;
+				
+			case '}': $( "#editorspace ul" ).append(
+						$("<li id=\"moveifclose\" class=\"command\"><div id=\"movediv\">End If</div></li>"));
+				break;
+				
+			case 'i': 
+				break;
+			case 'j':
+				break;
+			case 'k':
 				break;
 		}
 	}
