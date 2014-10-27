@@ -130,7 +130,7 @@
 						</div>
 						<h2><a href="#">Loops, variables & conditions</a></h2>
 						<div>
-							<ul>
+							<ul id="drag-elements">
 								<li id="moveloopo" class="command">
 									<div id="movediv">
 										OPEN LOOP
@@ -256,7 +256,7 @@
 						</div>
 						<h2><a href="#">Other commands</a></h2>
 						<div>
-							<ul>
+							<ul id="drag-elements">
 								<li id="movechartoggle" class="command">
 									<div id="movediv">
 										TOGGLE CHARACTER
