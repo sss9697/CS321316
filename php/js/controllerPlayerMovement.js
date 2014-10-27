@@ -221,6 +221,8 @@ function executeCommand(moves)
 			else if(moves[i].charAt(0) == "{")
 			{
 				var value = parseInt(moves[i].substring(3));
+				var varX = coords[0] / MULTIPLIER;
+				var varY = coords[1] / MULTIPLIER;
 				
 				switch(moves[i].charAt(2))
 				{
@@ -236,10 +238,10 @@ function executeCommand(moves)
 							case "k": if(varK != value)
 										skip = 1;
 								break;
-							case "x": if(coords[0] != value)
+							case "x": if(varX != value)
 										skip = 1;
 								break;
-							case "y": if(coords[1] != value)
+							case "y": if(varY != value)
 										skip = 1;
 								break;
 						}						
@@ -256,10 +258,10 @@ function executeCommand(moves)
 							case "k": if(!(varK < value))
 										skip = 1;
 								break;
-							case "x": if(!(coords[0] < value))
+							case "x": if(!(varX < value))
 										skip = 1;
 								break;
-							case "y": if(!(coords[1] < value))
+							case "y": if(!(varY < value))
 										skip = 1;
 								break;
 						}	
@@ -276,10 +278,10 @@ function executeCommand(moves)
 							case "k": if(!(varK > value))
 										skip = 1;
 								break;
-							case "x": if(!(coords[0] > value))
+							case "x": if(!(varX > value))
 										skip = 1;
 								break;
-							case "y": if(!(coords[1] > value))
+							case "y": if(!(varY > value))
 										skip = 1;
 								break;
 						}
