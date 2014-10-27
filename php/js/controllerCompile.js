@@ -200,10 +200,8 @@ function validateVariables(input)
 					return [3, i];
 			}
 		}
-		
-		return [0,0];
 	}
-	
+	return [0,0];
 	//if variables are used and not init, return error, else all ok
 }
 //remove the loop and expand out the commands
