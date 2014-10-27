@@ -146,7 +146,7 @@ function validateVariables(input)
 		//check if variables has been initialized
 		if(input[i].charAt(0) == "i")
 		{
-			if(input[1].charAt(1) == "=")
+			if(input[i].charAt(1) == "=")
 			{
 				checkI = 1;
 			}
@@ -158,7 +158,7 @@ function validateVariables(input)
 		}
 		if(input[i].charAt(0) == "j")
 		{
-			if(input[1].charAt(1) == "=")
+			if(input[i].charAt(1) == "=")
 			{
 				checkJ = 1;
 			}
@@ -170,7 +170,7 @@ function validateVariables(input)
 		}
 		if(input[i].charAt(0) == "k")
 		{
-			if(input[1].charAt(1) == "=")
+			if(input[i].charAt(1) == "=")
 			{
 				checkK = 1;
 			}
