@@ -118,6 +118,9 @@ function executeCommand(moves)
 	var charChangeCount = 0;
 	var foreverloopIndex = 0;
 	var loopCount = 0;
+	var varI = 0;
+	var varJ = 0;
+	var varK = 0;
 	
 	for(i = 0 ; i < moves.length ; i++)
 	{
@@ -167,6 +170,20 @@ function executeCommand(moves)
 				if(loopCount != 9999)
 					i = foreverloopIndex - 1;
 			}
+		}
+		else if(moves[i].charAt(0) == "i")
+		{
+			var value = parseInt(moves[i].substring(2));
+			switch(moves[i].chatAt(1))
+			{
+				case "=" : varI = value; break;
+				case "+" : varI += value; break;
+				case "-" : varI -= value; break;
+				case "*" : varI *= value; break;
+				case "/" : varI /= value; break;
+				case "%" : varI %= value; break;
+			}
+			console.log(varI);
 		}
 	}
 }
