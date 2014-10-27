@@ -138,18 +138,47 @@ function validateVariables(input)
 	
 	for(i = 0; i < input.length ; i++)
 	{
+		if(checkI == 1 && checkK == 1 && checkK == 1)
+		{
+			break;
+		}
+		
 		//check if variables has been initialized
 		if(input[i].charAt(0) == "i")
 		{
-			checkI = 1;
+			if(input[1].charAt(1) == "=")
+			{
+				checkI = 1;
+			}
+			else
+			{
+				if(checkI != 1)
+					return [1, i];
+			}
 		}
 		if(input[i].charAt(0) == "j")
 		{
-			checkJ = 1;
+			if(input[1].charAt(1) == "=")
+			{
+				checkJ = 1;
+			}
+			else
+			{
+				if(checkJ != 1)
+					return [2, i];
+			}
 		}
 		if(input[i].charAt(0) == "k")
 		{
-			checkK = 1;
+			if(input[1].charAt(1) == "=")
+			{
+				checkK = 1;
+			}
+			else
+			{
+				if(checkK != 1)
+					return [3, i];
+			}
 		}
 		
 		//check if variables are used, variables also have to be declared before it is used
@@ -157,15 +186,22 @@ function validateVariables(input)
 		{
 			if(input[i].charAt(1) == "i")
 			{
+				if(checkI != 1)
+					return [1, i];
 			}
 			if(input[i].charAt(1) == "j")
 			{
+				if(checkJ != 1)
+					return [2, i];
 			}
 			if(input[i].charAt(1) == "k")
 			{
-
+				if(checkK != 1)
+					return [3, i];
 			}
 		}
+		
+		return [0,0];
 	}
 	
 	//if variables are used and not init, return error, else all ok
@@ -271,10 +307,27 @@ function compilef()
 		}
 		else
 		{
-			var expanded = expandCommand(command, 0);
-			
-			console.log(expanded);
-			executeCommand(expanded);
+			check = validateVariables(command);
+	
+			if(check[0] == 1)
+			{
+				alert("Variable i used before declaration at line number " + check[1]);
+			}
+			else if(check[0] == 2)
+			{
+				alert("Variable j used before declaration at line number " + check[1]);
+			}
+			else if (check[0] == 3)
+			{
+				alert("Variable k used before declaration at line number " + check[1]);
+			}
+			else
+			{
+				var expanded = expandCommand(command, 0);
+				
+				console.log(expanded);
+				executeCommand(expanded);
+			}
 		}
 	}
 }
