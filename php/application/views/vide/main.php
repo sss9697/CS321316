@@ -116,6 +116,21 @@
 										MOVE DOWN: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
 									</div>
 								</li>
+								<li id="movesetx" class="command">
+									<div id="movediv">
+										SET X: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
+									</div>
+								</li>
+								<li id="movesety" class="command">
+									<div id="movediv">
+										SET Y: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
+									</div>
+								</li>
+							</ul>
+						</div>
+						<h2><a href="#">Loops, variables & conditions</a></h2>
+						<div>
+							<ul>
 								<li id="moveloopo" class="command">
 									<div id="movediv">
 										OPEN LOOP
@@ -153,6 +168,69 @@
 									</div>
 								</li>
 								
+								<li id="movewhileopen" class="command">
+									<div id="movediv">
+										While: <select id="movewhileopenfirstlist">
+										  <option value="i">i</option>
+										  <option value="j">j</option>
+										  <option value="k">k</option>
+										</select>
+										
+										<select id="movewhileopensecondlist">
+										  <option value=">">></option>
+										  <option value="<"><</option>
+										  <option value="=">=</option>
+										</select>
+										
+										<input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
+									</div>
+								</li>
+								
+								<li id="movewhileclose" class="command">
+									<div id="movediv">
+										End While 
+									</div>
+								</li>
+								
+								<li id="moveforopen" class="command">
+									<div id="movediv">
+										For: <select id="moveforopenfirstlist">
+										  <option value="i">i</option>
+										  <option value="j">j</option>
+										  <option value="k">k</option>
+										</select>
+										=																			
+										<input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
+										;
+										
+										<select id="moveforopensecondlist">
+										  <option value=">">></option>
+										  <option value="<"><</option>
+										  <option value="=">=</option>
+										</select>				
+										
+										<input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
+										;
+										<select id="moveforopenthirdlist">
+										  <option value="=">=</option>
+										  <option value="+">+</option>
+										  <option value="-">-</option>
+										  <option value="*">*</option>
+										  <option value="/">/</option>
+										  <option value="%">%</option>
+										</select>				
+										
+										<input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
+										
+									</div>
+								</li>
+								
+								<li id="moveforclose" class="command">
+									<div id="movediv">
+										End For 
+									</div>
+								</li>
+								
 								<li id="movevariable" class="command">
 									<div id="movediv">
 										<select id="movevariablefirstlist">
@@ -172,17 +250,6 @@
 										
 										<input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
 										
-									</div>
-								</li>
-								
-								<li id="movesetx" class="command">
-									<div id="movediv">
-										SET X: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
-									</div>
-								</li>
-								<li id="movesety" class="command">
-									<div id="movediv">
-										SET Y: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
 									</div>
 								</li>
 							</ul>

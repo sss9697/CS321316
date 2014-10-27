@@ -290,4 +290,7 @@ function executeCommand(moves)
 			}
 		}
 	}
+
 }
+
+
