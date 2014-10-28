@@ -24,7 +24,28 @@
 		<script src="<?php echo base_url(). "js/controllerBinFunction.js" ?>"></script>	
 		<script src="<?php echo base_url(). "js/controllerKeypress.js" ?>">
 		document.onkeydown = keydownFunction;
-		document.onkeyup = keyupFunction;</script>							
+		document.onkeyup = keyupFunction;</script>
+<input type="text" id="keypress">
+
+
+<script>
+document.onkeydown = keydownFunction;
+document.onkeyup = keyupFunction;
+
+function keydownFunction() {
+var key = ( window.event ) ? event.keyCode : e.keyCode;
+
+if(event.shiftKey){
+if(key == 67)//c:compile
+    document.getElementById("keypress").style.backgroundColor = "red";
+if(key == 76)//l:logout
+    document.getElementById("keypress").style.backgroundColor = "green";
+if(key == 84)//t:toggle grid
+    document.getElementById("keypress").style.backgroundColor = "yellow";
+if(key == 80)//p:play
+    document.getElementById("keypress").style.backgroundColor = "cyan";
+}
+}		
 		
 		<script src="<?php echo base_url(). "js/commandprocessor.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/events.js" ?>"></script>

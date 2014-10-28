@@ -1,7 +1,6 @@
   
 function keydownFunction() {
- 
-  
+ var key = ( window.event ) ? event.keyCode : e.keyCode;
 	if(event.shiftKey)//Shift key is held down
 	{
 		// toggleFrontf("show");
