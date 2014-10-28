@@ -44,6 +44,7 @@ if(key == 80)//p:play
     document.getElementById("keypress").style.backgroundColor = "cyan";
 }
 }		
+</script>
 		
 		<script src="<?php echo base_url(). "js/commandprocessor.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/events.js" ?>"></script>
