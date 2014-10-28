@@ -7,11 +7,15 @@ var LEFTBOUNDARY = 0;
 //control movement of player, because all instructions will be ran before the animation even completes
 //it results in the base position to be a constant 0,0 if we were to use sprite.position(). Thus, we will
 //manually calculate the position with each iteration of this function outselves to pass to the animation queue.
-function movePlayer(move, x, y, delayTime)
+function movePlayer(move, x, y, delayTime, val)
 {
-	var times = parseInt(move.substring(1));
+	var times;
 	var newX = x;
 	var newY = y;
+	if(val == 10000)
+		times = parseInt(move.substring(1));
+	else
+		times = val;
 	
 	switch(move.charAt(0))
 	{
@@ -169,7 +173,15 @@ function executeCommand(moves)
 			charDelay += 500;
 			if (moves[i].charAt(0) == "U" || moves[i].charAt(0) == "D" || moves[i].charAt(0) == "L" || moves[i].charAt(0) == "R")
 			{
-				coords = movePlayer(moves[i], coords[0], coords[1], spriteDelay);
+				var value = 10000; //a number that is impossible to set manually
+				if(moves[i].charAt(1) == "i")
+					value = varI;
+				else if(moves[i].charAt(1) == "j")
+					value = varJ;
+				else if(moves[i].charAt(1) == "k")
+					value = varK;
+					
+				coords = movePlayer(moves[i], coords[0], coords[1], spriteDelay, value);
 				spriteDelay = 0;
 			}
 			else if(moves[i].charAt(0) == "X" || moves[i].charAt(0) == "Y")

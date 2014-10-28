@@ -201,7 +201,7 @@ function validateVariables(input)
 		}
 		
 		//check if variables are used, variables also have to be declared before it is used
-		else if(input[i].charAt(0) == "{" || input[i].charAt(0) == "[")
+		else if(input[i].charAt(0) == "{" || input[i].charAt(0) == "[" || input[i].charAt(0) == "U" || input[i].charAt(0) == "D" || input[i].charAt(0) == "L" || input[i].charAt(0) == "R")
 		{
 			if(input[i].charAt(1) == "i")
 			{
