@@ -1,7 +1,5 @@
   
-function keydownFunction() {
- 
-  
+function keydownFunction1() {
 	if(event.shiftKey)//Shift key is held down
 	{
 		// toggleFrontf("show");

@@ -24,7 +24,19 @@
 		<script src="<?php echo base_url(). "js/controllerBinFunction.js" ?>"></script>	
 		<script src="<?php echo base_url(). "js/controllerKeypress.js" ?>">
 		document.onkeydown = keydownFunction;
-		document.onkeyup = keyupFunction;</script>							
+		document.onkeyup = keyupFunction;
+		function keydownFunction() {
+		// if(event.shiftKey)//Shift key is held down
+		{
+			// toggleFrontf("show");
+			if(event.keyCode == 67)//c:compile
+				compileCommand();
+			if(event.keyCode == 76)//l:logout
+				logoutf();
+			if(event.keyCode == 84)//t:toggle grid
+				toggleGridf(this);
+			}
+		}</script>							
 		
 		<script src="<?php echo base_url(). "js/commandprocessor.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/events.js" ?>"></script>
