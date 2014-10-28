@@ -324,7 +324,7 @@ function executeCommand(moves)
 				elseCount[curIf] = "";
 				curIf -= 1;
 			}
-			else if(moves[i].charAt(0) == "|" && elseCount[cufIf] == 0) //else
+			else if(moves[i].charAt(0) == "|" && elseCount[curIf] == 0) //else
 			{
 				delay -= 500;
 				charDelay -= 500;
