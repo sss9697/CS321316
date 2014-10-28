@@ -116,7 +116,10 @@ function validateCommand(input, type)
 		}
 		if(input[i].charAt(0) == close)
 		{
-			check -= 1;
+			if(close == ")")
+				check -= 3;
+			else
+				check -= 1;
 		}
 		
 		if(check < 0 && i < input.length -1)
