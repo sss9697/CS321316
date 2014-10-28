@@ -94,46 +94,27 @@ function compileCommand()
 //validate user input command, the loops, if OPEN, check +1, if close Check -1, at the end must be 0
 //At anytime if check <0, return error
 //0 = ok, 1 = too much open, 2 = too much close, 3 = close before open
-function validateCommand(input)
+function validateCommand(input, type)
 {
 	var check = 0;
+	var open;
+	var close; 
 	
-	for(i = 0; i < input.length ; i++)
+	switch(type)
 	{
-		if(input[i].charAt(0) == "O")
-		{
-			check += 1;
-		}
-		if(input[i].charAt(0) == "C")
-		{
-			check -= 1;
-		}
-		
-		if(check < 0 && i < input.length -1)
-		{
-			return [3, i+1];
-		}
+		case 0:	open = "O";	close = "C"; break;
+		case 1:	open = "{";	close = "}"; break;
+		case 2:	open = "[";	close = "]"; break;
+		case 3:	open = "(";	close = ")"; break;
 	}
 	
-	if(check > 0)
-		return [1, 0];
-	else if(check < 0)
-		return [2, input.length];
-	else
-		return [0,0];	
-}
-
-function validateIfCommand(input)
-{
-	var check = 0;
-	
 	for(i = 0; i < input.length ; i++)
 	{
-		if(input[i].charAt(0) == "{")
+		if(input[i].charAt(0) == open)
 		{
 			check += 1;
 		}
-		if(input[i].charAt(0) == "}")
+		if(input[i].charAt(0) == close)
 		{
 			check -= 1;
 		}
@@ -204,7 +185,7 @@ function validateVariables(input)
 		}
 		
 		//check if variables are used, variables also have to be declared before it is used
-		else if(input[i].charAt(0) == "{")
+		else if(input[i].charAt(0) == "{" || input[i].charAt(0) == "[")
 		{
 			if(input[i].charAt(1) == "i")
 			{
@@ -226,6 +207,7 @@ function validateVariables(input)
 	return [0,0];
 	//if variables are used and not init, return error, else all ok
 }
+
 //remove the loop and expand out the commands
 //this is a recursive function that will open a new instance of itself everytime a loop open is found
 //the new instance will then add its own set of commands into its own output
@@ -295,58 +277,62 @@ function compilef()
 {	
 	var command = compileCommand();
 	
-	var check = validateCommand(command);
+	var check = validateCommand(command, 0);
 	
 	if(check[0] == 1)
-	{
-		alert("Too much open brackets, remove one of them");
-	}
+		alert("Too much \"OPEN LOOP\" command");
 	else if(check[0] == 2)
-	{
-		alert("Too much close brackets, remove it at line number " + check[1]);
-	}
+		alert("Too much \"CLOSE LOOP\" command, remove it at line number " + check[1]);
 	else if (check[0] == 3)
-	{
-		alert("Closed bracket before open brackets at line number " + check[1]);
-	}
+		alert("\"CLOSE LOOP\" before \"OPEN LOOP\" at line number " + check[1]);
 	else
 	{
-		check = validateIfCommand(command);
+		check = validateCommand(command, 1);
 	
 		if(check[0] == 1)
-		{
-			alert("Too much IF open command");
-		}
+			alert("Too much \"IF OPEN\" command");
 		else if(check[0] == 2)
-		{
-			alert("Too much if closure, remove it at line number " + check[1]);
-		}
+			alert("Too much \"END IF\" command, remove it at line number " + check[1]);
 		else if (check[0] == 3)
-		{
-			alert("IF closure before IF open at line number " + check[1]);
-		}
+			alert("\"END IF\" before \"IF OPEN\" at line number " + check[1]);
 		else
 		{
 			check = validateVariables(command);
 	
 			if(check[0] == 1)
-			{
-				alert("Variable i used before declaration at line number " + check[1]);
-			}
+				alert("Variable 'i' used before declaration at line number " + check[1]);
 			else if(check[0] == 2)
-			{
-				alert("Variable j used before declaration at line number " + check[1]);
-			}
+				alert("Variable 'j' used before declaration at line number " + check[1]);
 			else if (check[0] == 3)
-			{
-				alert("Variable k used before declaration at line number " + check[1]);
-			}
+				alert("Variable 'k' used before declaration at line number " + check[1]);
 			else
 			{
-				var expanded = expandCommand(command, 0);
-				
-				console.log(expanded);
-				executeCommand(expanded);
+				check = validateCommand(command, 2);
+	
+				if(check[0] == 1)
+					alert("Too much \"WHILE OPEN\" commands");
+				else if(check[0] == 2)
+					alert("Too much \"END WHILE\" commands, remove it at line number" + check[1]);
+				else if (check[0] == 3)
+					alert("\"END WHILE\" before \"WHILE OPEN\" at line number " + check[1]);
+				else
+				{
+					check = validateCommand(command, 3);
+	
+					if(check[0] == 1)
+						alert("Too much \"FOR OPEN\" commands");
+					else if(check[0] == 2)
+						alert("Too much \"END FOR\" commands, remove it at line number" + check[1]);
+					else if (check[0] == 3)
+						alert("\"END FOR\" before \"FOR OPEN\" at line number " + check[1]);
+					else
+					{
+						var expanded = expandCommand(command, 0);
+						
+						console.log(expanded);
+						executeCommand(expanded);
+					}
+				}
 			}
 		}
 	}
