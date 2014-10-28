@@ -124,14 +124,20 @@ function executeCommand(moves)
 	var varI = 0;
 	var varJ = 0;
 	var varK = 0;
-	var skip = 0;
+	var curIf = -1;
+	var ifStatus = [];
 	
 	for(i = 0 ; i < moves.length ; i++)
 	{
-		if(skip == 1)
+		if(ifStatus[curIf] == 1) //if miss, we do else
 		{
+			if(moves[i].charAt(0) == "|")
+				ifStatus[curIf] = 0;
 			if(moves[i].charAt(0) == "}")
-				skip = 0;
+			{
+				ifStatus[curIf] = "";
+				curIf -= 1;
+			}
 		}
 		else if(loopStatus[curLoop] == 1) //1 = break out of loop
 		{
@@ -242,6 +248,10 @@ function executeCommand(moves)
 			{
 				delay -= 500;
 				charDelay -= 500;
+				
+				curIf += 1;
+				ifStatus[curIf] = 0;
+				
 				var value = parseInt(moves[i].substring(3));
 				var varX = coords[0] / MULTIPLIER;
 				var varY = coords[1] / MULTIPLIER;
@@ -251,44 +261,57 @@ function executeCommand(moves)
 					case "=":	
 						switch(moves[i].charAt(1))
 						{
-							case "i": if(!(varI == value))	skip = 1;	break;
-							case "j": if(!(varJ == value))	skip = 1;	break;
-							case "k": if(!(varK == value))	skip = 1;	break;
-							case "x": if(!(varX == value))	skip = 1;	break;
-							case "y": if(!(varY == value))	skip = 1;	break;
+							case "i": if(!(varI == value))	ifStatus[curIf] = 1;	break;
+							case "j": if(!(varJ == value))	ifStatus[curIf] = 1;	break;
+							case "k": if(!(varK == value))	ifStatus[curIf] = 1;	break;
+							case "x": if(!(varX == value))	ifStatus[curIf] = 1;	break;
+							case "y": if(!(varY == value))	ifStatus[curIf] = 1;	break;
 						}						
 						break;
 					case "<":
 						switch(moves[i].charAt(1))
 						{
-							case "i": if(!(varI < value))	skip = 1;	break;
-							case "j": if(!(varJ < value))	skip = 1;	break;
-							case "k": if(!(varK < value))	skip = 1;	break;
-							case "x": if(!(varX < value))	skip = 1;	break;
-							case "y": if(!(varY < value))	skip = 1;	break;
+							case "i": if(!(varI < value))	ifStatus[curIf] = 1;	break;
+							case "j": if(!(varJ < value))	ifStatus[curIf] = 1;	break;
+							case "k": if(!(varK < value))	ifStatus[curIf] = 1;	break;
+							case "x": if(!(varX < value))	ifStatus[curIf] = 1;	break;
+							case "y": if(!(varY < value))	ifStatus[curIf] = 1;	break;
 						}	
 						break;
 					case ">":
 						switch(moves[i].charAt(1))
 						{
-							case "i": if(!(varI > value))	skip = 1;	break;
-							case "j": if(!(varJ > value))	skip = 1;	break;
-							case "k": if(!(varK > value))	skip = 1;	break;
-							case "x": if(!(varX > value))	skip = 1;	break;
-							case "y": if(!(varY > value))	skip = 1;	break;
+							case "i": if(!(varI > value))	ifStatus[curIf] = 1;	break;
+							case "j": if(!(varJ > value))	ifStatus[curIf] = 1;	break;
+							case "k": if(!(varK > value))	ifStatus[curIf] = 1;	break;
+							case "x": if(!(varX > value))	ifStatus[curIf] = 1;	break;
+							case "y": if(!(varY > value))	ifStatus[curIf] = 1;	break;
 						}
 						break;
 					case "!":
 						switch(moves[i].charAt(1))
 						{
-							case "i": if(!(varI != value))	skip = 1;	break;
-							case "j": if(!(varJ != value))	skip = 1;	break;
-							case "k": if(!(varK != value))	skip = 1;	break;
-							case "x": if(!(varX != value))	skip = 1;	break;
-							case "y": if(!(varY != value))	skip = 1;	break;
+							case "i": if(!(varI != value))	ifStatus[curIf] = 1;	break;
+							case "j": if(!(varJ != value))	ifStatus[curIf] = 1;	break;
+							case "k": if(!(varK != value))	ifStatus[curIf] = 1;	break;
+							case "x": if(!(varX != value))	ifStatus[curIf] = 1;	break;
+							case "y": if(!(varY != value))	ifStatus[curIf] = 1;	break;
 						}
 						break;
 				}
+			}
+			else if(moves[i].charAt(0) == "}") //if close
+			{
+				delay -= 500;
+				charDelay -= 500;
+				ifStatus[curIf] = "";
+				curIf -= 1;
+			}
+			else if(moves[i].charAt(0) == "|") //else
+			{
+				delay -= 500;
+				charDelay -= 500;
+				ifStatus[curIf] = 1; //skip else
 			}
 			else if(moves[i].charAt(0) == "[") //while open
 			{
