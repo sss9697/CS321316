@@ -132,7 +132,7 @@ function executeCommand(moves)
 	{
 		if(ifStatus[curIf] == 1) //if miss, we do else
 		{
-			if(moves[i].charAt(0) == "|" && elseCount[cufIf] == 0)
+			if(moves[i].charAt(0) == "|" && elseCount[curIf] == 0)
 			{
 				ifStatus[curIf] = 0;
 				elseCount[curIf] = 1;
