@@ -1,5 +1,5 @@
 $( document ).on( 'keydown', function keydownFunction(e) {
-	if(e.shiftKey)//Shift key is held down
+	//if(e.shiftKey)//Shift key is held down
 	{
 		// toggleFrontf("show");
 		if(e.keyCode == 67)//c:compile
