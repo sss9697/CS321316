@@ -166,6 +166,7 @@ option.Lilac{background-color:#c8a2c8; color:black;}
 	text-align: left;
 	background-image: ;
 	background-repeat: repeat;
+	z-index: -1;
 }
 #sprite
 {
