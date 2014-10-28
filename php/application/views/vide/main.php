@@ -166,6 +166,12 @@
 									</div>
 								</li>
 								
+								<li id="moveifelse" class="command">
+									<div id="movediv">
+										Else 
+									</div>
+								</li>
+								
 								<li id="moveifclose" class="command">
 									<div id="movediv">
 										End If 

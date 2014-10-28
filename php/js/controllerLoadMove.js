@@ -76,7 +76,11 @@ function loadf(moves)
 			case '}': $( "#editorspace ul" ).append(
 						$("<li id=\"moveifclose\" class=\"command\"><div id=\"movediv\">End If</div></li>"));
 				break;
-			
+				
+			//else
+			case '|': $( "#editorspace ul" ).append(
+						$("<li id=\"moveifelse\" class=\"command\"><div id=\"movediv\">Else</div></li>"));
+				break;
 			//variables
 			case 'i': 
 			case 'j':

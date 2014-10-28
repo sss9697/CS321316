@@ -45,6 +45,10 @@ function compileCommand()
 					numberTimes = $(this).find("#moveifopenfirstlist").val() + $(this).find("#moveifopensecondlist").val() + $(this).find("input").val();
 					//first char is variable, 2nd char is boolean comparator, after that all inputs
 				break;
+			
+			case "moveifelse": compileString += "|";
+				break;
+				
 			case "moveifclose": compileString += "}";
 				break;
 				
@@ -97,6 +101,7 @@ function compileCommand()
 function validateCommand(input, type)
 {
 	var check = 0;
+	var elseCheck = 0;
 	var open;
 	var close; 
 	
@@ -122,6 +127,14 @@ function validateCommand(input, type)
 				check -= 1;
 		}
 		
+		if(type == 1)
+		{
+			if(input[i].charAt(0) == "|")
+			{
+				if(check == 0) //else before if
+					return [4, i+1];
+			}
+		}		
 		if(check < 0 && i < input.length -1)
 		{
 			return [3, i+1];
@@ -298,6 +311,8 @@ function compilef()
 			alert("Too much \"END IF\" command, remove it at line number " + check[1]);
 		else if (check[0] == 3)
 			alert("\"END IF\" before \"IF OPEN\" at line number " + check[1]);
+		else if(check[0] == 4)
+			alert("\"ELSE\" before \"IF OPEN\" at line number " + check[1]);
 		else
 		{
 			check = validateVariables(command);
