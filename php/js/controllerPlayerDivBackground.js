@@ -59,7 +59,7 @@ function toggleGridf(state)
 {
 	if(state.value == "show")
 	{
-		$('#playerdiv').css("background-image", "url('../img/smallgrid.png')"); 
+		$('#playerdiv').css("background-image", "url('../img/grid.png')"); 
 		state.value = "hide";
 	}
 	else
