@@ -1,18 +1,17 @@
-  
-function keydownFunction() {
+$( document ).on( 'keydown', function keydownFunction(e) {
  var key = ( window.event ) ? event.keyCode : e.keyCode;
-	if(event.shiftKey)//Shift key is held down
+	if(e.shiftKey)//Shift key is held down
 	{
 		// toggleFrontf("show");
-		if(event.keyCode == 67)//c:compile
-			compileCommand();
-		if(event.keyCode == 76)//l:logout
-			logoutf();
-		if(event.keyCode == 84)//t:toggle grid
-			toggleGridf(this);
+		if(e.keyCode == 67)//c:compile
+			$("#keypress").style.backgroundColor = "red";
+		if(e.keyCode == 76)//l:logout
+			$("#keypress").style.backgroundColor = "green";
+		if(e.keyCode == 84)//t:toggle grid
+			$("#keypress").style.backgroundColor = "yellow";
 	}
-}
-
+});
+  
 function keyupFunction() {
 	// toggleFrontf("hide");
 	
