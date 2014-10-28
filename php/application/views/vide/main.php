@@ -209,7 +209,7 @@
 										  <option value="=">=</option>
 										</select>				
 										
-										<input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
+										<input type="number" name="edittxt" id="edittxt2" value="1" max="999" min="-999" />
 										;
 										<select id="moveforopenthirdlist">
 										  <option value="=">=</option>
@@ -220,7 +220,7 @@
 										  <option value="%">%</option>
 										</select>				
 										
-										<input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
+										<input type="number" name="edittxt" id="edittxt3" value="1" max="999" min="-999" />
 										
 									</div>
 								</li>

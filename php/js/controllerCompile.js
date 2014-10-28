@@ -59,6 +59,28 @@ function compileCommand()
 				numberTimes = $(this).find("#movevariablesecondlist").val()  + $(this).find("input").val();
 				//this is for set variable, so first char will be variable name, number times will be value
 				break;
+			
+			case "movewhileopen": compileString += "[";
+				numberTimes = $(this).find("#movewhileopenfirstlist").val() + $(this).find("#movewhileopensecondlist").val() + $(this).find("input").val();
+				break;
+			
+			case "movewhileclose": compileString += "]";
+				break;
+			
+			case "moveforopen": compileString += "(";
+				compileString += $(this).find("#moveforopenfirstlist").val() + $(this).find("#edittxt").val();
+				commands[commands.length] = compileString;
+				
+				compileString += "(";
+				compileString += $(this).find("#moveforopensecondlist").val() + $(this).find("#edittxt2").val();
+				commands[commands.length] = compileString;
+				
+				compileString += "("; 
+				numberTimes = $(this).find("#moveforopenthirdlist").val() + $(this).find("#edittxt3").val();
+				break;
+			
+			case "moveforclose": compileString += ")";
+				break;
 				
 			default: compileString += "E";
 		}
