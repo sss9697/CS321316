@@ -126,15 +126,20 @@ function executeCommand(moves)
 	var varK = 0;
 	var curIf = -1;
 	var ifStatus = [];
+	var elseCount = [];
 	
 	for(i = 0 ; i < moves.length ; i++)
 	{
 		if(ifStatus[curIf] == 1) //if miss, we do else
 		{
-			if(moves[i].charAt(0) == "|")
+			if(moves[i].charAt(0) == "|" && elseCount[cufIf] == 0)
+			{
 				ifStatus[curIf] = 0;
+				elseCount[curIf] = 1;
+			}
 			if(moves[i].charAt(0) == "}")
 			{
+				elseCount[curIf] = "";
 				ifStatus[curIf] = "";
 				curIf -= 1;
 			}
@@ -305,13 +310,15 @@ function executeCommand(moves)
 				delay -= 500;
 				charDelay -= 500;
 				ifStatus[curIf] = "";
+				elseCount[curIf] = "";
 				curIf -= 1;
 			}
-			else if(moves[i].charAt(0) == "|") //else
+			else if(moves[i].charAt(0) == "|" && elseCount[cufIf] == 0) //else
 			{
 				delay -= 500;
 				charDelay -= 500;
 				ifStatus[curIf] = 1; //skip else
+				elseCount[curIf] = 1;
 			}
 			else if(moves[i].charAt(0) == "[") //while open
 			{
