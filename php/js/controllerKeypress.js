@@ -1,13 +1,13 @@
 $( document ).on( 'keydown', function keydownFunction(e) {
-	//if(e.shiftKey)//Shift key is held down
+	if(e.shiftKey)//Shift key is held down
 	{
 		// toggleFrontf("show");
 		if(e.keyCode === 67)//c:compile
-			$("#keypress").css('color', "red");
+			$("#keypress").css('background-color', "red");
 		if(e.keyCode === 76)//l:logout
-			$("#keypress").css('color', "green");
+			$("#keypress").css('background-color', "green");
 		if(e.keyCode === 84)//t:toggle grid
-			$("#keypress").css('color', "yellow");
+			$("#keypress").css('background-color', "yellow");
 	}
 });
   
