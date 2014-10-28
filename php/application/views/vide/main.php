@@ -21,7 +21,8 @@
 		<script src="<?php echo base_url(). "js/controllerPlayerMovement.js" ?>"></script>		
 		<script src="<?php echo base_url(). "js/controllerLoadMove.js" ?>"></script>	
 		<script src="<?php echo base_url(). "js/controllerSaveMove.js" ?>"></script>		
-		<script src="<?php echo base_url(). "js/controllerBinFunction.js" ?>"></script>				
+		<script src="<?php echo base_url(). "js/controllerBinFunction.js" ?>"></script>	
+		<script src="<?php echo base_url(). "js/controllerKeypress.js" ?>"></script>							
 		
 		<script src="<?php echo base_url(). "js/commandprocessor.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/events.js" ?>"></script>
