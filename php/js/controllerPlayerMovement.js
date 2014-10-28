@@ -117,6 +117,9 @@ function executeCommand(moves)
 	var charDelay = -500;
 	var charChangeCount = 0;
 	var foreverloopIndex = 0;
+	var loopIndex = [];
+	var loopStatus = [];
+	var curLoop = -1;
 	var loopCount = 0;
 	var varI = 0;
 	var varJ = 0;
@@ -129,6 +132,15 @@ function executeCommand(moves)
 		{
 			if(moves[i].charAt(0) == "}")
 				skip = 0;
+		}
+		else if(loopStatus[curLoop] == 1) //1 = break out of loop
+		{
+			if(moves[i].charAt(0) == "]" || moves[i].charAt(0) == ")")
+			{
+				loopStatus[curLoop] = "";
+				loopIndex[curLoop] = "";
+				curLoop -= 1;
+			}
 		}
 		else
 		{
@@ -165,8 +177,10 @@ function executeCommand(moves)
 				
 				charChangeCount += 1;
 			}
-			else if(moves[i].charAt(0) == "F")
+			else if(moves[i].charAt(0) == "F") //forever loop
 			{
+				delay -= 500;
+				charDelay -= 500;
 				var foreverIndex = parseInt(moves[i].substring(1));
 				if(foreverIndex == 0)
 				{
@@ -175,12 +189,14 @@ function executeCommand(moves)
 				else
 				{
 					loopCount = loopCount + 1;
-					if(loopCount != 9999)
+					if(loopCount != 999)
 						i = foreverloopIndex - 1;
 				}
 			}
 			else if(moves[i].charAt(0) == "i")
 			{
+				delay -= 500;
+				charDelay -= 500;
 				var value = parseInt(moves[i].substring(2));
 				switch(moves[i].charAt(1))
 				{
@@ -194,6 +210,8 @@ function executeCommand(moves)
 			}
 			else if(moves[i].charAt(0) == "j")
 			{
+				delay -= 500;
+				charDelay -= 500;
 				var value = parseInt(moves[i].substring(2));
 				switch(moves[i].charAt(1))
 				{
@@ -207,6 +225,8 @@ function executeCommand(moves)
 			}
 			else if(moves[i].charAt(0) == "k")
 			{
+				delay -= 500;
+				charDelay -= 500;
 				var value = parseInt(moves[i].substring(2));
 				switch(moves[i].charAt(1))
 				{
@@ -218,8 +238,10 @@ function executeCommand(moves)
 					case "%" : varK %= value; break;
 				}
 			}
-			else if(moves[i].charAt(0) == "{")
+			else if(moves[i].charAt(0) == "{") //if open
 			{
+				delay -= 500;
+				charDelay -= 500;
 				var value = parseInt(moves[i].substring(3));
 				var varX = coords[0] / MULTIPLIER;
 				var varY = coords[1] / MULTIPLIER;
@@ -267,6 +289,69 @@ function executeCommand(moves)
 						}
 						break;
 				}
+			}
+			else if(moves[i].charAt(0) == "[") //while open
+			{
+				delay -= 500;
+				charDelay -= 500;
+				//loop detected, increase curLoop and add this index to loopIndex
+				curLoop += 1;
+				loopIndex[curLoop] = i - 1;
+				loopStatus[curLoop] = 0; 
+				
+				var value = parseInt(moves[i].substring(3));
+				var varX = coords[0] / MULTIPLIER;
+				var varY = coords[1] / MULTIPLIER;
+				
+				switch(moves[i].charAt(2))
+				{
+					case "=":	
+						switch(moves[i].charAt(1))
+						{
+							case "i": if(!(varI == value))	loopStatus[curLoop] = 1;	break;
+							case "j": if(!(varJ == value))	loopStatus[curLoop] = 1;	break;
+							case "k": if(!(varK == value))	loopStatus[curLoop] = 1;	break;
+							case "x": if(!(varX == value))	loopStatus[curLoop] = 1;	break;
+							case "y": if(!(varY == value))	loopStatus[curLoop] = 1;	break;
+						}						
+						break;
+					case "<":
+						switch(moves[i].charAt(1))
+						{
+							case "i": if(!(varI < value))	loopStatus[curLoop] = 1;	break;
+							case "j": if(!(varJ < value))	loopStatus[curLoop] = 1;	break;
+							case "k": if(!(varK < value))	loopStatus[curLoop] = 1;	break;
+							case "x": if(!(varX < value))	loopStatus[curLoop] = 1;	break;
+							case "y": if(!(varY < value))	loopStatus[curLoop] = 1;	break;
+						}	
+						break;
+					case ">":
+						switch(moves[i].charAt(1))
+						{
+							case "i": if(!(varI > value))	loopStatus[curLoop] = 1;	break;
+							case "j": if(!(varJ > value))	loopStatus[curLoop] = 1;	break;
+							case "k": if(!(varK > value))	loopStatus[curLoop] = 1;	break;
+							case "x": if(!(varX > value))	loopStatus[curLoop] = 1;	break;
+							case "y": if(!(varY > value))	loopStatus[curLoop] = 1;	break;
+						}
+						break;
+					case "!":
+						switch(moves[i].charAt(1))
+						{
+							case "i": if(!(varI != value))	loopStatus[curLoop] = 1;	break;
+							case "j": if(!(varJ != value))	loopStatus[curLoop] = 1;	break;
+							case "k": if(!(varK != value))	loopStatus[curLoop] = 1;	break;
+							case "x": if(!(varX != value))	loopStatus[curLoop] = 1;	break;
+							case "y": if(!(varY != value))	loopStatus[curLoop] = 1;	break;
+						}
+						break;
+				}
+			}
+			else if(moves[i].charAt(0) == "]" || moves[i].charAt(0) == ")")
+			{
+				delay -= 500;
+				charDelay -= 500;
+				i = loopIndex[curLoop];
 			}
 		}
 	}
