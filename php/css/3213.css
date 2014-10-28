@@ -132,12 +132,14 @@ option.Lilac{background-color:#c8a2c8; color:black;}
 }
 #droppable li
 {
+	display:inline-block;
 	padding:.5em 1em;
-	width: 270px;
+	margin: 1px 1px 5px 1px;
 	border:1px solid #d9d9d9;
 	background:#f7f7f7;
 	border-radius:3px
 }
+
 #saveDirErr
 {
 	color:red;
