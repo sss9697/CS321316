@@ -127,11 +127,21 @@ function executeCommand(moves)
 	var curIf = -1;
 	var ifStatus = [];
 	var elseCount = [];
+	var ignoreIf = 0;
 	
 	for(i = 0 ; i < moves.length ; i++)
 	{
-		if(ifStatus[curIf] == 1) //if miss, we do else
+		if(ignoreIf != 0)
 		{
+			if(moves[i].charAt(0) == "}")
+				ignoreIf -= 1;
+		}
+		else if(ifStatus[curIf] == 1) //if miss, we do else
+		{
+			if(moves[i].charAt(0) == "{")
+			{
+				ignoreIf += 1;
+			}
 			if(moves[i].charAt(0) == "|" && elseCount[curIf] == 0)
 			{
 				ifStatus[curIf] = 0;
