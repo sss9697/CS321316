@@ -22,9 +22,7 @@
 		<script src="<?php echo base_url(). "js/controllerLoadMove.js" ?>"></script>	
 		<script src="<?php echo base_url(). "js/controllerSaveMove.js" ?>"></script>		
 		<script src="<?php echo base_url(). "js/controllerBinFunction.js" ?>"></script>	
-		<script src="<?php echo base_url(). "js/controllerKeypress.js" ?>">
-		document.onkeydown = keydownFunction;
-		document.onkeyup = keyupFunction;</script>
+		<script src="<?php echo base_url(). "js/controllerKeypress.js" ?>"></script>
 <input type="text" id="keypress">
 
 
@@ -34,7 +32,7 @@ document.onkeyup = keyupFunction;
 
 function keydownFunction() {
 var key = ( window.event ) ? event.keyCode : e.keyCode;
-
+document.getElementById("keypress").value="pressed";
 if(event.shiftKey){
 if(key == 67)//c:compile
     document.getElementById("keypress").style.backgroundColor = "red";
