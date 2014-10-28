@@ -98,10 +98,10 @@ function loadf(moves)
 				break;
 			//open for
 			case ')': $( "#editorspace ul" ).append(
-						$("<li id=\"moveforopen\" class=\"command\"><div id=\"movediv\">For: <select id=\"moveforopenfirstlist\"><option value=\"i\">i</option><option value=\"j\">j</option><option value=\"k\">k</option></select>=<input type=\"number\" name=\"edittxt\" id=\"edittxt\" value="+number.substring(1)+" max=\"999\" min=\"-999\" />;<select id=\"moveforopensecondlist\"><option value=\">\">></option><option value=\"<\"><</option><option value=\"=\">=</option></select><input type=\"number\" name=\"edittxt\" id=\"edittxt2\" value="+ movearray[i+1].substring(2) +" max=\"999\" min=\"-999\" />;<select id=\"moveforopenthirdlist\"><option value=\"+\">+</option><option value=\"-\">-</option><option value=\"*\">*</option><option value=\"/\">/</option><option value=\"%\">%</option></select><input type=\"number\" name=\"edittxt\" id=\"edittxt3\" value="+ movearray[i+2].substring(2) +" max=\"999\" min=\"-999\" /></div></li>"));
+						$("<li id=\"moveforopen\" class=\"command\"><div id=\"movediv\">For: <select id=\"moveforopenfirstlist\"><option value=\"i\">i</option><option value=\"j\">j</option><option value=\"k\">k</option></select>=<input type=\"number\" name=\"edittxt\" id=\"edittxt\" value="+number.substring(1)+" max=\"999\" min=\"-999\" />;<select id=\"moveforopensecondlist\"><option value=\">\">></option><option value=\"<\"><</option><option value=\"=\">=</option></select><input type=\"number\" name=\"edittxt\" id=\"edittxt2\" value="+ movearray[(i+1)].substring(2) +" max=\"999\" min=\"-999\" />;<select id=\"moveforopenthirdlist\"><option value=\"+\">+</option><option value=\"-\">-</option><option value=\"*\">*</option><option value=\"/\">/</option><option value=\"%\">%</option></select><input type=\"number\" name=\"edittxt\" id=\"edittxt3\" value="+ movearray[(i+2)].substring(2) +" max=\"999\" min=\"-999\" /></div></li>"));
 						$("#editorspace ul li").last().find("#moveforopenfirstlist").val(number.substring(0,1));
-						$("#editorspace ul li").last().find("#moveforopensecondlist").val(movearray[i+1].substring(1,2));
-						$("#editorspace ul li").last().find("#moveforopenthirdlist").val(movearray[i+2].substring(1,2));
+						$("#editorspace ul li").last().find("#moveforopensecondlist").val(movearray[(i+1)].substring(1,2));
+						$("#editorspace ul li").last().find("#moveforopenthirdlist").val(movearray[(i+2)].substring(1,2));
 					i += 2; //skip 2 line as for is 3 lines worth
 				break;
 			//close for
