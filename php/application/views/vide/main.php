@@ -27,6 +27,9 @@
 		<script src="<?php echo base_url(). "js/commandprocessor.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/events.js" ?>"></script>
 
+		<div id="hiddenDiv" style="display: none;">
+		<input type="text" id="keypress" onkeydown="keydownFunction()" onkeyup="keyupFunction()" value="demo1">
+		</div>
 		
 		<script src="<?php echo base_url(). "js/controllerSession.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/json-serialization.js" ?>"></script>

@@ -1,6 +1,6 @@
 
 function keydownFunction() {
-	// if(event.shiftKey)//Shift key is held down
+	if(event.shiftKey)//Shift key is held down
 	{
 		// toggleFrontf("show");
 		if(event.keyCode == 67)//c:compile
