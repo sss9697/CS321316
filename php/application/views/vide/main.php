@@ -327,14 +327,10 @@
 				</div>
 			</div>
 
-
-				<canvas id="playerdiv">
-					Your browser does not support the HTML5 canvas tag.
+			<div id="playerdiv">
 					<img src= "<?php echo base_url(). "img/1.gif" ?> " height="50" width="50" id="sprite" value="hide"> 
-					<img src= "<?php echo base_url(). "img/1.gif" ?> " height="50" width="50" id="sprite2" value="hide" style="display: none;"> 
-				</canvas>
-				 
-
+					<img src= "<?php echo base_url(). "img/1.gif" ?> " height="50" width="50" id="sprite2" value="hide" style="display: none;"> 				 
+			</div>
 			<div id="controldiv">
 				<button id="compile-btn">Compile</button>&nbsp;&nbsp;&nbsp;
 				<button id="toggleGrid-btn" value="show">Toggle Grid</button>&nbsp;&nbsp;&nbsp;
