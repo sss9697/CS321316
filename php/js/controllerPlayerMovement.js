@@ -229,61 +229,41 @@ function executeCommand(moves)
 					case "=":	
 						switch(moves[i].charAt(1))
 						{
-							case "i": if(varI != value)
-										skip = 1;
-								break;
-							case "j": if(varJ != value)
-										skip = 1;
-								break;
-							case "k": if(varK != value)
-										skip = 1;
-								break;
-							case "x": if(varX != value)
-										skip = 1;
-								break;
-							case "y": if(varY != value)
-										skip = 1;
-								break;
+							case "i": if(!(varI == value))	skip = 1;	break;
+							case "j": if(!(varJ == value))	skip = 1;	break;
+							case "k": if(!(varK == value))	skip = 1;	break;
+							case "x": if(!(varX == value))	skip = 1;	break;
+							case "y": if(!(varY == value))	skip = 1;	break;
 						}						
 						break;
 					case "<":
 						switch(moves[i].charAt(1))
 						{
-							case "i": if(!(varI < value))
-										skip = 1;
-								break;
-							case "j": if(!(varJ < value))
-										skip = 1;
-								break;
-							case "k": if(!(varK < value))
-										skip = 1;
-								break;
-							case "x": if(!(varX < value))
-										skip = 1;
-								break;
-							case "y": if(!(varY < value))
-										skip = 1;
-								break;
+							case "i": if(!(varI < value))	skip = 1;	break;
+							case "j": if(!(varJ < value))	skip = 1;	break;
+							case "k": if(!(varK < value))	skip = 1;	break;
+							case "x": if(!(varX < value))	skip = 1;	break;
+							case "y": if(!(varY < value))	skip = 1;	break;
 						}	
 						break;
 					case ">":
 						switch(moves[i].charAt(1))
 						{
-							case "i": if(!(varI > value))
-										skip = 1;
-								break;
-							case "j": if(!(varJ > value))
-										skip = 1;
-								break;
-							case "k": if(!(varK > value))
-										skip = 1;
-								break;
-							case "x": if(!(varX > value))
-										skip = 1;
-								break;
-							case "y": if(!(varY > value))
-										skip = 1;
-								break;
+							case "i": if(!(varI > value))	skip = 1;	break;
+							case "j": if(!(varJ > value))	skip = 1;	break;
+							case "k": if(!(varK > value))	skip = 1;	break;
+							case "x": if(!(varX > value))	skip = 1;	break;
+							case "y": if(!(varY > value))	skip = 1;	break;
+						}
+						break;
+					case "!":
+						switch(moves[i].charAt(1))
+						{
+							case "i": if(!(varI != value))	skip = 1;	break;
+							case "j": if(!(varJ != value))	skip = 1;	break;
+							case "k": if(!(varK != value))	skip = 1;	break;
+							case "x": if(!(varX != value))	skip = 1;	break;
+							case "y": if(!(varY != value))	skip = 1;	break;
 						}
 						break;
 				}

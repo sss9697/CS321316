@@ -156,6 +156,7 @@
 										  <option value=">">></option>
 										  <option value="<"><</option>
 										  <option value="=">=</option>
+										  <option value="!">!</option>
 										</select>
 										
 										<input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
@@ -174,12 +175,15 @@
 										  <option value="i">i</option>
 										  <option value="j">j</option>
 										  <option value="k">k</option>
+										  <option value="x">x</option>
+										  <option value="y">y</option>
 										</select>
 										
 										<select id="movewhileopensecondlist">
 										  <option value=">">></option>
 										  <option value="<"><</option>
 										  <option value="=">=</option>
+										  <option value="!">!</option>
 										</select>
 										
 										<input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
@@ -207,6 +211,7 @@
 										  <option value=">">></option>
 										  <option value="<"><</option>
 										  <option value="=">=</option>
+										  <option value="!">!</option>
 										</select>				
 										
 										<input type="number" name="edittxt" id="edittxt2" value="1" max="999" min="-999" />
