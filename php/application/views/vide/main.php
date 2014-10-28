@@ -212,7 +212,6 @@
 										<input type="number" name="edittxt" id="edittxt2" value="1" max="999" min="-999" />
 										;
 										<select id="moveforopenthirdlist">
-										  <option value="=">=</option>
 										  <option value="+">+</option>
 										  <option value="-">-</option>
 										  <option value="*">*</option>

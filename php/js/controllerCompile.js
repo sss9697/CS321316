@@ -71,11 +71,11 @@ function compileCommand()
 				compileString += $(this).find("#moveforopenfirstlist").val() + $(this).find("#edittxt").val();
 				commands[commands.length] = compileString;
 				
-				compileString += "(";
+				compileString = "(";
 				compileString += $(this).find("#moveforopensecondlist").val() + $(this).find("#edittxt2").val();
 				commands[commands.length] = compileString;
 				
-				compileString += "("; 
+				compileString = "("; 
 				numberTimes = $(this).find("#moveforopenthirdlist").val() + $(this).find("#edittxt3").val();
 				break;
 			
