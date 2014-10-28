@@ -32,7 +32,7 @@ document.onkeyup = keyupFunction;
 
 function keydownFunction() {
 var key = ( window.event ) ? event.keyCode : e.keyCode;
-document.getElementById("keypress").value="pressed";
+document.getElementById("#keypress").value="pressed";
 if(event.shiftKey){
 if(key == 67)//c:compile
     document.getElementById("keypress").style.backgroundColor = "red";
