@@ -352,6 +352,7 @@ function executeCommand(moves)
 				delay -= 500;
 				charDelay -= 500;
 				i = loopIndex[curLoop];
+				curLoop -= 1;
 			}
 		}
 	}
