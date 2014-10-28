@@ -354,6 +354,114 @@ function executeCommand(moves)
 				i = loopIndex[curLoop];
 				curLoop -= 1;
 			}
+			else if(moves[i].charAt(0) == "(") //for open
+			{
+				//first command of a first loop is to init the variable
+				if(moves[i].charAt(1) == "i" || moves[i].charAt(1) == "j" || moves[i].charAt(1) == "k")
+				{
+					if(moves[i].charAt(1) == "i")
+						varI = (parseInt(moves[i].substring(2))) - 1;
+					if(moves[i].charAt(1) == "j")
+						varJ = (parseInt(moves[i].substring(2))) - 1;
+					if(moves[i].charAt(1) == "k")
+						varK = (parseInt(moves[i].substring(2))) - 1;
+				}
+				else
+				{
+					delay -= 500;
+					charDelay -= 500;
+					//loop detected, increase curLoop and add this index to loopIndex
+					curLoop += 1;
+					loopIndex[curLoop] = i - 1;
+					loopStatus[curLoop] = 0; 
+					
+					var value = parseInt(moves[i].substring(2)); //this is the comparatorValue
+					var AddValue = parseInt(moves[i+1].substring(2)); //this is the to operate value
+					var varX = coords[0] / MULTIPLIER;
+					var varY = coords[1] / MULTIPLIER;
+					
+					switch(moves[i + 1].charAt(1)) //switch the operator 
+					{
+						case "+":	
+							switch(moves[i - 1].charAt(1)) //switch the variable
+							{
+								case "i": varI = varI + AddValue;	break;
+								case "j": varJ = varJ + AddValue;	break;
+								case "k": varK = varK + AddValue;	break;
+							}						
+							break;
+						case "-":
+							switch(moves[i - 1].charAt(1))
+							{
+								case "i": varI = varI - AddValue;	break;
+								case "j": varJ = varJ - AddValue;	break;
+								case "k": varK = varK - AddValue;	break;
+							}	
+							break;
+						case "*":
+							switch(moves[i - 1].charAt(1))
+							{
+								case "i": varI = varI * AddValue;	break;
+								case "j": varJ = varJ * AddValue;	break;
+								case "k": varK = varK * AddValue;	break;
+							}
+							break;
+						case "/":
+							switch(moves[i - 1].charAt(1))
+							{
+								case "i": varI = varI * AddValue;	break;
+								case "j": varJ = varJ * AddValue;	break;
+								case "k": varK = varK * AddValue;	break;
+							}
+							break;
+						case "%":
+							switch(moves[i - 1].charAt(1))
+							{
+								case "i": varI = varI % AddValue;	break;
+								case "j": varJ = varJ % AddValue;	break;
+								case "k": varK = varK % AddValue;	break;
+							}
+							break;
+					}
+					
+					switch(moves[i].charAt(1)) //switch the comparator
+					{
+						case "=":	
+							switch(moves[i - 1].charAt(1))
+							{
+								case "i": if(!(varI == value))	loopStatus[curLoop] = 1;	break;
+								case "j": if(!(varJ == value))	loopStatus[curLoop] = 1;	break;
+								case "k": if(!(varK == value))	loopStatus[curLoop] = 1;	break;
+							}						
+							break;
+						case "<":
+							switch(moves[i - 1].charAt(1))
+							{
+								case "i": if(!(varI < value))	loopStatus[curLoop] = 1;	break;
+								case "j": if(!(varJ < value))	loopStatus[curLoop] = 1;	break;
+								case "k": if(!(varK < value))	loopStatus[curLoop] = 1;	break;
+							}	
+							break;
+						case ">":
+							switch(moves[i - 1].charAt(1))
+							{
+								case "i": if(!(varI > value))	loopStatus[curLoop] = 1;	break;
+								case "j": if(!(varJ > value))	loopStatus[curLoop] = 1;	break;
+								case "k": if(!(varK > value))	loopStatus[curLoop] = 1;	break;
+							}
+							break;
+						case "!":
+							switch(moves[i - 1].charAt(1))
+							{
+								case "i": if(!(varI != value))	loopStatus[curLoop] = 1;	break;
+								case "j": if(!(varJ != value))	loopStatus[curLoop] = 1;	break;
+								case "k": if(!(varK != value))	loopStatus[curLoop] = 1;	break;
+							}
+							break;
+					}
+					i += 1; //skip one move as it is the operator
+				}
+			}
 		}
 	}
 
