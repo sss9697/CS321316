@@ -68,7 +68,7 @@ function loadf(moves)
 				
 			//open if
 			case '{': $( "#editorspace ul" ).append(
-						$("<li id=\"moveifopen\" class=\"command\"><div 		id=\"movediv\">If: <select id=\"moveifopenfirstlist\"> <option value=\"i\">i</option><option value=\"j\">j</option><option value=\"k\">k</option><option value=\"x\">x</option><option value=\"y\">y</option></select><select id=\"moveifopensecondlist\"><option value=\">\">></option><option value=\"<\"><</option><option value=\"=\">=</option></select><input type=\"number\" name=\"edittxt\" id=\"edittxt\" value="+ number.substring(2) +" max=\"999\" min=\"-999\" /></div></li>"));
+						$("<li id=\"moveifopen\" class=\"command\"><div 		id=\"movediv\">If: <select id=\"moveifopenfirstlist\"> <option value=\"i\">i</option><option value=\"j\">j</option><option value=\"k\">k</option><option value=\"x\">x</option><option value=\"y\">y</option></select><select id=\"moveifopensecondlist\"><option value=\">\">></option><option value=\"<\"><</option><option value=\"=\">=</option><option value=\"!\">!</option></select><input type=\"number\" name=\"edittxt\" id=\"edittxt\" value="+ number.substring(2) +" max=\"999\" min=\"-999\" /></div></li>"));
 						$("#editorspace ul li").last().find("#moveifopenfirstlist").val(number.substring(0,1));
 						$("#editorspace ul li").last().find("#moveifopensecondlist").val(number.substring(1,2));
 				break;
@@ -88,7 +88,7 @@ function loadf(moves)
 			
 			//open while
 			case '[': $( "#editorspace ul" ).append(
-						$("<li id=\"movewhileopen\" class=\"command\"><div id=\"movediv\">While: <select id=\"movewhileopenfirstlist\"><option value=\"i\">i</option><option value=\"j\">j</option><option value=\"k\">k</option></select><select id=\"movewhileopensecondlist\"><option value=\">\">></option><option value=\"<\"><</option><option value=\"=\">=</option></select><input type=\"number\" name=\"edittxt\" id=\"edittxt\" value="+number.substring(2)+" max=\"999\" min=\"-999\" /></div></li>"));
+						$("<li id=\"movewhileopen\" class=\"command\"><div id=\"movediv\">While: <select id=\"movewhileopenfirstlist\"><option value=\"i\">i</option><option value=\"j\">j</option><option value=\"k\">k</option><option value=\"x\">x</option><option value=\"y\">y</option></select><select id=\"movewhileopensecondlist\"><option value=\">\">></option><option value=\"<\"><</option><option value=\"=\">=</option></select><input type=\"number\" name=\"edittxt\" id=\"edittxt\" value="+number.substring(2)+" max=\"999\" min=\"-999\" /></div></li>"));
 						$("#editorspace ul li").last().find("#movewhileopenfirstlist").val(number.substring(0,1));
 						$("#editorspace ul li").last().find("#movewhileopensecondlist").val(number.substring(1,2));
 				break;
