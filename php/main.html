@@ -1,75 +1,37 @@
-
-<script type="text/javascript" src="js/json-serialization.js"></script>
-<script type="text/javascript" src="js/controllerSession.js"></script>
-<head>
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-<title>Cookie-less Session Variables in JavaScript</title>
-</head>
+<!DOCTYPE html>
+<html>
 <body>
 
-<h1>Cookie-less Session Variables in JavaScript</h1>
-
-<p>This page uses cookie-less session variables in JavaScript. <a href="main.html"><strong>Refresh</strong></a> or <a href="http://www.sitepoint.com/articlelist/560/show-all-blogs/">navigate away</a> from this page and click back to see the effect in operation.</p>
-
-<hr />
-<form name="input"  method="get">
-Username: <input type="text" name="user1" id="user">
-<input type="submit" value="Submit">
-</form>
-
-<p><strong>You have visited this page: </strong> <span id="visits">0 times</span></p>
+<p>Press and hold down a key inside the text field to set a red background color. Release the key to set a green background color.</p>
 
 
-<p><strong>The previous 10 visit times:</strong></p>
-<pre id="times">--:--:--</pre>
-
-<p>Close your browser or click <a href="main.html" onclick="Session.clear();"><strong>reset counter</strong></a> to restart the session.</p>
-
-<p><a href="#" onclick="alert(Session.dump());">(view session dump)</a></p>
-
-<hr />
-
-<p>View the source of this file and <a href="session.js">session.js</a> for implementation instructions.</p>
+<input type="text" id="keypress">
 
 
-<script type="text/javascript">
-// <![CDATA[
+<script>
+document.onkeydown = keydownFunction;
+document.onkeyup = keyupFunction;
 
-// initialize application defaults
-var counter = Session.get("counter") || {
-	visits: 0,
-	userName: "",
-	time: []
-};
+function keydownFunction() {
+var key = ( window.event ) ? event.keyCode : e.keyCode;
 
-// onload
-window.onload = function() {
-
-	// update previous visits
-	var d = new Date();
-	var userName = document.getElementsByName('user1').value;
-	counter.time.push("hello "+userName);
-	counter.visits++;
-	counter.time.push(Pad(d.getHours()) + ":" + Pad(d.getMinutes()) + ":" + Pad(d.getSeconds()));
-	if (counter.time.length > 10) counter.time = counter.time.slice(1);
-
-	// update page
-	document.getElementById("visits").firstChild.nodeValue = counter.visits + " time" + (counter.visits == 1 ? "" : "s");
-	var t = "";
-	for (var i = counter.time.length-1; i >= 0; i--) t += counter.time[i] + "\n";
-	document.getElementById("times").firstChild.nodeValue = t;
-
-	// store value in session
-	Session.set("counter", counter);
-
-};
-
-// add leading zeros
-function Pad(n) {
-	n = "00" + n;
-	return n.substr(n.length-2);
+if(event.shiftKey){
+if(key == 67)//c:compile
+    document.getElementById("keypress").style.backgroundColor = "red";
+if(key == 76)//l:logout
+    document.getElementById("keypress").style.backgroundColor = "green";
+if(key == 84)//t:toggle grid
+    document.getElementById("keypress").style.backgroundColor = "yellow";
+if(key == 80)//p:play
+    document.getElementById("keypress").style.backgroundColor = "cyan";
 }
-// ]]>
+}
+
+function keyupFunction() {
+
+if(event.keyCode == 16)//Shift
+    document.getElementById("keypress").style.backgroundColor = "white";
+}
 </script>
 
 </body>
