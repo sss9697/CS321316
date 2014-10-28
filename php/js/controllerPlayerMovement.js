@@ -256,6 +256,7 @@ function executeCommand(moves)
 				
 				curIf += 1;
 				ifStatus[curIf] = 0;
+				elseCount[cufIf] = 0;
 				
 				var value = parseInt(moves[i].substring(3));
 				var varX = coords[0] / MULTIPLIER;
