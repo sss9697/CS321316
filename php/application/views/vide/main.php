@@ -22,13 +22,13 @@
 		<script src="<?php echo base_url(). "js/controllerLoadMove.js" ?>"></script>	
 		<script src="<?php echo base_url(). "js/controllerSaveMove.js" ?>"></script>		
 		<script src="<?php echo base_url(). "js/controllerBinFunction.js" ?>"></script>	
-		<script src="<?php echo base_url(). "js/controllerKeypress.js" ?>"></script>
 
 		
 		<script src="<?php echo base_url(). "js/commandprocessor.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/events.js" ?>"></script>
 
 		
+		<script src="<?php echo base_url(). "js/controllerKeypress.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/controllerSession.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/json-serialization.js" ?>"></script>
 		<title>Visual IDE Group 16</title>
