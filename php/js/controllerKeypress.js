@@ -4,7 +4,7 @@ $( document ).on( 'keydown', function keydownFunction(e) {
 		// toggleFrontf("show");
 		if(e.keyCode === 67)//c:compile
 		{
-			compileCommand();
+			compilef();
 		}
 		if(e.keyCode === 76)//l:logout
 		{
@@ -12,7 +12,7 @@ $( document ).on( 'keydown', function keydownFunction(e) {
 		}
 		if(e.keyCode === 84)//t:toggle grid
 		{
-			toggleGridf(this);
+			toggleGridf(#("#toggleGrid-btn").val());
 		}
 	}
 });
