@@ -132,6 +132,7 @@ function executeCommand(moves)
 	var ifStatus = [];
 	var elseCount = [];
 	var ignoreIf = 0;
+	var firstFor = 0;
 	
 	for(i = 0 ; i < moves.length ; i++)
 	{
@@ -413,11 +414,12 @@ function executeCommand(moves)
 				if(moves[i].charAt(1) == "i" || moves[i].charAt(1) == "j" || moves[i].charAt(1) == "k")
 				{
 					if(moves[i].charAt(1) == "i")
-						varI = (parseInt(moves[i].substring(2))) - 1;
+						varI = (parseInt(moves[i].substring(2)));
 					if(moves[i].charAt(1) == "j")
-						varJ = (parseInt(moves[i].substring(2))) - 1;
+						varJ = (parseInt(moves[i].substring(2)));
 					if(moves[i].charAt(1) == "k")
-						varK = (parseInt(moves[i].substring(2))) - 1;
+						varK = (parseInt(moves[i].substring(2)));
+					firstFor = 1;
 				}
 				else
 				{
@@ -433,48 +435,51 @@ function executeCommand(moves)
 					var varX = coords[0] / MULTIPLIER;
 					var varY = coords[1] / MULTIPLIER;
 					
-					switch(moves[i + 1].charAt(1)) //switch the operator 
+					if(firstFor == 1) //signify the first time running the loop
 					{
-						case "+":	
-							switch(moves[i - 1].charAt(1)) //switch the variable
-							{
-								case "i": varI = varI + AddValue;	break;
-								case "j": varJ = varJ + AddValue;	break;
-								case "k": varK = varK + AddValue;	break;
-							}						
-							break;
-						case "-":
-							switch(moves[i - 1].charAt(1))
-							{
-								case "i": varI = varI - AddValue;	break;
-								case "j": varJ = varJ - AddValue;	break;
-								case "k": varK = varK - AddValue;	break;
-							}	
-							break;
-						case "*":
-							switch(moves[i - 1].charAt(1))
-							{
-								case "i": varI = varI * AddValue;	break;
-								case "j": varJ = varJ * AddValue;	break;
-								case "k": varK = varK * AddValue;	break;
-							}
-							break;
-						case "/":
-							switch(moves[i - 1].charAt(1))
-							{
-								case "i": varI = varI * AddValue;	break;
-								case "j": varJ = varJ * AddValue;	break;
-								case "k": varK = varK * AddValue;	break;
-							}
-							break;
-						case "%":
-							switch(moves[i - 1].charAt(1))
-							{
-								case "i": varI = varI % AddValue;	break;
-								case "j": varJ = varJ % AddValue;	break;
-								case "k": varK = varK % AddValue;	break;
-							}
-							break;
+						switch(moves[i + 1].charAt(1)) //switch the operator 
+						{
+							case "+":	
+								switch(moves[i - 1].charAt(1)) //switch the variable
+								{
+									case "i": varI = varI + AddValue;	break;
+									case "j": varJ = varJ + AddValue;	break;
+									case "k": varK = varK + AddValue;	break;
+								}						
+								break;
+							case "-":
+								switch(moves[i - 1].charAt(1))
+								{
+									case "i": varI = varI - AddValue;	break;
+									case "j": varJ = varJ - AddValue;	break;
+									case "k": varK = varK - AddValue;	break;
+								}	
+								break;
+							case "*":
+								switch(moves[i - 1].charAt(1))
+								{
+									case "i": varI = varI * AddValue;	break;
+									case "j": varJ = varJ * AddValue;	break;
+									case "k": varK = varK * AddValue;	break;
+								}
+								break;
+							case "/":
+								switch(moves[i - 1].charAt(1))
+								{
+									case "i": varI = varI * AddValue;	break;
+									case "j": varJ = varJ * AddValue;	break;
+									case "k": varK = varK * AddValue;	break;
+								}
+								break;
+							case "%":
+								switch(moves[i - 1].charAt(1))
+								{
+									case "i": varI = varI % AddValue;	break;
+									case "j": varJ = varJ % AddValue;	break;
+									case "k": varK = varK % AddValue;	break;
+								}
+								break;
+						}
 					}
 					
 					switch(moves[i].charAt(1)) //switch the comparator
@@ -512,6 +517,7 @@ function executeCommand(moves)
 							}
 							break;
 					}
+					firstFor = 0;
 					i += 1; //skip one move as it is the operator
 				}
 			}
