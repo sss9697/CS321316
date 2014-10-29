@@ -106,7 +106,6 @@ option.Lilac{background-color:#c8a2c8; color:black;}
 }
 #editorcontrol
 {
-	float: left;
 	border: black;
 	padding: 15px;
 	margin: 15px;
@@ -129,8 +128,8 @@ option.Lilac{background-color:#c8a2c8; color:black;}
 #droppable
 {
 	float: left;
-	width: 300px;
-	height: 600px;
+	width: 650px;
+	height: 350px;
 	list-style: decimal-leading-zero;
 	font-size: 110%;
 	overflow: hidden;
