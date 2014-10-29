@@ -26,7 +26,7 @@ function toggleFrontf(state)
 	if(state.value == "show")
 	{
 		var img = document.getElementById('myImageId');
-		img.style.visibility = 'visible';}
+		img.style.visibility = 'visible';
 	}
 	else
 	{
