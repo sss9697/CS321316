@@ -89,28 +89,25 @@ option.Lilac{background-color:#c8a2c8; color:black;}
 	width: 710px;
 	height: 800px;
 	font-size: 80%;
-	margin-left: 1%;
 }
 #movecontainer
 {
 	background-color: #eeeeee;
 	float: left;
-	width: 350px;
-	height: 800px;
+	width: 700px;
+	height: 290px;
 }
 #editorspace
 {
 	background-color: #eeeeee;
 	float: left;
-	width: 350px;
-	height: 800px;
-	margin-left: 5px;
+	width: 700px;
+	height: 500px;
 }
 #editorcontrol
 {
 	float: left;
 	border: black;
-	border-style: double;
 	padding: 15px;
 	margin: 15px;
 }
