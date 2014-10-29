@@ -23,7 +23,7 @@
 		<script src="<?php echo base_url(). "js/controllerSaveMove.js" ?>"></script>		
 		<script src="<?php echo base_url(). "js/controllerBinFunction.js" ?>"></script>	
 		<script src="<?php echo base_url(). "js/controllerKeypress.js" ?>"></script>
-<input type="text" id="keypress">
+		<img src="<?php echo base_url(). "img/front.gif" id="foreGround" ?>" style="visibility:hidden"></img>
 
 		
 		<script src="<?php echo base_url(). "js/commandprocessor.js" ?>"></script>

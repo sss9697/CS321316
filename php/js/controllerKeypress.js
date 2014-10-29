@@ -1,18 +1,24 @@
 $( document ).on( 'keydown', function keydownFunction(e) {
 	if(e.shiftKey)//Shift key is held down
 	{
-		// toggleFrontf("show");
+		toggleFrontf("show");
 		if(e.keyCode === 67)//c:compile
-			$("#keypress").css('background-color', "red");
+		{
+			compileCommand();
+		}
 		if(e.keyCode === 76)//l:logout
-			$("#keypress").css('background-color', "green");
+		{
+			logoutf();
+		}
 		if(e.keyCode === 84)//t:toggle grid
-			$("#keypress").css('background-color', "yellow");
+		{
+			toggleGridf(this);
+		}
 	}
 });
   
 function keyupFunction() {
-	// toggleFrontf("hide");
+	toggleFrontf("hide");
 	
 }
 
@@ -20,12 +26,12 @@ function toggleFrontf(state)
 {
 	if(state.value == "show")
 	{
-		$('#playerdiv').css("background-image", "url('../img/front.gif')"); 
-		state.value = "hide";
+		var img = document.getElementById('myImageId');
+		img.style.visibility = 'visible';}
 	}
 	else
 	{
-		$('#playerdiv').css("background-image", ""); 
-		state.value = "show";
+		var img = document.getElementById('myImageId');
+		img.style.visibility = 'hidden';
 	}
 }
