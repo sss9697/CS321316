@@ -89,7 +89,7 @@ option.Lilac{background-color:#c8a2c8; color:black;}
 	width: 710px;
 	height: 800px;
 	font-size: 80%;
-	margin-left: 10%;
+	margin-left: 3%;
 }
 #movecontainer
 {
@@ -161,7 +161,7 @@ option.Lilac{background-color:#c8a2c8; color:black;}
 	height:800px;
 	border: 2px solid #a1a1a1;
 	background: #cccccc;
-	margin-left: 10px;
+	margin-left: 1%;
 	float: left;
 	text-align: left;
 	background-image: ;
