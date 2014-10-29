@@ -12,7 +12,7 @@ $( document ).on( 'keydown', function keydownFunction(e) {
 		}
 		if(e.keyCode === 84)//t:toggle grid
 		{
-			toggleGridf(document.getElementById("toggleGrid-btn").val());
+			toggleGridf(document.getElementById("toggleGrid-btn"));
 		}
 	}
 });
