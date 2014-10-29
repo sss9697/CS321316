@@ -435,7 +435,7 @@ function executeCommand(moves)
 					var varX = coords[0] / MULTIPLIER;
 					var varY = coords[1] / MULTIPLIER;
 					
-					if(firstFor == 1) //signify the first time running the loop
+					if(firstFor != 1) //signify the first time running the loop
 					{
 						switch(moves[i + 1].charAt(1)) //switch the operator 
 						{
