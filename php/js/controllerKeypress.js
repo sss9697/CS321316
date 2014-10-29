@@ -16,11 +16,10 @@ $( document ).on( 'keydown', function keydownFunction(e) {
 		}
 	}
 });
-  
-function keyupFunction() {
+$( document ).on( 'keyup', function keyupFunction(e) {  
 	toggleFrontf("hide");
 	
-}
+});
 
 function toggleFrontf(state)
 {
