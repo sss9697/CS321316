@@ -12,7 +12,16 @@ $( document ).on( 'keydown', function keydownFunction(e) {
 		}
 		if(e.keyCode === 84)//t:toggle grid
 		{
-			toggleGridf(document.getElementById("toggleGrid-btn"));
+			var state=document.getElementById("toggleGrid-btn").value;
+				if(state.value == "show")
+					$('#playerdiv').css("background-image", "url('../img/grid.png')"); 
+					state.value = "hide";
+				}
+				else
+				{
+					$('#playerdiv').css("background-image", ""); 
+					state.value = "show";
+				}
 		}
 	}
 });
