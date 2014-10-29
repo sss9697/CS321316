@@ -14,6 +14,7 @@ $( document ).on( 'keydown', function keydownFunction(e) {
 		{
 			var state=document.getElementById("toggleGrid-btn").value;
 			if(state.value == "show")
+			{
 				$('#playerdiv').css("background-image", "url('../img/grid.png')"); 
 				// state.value = "hide";
 				document.getElementById("toggleGrid-btn").value = "hide";
@@ -23,7 +24,8 @@ $( document ).on( 'keydown', function keydownFunction(e) {
 				$('#playerdiv').css("background-image", ""); 
 				// state.value = "show";
 				document.getElementById("toggleGrid-btn").value = "show";
-			}	
+			}
+		}			
 	}
 });
 $( document ).on( 'keyup', function keyupFunction(e) {  
