@@ -15,12 +15,14 @@ $( document ).on( 'keydown', function keydownFunction(e) {
 			var state=document.getElementById("toggleGrid-btn").value;
 			if(state.value == "show")
 				$('#playerdiv').css("background-image", "url('../img/grid.png')"); 
-				state.value = "hide";
+				// state.value = "hide";
+				document.getElementById("toggleGrid-btn").value = "hide";
 			}
 			else
 			{
 				$('#playerdiv').css("background-image", ""); 
-				state.value = "show";
+				// state.value = "show";
+				document.getElementById("toggleGrid-btn").value = "show";
 			}	
 	}
 });
