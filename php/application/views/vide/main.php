@@ -366,13 +366,35 @@
 				<script>
 
 				function exportTrigger(){
-					var count =0
-					window.alert("Export Clicked. Count : "+count)
+
+					html2canvas($("#playerdiv"), {
+			            onrendered: function(canvas) {
+				            theCanvas = canvas;
+						    document.body.appendChild(canvas);
+
+					        canvas.toBlob(function(blob) {
+								saveAs(blob, "playerdiv.png"); 
+							});   
+					    }
+					});
+					
+					$( "compile-btn" ).click();
+
+					html2canvas($("#playerdiv"), {
+			            onrendered: function(canvas) {
+				            theCanvas = canvas;
+						    document.body.appendChild(canvas);
+
+					        canvas.toBlob(function(blob) {
+								saveAs(blob, "playerdiv.png"); 
+							});   
+					    }
+					});
 				}
 
 				</script>
 
-				<button id="exportGif-btn" onclick="setInterval(exportTrigger,500)">Export Gif</button>&nbsp;&nbsp;&nbsp;
+				<button id="exportGif-btn" onclick="exportTrigger()">Export Gif</button>&nbsp;&nbsp;&nbsp;
 
 				<img src= "<?php echo base_url(). "img/1.gif" ?> " height="35" width="35" id="placeholderSprite">
 			</div>		
