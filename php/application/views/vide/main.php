@@ -51,50 +51,6 @@
 				        });
 				    });
 				}); 
-
-				function startScreenShot() {
-					html2canvas($("#playerdiv"), {
-				            onrendered: function(canvas) {
-				                theCanvas = canvas;
-				                document.body.appendChild(canvas);
-
-				                canvas.toBlob(function(blob) {
-									saveAs(blob, "playerdiv.png"); 
-							});
-				    	}
-				    });
-
-				    setInterval(function (), 500);
-
-				    html2canvas($("#playerdiv"), {
-				            onrendered: function(canvas) {
-				                theCanvas = canvas;
-				                document.body.appendChild(canvas);
-
-				                canvas.toBlob(function(blob) {
-									saveAs(blob, "playerdiv.png"); 
-							});
-				    	}
-				    });
-
-				    setInterval(function (), 500);
-
-				    html2canvas($("#playerdiv"), {
-				            onrendered: function(canvas) {
-				                theCanvas = canvas;
-				                document.body.appendChild(canvas);
-
-				                canvas.toBlob(function(blob) {
-									saveAs(blob, "playerdiv.png"); 
-							});
-				    	}
-				    });
-
-				    setInterval(function (), 500);
-
-
-				}
-
 				</script>
 
 		<title>Visual IDE Group 16</title>
@@ -423,7 +379,19 @@
 					<option value="4">Blue Turtle</option>
 					<option value="5">Larry</option>
 				</select>
-				<button id="exportGif-btn" onclick="startScreenShot()">Export Gif</button>&nbsp;&nbsp;&nbsp;
+				<button id="exportGif-btn" onclick="setTimeout('html2canvas($("#playerdiv"), {
+				            onrendered: function(canvas) {
+				                theCanvas = canvas;
+				                document.body.appendChild(canvas);
+
+				                canvas.toBlob(function(blob) {
+									saveAs(blob, "playerdiv.png"); 
+							});
+				    	}
+				    });
+
+				    
+				',500)">Export Gif</button>&nbsp;&nbsp;&nbsp;
 
 				<img src= "<?php echo base_url(). "img/1.gif" ?> " height="35" width="35" id="placeholderSprite">
 			</div>		
