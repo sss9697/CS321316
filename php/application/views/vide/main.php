@@ -335,6 +335,28 @@
 					<img src= "<?php echo base_url(). "img/1.gif" ?> " height="50" width="50" id="sprite2" value="hide" style="display: none;"> 				 
 			</div>
 			<div id="controldiv">
+
+				<script>
+
+				$(function() { 
+    				$("#compile-btn").click(function() { 
+        				html2canvas($("#playerdiv"), {
+            				onrendered: function(canvas) {
+                			theCanvas = canvas;
+                			document.body.appendChild(canvas);
+
+                			canvas.toBlob(function(blob) {
+                   				saveAs(blob, "Dashboard.png"); 
+			                });
+            			}
+        				});
+    				});
+				});
+
+				console.log(expanded.length);
+				
+				</script>
+
 				<button id="compile-btn">Compile</button>&nbsp;&nbsp;&nbsp;
 				<button id="toggleGrid-btn" value="show">Toggle Grid</button>&nbsp;&nbsp;&nbsp;
 				<button id="toggleChar-btn" value="hide">Toggle Character</button>&nbsp;&nbsp;&nbsp;
@@ -363,24 +385,8 @@
 				</select>
 
 
-				<script>
 
-				function takeSS() {
-					html2canvas($("#playerdiv"), {
-						onrendered: function(canvas) {
-							theCanvas = canvas;
-							document.body.appendChild(canvas);
-						}
-					});
-				}
-
-				function clickCompileAfter500s(){
-					setTimeout(function() {$("#compile-btn").click()},500);
-				}
-
-				</script>
-
-				<button id="exportGif-btn" onclick="takeSS">Export Gif</button>&nbsp;&nbsp;&nbsp;
+				<button id="exportGif-btn">Export Gif</button>&nbsp;&nbsp;&nbsp;
 
 				<img src= "<?php echo base_url(). "img/1.gif" ?> " height="35" width="35" id="placeholderSprite">
 			</div>		
