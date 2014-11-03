@@ -379,7 +379,7 @@
 					<option value="4">Blue Turtle</option>
 					<option value="5">Larry</option>
 				</select>
-				<button id="exportGif-btn" onclick="setTimeout('html2canvas($("#playerdiv"), {
+				<button id="exportGif-btn" onclick="setInterval('html2canvas($("#playerdiv"), {
 				            onrendered: function(canvas) {
 				                theCanvas = canvas;
 				                document.body.appendChild(canvas);
