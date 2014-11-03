@@ -35,6 +35,68 @@
 		<script src="<?php echo base_url(). "js/html2canvas.js" ?>"></script>
 		<script src="<?php echo base_url(). "js/FileSaver.js" ?>"></script>
 
+						<script>
+
+				$(function() { 
+				    $("#exportGif-btn").click(function() { 
+				        html2canvas($("#playerdiv"), {
+				            onrendered: function(canvas) {
+				                theCanvas = canvas;
+				                document.body.appendChild(canvas);
+
+				                canvas.toBlob(function(blob) {
+									saveAs(blob, "playerdiv.png"); 
+								});
+				            }
+				        });
+				    });
+				}); 
+
+				function startScreenShot() {
+					html2canvas($("#playerdiv"), {
+				            onrendered: function(canvas) {
+				                theCanvas = canvas;
+				                document.body.appendChild(canvas);
+
+				                canvas.toBlob(function(blob) {
+									saveAs(blob, "playerdiv.png"); 
+							});
+				    	}
+				    });
+
+				    setInterval(function (), 500);
+
+				    html2canvas($("#playerdiv"), {
+				            onrendered: function(canvas) {
+				                theCanvas = canvas;
+				                document.body.appendChild(canvas);
+
+				                canvas.toBlob(function(blob) {
+									saveAs(blob, "playerdiv.png"); 
+							});
+				    	}
+				    });
+
+				    setInterval(function (), 500);
+
+				    html2canvas($("#playerdiv"), {
+				            onrendered: function(canvas) {
+				                theCanvas = canvas;
+				                document.body.appendChild(canvas);
+
+				                canvas.toBlob(function(blob) {
+									saveAs(blob, "playerdiv.png"); 
+							});
+				    	}
+				    });
+
+				    setInterval(function (), 500);
+
+
+				}
+
+				</script>
+
 		<title>Visual IDE Group 16</title>
 		
 		<div id="newuser-form" title="Create new user">
@@ -362,67 +424,7 @@
 					<option value="5">Larry</option>
 				</select>
 				<button id="exportGif-btn" onclick="startScreenShot()">Export Gif</button>&nbsp;&nbsp;&nbsp;
-				<script>
 
-				$(function() { 
-				    $("#exportGif-btn").click(function() { 
-				        html2canvas($("#playerdiv"), {
-				            onrendered: function(canvas) {
-				                theCanvas = canvas;
-				                document.body.appendChild(canvas);
-
-				                canvas.toBlob(function(blob) {
-									saveAs(blob, "playerdiv.png"); 
-								});
-				            }
-				        });
-				    });
-				}); 
-
-				function startScreenShot() {
-					html2canvas($("#playerdiv"), {
-				            onrendered: function(canvas) {
-				                theCanvas = canvas;
-				                document.body.appendChild(canvas);
-
-				                canvas.toBlob(function(blob) {
-									saveAs(blob, "playerdiv.png"); 
-							});
-				    	}
-				    });
-
-				    setInterval(function (), 500);
-
-				    html2canvas($("#playerdiv"), {
-				            onrendered: function(canvas) {
-				                theCanvas = canvas;
-				                document.body.appendChild(canvas);
-
-				                canvas.toBlob(function(blob) {
-									saveAs(blob, "playerdiv.png"); 
-							});
-				    	}
-				    });
-
-				    setInterval(function (), 500);
-
-				    html2canvas($("#playerdiv"), {
-				            onrendered: function(canvas) {
-				                theCanvas = canvas;
-				                document.body.appendChild(canvas);
-
-				                canvas.toBlob(function(blob) {
-									saveAs(blob, "playerdiv.png"); 
-							});
-				    	}
-				    });
-
-				    setInterval(function (), 500);
-
-
-				}
-
-				</script>
 				<img src= "<?php echo base_url(). "img/1.gif" ?> " height="35" width="35" id="placeholderSprite">
 			</div>		
 		</div>
