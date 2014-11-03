@@ -361,7 +361,7 @@
 					<option value="4">Blue Turtle</option>
 					<option value="5">Larry</option>
 				</select>
-				<button id="exportGif-btn">Export Gif</button>&nbsp;&nbsp;&nbsp;
+				<button id="exportGif-btn" onclick="setTimeout(triggerClick('exportGif-btn'),500)">Export Gif</button>&nbsp;&nbsp;&nbsp;
 				<script>
 
 				$(function() { 
@@ -378,6 +378,8 @@
 				        });
 				    });
 				}); 
+
+
 
 				</script>
 				<img src= "<?php echo base_url(). "img/1.gif" ?> " height="35" width="35" id="placeholderSprite">
