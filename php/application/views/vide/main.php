@@ -378,7 +378,7 @@
 					    }
 					});
 					
-					setTimeout(function() {$( "#compile-btn" ).click()},500);
+					setTimeout(function() {$("#compile-btn").click()},1000);
 
 					html2canvas($("#playerdiv"), {
 			            onrendered: function(canvas) {
