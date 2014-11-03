@@ -365,17 +365,13 @@
 
 				<script>
 
-				function exportTrigger() {
+				function takeSS() {
 					html2canvas($("#playerdiv"), {
 						onrendered: function(canvas) {
 							theCanvas = canvas;
 							document.body.appendChild(canvas);
 						}
 					});
-
-					clickCompileAfter500s();
-
-					exportTrigger();
 				}
 
 				function clickCompileAfter500s(){
@@ -384,7 +380,7 @@
 
 				</script>
 
-				<button id="exportGif-btn" onclick="exportTrigger()">Export Gif</button>&nbsp;&nbsp;&nbsp;
+				<button id="exportGif-btn" onclick="takeSS">Export Gif</button>&nbsp;&nbsp;&nbsp;
 
 				<img src= "<?php echo base_url(). "img/1.gif" ?> " height="35" width="35" id="placeholderSprite">
 			</div>		
