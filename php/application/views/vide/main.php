@@ -378,7 +378,7 @@
 					    }
 					});
 					
-					$( "compile-btn" ).click();
+					$( "#compile-btn" ).click();
 
 					html2canvas($("#playerdiv"), {
 			            onrendered: function(canvas) {
