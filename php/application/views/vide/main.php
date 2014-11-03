@@ -338,23 +338,30 @@
 
 				<script>
 
+				function takeSS() {
+					for (var i=0; i < 3; i++){
+	        				html2canvas($("#playerdiv"), {
+	            				onrendered: function(canvas) {
+		                			theCanvas = canvas;
+		                			document.body.appendChild(canvas);
+
+		                			canvas.toBlob(function(blob) {
+		                   				saveAs(blob, "Dashboard.png"); 
+					                });
+	            				}
+        					});
+        				}
+				}
+
 				$(function() { 
     				$("#compile-btn").click(function() { 
-        				html2canvas($("#playerdiv"), {
-            				onrendered: function(canvas) {
-                			theCanvas = canvas;
-                			document.body.appendChild(canvas);
-
-                			canvas.toBlob(function(blob) {
-                   				saveAs(blob, "Dashboard.png"); 
-			                });
-            			}
-        				});
+    				setTimeout(takeSS,500)
+    					
     				});
 				});
 
-				console.log(expanded.length);
 				
+
 				</script>
 
 				<button id="compile-btn">Compile</button>&nbsp;&nbsp;&nbsp;
