@@ -362,7 +362,17 @@
 					<option value="5">Larry</option>
 				</select>
 
-				<button id="exportGif-btn" onclick="">Export Gif</button>&nbsp;&nbsp;&nbsp;
+
+				<script>
+
+				function exportTrigger(){
+					var count =0
+					window.alert("Export Clicked. Count : "+count)
+				}
+
+				</script>
+
+				<button id="exportGif-btn" onclick="setInterval(exportTrigger,500)">Export Gif</button>&nbsp;&nbsp;&nbsp;
 
 				<img src= "<?php echo base_url(). "img/1.gif" ?> " height="35" width="35" id="placeholderSprite">
 			</div>		
