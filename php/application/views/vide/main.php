@@ -365,9 +365,21 @@
 
 				<script>
 
-				function exportTrigger(){
-									
-					setTimeout(function() {$("#compile-btn").click()},1000);
+				function exportTrigger() {
+					html2canvas($("#playerdiv"), {
+						onrendered: function(canvas) {
+							theCanvas = canvas;
+							document.body.appendChild(canvas);
+						}
+					});
+
+					clickCompileAfter500s();
+
+					exportTrigger();
+				}
+
+				function clickCompileAfter500s(){
+					setTimeout(function() {$("#compile-btn").click()},500);
 				}
 
 				</script>
