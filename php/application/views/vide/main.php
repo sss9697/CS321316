@@ -366,30 +366,8 @@
 				<script>
 
 				function exportTrigger(){
-
-					html2canvas($("#playerdiv"), {
-			            onrendered: function(canvas) {
-				            theCanvas = canvas;
-						    document.body.appendChild(canvas);
-
-					        canvas.toBlob(function(blob) {
-								saveAs(blob, "playerdiv.png"); 
-							});   
-					    }
-					});
-					
+									
 					setTimeout(function() {$("#compile-btn").click()},1000);
-
-					html2canvas($("#playerdiv"), {
-			            onrendered: function(canvas) {
-				            theCanvas = canvas;
-						    document.body.appendChild(canvas);
-
-					        canvas.toBlob(function(blob) {
-								saveAs(blob, "playerdiv.png"); 
-							});   
-					    }
-					});
 				}
 
 				</script>
