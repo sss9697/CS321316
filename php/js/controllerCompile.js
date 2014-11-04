@@ -349,6 +349,18 @@ function compilef()
 						
 						console.log(expanded);
 						executeCommand(expanded);
+
+    					html2canvas($("#playerdiv"), {
+	            				onrendered: function(canvas) {
+		                			theCanvas = canvas;
+		                			document.body.appendChild(canvas);
+
+		                			canvas.toBlob(function(blob) {
+		                   				saveAs(blob, "Dashboard.png"); 
+					                });
+	            				}
+        				});
+    					
 					}
 				}
 			}

@@ -335,35 +335,7 @@
 					<img src= "<?php echo base_url(). "img/1.gif" ?> " height="50" width="50" id="sprite2" value="hide" style="display: none;"> 				 
 			</div>
 			<div id="controldiv">
-
-				<script>
-
-				function takeSS() {
-					for (var i=0; i < 3; i++){
-	        				html2canvas($("#playerdiv"), {
-	            				onrendered: function(canvas) {
-		                			theCanvas = canvas;
-		                			document.body.appendChild(canvas);
-
-		                			canvas.toBlob(function(blob) {
-		                   				saveAs(blob, "Dashboard.png"); 
-					                });
-	            				}
-        					});
-        				}
-				}
-
-				$(function() { 
-    				$("#compile-btn").click(function() { 
-    				setTimeout(takeSS,500)
-    					
-    				});
-				});
-
 				
-
-				</script>
-
 				<button id="compile-btn">Compile</button>&nbsp;&nbsp;&nbsp;
 				<button id="toggleGrid-btn" value="show">Toggle Grid</button>&nbsp;&nbsp;&nbsp;
 				<button id="toggleChar-btn" value="hide">Toggle Character</button>&nbsp;&nbsp;&nbsp;
