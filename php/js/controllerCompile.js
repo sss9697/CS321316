@@ -352,7 +352,7 @@ function compilef()
 						takeSS(); // Initial screenshot
 
 						for (int i =0; i<expanded.length; i++)
-							setTimeout(takeSS,500); // waits for 500ms, execute once
+							window.setTimeout(takeSS(),500); // waits for 500ms, execute once
     					
     					
 					}
