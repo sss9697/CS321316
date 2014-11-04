@@ -350,11 +350,6 @@ function compilef()
 						console.log(expanded.length);
 						executeCommand(expanded);
 						takeSS();
-    					
-    					for (int i=0; i<expanded.length; i++){
-    						takeSS();
-    					}
-    					
 					}
 				}
 			}
