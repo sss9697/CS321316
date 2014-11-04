@@ -349,21 +349,28 @@ function compilef()
 						
 						console.log(expanded);
 						executeCommand(expanded);
+						takeSS(); // Initial screenshot
 
-    					html2canvas($("#playerdiv"), {
-	            				onrendered: function(canvas) {
-		                			theCanvas = canvas;
-		                			document.body.appendChild(canvas);
-
-		                			canvas.toBlob(function(blob) {
-		                   				saveAs(blob, "Dashboard.png"); 
-					                });
-	            				}
-        				});
+						for (int i =0; i<expanded.length; i++)
+							setTimeout(takeSS,500); // waits for 500ms, execute once
+    					
     					
 					}
 				}
 			}
 		}
 	}
+}
+
+function takeSS() {
+	html2canvas($("#playerdiv"), {
+		onrendered: function(canvas) {
+			theCanvas = canvas;
+			document.body.appendChild(canvas);
+
+			canvas.toBlob(function(blob) {
+   				saveAs(blob, "Dashboard.png"); 
+            });
+		}
+});
 }
