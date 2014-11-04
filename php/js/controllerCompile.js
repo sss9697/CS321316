@@ -349,10 +349,7 @@ function compilef()
 						
 						console.log(expanded);
 						executeCommand(expanded);
-						takeSS(); // Initial screenshot
-
-						for (int i =0; i<expanded.length; i++)
-							window.setTimeout(takeSS(),500); // waits for 500ms, execute once
+						takeSS();
     					
     					
 					}
