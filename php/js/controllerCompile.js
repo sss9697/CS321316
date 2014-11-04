@@ -347,10 +347,13 @@ function compilef()
 					{
 						var expanded = expandCommand(command, 0);
 						
-						console.log(expanded);
+						console.log(expanded.length);
 						executeCommand(expanded);
 						takeSS();
     					
+    					for (int i=0; i<expanded.length; i++){
+    						takeSS();
+    					}
     					
 					}
 				}
