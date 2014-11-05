@@ -371,7 +371,7 @@ function compilef()
 						});
 
 						for (i=0; i<expanded.length; i++)
-							gif.addFrame(screenshot);
+							gif.addFrame(screenshot[0]);
 /*
 						gif.on('finished', function(blob) {
 						  window.open(URL.createObjectURL(blob));
