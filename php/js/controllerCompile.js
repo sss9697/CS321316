@@ -348,10 +348,12 @@ function compilef()
 						var expanded = expandCommand(command, 0);
 						
 						console.log(expanded.length);
-						var gif = takeSS(); // Initial position
+						takeSS(); // Initial position
 						executeCommand(expanded);
-
-						document.body.appendChild(gif);
+						
+						window.setTimeout(takeSS,500);
+						window.setTimeout(takeSS,1000);
+						window.setTimeout(takeSS,1500);
 					}
 				}
 			}
@@ -364,7 +366,10 @@ function takeSS() {
 		onrendered: function(canvas) {
 			theCanvas = canvas;
 			document.body.appendChild(canvas);
+
+			canvas.toBlob(function(blob) {
+   				saveAs(blob, "Dashboard.png"); 
+            });
 		}
-	return canvas;
 });
 }
