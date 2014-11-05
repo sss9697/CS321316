@@ -350,9 +350,23 @@ function compilef()
 						console.log(expanded.length);
 						takeSS(); // Initial position
 						executeCommand(expanded);
-						window.setTimeout(takeSS,500);
-						window.setTimeout(takeSS,1000);
-						window.setTimeout(takeSS,1500);
+						
+						var canvas_playerdiv = document.getElementById("playerdiv");
+						
+						var gif = new GIF({
+						  workers: 2,
+						  quality: 10
+						});
+
+						gif.addFrame(canvas_playerdiv);
+
+						gif.on('finished', function(blob) {
+							window.open(URL.createObjectURL(blob));
+						});
+
+						gif.render();
+
+
 					}
 				}
 			}
@@ -365,10 +379,7 @@ function takeSS() {
 		onrendered: function(canvas) {
 			theCanvas = canvas;
 			document.body.appendChild(canvas);
-
-			canvas.toBlob(function(blob) {
-   				saveAs(blob, "Dashboard.png"); 
-            });
 		}
+	return canvas;
 });
 }
