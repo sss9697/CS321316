@@ -36,6 +36,7 @@
 		<script src="<?php echo base_url(). "js/FileSaver.js" ?>"></script>
 
 		<script src="<?php echo base_url(). "js/gif.js" ?>"></script>
+		<script src="<?php echo base_url(). "js/gif.worker.js" ?>"></script>
 
 		<title>Visual IDE Group 16</title>
 		
