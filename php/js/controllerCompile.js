@@ -10,17 +10,6 @@ function takeSS() {
 	}
 )};
 
-
-var gif = new GIF({
-  workers: 2,
-  quality: 10
-});
-
-gif.on('finished', function(blob){
-	window.open(URL.createObjectURL(blob));
-});
-
-
 //change user input command into an array
 function compileCommand()
 {
@@ -376,12 +365,19 @@ function compilef()
 						window.setTimeout(takeSS,500);
 						console.log(screenshot);
 
-						for (int i=0; i<expanded.length; i++) {
-							gif.addFrame(array[i]);
-						}
+						var gif = new GIF({
+						  workers: 2,
+						  quality: 10
+						});
+
+						for (int i=0; i<expanded.length; i++)
+							gif.addFrame(screenshot);
+
+						gif.on('finished', function(blob) {
+						  window.open(URL.createObjectURL(blob));
+						});
 
 						gif.render();
-
 
 					}
 				}
