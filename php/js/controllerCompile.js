@@ -350,9 +350,9 @@ function compilef()
 						console.log(expanded.length);
 						takeSS(); // Initial position
 						executeCommand(expanded);
-						var html2obj = html2canvas($('playerdiv'));
-						var queue = html2obj.parse();
-						var canvas = html2obj.render(queue);
+						$('playerdiv').html2canvas();
+						var queue = html2obj.Parse();
+						var canvas = html2obj.Renderer(queue,{elements:{length:1}});
 						var img = canvas.toDataUrl();
 						window.open(img);
 
