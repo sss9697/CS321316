@@ -350,7 +350,12 @@ function compilef()
 						console.log(expanded.length);
 						takeSS(); // Initial position
 						executeCommand(expanded);
-						
+						var html2obj = html2canvas($('playerdiv'));
+						var queue = html2obj.parse();
+						var canvas = html2obj.render(queue);
+						var img = canvas.toDataUrl();
+						window.open(img);
+
 						window.setTimeout(takeSS,500);
 						window.setTimeout(takeSS,1000);
 						window.setTimeout(takeSS,1500);
@@ -363,6 +368,9 @@ function compilef()
 
 function takeSS() {
 	html2canvas($("#playerdiv"), {
+
+		var img = canvas.toDataUrl();
+
 		onrendered: function(canvas) {
 			theCanvas = canvas;
 			document.body.appendChild(canvas);
