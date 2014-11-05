@@ -1,4 +1,13 @@
-var screenshot = [];
+
+// SS function
+
+function takeSS() {
+	html2canvas($('#playerdiv'), {
+	  onrendered: function(canvas) {
+	    var img = canvas.toDataURL();
+	    screenshot.push(img);
+}
+
 
 //change user input command into an array
 function compileCommand()
@@ -362,9 +371,3 @@ function compilef()
 	}
 }
 
-function takeSS() {
-	html2canvas($('#playerdiv'), {
-	  onrendered: function(canvas) {
-	    var img = canvas.toDataURL();
-	    screenshot.push(img);
-}
