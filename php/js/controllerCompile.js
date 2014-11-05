@@ -4,7 +4,7 @@ var screenshot = [];
 function takeSS() {
 	html2canvas($('#playerdiv'), {
 	  onrendered: function(canvas) {
-	    var img = canvas.toDataURL();
+	    var img = canvas;
 	    screenshot.push(img);
 		}
 	}
