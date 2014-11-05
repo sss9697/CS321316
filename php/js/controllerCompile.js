@@ -16,7 +16,7 @@ function generateGif(array, num) {
 	  quality: 10
 	})
 
-	for (int i=0; i<num; i++){
+	for (int i=0; i<num; i++) {
 		gif.addFrame(array[i]);
 	}
 
