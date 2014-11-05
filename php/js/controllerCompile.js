@@ -350,11 +350,6 @@ function compilef()
 						console.log(expanded.length);
 						takeSS(); // Initial position
 						executeCommand(expanded);
-						$('playerdiv').html2canvas();
-						var queue = html2obj.Parse();
-						var canvas = html2obj.Renderer(queue,{elements:{length:1}});
-						var img = canvas.toDataUrl();
-						window.open(img);
 
 						//window.setTimeout(takeSS,500);
 						//window.setTimeout(takeSS,1000);
