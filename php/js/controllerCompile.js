@@ -14,7 +14,7 @@ function generateGif(array, num) {
 	var gif = new GIF({
 	  workers: 2,
 	  quality: 10
-	});
+	})
 
 	for (int i=0; i<num; i++){
 		gif.addFrame(array[i]);
