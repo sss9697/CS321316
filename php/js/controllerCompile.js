@@ -364,12 +364,12 @@ function compilef()
 						executeCommand(expanded);
 						window.setTimeout(takeSS,500);
 						console.log(screenshot);
-/*
+
 						var gif = new GIF({
 						  workers: 2,
 						  quality: 10
 						});
-
+/*
 						for (int i=0; i<expanded.length; i++)
 							gif.addFrame(screenshot);
 
