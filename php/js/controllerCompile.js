@@ -348,8 +348,10 @@ function compilef()
 						var expanded = expandCommand(command, 0);
 						
 						console.log(expanded.length);
-						takeSS();
+						takeSS(); // Initial position
 						executeCommand(expanded);
+						window.setTimeout(takeSS,500);
+						window.setTimeout(takeSS,500);
 						window.setTimeout(takeSS,500);
 					}
 				}
