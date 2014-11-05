@@ -356,9 +356,9 @@ function compilef()
 						var img = canvas.toDataUrl();
 						window.open(img);
 
-						window.setTimeout(takeSS,500);
-						window.setTimeout(takeSS,1000);
-						window.setTimeout(takeSS,1500);
+						//window.setTimeout(takeSS,500);
+						//window.setTimeout(takeSS,1000);
+						//window.setTimeout(takeSS,1500);
 					}
 				}
 			}
