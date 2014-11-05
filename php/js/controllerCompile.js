@@ -348,25 +348,10 @@ function compilef()
 						var expanded = expandCommand(command, 0);
 						
 						console.log(expanded.length);
-						takeSS(); // Initial position
+						var gif = takeSS(); // Initial position
 						executeCommand(expanded);
-						
-						var canvas_playerdiv = document.getElementById("playerdiv");
-						
-						var gif = new GIF({
-						  workers: 2,
-						  quality: 10
-						});
 
-						gif.addFrame(canvas_playerdiv);
-
-						gif.on('finished', function(blob) {
-							window.open(URL.createObjectURL(blob));
-						});
-
-						gif.render();
-
-
+						document.body.appendChild(gif);
 					}
 				}
 			}
