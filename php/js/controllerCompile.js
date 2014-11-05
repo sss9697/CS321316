@@ -1,4 +1,4 @@
-
+var screenshot = [];
 // SS function
 
 function takeSS() {
