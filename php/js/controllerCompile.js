@@ -348,12 +348,9 @@ function compilef()
 						var expanded = expandCommand(command, 0);
 						
 						console.log(expanded.length);
-						takeSS(); // Initial position
+						takeSS();
 						executeCommand(expanded);
-
-						//window.setTimeout(takeSS,500);
-						//window.setTimeout(takeSS,1000);
-						//window.setTimeout(takeSS,1500);
+						window.setTimeout(takeSS,500);
 					}
 				}
 			}
@@ -363,9 +360,6 @@ function compilef()
 
 function takeSS() {
 	html2canvas($("#playerdiv"), {
-
-		var img = canvas.toDataUrl();
-
 		onrendered: function(canvas) {
 			theCanvas = canvas;
 			document.body.appendChild(canvas);
