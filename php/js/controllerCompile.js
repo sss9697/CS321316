@@ -1,3 +1,5 @@
+var screenshot = [];
+
 //change user input command into an array
 function compileCommand()
 {
@@ -351,14 +353,8 @@ function compilef()
 						takeSS();
 						executeCommand(expanded);
 						window.setTimeout(takeSS,500);
+						console.log(screenshot);
 
-						html2canvas($('#playerdiv'), {
-							  onrendered: function(canvas) {
-							    var img = canvas.toDataURL()
-							    console.log(img);
-							    window.open(img);
-							  }
-							});
 					}
 				}
 			}
@@ -367,14 +363,8 @@ function compilef()
 }
 
 function takeSS() {
-	html2canvas($("#playerdiv"), {
-		onrendered: function(canvas) {
-			theCanvas = canvas;
-			document.body.appendChild(canvas);
-
-			canvas.toBlob(function(blob) {
-   				saveAs(blob, "Dashboard.png"); 
-            });
-		}
-});
+	html2canvas($('#playerdiv'), {
+	  onrendered: function(canvas) {
+	    var img = canvas.toDataURL();
+	    screenshot.push(img);
 }
