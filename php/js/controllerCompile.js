@@ -364,7 +364,7 @@ function compilef()
 						executeCommand(expanded);
 						window.setTimeout(takeSS,500);
 						console.log(screenshot);
-
+/*
 						var gif = new GIF({
 						  workers: 2,
 						  quality: 10
@@ -378,8 +378,7 @@ function compilef()
 						});
 
 						gif.render();
-
-					}
+*/					}
 				}
 			}
 		}
