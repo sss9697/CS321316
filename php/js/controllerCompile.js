@@ -351,8 +351,8 @@ function compilef()
 						takeSS(); // Initial position
 						executeCommand(expanded);
 						window.setTimeout(takeSS,500);
-						window.setTimeout(takeSS,500);
-						window.setTimeout(takeSS,500);
+						window.setTimeout(takeSS,1000);
+						window.setTimeout(takeSS,1500);
 					}
 				}
 			}
