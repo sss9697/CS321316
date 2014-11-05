@@ -370,7 +370,7 @@ function compilef()
 						  quality: 10
 						});
 
-						for (int i=0; i<expanded.length; i++)
+						for (i=0; i<expanded.length; i++)
 							gif.addFrame(screenshot);
 /*
 						gif.on('finished', function(blob) {
