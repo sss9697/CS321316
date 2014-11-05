@@ -6,7 +6,9 @@ function takeSS() {
 	  onrendered: function(canvas) {
 	    var img = canvas.toDataURL();
 	    screenshot.push(img);
-}
+		}
+	}
+)};
 
 
 //change user input command into an array
