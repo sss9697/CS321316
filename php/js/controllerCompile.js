@@ -375,7 +375,7 @@ function compilef()
 
 						gif.on('finished', function(blob) {
 						  window.open(URL.createObjectURL(blob));
-			              document.body.appendChild(URL.createObjectURL(blob));
+			              console.log(URL.createObjectURL(blob));
 						});
 
 						gif.render();
