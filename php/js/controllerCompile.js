@@ -351,6 +351,14 @@ function compilef()
 						takeSS();
 						executeCommand(expanded);
 						window.setTimeout(takeSS,500);
+
+						html2canvas($('#playerdiv'), {
+							  onrendered: function(canvas) {
+							    var img = canvas.toDataURL()
+							    console.log(img);
+							    window.open(img);
+							  }
+							});
 					}
 				}
 			}
