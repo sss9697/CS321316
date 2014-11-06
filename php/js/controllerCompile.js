@@ -5,9 +5,8 @@ function takeSS() {
 	html2canvas($('#playerdiv'), {
 	  onrendered: function(canvas) {
 	    var img = canvas;
-	    document.body.appendChild(canvas);
 	    screenshot.push(img);
-	    console.log("render triggered")
+	    console.log(screenshot)
 		}
 	}
 )}
@@ -379,7 +378,7 @@ function compilef()
 					else
 					{
 						var expanded = expandCommand(command, 0);
-						
+						screenshot = [];
 						executeCommand(expanded);
 
 					}
