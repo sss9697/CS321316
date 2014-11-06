@@ -13,6 +13,7 @@ function takeSS() {
 )}
 
 function exportGif() {
+	console.log("export triggered")
 	var gif = new GIF({
 	  workers: 2,
 	  quality: 10,
