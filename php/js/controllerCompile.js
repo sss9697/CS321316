@@ -372,10 +372,10 @@ function compilef()
 						});
 
 						for (i=0; i<expanded.length; i++)
-							gif.addFrame(screenshot[0]);
+							gif.addFrame(screenshot[i]);
 
 						gif.on('finished', function(blob) {
-						  window.open(URL.createObjectURL(blob));
+						  window.open(URL.createObjectURL(blob), "width=804, height=804");
 						});
 
 						gif.render();
