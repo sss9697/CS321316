@@ -364,18 +364,28 @@ function compilef()
 						takeSS();
 						executeCommand(expanded);
 						window.setTimeout(takeSS,500);
+
+						window.setTimeout(takeSS,1000);
+
+						window.setTimeout(takeSS,1500);
+
+						window.setTimeout(takeSS,2000);
+
+						window.setTimeout(takeSS,2500);
 						console.log(screenshot);
 
 						var gif = new GIF({
 						  workers: 2,
-						  quality: 10
+						  quality: 10,
+						  width:804,
+						  height:804
 						});
 
 						for (i=0; i<expanded.length; i++)
 							gif.addFrame(screenshot[i]);
 
 						gif.on('finished', function(blob) {
-						  window.open(URL.createObjectURL(blob), "width=804, height=804");
+						  window.open(URL.createObjectURL(blob),"", "width=804, height=804");
 						});
 
 						gif.render();
