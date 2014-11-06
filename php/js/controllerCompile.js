@@ -361,18 +361,11 @@ function compilef()
 					{
 						var expanded = expandCommand(command, 0);
 						
-						takeSS();
 						executeCommand(expanded);
-						window.setTimeout(takeSS,500);
 
-						window.setTimeout(takeSS,1000);
-
-						window.setTimeout(takeSS,1500);
-
-						window.setTimeout(takeSS,2000);
-
-						window.setTimeout(takeSS,2500);
-						console.log(screenshot);
+						for (var i=0; i<expanded.length; i++) {
+							window.setTimeout(takeSS,500*i);
+						}
 
 						var gif = new GIF({
 						  workers: 2,
@@ -385,7 +378,7 @@ function compilef()
 							gif.addFrame(screenshot[i]);
 
 						gif.on('finished', function(blob) {
-						  window.open(URL.createObjectURL(blob),"", "width=804, height=804");
+						  window.open(URL.createObjectURL(blob),"", "width=600, height=600");
 						});
 
 						gif.render();
