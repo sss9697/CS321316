@@ -21,7 +21,7 @@ function exportGif() {
 	  height:804
 	});
 
-	for (i=0; i<expanded.length; i++)
+	for (i=0; i<screenshot.length; i++)
 		gif.addFrame(screenshot[i]);
 
 	gif.on('finished', function(blob) {
