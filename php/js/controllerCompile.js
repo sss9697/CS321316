@@ -6,7 +6,6 @@ function takeSS() {
 	  onrendered: function(canvas) {
 	    var img = canvas;
 	    screenshot.push(img);
-	    console.log(screenshot)
 		}
 	}
 )}
@@ -14,7 +13,7 @@ function takeSS() {
 function exportGif() {
 	console.log("export triggered")
 	var gif = new GIF({
-	  workers: 5,
+	  workers: 8,
 	  quality: 10,
 	  width:804,
 	  height:804
