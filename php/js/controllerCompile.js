@@ -5,7 +5,9 @@ function takeSS() {
 	html2canvas($('#playerdiv'), {
 	  onrendered: function(canvas) {
 	    var img = canvas;
+	    document.body.appendChild(canvas);
 	    screenshot.push(img);
+
 		}
 	}
 )};
@@ -359,7 +361,6 @@ function compilef()
 					{
 						var expanded = expandCommand(command, 0);
 						
-						console.log(expanded.length);
 						takeSS();
 						executeCommand(expanded);
 						window.setTimeout(takeSS,500);
@@ -375,7 +376,6 @@ function compilef()
 
 						gif.on('finished', function(blob) {
 						  window.open(URL.createObjectURL(blob));
-			              console.log(URL.createObjectURL(blob));
 						});
 
 						gif.render();
