@@ -139,8 +139,7 @@ function executeCommand(moves)
 	{
 		if(captureChecked)
 		{
-			window.setTimeout(takeSS,250*i);
-			window.setTimeout(takeSS,500*i);
+			window.setTimeout(takeSS,50*i);
 			console.log("takeSS loop " + i)
 			console.log(screenshot)
 		}
