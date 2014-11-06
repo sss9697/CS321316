@@ -67,15 +67,17 @@ $(function()
 			}
 		}
 	});
+	
+	$('#chkBoxCapture').click(function () 
+	{
+		var captureChecked = $('#chkBoxCapture').prop('checked');
+		console.log(captureChecked);
+		if(captureChecked)
+			$('#exportGif-btn').show();
+		else
+			$('#exportGif-btn').hide();
+	});
 });
 
-$('#chkBoxCapture').click(function () 
-{
-	var captureChecked = $('#chkBoxCapture').prop('checked');
-   
-	if(captureChecked)
-		$('#exportGif-btn').show();
-	else
-		$('#exportGif-btn').hide();
-});
+
 
