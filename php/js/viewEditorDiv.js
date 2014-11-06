@@ -1,5 +1,6 @@
 $(function() 
 {
+	$('#exportGif-btn').hide();
 	$( "#movelist" ).accordion(
 	{
 		heightStyle: "content"
@@ -67,3 +68,14 @@ $(function()
 		}
 	});
 });
+
+$('#chkBoxCapture').click(function () 
+{
+	var captureChecked = $('#chkBoxCapture').prop('checked');
+   
+	if(captureChecked)
+		$('#exportGif-btn').show();
+	else
+		$('#exportGif-btn').hide();
+});
+
