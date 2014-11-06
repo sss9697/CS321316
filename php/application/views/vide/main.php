@@ -368,7 +368,7 @@
 
 
 				<button id="exportGif-btn" onclick="exportGif()">Export Gif</button>&nbsp;&nbsp;&nbsp;
-
+					<input type="checkbox" id="chkBoxCapture" value="chkBoxCapture"> Capture
 				<img src= "<?php echo base_url(). "img/1.gif" ?> " height="35" width="35" id="placeholderSprite">
 			</div>		
 		</div>

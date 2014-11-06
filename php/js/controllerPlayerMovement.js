@@ -133,13 +133,17 @@ function executeCommand(moves)
 	var elseCount = [];
 	var ignoreIf = 0;
 	var firstFor = 0;
+	var captureChecked = $('#chkBoxCapture').prop('checked');
 	
 	for(i = 0 ; i < moves.length ; i++)
 	{
-		window.setTimeout(takeSS,250*i);
-		window.setTimeout(takeSS,500*i);
-		console.log("takeSS loop " + i)
-		console.log(screenshot)
+		if(captureChecked)
+		{
+			window.setTimeout(takeSS,250*i);
+			window.setTimeout(takeSS,500*i);
+			console.log("takeSS loop " + i)
+			console.log(screenshot)
+		}
 
 		if(ignoreIf != 0)
 		{
