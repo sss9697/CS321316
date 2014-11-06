@@ -10,7 +10,25 @@ function takeSS() {
 
 		}
 	}
-)};
+)}
+
+function exportGif() {
+	var gif = new GIF({
+	  workers: 2,
+	  quality: 10,
+	  width:804,
+	  height:804
+	});
+
+	for (i=0; i<expanded.length; i++)
+		gif.addFrame(screenshot[i]);
+
+	gif.on('finished', function(blob) {
+		window.open(URL.createObjectURL(blob),"", "width=600, height=600");
+	});
+
+	gif.render();
+}
 
 //change user input command into an array
 function compileCommand()
@@ -365,24 +383,10 @@ function compilef()
 
 						for (var i=0; i<expanded.length; i++) {
 							window.setTimeout(takeSS,500*i);
-							console.log("takeSS loop")
+							console.log("takeSS loop " + i)
 						}
 
-						var gif = new GIF({
-						  workers: 2,
-						  quality: 10,
-						  width:804,
-						  height:804
-						});
 
-						for (i=0; i<expanded.length; i++)
-							gif.addFrame(screenshot[i]);
-
-						gif.on('finished', function(blob) {
-						  window.open(URL.createObjectURL(blob),"", "width=600, height=600");
-						});
-
-						gif.render();
 					}
 				}
 			}
