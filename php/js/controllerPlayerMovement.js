@@ -138,6 +138,7 @@ function executeCommand(moves)
 	{
 		window.setTimeout(takeSS,500*i);
 		console.log("takeSS loop " + i)
+		console.log(screenshot)
 
 		if(ignoreIf != 0)
 		{
