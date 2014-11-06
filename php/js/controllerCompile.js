@@ -7,7 +7,7 @@ function takeSS() {
 	    var img = canvas;
 	    document.body.appendChild(canvas);
 	    screenshot.push(img);
-
+	    console.log("render triggered")
 		}
 	}
 )}
