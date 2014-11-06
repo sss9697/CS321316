@@ -71,7 +71,7 @@ $(function()
 	$('#chkBoxCapture').click(function () 
 	{
 		var captureChecked = $('#chkBoxCapture').prop('checked');
-		console.log(captureChecked);
+
 		if(captureChecked)
 			$('#exportGif-btn').show();
 		else
