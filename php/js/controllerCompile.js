@@ -365,6 +365,7 @@ function compilef()
 
 						for (var i=0; i<expanded.length; i++) {
 							window.setTimeout(takeSS,500*i);
+							console.log("takeSS loop")
 						}
 
 						var gif = new GIF({
