@@ -133,16 +133,18 @@ function executeCommand(moves)
 	var elseCount = [];
 	var ignoreIf = 0;
 	var firstFor = 0;
+	var screenshot_multiplier = 0;
 	var captureChecked = $('#chkBoxCapture').prop('checked');
 	
 	for(i = 0 ; i < moves.length ; i++)
 	{
 		if(captureChecked)
 		{
-			window.setTimeout(takeSS,250*i);
-			window.setTimeout(takeSS,500*i);
-			console.log("takeSS loop " + i)
-			console.log(screenshot)
+			window.setTimeout(takeSS,i*screenshot_multiplier*50);
+			screenshot_multiplier += screenshot_multiplier + 5;
+			window.setTimeout(takeSS,500);
+			screenshot_multiplier += screenshot_multiplier + 5;
+			console.log("screenshot_multiplier : " + screenshot_multiplier);
 		}
 
 		if(ignoreIf != 0)
