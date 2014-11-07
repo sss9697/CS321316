@@ -143,7 +143,6 @@ function executeCommand(moves)
 			window.setTimeout(takeSS,i*screenshot_multiplier*50);
 			screenshot_multiplier += screenshot_multiplier + 5;
 			window.setTimeout(takeSS,500);
-			screenshot_multiplier += screenshot_multiplier + 5;
 			console.log("screenshot_multiplier : " + screenshot_multiplier);
 		}
 
