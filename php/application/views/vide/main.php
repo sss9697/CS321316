@@ -109,9 +109,27 @@
 										MOVE LEFT: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
 									</div>
 								</li>
+								<li id="moveleft" class="command">
+									<div id="movediv">
+										<select id="selectleft">
+										  <option value="i">i</option>
+										  <option value="j">j</option>
+										  <option value="k">k</option>
+										</select>
+									</div>
+								</li>
 								<li id="moveright" class="command">
 									<div id="movediv">
 										MOVE RIGHT: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
+									</div>
+								</li>
+								<li id="moveright" class="command">
+									<div id="movediv">
+										<select id="selectright">
+										  <option value="i">i</option>
+										  <option value="j">j</option>
+										  <option value="k">k</option>
+										</select>
 									</div>
 								</li>
 								<li id="moveup" class="command">
@@ -119,9 +137,27 @@
 										MOVE UP: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
 									</div>
 								</li>
+								<li id="moveup" class="command">
+									<div id="movediv">
+										<select id="selectup">
+										  <option value="i">i</option>
+										  <option value="j">j</option>
+										  <option value="k">k</option>
+										</select>
+									</div>
+								</li>
 								<li id="movedown" class="command">
 									<div id="movediv">
 										MOVE DOWN: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
+									</div>
+								</li>
+								<li id="movedown" class="command">
+									<div id="movediv">
+										<select id="selectdown">
+										  <option value="i">i</option>
+										  <option value="j">j</option>
+										  <option value="k">k</option>
+										</select>
 									</div>
 								</li>
 								<li id="movesetx" class="command">
