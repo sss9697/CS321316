@@ -10,7 +10,7 @@ function loadf(moves)
 		{			
 			//up
 			case 'U': $( "#editorspace ul" ).append(
-						$("<li id=\"moveup\" class=\"command\">	<div id=\"movediv\">MOVE UP: <input type=\"number\" name=\"edittxt\" id=\"edittxt\" value=" + number + " max=\"999\" min=\"-999\" /></div></li>"));
+						$("<li id=\"moveup\" class=\"item\">	<div id=\"movediv\">MOVE UP: <input type=\"number\" name=\"edittxt\" id=\"edittxt\" value=" + number + " max=\"999\" min=\"-999\" /></div></li>"));
 				break;
 				
 			//down
