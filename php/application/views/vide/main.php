@@ -111,7 +111,7 @@
 								</li>
 								<li id="moveleft" class="command moves">
 									<div id="movediv">
-										MOVE LEFT: <select id="selectleft">
+										MOVE LEFT: <select id="moveleft">
 										  <option value="i">i</option>
 										  <option value="j">j</option>
 										  <option value="k">k</option>
@@ -125,7 +125,7 @@
 								</li>
 								<li id="moveright" class="command moves">
 									<div id="movediv">
-										MOVE RIGHT: <select id="selectright">
+										MOVE RIGHT: <select id="moveright">
 										  <option value="i">i</option>
 										  <option value="j">j</option>
 										  <option value="k">k</option>
@@ -139,7 +139,7 @@
 								</li>
 								<li id="moveup" class="command moves">
 									<div id="movediv">
-										MOVE UP: <select id="selectup">
+										MOVE UP: <select id="moveup">
 										  <option value="i">i</option>
 										  <option value="j">j</option>
 										  <option value="k">k</option>
@@ -153,7 +153,7 @@
 								</li>
 								<li id="movedown" class="command moves">
 									<div id="movediv">
-										MOVE DOWN: <select id="selectdown">
+										MOVE DOWN: <select id="movedown">
 										  <option value="i">i</option>
 										  <option value="j">j</option>
 										  <option value="k">k</option>
