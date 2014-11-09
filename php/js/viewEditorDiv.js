@@ -10,7 +10,8 @@ $(function()
 		appendTo: "body",
 		helper: "clone",
 		revert: "invalid",
-		cursor: "move"
+		cursor: "move",
+		handle: "li"
 	});
 	
 	var bIndex = 0;
