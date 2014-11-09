@@ -104,12 +104,12 @@
 						<h2><a href="#">Moves</a></h2>
 						<div>
 							<ul id="drag-elements">
-								<li id="moveleft" class="command">
+								<li id="moveleft" class="command moves">
 									<div id="movediv">
 										MOVE LEFT: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
 									</div>
 								</li>
-								<li id="moveleft" class="command">
+								<li id="moveleft" class="command moves">
 									<div id="movediv">
 										MOVE LEFT: <select id="selectleft">
 										  <option value="i">i</option>
@@ -118,12 +118,12 @@
 										</select>
 									</div>
 								</li>
-								<li id="moveright" class="command">
+								<li id="moveright" class="command moves">
 									<div id="movediv">
 										MOVE RIGHT: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
 									</div>
 								</li>
-								<li id="moveright" class="command">
+								<li id="moveright" class="command moves">
 									<div id="movediv">
 										MOVE RIGHT: <select id="selectright">
 										  <option value="i">i</option>
@@ -132,12 +132,12 @@
 										</select>
 									</div>
 								</li>
-								<li id="moveup" class="command">
+								<li id="moveup" class="command moves">
 									<div id="movediv">
 										MOVE UP: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
 									</div>
 								</li>
-								<li id="moveup" class="command">
+								<li id="moveup" class="command moves">
 									<div id="movediv">
 										MOVE UP: <select id="selectup">
 										  <option value="i">i</option>
@@ -146,12 +146,12 @@
 										</select>
 									</div>
 								</li>
-								<li id="movedown" class="command">
+								<li id="movedown" class="command moves">
 									<div id="movediv">
 										MOVE DOWN: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
 									</div>
 								</li>
-								<li id="movedown" class="command">
+								<li id="movedown" class="command moves">
 									<div id="movediv">
 										MOVE DOWN: <select id="selectdown">
 										  <option value="i">i</option>
@@ -160,12 +160,12 @@
 										</select>
 									</div>
 								</li>
-								<li id="movesetx" class="command">
+								<li id="movesetx" class="command moves">
 									<div id="movediv">
 										SET X: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
 									</div>
 								</li>
-								<li id="movesety" class="command">
+								<li id="movesety" class="command moves">
 									<div id="movediv">
 										SET Y: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
 									</div>
@@ -311,12 +311,12 @@
 						<h2><a href="#">Other commands</a></h2>
 						<div>
 							<ul id="drag-elements">
-								<li id="movechartoggle" class="command">
+								<li id="movechartoggle" class="command others1">
 									<div id="movediv">
 										TOGGLE CHARACTER
 									</div>
 								</li>
-								<li id="movebackground" class="command">
+								<li id="movebackground" class="command others2">
 									<select id="movebackgroundlist" class="backgroundSelectedCom">
 										  <option value="" disabled selected>Background</option>
 										  <option value="#cccccc" class="Grey">Grey</option>
@@ -331,7 +331,7 @@
 										  <option value="#c8a2c8" class="Lilac">Lilac</option>
 									</select>
 								</li>
-								<li id="movechangechar" class="command">
+								<li id="movechangechar" class="command others3">
 									<select id="defaultCharListCom" class="characterSelected">
 										<option value="" disabled selected>Change char</option>
 										<option value="1">Yellow Mouse</option>
