@@ -55,8 +55,8 @@ function loadf(moves)
 				break;
 				
 			//change background
-			case 'B': $( "#editorspace ul" ).append(
-					var loadId = "#loadmovebackgroundlist"+bIndex;
+			case 'B': var loadId = "#loadmovebackgroundlist"+bIndex;
+					  $( "#editorspace ul" ).append(
 						$("<li id=\"movebackground\" class=\"item others2\"><select id=\""+loadId+"\" class=\"backgroundSelectedCom\"><option value=\"\" disabled selected>Background</option><option value=\"#cccccc\" class=\"Grey\">Grey</option><option value=\"#000000\" class=\"Black\">Black</option><option value=\"#ffffff\" class=\"White\">White</option><option value=\"#0000ff\" class=\"Blue\">Blue</option><option value=\"#ff0000\" class=\"Red\">Red</option><option value=\"#00ff00\" class=\"Green\">Green</option><option value=\"#ffff00\" class=\"Yellow\">Yellow</option><option value=\"#00ffff\" class=\"Cyan\">Cyan</option><option value=\"#ff69b4\" class=\"Pink\">Pink</option><option value=\"#c8a2c8\" class=\"Lilac\">Lilac</option></select></li>"));
 						$("#editorspace ul li").last().find(loadId).val(number);
 						$("#editorspace ul li").last().find(loadId).css('background-color', number);
