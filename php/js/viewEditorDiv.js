@@ -28,7 +28,6 @@ $(function()
 				$( this ).find( "#movebackgroundlist" ).attr("id", "newmovebackgroundlist"+bIndex);
 				var newId = "#newmovebackgroundlist"+bIndex;
 				var rgb = (ui.draggable).clone().find("#movebackgroundlist").css( "background-color" );
-				console.log("a"+rgb+"a");
 				var newColor = rgb2hex(rgb);
 				$(newId).val(newColor);
 				$(newId).on('change', function() 
