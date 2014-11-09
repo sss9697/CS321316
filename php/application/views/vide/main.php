@@ -175,18 +175,18 @@
 						<h2><a href="#">Loops, variables & conditions</a></h2>
 						<div>
 							<ul id="drag-elements">
-								<li id="moveloopo" class="command">
+								<li id="moveloopo" class="command loops">
 									<div id="movediv">
 										OPEN LOOP
 									</div>
 								</li>
-								<li id="moveloopc" class="command">
+								<li id="moveloopc" class="command loops">
 									<div id="movediv">
 										CLOSE LOOP: <input type="number" name="edittxt" id="edittxt" value="1" max="999" min="-999" />
 									</div>
 								</li>
 								
-								<li id="moveifopen" class="command">
+								<li id="moveifopen" class="command ifs">
 									<div id="movediv">
 										If: <select id="moveifopenfirstlist">
 										  <option value="i">i</option>
@@ -207,19 +207,19 @@
 									</div>
 								</li>
 								
-								<li id="moveifelse" class="command">
+								<li id="moveifelse" class="command ifs">
 									<div id="movediv">
 										Else 
 									</div>
 								</li>
 								
-								<li id="moveifclose" class="command">
+								<li id="moveifclose" class="command ifs">
 									<div id="movediv">
 										End If 
 									</div>
 								</li>
 								
-								<li id="movewhileopen" class="command">
+								<li id="movewhileopen" class="command whiles">
 									<div id="movediv">
 										While: <select id="movewhileopenfirstlist">
 										  <option value="i">i</option>
@@ -240,13 +240,13 @@
 									</div>
 								</li>
 								
-								<li id="movewhileclose" class="command">
+								<li id="movewhileclose" class="command whiles">
 									<div id="movediv">
 										End While 
 									</div>
 								</li>
 								
-								<li id="moveforopen" class="command">
+								<li id="moveforopen" class="command fors">
 									<div id="movediv">
 										For: <select id="moveforopenfirstlist">
 										  <option value="i">i</option>
@@ -279,7 +279,7 @@
 									</div>
 								</li>
 								
-								<li id="moveforclose" class="command">
+								<li id="moveforclose" class="command fors">
 									<div id="movediv">
 										End For 
 									</div>

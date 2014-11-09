@@ -186,3 +186,19 @@ option.Lilac{background-color:#c8a2c8; color:black;}
 	text-align:center;
 	padding:5px; 
 }
+.loops
+{
+	background: #ACCBE8;
+}
+.ifs
+{
+	background: #9295CA;
+}
+.whiles
+{
+	background: #9ECEB4;
+}
+.fors
+{
+	background: #A9B2B1;
+}
