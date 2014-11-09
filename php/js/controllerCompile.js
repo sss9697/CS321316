@@ -54,6 +54,18 @@ function compileCommand()
 				break;
 			case "movedown": compileString += "D";
 				break;
+			case "moveleft2": compileString += "L";
+				numberTimes = $(this).find("#selectleft").val();
+				break;
+			case "moveright2": compileString += "R";
+				numberTimes = $(this).find("#selectright").val();
+				break;
+			case "moveup2": compileString += "U";
+				numberTimes = $(this).find("#selectup").val();
+				break;
+			case "movedown2": compileString += "D";
+				numberTimes = $(this).find("#selectdown").val();
+				break;
 			case "moveloopo": compileString += "O";
 				break;
 			case "moveloopc": compileString += "C";
