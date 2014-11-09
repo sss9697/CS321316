@@ -9,7 +9,7 @@ function loadf(moves)
 		switch(movearray[i].charAt(0))
 		{			
 			//up
-			case 'U': 	if(number != 'i' || number != 'j' || number != 'k')
+			case 'U': 	if(number != 'i' && number != 'j' && number != 'k')
 						{
 							$( "#editorspace ul" ).append(
 							$("<li id=\"moveup\" class=\"item moves\">	<div id=\"movediv\">MOVE UP: <input type=\"number\" name=\"edittxt\" id=\"edittxt\" value=" + number + " max=\"999\" min=\"-999\" /></div></li>"));
@@ -23,7 +23,7 @@ function loadf(moves)
 				break;
 				
 			//down
-			case 'D': 	if(number != 'i' || number != 'j' || number != 'k')
+			case 'D': 	if(number != 'i' && number != 'j' && number != 'k')
 						{
 							$( "#editorspace ul" ).append(
 							$("<li id=\"movedown\" class=\"item moves\">	<div id=\"movediv\">MOVE DOWN: <input type=\"number\" name=\"edittxt\" id=\"edittxt\" value=" + number + " max=\"999\" min=\"-999\" /></div></li>"));
@@ -37,7 +37,7 @@ function loadf(moves)
 				break;
 				
 			//left
-			case 'L': 	if(number != 'i' || number != 'j' || number != 'k')
+			case 'L': 	if(number != 'i' && number != 'j' && number != 'k')
 						{
 							$( "#editorspace ul" ).append(
 							$("<li id=\"moveleft\" class=\"item moves\">	<div id=\"movediv\">MOVE LEFT: <input type=\"number\" name=\"edittxt\" id=\"edittxt\" value=" + number + " max=\"999\" min=\"-999\" /></div></li>"));
@@ -51,7 +51,7 @@ function loadf(moves)
 				break;
 				
 			//right
-			case 'R': 	if(number != 'i' || number != 'j' || number != 'k')
+			case 'R': 	if(number != 'i' && number != 'j' && number != 'k')
 						{
 							$( "#editorspace ul" ).append(
 							$("<li id=\"moveright\" class=\"item moves\">	<div id=\"movediv\">MOVE RIGHT: <input type=\"number\" name=\"edittxt\" id=\"edittxt\" value=" + number + " max=\"999\" min=\"-999\" /></div></li>"));
