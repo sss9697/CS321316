@@ -11,7 +11,7 @@ $(function()
 		helper: "clone",
 		revert: "invalid",
 		cursor: "move",
-		handle: "li"
+		handle: "div"
 	});
 	
 	var bIndex = 0;
