@@ -60,6 +60,12 @@ function loadf(moves)
 						var loadId = "#loadmovebackgroundlist"+bIndex;
 					  	$(loadId).val(number);
 						$(loadId).css('background-color', number);
+						if(number == "#000000" || number == "#0000ff"){
+							$(loadId).css('color', "#ffffff");
+						}
+						else{
+							$(loadId).css('color', "#000000");
+						}
 						$(loadId).on('change', function() 
 						{
 							processCommand("defaultBackgroundCom", this);
