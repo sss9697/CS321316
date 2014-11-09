@@ -185,11 +185,11 @@ function validateCommand(input, type)
 	}
 	
 	if(check > 0)
-		return [1, 0];
+		return [1, 1];
 	else if(check < 0)
-		return [2, input.length];
+		return [2, (input.length + 1)];
 	else
-		return [0,0];	
+		return [0,1];	
 }
 
 function validateVariables(input)
@@ -215,7 +215,7 @@ function validateVariables(input)
 			else
 			{
 				if(checkI == 0)
-					return [1, i];
+					return [1, i + 1];
 			}
 		}
 		else if(input[i].charAt(0) == "j")
@@ -227,7 +227,7 @@ function validateVariables(input)
 			else
 			{
 				if(checkJ == 0)
-					return [2, i];
+					return [2, i + 1];
 			}
 		}
 		else if(input[i].charAt(0) == "k")
@@ -239,7 +239,7 @@ function validateVariables(input)
 			else
 			{
 				if(checkK == 0)
-					return [3, i];
+					return [3, i + 1];
 			}
 		}
 		
@@ -249,17 +249,17 @@ function validateVariables(input)
 			if(input[i].charAt(1) == "i")
 			{
 				if(checkI == 0)
-					return [1, i];
+					return [1, i + 1];
 			}
 			if(input[i].charAt(1) == "j")
 			{
 				if(checkJ == 0)
-					return [2, i];
+					return [2, i + 1];
 			}
 			if(input[i].charAt(1) == "k")
 			{
 				if(checkK == 0)
-					return [3, i];
+					return [3, i + 1];
 			}
 		}
 	}
